@@ -40,7 +40,8 @@
 						[JUNCTIONS END]
 						[PORTS BEGIN]
 							device R1 port 1
-							netchanger 1 port A
+							netchanger 1 port master
+							netchanger 3 port slave
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -54,9 +55,11 @@
 [NETCHANGERS BEGIN]
 	[NETCHANGER BEGIN]
 		name 1
-		position sheet 1 x 215 y 100
-		rotation 0.0
-	[NETCHANGER BEGIN]
+		position_in_schematic sheet 1 x 215 y 100
+		rotation_in_schematic 0.0
+		position_in_board x 234.4 y 99.0
+		layer 3
+	[NETCHANGER END]
 [NETCHANGERS END]
 
 [DRAWING_FRAMES BEGIN]
@@ -82,7 +85,7 @@
 
 [DEVICES BEGIN]
 	[DEVICE BEGIN]
-		name R1
+		name R78
 		appearance sch_pcb
 		model $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev
 		value 1k2
