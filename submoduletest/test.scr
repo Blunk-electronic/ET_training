@@ -14,46 +14,47 @@ sch submoduletest purpose device R1 brightnesss_control
 sch submoduletest partcode device R1 SAP123456
 # sch submoduletest partcode device_accessory clamp SAP1701
 
-sch submoduletest move device R1 1 13 12.3 85.4 # R1 unit 1 sheet x y
-sch submoduletest move device IC1 B 2 12.3 85.4 # IC1 unit B sheet 2 x y
-sch submoduletest rotate device IC1 B 90.0 # IC1 unit B 90 degree
+sch submoduletest move device R1 1 abs 13 12.3 85.4 # R1 unit 1 sheet x y
+sch submoduletest move device IC1 B abs 2 12.3 85.4 # IC1 unit B sheet 2 x y
+sch submoduletest move device IC1 B rel 2 4 # IC1 unit B dx dy
+sch submoduletest rotate device IC1 B abs 90.0 # IC1 unit B 90 degree
 
-sch submoduletest move device_name R1 1 r 1 # R1 unit 1 right by 1mm
-sch submoduletest move device_value R1 1 l 1 # R1 unit 1 left by 1mm
+sch submoduletest move device_name R1 1 rel 1 0 # R1 unit 1 dx dy
+sch submoduletest move device_value R1 1 rel 1 0 # R1 unit 1 dx dy
 
-sch submoduletest rotate device_name R1 1 -90 # R1 unit 1 by -90 degree
-sch submoduletest rotate device_value R1 1 -90 # R1 unit 1 by -90 degree
+sch submoduletest rotate device_name R1 1 abs -90 # R1 unit 1 by -90 degree
+sch submoduletest rotate device_value R1 1 abs -90 # R1 unit 1 by -90 degree
 
 sch submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev R1 1 22.3 45.4 0.0 # R1 sheet 1 x y rotation 
 sch submoduletest invoke unit IC1 A 1 12.3 85.4 180.0 # IC1 unit A sheet 1 x y rotation
 
 sch submoduletest net 2 30 40 30 50 # net segment on sheet 2 from 30/40 to 30/50
-sch submoduletest move net 2 30 40 30 50 r 10 # move net segment right by 10mm
-sch submoduletest move net 2 30 40 d 5 # move point on net down by 10mm
+sch submoduletest move net 2 30 40 30 50 rel 0 10 # move net segment dx dy
+sch submoduletest move net 2 30 40 rel 0 5 # move point on net dx dy
 sch submoduletest delete net 3 60 100 # delete net segment
 
 sch submoduletest text 2 50 50 "hello"
-sch submoduletest move text 2 50 50 r 10
+sch submoduletest move text 2 50 50 rel 10 0 
 sch submoduletest delete text 2 60 50
-sch submoduletest rotate text 2 50 50 -45
+sch submoduletest rotate text 2 50 50 abs -45
 sch submoduletest text_size 2 50 50 6 # 6mm
 
 brd submoduletest move device R1 33.0 23.0
-brd submoduletest move device R1 u 1.3
+brd submoduletest move device R1 rel 1.3 0
 brd submoduletest flip device R2
-brd submoduletest rotate device R2 45.0
+brd submoduletest rotate device R2 abs 45.0
 
 brd submoduletest route CLK 0.15 1 20.0 10.0 20.0 20.0 # width 0.15 layer 1 from 20/10 to 20/20
 brd submoduletest ripup CLK 1 25.0 15.0 # layer 1 x y
 brd submoduletest ripup CLK 
 
 brd submoduletest text silk_screen 50 50 "hello"
-brd submoduletest move text silk_screen 50 50 u 10
+brd submoduletest move text silk_screen 50 50 rel 1 0
 brd submoduletest text_size silk_screen 50 50 3 # 3mm
 brd submoduletest text_line_width silk_screen 50 50 0.2 # 0.2mm
 brd submoduletest flip text silk_screen 50 50
 
-brd submoduletest move device_name R1 r 1 # R1 right by 1mm
-brd submoduletest move device_purpose R1 l 1 # R1 left by 1mm
+brd submoduletest move device_name R1 rel 1 0
+brd submoduletest move device_purpose R1 rel 0 1
 
 # script end
