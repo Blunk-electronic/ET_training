@@ -4,67 +4,68 @@
 # set module submoduletest
 
 # delete
-schematic submoduletest delete device R1
-schematic submoduletest delete unit IC1 C
+#schematic submoduletest delete device R1 # supported
+#schematic submoduletest delete unit R1 1 # supported
 
 # name, value, partcode, purpose
-schematic submoduletest rename device R1 R100
-schematic submoduletest set device_value R1 100R
-schematic submoduletest set device_purpose R1 brightnesss_control
-schematic submoduletest set device_partcode R1 SAP123456
+#schematic submoduletest rename device R1 R100
+#schematic submoduletest set device_value R1 100R
+#schematic submoduletest set device_purpose R1 brightnesss_control
+#schematic submoduletest set device_partcode R1 SAP123456
 # schematic submoduletest set device_accessory clamp SAP1701
 
-schematic submoduletest move unit R1 1 abs 13 12.3 85.4 # R1 unit 1 sheet x y
-schematic submoduletest move unit IC1 B abs 2 12.3 85.4 # IC1 unit B sheet 2 x y
-schematic submoduletest move unit IC1 B rel 2 4 # IC1 unit B dx dy
-schematic submoduletest rotate unit IC1 B abs 90.0 # IC1 unit B 90 degree
+schematic submoduletest move unit R1 1 absolute 2 100 80 # R1 unit sheet x y
+#schematic submoduletest move unit R1 1 relative -1 2 4 # IC1 unit B sheet x y
 
-schematic submoduletest move unit_name R1 1 rel 1 0 # R1 unit 1 dx dy
-schematic submoduletest move unit_value R1 1 rel 1 0 # R1 unit 1 dx dy
+#schematic submoduletest move unit IC1 B rel 2 4 # IC1 unit B dx dy
+#schematic submoduletest rotate unit IC1 B abs 90.0 # IC1 unit B 90 degree
 
-schematic submoduletest rotate unit_name R1 1 abs -90 # R1 unit 1 by -90 degree
-schematic submoduletest rotate unit_value R1 1 abs -90 # R1 unit 1 by -90 degree
-
-schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev R1 1 22.3 45.4 0.0 # R1 sheet 1 x y rotation 
-schematic submoduletest invoke unit IC1 A 1 12.3 85.4 180.0 # IC1 unit A sheet 1 x y rotation
-
-schematic submoduletest draw net CLK 2 30 40 30 50 # net segment on sheet 2 from 30/40 to 30/50
-schematic submoduletest move net CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
-schematic submoduletest move net CLK 2 30 40 rel 0 5 # move point on net dx dy
-schematic submoduletest delete net CLK
-schematic submoduletest delete net CLK 3
-schematic submoduletest delete net CLK 3 60 100 # delete net segment
-schematic submoduletest rename net +5V P5V
-
-schematic submoduletest write text 2 50 50 "hello"
-schematic submoduletest move text 2 50 50 rel 10 0 
-schematic submoduletest delete text 2 60 50
-schematic submoduletest rotate text 2 50 50 abs -45
-schematic submoduletest set text_size 2 50 50 6 # 6mm
-
-board submoduletest move device R1 33.0 23.0
-board submoduletest move device R1 rel 1.3 0
-board submoduletest move device_name R1 rel 1.3 0
-board submoduletest move device_purpose R1 rel 1.3 0
-board submoduletest flip device R2
-board submoduletest rotate device R2 abs 45.0
-
-board submoduletest place via 3.3 4.6 0.25 5-9 CLK # x y diameter layers net_name
-board submoduletest move via 3.3 4.6 1-2 rel 1 0
-board submoduletest set via_drill 3.3 4.6 1-2 0.3
-board submoduletest ripup via 3.3 4.6 1-2
-
-board submoduletest route net CLK 0.15 1 20.0 10.0 20.0 20.0 # width 0.15 layer 1 from 20/10 to 20/20
-board submoduletest ripup net CLK 1 25.0 15.0 # layer 1 x y
-board submoduletest ripup net CLK 
-
-board submoduletest write text silk_screen 50 50 "hello"
-board submoduletest move text silk_screen 50 50 rel 1 0
-board submoduletest set text_size silk_screen 50 50 3 # 3mm
-board submoduletest set text_line_width silk_screen 50 50 0.2 # 0.2mm
-board submoduletest flip text silk_screen 50 50
-
-board submoduletest move device_name R1 rel 1 0
-board submoduletest move device_purpose R1 rel 0 1
+# schematic submoduletest move unit_name R1 1 rel 1 0 # R1 unit 1 dx dy
+# schematic submoduletest move unit_value R1 1 rel 1 0 # R1 unit 1 dx dy
+# 
+# schematic submoduletest rotate unit_name R1 1 abs -90 # R1 unit 1 by -90 degree
+# schematic submoduletest rotate unit_value R1 1 abs -90 # R1 unit 1 by -90 degree
+# 
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev R1 1 22.3 45.4 0.0 # R1 sheet 1 x y rotation 
+# schematic submoduletest invoke unit IC1 A 1 12.3 85.4 180.0 # IC1 unit A sheet 1 x y rotation
+# 
+# schematic submoduletest draw net CLK 2 30 40 30 50 # net segment on sheet 2 from 30/40 to 30/50
+# schematic submoduletest move net CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
+# schematic submoduletest move net CLK 2 30 40 rel 0 5 # move point on net dx dy
+# schematic submoduletest delete net CLK
+# schematic submoduletest delete net CLK 3
+# schematic submoduletest delete net CLK 3 60 100 # delete net segment
+# schematic submoduletest rename net +5V P5V
+# 
+# schematic submoduletest write text 2 50 50 "hello"
+# schematic submoduletest move text 2 50 50 rel 10 0 
+# schematic submoduletest delete text 2 60 50
+# schematic submoduletest rotate text 2 50 50 abs -45
+# schematic submoduletest set text_size 2 50 50 6 # 6mm
+# 
+# board submoduletest move device R1 33.0 23.0
+# board submoduletest move device R1 rel 1.3 0
+# board submoduletest move device_name R1 rel 1.3 0
+# board submoduletest move device_purpose R1 rel 1.3 0
+# board submoduletest flip device R2
+# board submoduletest rotate device R2 abs 45.0
+# 
+# board submoduletest place via 3.3 4.6 0.25 5-9 CLK # x y diameter layers net_name
+# board submoduletest move via 3.3 4.6 1-2 rel 1 0
+# board submoduletest set via_drill 3.3 4.6 1-2 0.3
+# board submoduletest ripup via 3.3 4.6 1-2
+# 
+# board submoduletest route net CLK 0.15 1 20.0 10.0 20.0 20.0 # width 0.15 layer 1 from 20/10 to 20/20
+# board submoduletest ripup net CLK 1 25.0 15.0 # layer 1 x y
+# board submoduletest ripup net CLK 
+# 
+# board submoduletest write text silk_screen 50 50 "hello"
+# board submoduletest move text silk_screen 50 50 rel 1 0
+# board submoduletest set text_size silk_screen 50 50 3 # 3mm
+# board submoduletest set text_line_width silk_screen 50 50 0.2 # 0.2mm
+# board submoduletest flip text silk_screen 50 50
+# 
+# board submoduletest move device_name R1 rel 1 0
+# board submoduletest move device_purpose R1 rel 0 1
 
 # script end

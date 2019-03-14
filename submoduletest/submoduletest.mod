@@ -22,10 +22,11 @@
 		scope local
 		[STRANDS BEGIN]
 			[STRAND BEGIN]
+				position sheet 1 x 100.00 y 100.00
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
-						start sheet 1 x 100 y 100
-						end sheet 1 x 200 y 100
+						start x 100 y 100
+						end x 200 y 100
 						[LABELS BEGIN]
 							[LABEL BEGIN]
 								position x 100 y 100
@@ -49,6 +50,40 @@
 		[ROUTE BEGIN]
 		[ROUTE END]
 	[NET END]
+
+	[NET BEGIN]
+		name master_reset
+		class default
+		scope local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet 3 x 101.00 y 100.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x 99 y 100
+						end x 200 y 100
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x 100 y 100
+								rotation 0
+								size 1.30
+								style normal
+								line_width 0.00
+								appearance simple
+							[LABEL END]
+						[LABELS END]
+						[JUNCTIONS BEGIN]
+						[JUNCTIONS END]
+						[PORTS BEGIN]
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
+	[NET END]
+	
 [NETS END]
 
 [DRAWING_FRAMES BEGIN]
