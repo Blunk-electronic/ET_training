@@ -24,8 +24,8 @@
 			[STRAND BEGIN]
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
-						start sheet 1 x 100 y 100
-						end sheet 1 x 200 y 100
+						start x 100 y 100
+						end x 200 y 100
 						[LABELS BEGIN]
 							[LABEL BEGIN]
 								position x 100 y 100
