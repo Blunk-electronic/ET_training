@@ -57,7 +57,7 @@
 		scope local
 		[STRANDS BEGIN]
 			[STRAND BEGIN]
-				position sheet 3 x 101.00 y 100.00
+				position sheet 3 x 99 y 100.00
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
 						start x 99 y 100

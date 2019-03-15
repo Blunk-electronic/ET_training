@@ -22,6 +22,7 @@
 		scope local
 		[STRANDS BEGIN]
 			[STRAND BEGIN]
+				position sheet 1 x 100 y 100
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
 						start x 100 y 100
