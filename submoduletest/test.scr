@@ -3,9 +3,24 @@
 # set domain schematic
 # set module submoduletest
 
+# supported commands:
+
 # delete
-#schematic submoduletest delete device R1 # supported
-#schematic submoduletest delete unit R1 1 # supported
+# schematic submoduletest delete device R1
+# schematic submoduletest delete unit R1 1
+
+# move
+# schematic submoduletest move unit R1 1 absolute 2 210 100 # R1 unit sheet x y
+# schematic submoduletest move unit R1 1 relative -1 2 4 # IC1 unit B sheet x y
+
+# drag
+# schematic submoduletest drag unit R1 1 absolute 220 100 # R1 unit x y
+# schematic submoduletest drag unit R1 1 relative 10 0 # IC1 unit B x y
+
+# check
+schematic submoduletest check integrity
+
+# not supported yet:
 
 # name, value, partcode, purpose
 #schematic submoduletest rename device R1 R100
@@ -14,8 +29,6 @@
 #schematic submoduletest set device_partcode R1 SAP123456
 # schematic submoduletest set device_accessory clamp SAP1701
 
-schematic submoduletest move unit R1 1 absolute 2 210 100 # R1 unit sheet x y
-#schematic submoduletest move unit R1 1 relative -1 2 4 # IC1 unit B sheet x y
 
 #schematic submoduletest move unit IC1 B rel 2 4 # IC1 unit B dx dy
 #schematic submoduletest rotate unit IC1 B abs 90.0 # IC1 unit B 90 degree

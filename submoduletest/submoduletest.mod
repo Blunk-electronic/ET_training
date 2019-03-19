@@ -17,7 +17,7 @@
 
 [NETS BEGIN]
 	[NET BEGIN]
-		name clk_top
+		name motor_on
 		class default
 		scope local
 		[STRANDS BEGIN]
@@ -27,150 +27,43 @@
 					[SEGMENT BEGIN]
 						start x 100 y 100
 						end x 200 y 100
-						[LABELS BEGIN]
-							[LABEL BEGIN]
-								position x 100 y 100
-								rotation 0
-								size 1.30
-								style normal
-								line_width 0.00
-								appearance simple
-							[LABEL END]
-						[LABELS END]
 						[JUNCTIONS BEGIN]
+							position x 200 y 100
 						[JUNCTIONS END]
 						[PORTS BEGIN]
 							submodule CLK_GENERATOR port out
 							device R1 port 1
 						[PORTS END]
 					[SEGMENT END]
+
+					[SEGMENT BEGIN]
+						start x 200 y 100
+						end x 200 y 150
+					[SEGMENT END]
+					
 				[SEGMENTS END]
 			[STRAND END]
+		[STRANDS END]
+	[NET END]
 
+	[NET BEGIN]
+		name motor_on_res
+		class default
+		scope local
+		[STRANDS BEGIN]
 			[STRAND BEGIN]
 				position sheet 1 x 220.00 y 100.00
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
 						start x 220 y 100
 						end x 300 y 100
-						[LABELS BEGIN]
-							[LABEL BEGIN]
-								position x 100 y 100
-								rotation 0
-								size 1.30
-								style normal
-								line_width 0.00
-								appearance simple
-							[LABEL END]
-						[LABELS END]
-						[JUNCTIONS BEGIN]
-						[JUNCTIONS END]
 						[PORTS BEGIN]
 							device R1 port 2
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
 			[STRAND END]			
-			
-			[STRAND BEGIN]
-				position sheet 2 x 100.00 y 100.00
-				[SEGMENTS BEGIN]
-					[SEGMENT BEGIN]
-						start x 100 y 100
-						end x 200 y 100
-						[LABELS BEGIN]
-							[LABEL BEGIN]
-								position x 100 y 100
-								rotation 0
-								size 1.30
-								style normal
-								line_width 0.00
-								appearance simple
-							[LABEL END]
-						[LABELS END]
-						[JUNCTIONS BEGIN]
-						[JUNCTIONS END]
-						[PORTS BEGIN]
-						[PORTS END]
-					[SEGMENT END]
-				[SEGMENTS END]
-			[STRAND END]
-
-			[STRAND BEGIN]
-				position sheet 2 x 220.00 y 100.00
-				[SEGMENTS BEGIN]
-					[SEGMENT BEGIN]
-						start x 220 y 100
-						end x 300 y 100
-						[LABELS BEGIN]
-							[LABEL BEGIN]
-								position x 100 y 100
-								rotation 0
-								size 1.30
-								style normal
-								line_width 0.00
-								appearance simple
-							[LABEL END]
-						[LABELS END]
-						[JUNCTIONS BEGIN]
-						[JUNCTIONS END]
-						[PORTS BEGIN]
-						[PORTS END]
-					[SEGMENT END]
-
-					[SEGMENT BEGIN]
-						start x 300 y 100
-						end x 300 y 50
-						[LABELS BEGIN]
-							[LABEL BEGIN]
-								position x 100 y 100
-								rotation 0
-								size 1.30
-								style normal
-								line_width 0.00
-								appearance simple
-							[LABEL END]
-						[LABELS END]
-						[JUNCTIONS BEGIN]
-						[JUNCTIONS END]
-						[PORTS BEGIN]
-						[PORTS END]
-					[SEGMENT END]
-
-					
-				[SEGMENTS END]
-			[STRAND END]			
-			
-			
-			[STRAND BEGIN]
-				position sheet 2 x 200.00 y 200.00
-				[SEGMENTS BEGIN]
-					[SEGMENT BEGIN]
-						start x 200 y 200
-						end x 240 y 200
-						[LABELS BEGIN]
-							[LABEL BEGIN]
-								position x 100 y 100
-								rotation 0
-								size 1.30
-								style normal
-								line_width 0.00
-								appearance simple
-							[LABEL END]
-						[LABELS END]
-						[JUNCTIONS BEGIN]
-						[JUNCTIONS END]
-						[PORTS BEGIN]
-						[PORTS END]
-					[SEGMENT END]
-				[SEGMENTS END]
-			[STRAND END]
-
-			
 		[STRANDS END]
-
-		[ROUTE BEGIN]
-		[ROUTE END]
 	[NET END]
 
 [NETS END]
