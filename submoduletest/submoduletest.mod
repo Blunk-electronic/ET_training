@@ -27,9 +27,7 @@
 					[SEGMENT BEGIN]
 						start x 100 y 100
 						end x 200 y 100
-						[JUNCTIONS BEGIN]
-							position x 200 y 100
-						[JUNCTIONS END]
+						junction end
 						[PORTS BEGIN]
 							submodule CLK_GENERATOR port out
 							device R1 port 1
@@ -102,6 +100,10 @@
 			[PORT BEGIN]
 				name out
 				position x 0 y 10
+			[PORT END]
+			[PORT BEGIN]
+				name out2
+				position x 1 y 10
 			[PORT END]
 		[PORTS END]
 	[SUBMODULE END]

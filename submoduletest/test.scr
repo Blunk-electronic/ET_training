@@ -13,25 +13,34 @@
 # schematic submoduletest move unit R1 1 absolute 2 210 100 # R1 unit sheet x y
 # schematic submoduletest move unit R1 1 relative -1 2 4 # IC1 unit B sheet x y
 
+# rotate
+schematic submoduletest rotate unit R1 1 absolute -405 # R1 unit 1 at 90 degree
+# schematic submoduletest rotate unit R1 1 relative -10.0 # R1 unit 1 by -10 degree
+
 # drag
 # schematic submoduletest drag unit R1 1 absolute 220 100 # R1 unit x y
 # schematic submoduletest drag unit R1 1 relative 10 0 # IC1 unit B x y
 
+# junction
+# schematic submoduletest place junction 1 100 120 # sheet x y
+
+# rename
+# schematic submoduletest rename device R1 R100
+
 # check
 schematic submoduletest check integrity
+
+
 
 # not supported yet:
 
 # name, value, partcode, purpose
-#schematic submoduletest rename device R1 R100
 #schematic submoduletest set device_value R1 100R
 #schematic submoduletest set device_purpose R1 brightnesss_control
 #schematic submoduletest set device_partcode R1 SAP123456
 # schematic submoduletest set device_accessory clamp SAP1701
 
 
-#schematic submoduletest move unit IC1 B rel 2 4 # IC1 unit B dx dy
-#schematic submoduletest rotate unit IC1 B abs 90.0 # IC1 unit B 90 degree
 
 # schematic submoduletest move unit_name R1 1 rel 1 0 # R1 unit 1 dx dy
 # schematic submoduletest move unit_value R1 1 rel 1 0 # R1 unit 1 dx dy

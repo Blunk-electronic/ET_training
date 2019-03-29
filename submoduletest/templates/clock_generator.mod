@@ -37,8 +37,6 @@
 								appearance simple
 							[LABEL END]
 						[LABELS END]
-						[JUNCTIONS BEGIN]
-						[JUNCTIONS END]
 						[PORTS BEGIN]
 							device R1 port 1
 							netchanger 1 port master
