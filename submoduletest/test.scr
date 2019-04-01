@@ -14,8 +14,8 @@
 # schematic submoduletest move unit R1 1 relative -1 2 4 # IC1 unit B sheet x y
 
 # rotate
-schematic submoduletest rotate unit R1 1 absolute -405 # R1 unit 1 at 90 degree
-# schematic submoduletest rotate unit R1 1 relative -10.0 # R1 unit 1 by -10 degree
+# schematic submoduletest rotate unit R1 1 absolute -270 # R1 unit 1 at 90 degree
+# schematic submoduletest rotate unit R1 1 relative -90 # R1 unit 1 by -10 degree
 
 # drag
 # schematic submoduletest drag unit R1 1 absolute 220 100 # R1 unit x y

@@ -55,7 +55,7 @@
 	[NETCHANGER BEGIN]
 		name 1
 		position_in_schematic sheet 1 x 215 y 100
-		rotation_in_schematic 0.0
+		rotation_in_schematic 0
 		position_in_board x 234.4 y 99.0
 		layer 3
 	[NETCHANGER END]
@@ -117,7 +117,7 @@
 			[UNIT BEGIN]
 				name 1
 				position sheet 1 x 215 y 100
-				rotation 0.0
+				rotation 0
 				mirrored no
 				[PLACEHOLDERS BEGIN]
 					[PLACEHOLDER BEGIN]
