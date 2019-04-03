@@ -27,6 +27,14 @@
 # rename
 # schematic submoduletest rename device R1 R100
 
+# set value, purpose, partcode of a device
+# schematic submoduletest set value R1 2k2
+# schematic submoduletest set purpose R1 "brightnesss_control"
+# schematic submoduletest set partcode R1 R_PAC_S_0805_VAL_100R
+
+# add device or unit
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/RA4.dev 1 22.3 45.4 0 # sheet 1 x y rotation 
+
 # check
 schematic submoduletest check integrity
 
@@ -34,24 +42,22 @@ schematic submoduletest check integrity
 
 # not supported yet:
 
-# name, value, partcode, purpose
-#schematic submoduletest set device_value R1 100R
-#schematic submoduletest set device_purpose R1 brightnesss_control
-#schematic submoduletest set device_partcode R1 SAP123456
+
 # schematic submoduletest set device_accessory clamp SAP1701
 
 
 
-# schematic submoduletest move unit_name R1 1 rel 1 0 # R1 unit 1 dx dy
-# schematic submoduletest move unit_value R1 1 rel 1 0 # R1 unit 1 dx dy
+# schematic submoduletest move name R1 1 rel 1 0 # R1 unit 1 dx dy
+# schematic submoduletest move value R1 1 rel 1 0 # R1 unit 1 dx dy
 # 
-# schematic submoduletest rotate unit_name R1 1 abs -90 # R1 unit 1 by -90 degree
-# schematic submoduletest rotate unit_value R1 1 abs -90 # R1 unit 1 by -90 degree
+# schematic submoduletest rotate name R1 1 abs -90 # R1 unit 1 by -90 degree
+# schematic submoduletest rotate value R1 1 abs -90 # R1 unit 1 by -90 degree
 # 
-# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev R1 1 22.3 45.4 0.0 # R1 sheet 1 x y rotation 
+
 # schematic submoduletest invoke unit IC1 A 1 12.3 85.4 180.0 # IC1 unit A sheet 1 x y rotation
 # 
 # schematic submoduletest draw net CLK 2 30 40 30 50 # net segment on sheet 2 from 30/40 to 30/50
+# schematic submoduletest move label CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
 # schematic submoduletest move net CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
 # schematic submoduletest move net CLK 2 30 40 rel 0 5 # move point on net dx dy
 # schematic submoduletest delete net CLK
@@ -67,8 +73,8 @@ schematic submoduletest check integrity
 # 
 # board submoduletest move device R1 33.0 23.0
 # board submoduletest move device R1 rel 1.3 0
-# board submoduletest move device_name R1 rel 1.3 0
-# board submoduletest move device_purpose R1 rel 1.3 0
+# board submoduletest move name R1 rel 1.3 0
+# board submoduletest move purpose R1 rel 1.3 0
 # board submoduletest flip device R2
 # board submoduletest rotate device R2 abs 45.0
 # 
