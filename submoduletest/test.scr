@@ -33,7 +33,8 @@
 # schematic submoduletest set partcode R1 R_PAC_S_0805_VAL_100R
 
 # add device or unit
-schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/RA4.dev 1 22.3 45.4 0 # sheet 1 x y rotation 
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 22.3 45.4 0 S_0805 # sheet 1 x y rotation [variant]
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/RA4.dev 1 22.3 45.4 0 # sheet 1 x y rotation [variant]
 
 # check
 schematic submoduletest check integrity
