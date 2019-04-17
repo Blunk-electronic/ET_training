@@ -33,8 +33,12 @@
 # schematic submoduletest set partcode R1 R_PAC_S_0805_VAL_100R
 
 # add device or unit
-schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 22.3 45.4 0 S_0805 # sheet 1 x y rotation [variant]
-# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/RA4.dev 1 22.3 45.4 0 # sheet 1 x y rotation [variant]
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 210 150 90 S_0805 # sheet 1 x y rotation [variant]
+#schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 250 150 90 D # sheet 1 x y rotation [variant]
+#schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 2 250 150 0 D # sheet 1 x y rotation [variant]
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 250 150 90 D
+schematic submoduletest invoke unit IC1 B 1 60 90 0 # device unit sheet x y rotation
+schematic submoduletest invoke unit IC1 P 4 60 90 0 # device unit sheet x y rotation
 
 # check
 schematic submoduletest check integrity
@@ -42,9 +46,6 @@ schematic submoduletest check integrity
 
 
 # not supported yet:
-
-
-# schematic submoduletest set device_accessory clamp SAP1701
 
 
 
@@ -55,7 +56,7 @@ schematic submoduletest check integrity
 # schematic submoduletest rotate value R1 1 abs -90 # R1 unit 1 by -90 degree
 # 
 
-# schematic submoduletest invoke unit IC1 A 1 12.3 85.4 180.0 # IC1 unit A sheet 1 x y rotation
+
 # 
 # schematic submoduletest draw net CLK 2 30 40 30 50 # net segment on sheet 2 from 30/40 to 30/50
 # schematic submoduletest move label CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
@@ -96,5 +97,7 @@ schematic submoduletest check integrity
 # 
 # board submoduletest move device_name R1 rel 1 0
 # board submoduletest move device_purpose R1 rel 0 1
+
+# schematic submoduletest set device_accessory clamp SAP1701
 
 # script end
