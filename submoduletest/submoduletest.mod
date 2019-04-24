@@ -41,6 +41,23 @@
 					
 				[SEGMENTS END]
 			[STRAND END]
+
+			[STRAND BEGIN]
+				position sheet 3 x 100.00 y 100.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x 100 y 100
+						end x 200 y 100
+					[SEGMENT END]
+
+					[SEGMENT BEGIN]
+						start x 200 y 100
+						end x 200 y 150
+					[SEGMENT END]
+					
+				[SEGMENTS END]
+			[STRAND END]
+			
 		[STRANDS END]
 	[NET END]
 

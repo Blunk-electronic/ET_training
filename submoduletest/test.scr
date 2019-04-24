@@ -11,18 +11,27 @@
 
 # move
 # schematic submoduletest move unit R1 1 absolute 2 210 100 # R1 unit sheet x y
-# schematic submoduletest move unit R1 1 relative -1 2 4 # IC1 unit B sheet x y
+# schematic submoduletest move unit R1 1 relative -1 2 4 # IC1 unit B sheet dx dy
+# schematic submoduletest move name R1 1 relative 1 -4 # R1 unit 1 dx dy
+# schematic submoduletest move name R1 1 absolute 210 115 # R1 unit 1 x y
+# schematic submoduletest move value R1 1 relative 1 -4 # R1 unit 1 dx dy
+# schematic submoduletest move value R1 1 absolute 210 115 # R1 unit x y
+# schematic submoduletest move purpose R1 1 relative 1 -4 # R1 unit 1 dx dy
+# schematic submoduletest move purpose R1 1 absolute 210 115 # R1 unit x y
 
 # rotate
-# schematic submoduletest rotate unit R1 1 absolute -270 # R1 unit 1 at 90 degree
-# schematic submoduletest rotate unit R1 1 relative -90 # R1 unit 1 by -10 degree
+# schematic submoduletest rotate unit R1 1 absolute -270
+# schematic submoduletest rotate unit R1 1 relative 90
+# schematic submoduletest rotate name R1 1 0
+# schematic submoduletest rotate value R1 1 90
+# schematic submoduletest rotate purpose R1 1 0
 
 # drag
 # schematic submoduletest drag unit R1 1 absolute 220 100 # R1 unit x y
 # schematic submoduletest drag unit R1 1 relative 10 0 # IC1 unit B x y
 
 # junction
-# schematic submoduletest place junction 1 100 120 # sheet x y
+# schematic submoduletest place junction 1 230 100 # sheet x y
 
 # rename
 # schematic submoduletest rename device R1 R100
@@ -34,11 +43,17 @@
 
 # add device or unit
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 210 150 90 S_0805 # sheet 1 x y rotation [variant]
-#schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 250 150 90 D # sheet 1 x y rotation [variant]
-#schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 2 250 150 0 D # sheet 1 x y rotation [variant]
-schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 250 150 90 D
-schematic submoduletest invoke unit IC1 B 1 60 90 0 # device unit sheet x y rotation
-schematic submoduletest invoke unit IC1 P 4 60 90 0 # device unit sheet x y rotation
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 250 150 90 D # sheet 1 x y rotation [variant]
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 2 250 150 0 D # sheet 1 x y rotation [variant]
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 250 150 90 D
+# schematic submoduletest invoke unit IC1 B 1 60 90 0 # device unit sheet x y rotation
+# schematic submoduletest invoke unit IC1 P 4 60 90 0 # device unit sheet x y rotation
+
+# nets
+#schematic submoduletest rename net motor_on motor_on_n # on all sheets
+#schematic submoduletest rename net motor_on motor_on_n 1 # only on sheet 2
+#schematic submoduletest rename net motor_on motor_on_n 3 100 100 # only on sheet 2 strand starting at point 30 45
+
 
 # check
 schematic submoduletest check integrity
@@ -47,17 +62,7 @@ schematic submoduletest check integrity
 
 # not supported yet:
 
-
-
-# schematic submoduletest move name R1 1 rel 1 0 # R1 unit 1 dx dy
-# schematic submoduletest move value R1 1 rel 1 0 # R1 unit 1 dx dy
-# 
-# schematic submoduletest rotate name R1 1 abs -90 # R1 unit 1 by -90 degree
-# schematic submoduletest rotate value R1 1 abs -90 # R1 unit 1 by -90 degree
-# 
-
-
-# 
+ 
 # schematic submoduletest draw net CLK 2 30 40 30 50 # net segment on sheet 2 from 30/40 to 30/50
 # schematic submoduletest move label CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
 # schematic submoduletest move net CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
@@ -65,7 +70,7 @@ schematic submoduletest check integrity
 # schematic submoduletest delete net CLK
 # schematic submoduletest delete net CLK 3
 # schematic submoduletest delete net CLK 3 60 100 # delete net segment
-# schematic submoduletest rename net +5V P5V
+
 # 
 # schematic submoduletest write text 2 50 50 "hello"
 # schematic submoduletest move text 2 50 50 rel 10 0 
