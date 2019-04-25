@@ -58,9 +58,12 @@
 # schematic submoduletest delete net motor_on 3 # only on sheet 3
 # schematic submoduletest delete net motor_on 3 100 100 # only on sheet 3 strand starting at point 100 100
 # schematic submoduletest delete net motor_on_res 1 220 100
-schematic submoduletest delete segment motor_on 1 120 100 # segment on sheet 1 crossing point 120 100
-schematic submoduletest delete segment motor_on 3 200 130
-#schematic submoduletest delete segment motor_on 3 120 100
+# schematic submoduletest delete segment motor_on 1 120 100 # segment on sheet 1 crossing point 120 100
+# schematic submoduletest delete segment motor_on 1 200 130
+# schematic submoduletest delete segment motor_on 3 200 130
+# schematic submoduletest delete segment motor_on 3 120 100
+schematic submoduletest drag segment motor_on 1 130 100 relative 0 10 # drag net segment by dx dy
+#schematic submoduletest drag segment motor_on 1 130 100 absolute 12 10 # drag net segment to x y
 
 # check
 schematic submoduletest check integrity
@@ -72,7 +75,7 @@ schematic submoduletest check integrity
  
 # schematic submoduletest draw net CLK 2 30 40 30 50 # net segment on sheet 2 from 30/40 to 30/50
 # schematic submoduletest move label CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
-# schematic submoduletest move net CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
+
 # schematic submoduletest move net CLK 2 30 40 rel 0 5 # move point on net dx dy
 
 # 
