@@ -62,8 +62,17 @@
 # schematic submoduletest delete segment motor_on 1 200 130
 # schematic submoduletest delete segment motor_on 3 200 130
 # schematic submoduletest delete segment motor_on 3 120 100
-schematic submoduletest drag segment motor_on 1 130 100 relative 0 10 # drag net segment by dx dy
-#schematic submoduletest drag segment motor_on 1 130 100 absolute 12 10 # drag net segment to x y
+
+# Dragging a net segment requires the net name, sheet and point of attack.
+# Dragging requires further-on an argument for relative/absolute movement followed by the x and y position.
+# If movement is relative, x and y are handled as difference.
+# In the example below the net motor_on is attacked on sheet 1 at x/y 120/100. The point 120/100
+# is close to start point. So the start point will be dragged by dx/dy of 0/10.
+# The decision whether the start or end point (or both) will be dragged depends on the point of attack.
+# If the start or end point is tied to any port, no dragging will be performed.
+# Absolute dragging with the center of the segment is not supported.
+#schematic submoduletest drag segment motor_on 1 120 100 relative 0 10 # point of attack 120 100 by dx dy
+schematic submoduletest drag segment motor_on 1 120 100 absolute 90 105 # drag net segment to x y
 
 # check
 schematic submoduletest check integrity
