@@ -7,7 +7,7 @@
 
 # delete
 # schematic submoduletest delete device R1
-# schematic submoduletest delete unit R1 1
+schematic submoduletest delete unit R1 1
 
 # move
 # schematic submoduletest move unit R1 1 absolute 2 210 100 # R1 unit sheet x y
@@ -71,8 +71,10 @@
 # The decision whether the start or end point (or both) will be dragged depends on the point of attack.
 # If the start or end point is tied to any port, no dragging will be performed.
 # Absolute dragging with the center of the segment is not supported.
-#schematic submoduletest drag segment motor_on 1 120 100 relative 0 10 # point of attack 120 100 by dx dy
-schematic submoduletest drag segment motor_on 1 120 100 absolute 90 105 # drag net segment to x y
+
+# schematic submoduletest drag segment motor_on 1 110 100 relative 0 -10 # point of attack 120 100 by dx dy
+# schematic submoduletest drag segment motor_on 1 110 89 relative 0 10 # point of attack 120 100 by dx dy
+# schematic submoduletest drag segment motor_on 1 120 100 absolute 90 105 # drag net segment to x y
 
 # check
 schematic submoduletest check integrity
