@@ -72,14 +72,15 @@
 # If the start or end point is tied to any port, no dragging will be performed.
 # Absolute dragging with the center of the segment is not supported.
 
-#schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 90 100 0 S_0805
-schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 90  90 0 S_0805
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 90 100 0 S_0805
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 90  90 0 S_0805
 
-schematic submoduletest drag segment motor_on 1 110 100 relative 0 -10 # point of attack 110 100 by dx dy
+# schematic submoduletest drag segment motor_on 1 110 100 relative 0 -10 # point of attack 110 100 by dx dy
 # schematic submoduletest drag segment motor_on 1 110 89 relative 0 10 # point of attack 120 100 by dx dy
 # schematic submoduletest drag segment motor_on 1 120 100 absolute 90 105 # drag net segment to x y
 
-# schematic submoduletest draw net CLK 2 30 40 30 50 # net segment on sheet 2 from 30/40 to 30/50
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 2 40 40 0 S_0805
+schematic submoduletest draw net CLK 2 30 40 10 40 # net segment on sheet 2 from 30/40 to 10/40
 
 # check
 schematic submoduletest check integrity
@@ -88,7 +89,15 @@ schematic submoduletest check integrity
 
 # not supported yet:
 
- 
+# schematic submoduletest add submodule OSC 2 50 60
+# schematic submoduletest move port OSC absolute 30 60
+# schematic submoduletest move submodule OSC absolute 2 210 100
+# schematic submoduletest move submodule OSC relative 0 10 -15
+# schematic submoduletest delete submodule OSC
+
+# schematic submoduletest move netchanger 45 absolute 2 210 100
+# schematic submoduletest move netchanger 45 relative 0 10 -15
+# schematic submoduletest delete netchanger 45
 
 # schematic submoduletest move label CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
 
