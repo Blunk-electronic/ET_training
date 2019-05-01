@@ -79,8 +79,8 @@
 # schematic submoduletest drag segment motor_on 1 110 89 relative 0 10 # point of attack 120 100 by dx dy
 # schematic submoduletest drag segment motor_on 1 120 100 absolute 90 105 # drag net segment to x y
 
-schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 2 40 40 0 S_0805
-schematic submoduletest draw net CLK 2 30 40 10 40 # net segment on sheet 2 from 30/40 to 10/40
+#schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 2 40 40 0 S_0805
+schematic submoduletest draw net motor_on 2 200 150 10 40 # net segment on sheet 1 from 230/150 to 10/40
 
 # check
 schematic submoduletest check integrity
