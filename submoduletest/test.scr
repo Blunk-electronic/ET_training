@@ -81,10 +81,15 @@
 
 schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 0 40 0 S_0805
 schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 210 140 0 S_0805
-schematic submoduletest draw net motor_on 1 200 140 10 40 # net segment on sheet 1 from 230/150 to 10/40
-schematic submoduletest draw net motor_on 1 200 140 10 90 # net segment on sheet 1 from 230/150 to 10/40
-schematic submoduletest draw net motor_on 1 200 300 300 300 # net segment on sheet 1 from 230/150 to 10/40
-schematic submoduletest draw net motor_on 1 220 300 200 140 # net segment on sheet 1 from 230/150 to 10/40
+
+# draw net segment
+# schematic submoduletest draw net motor_on 1 200 140 10 40 # net segment on sheet 1 from 230/150 to 10/40
+# schematic submoduletest draw net motor_on 1 200 140 10 90 # net segment on sheet 1 from 230/150 to 10/40
+# schematic submoduletest draw net motor_on 1 200 300 300 300 # net segment on sheet 1 from 230/150 to 10/40
+# schematic submoduletest draw net motor_on 1 220 300 200 140 # net segment on sheet 1 from 230/150 to 10/40
+
+# add netchanger
+schematic submoduletest add netchanger 1 90 100 0 # sheet 1 x/y 90/100 rotation 0
 
 # check
 schematic submoduletest check integrity
@@ -92,6 +97,11 @@ schematic submoduletest check integrity
 
 
 # not supported yet:
+
+# schematic submoduletest drag netchanger 12 absolute 220 100
+# schematic submoduletest move netchanger 12 absolute 2 220 100
+# schematic submoduletest rotate netchanger 12 absolute 90
+
 
 # schematic submoduletest add submodule OSC 2 50 60
 # schematic submoduletest move port OSC absolute 30 60
