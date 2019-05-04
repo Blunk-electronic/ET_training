@@ -89,8 +89,9 @@ schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/pa
 # schematic submoduletest draw net motor_on 1 220 300 200 140 # net segment on sheet 1 from 230/150 to 10/40
 
 # netchangers
-schematic submoduletest add netchanger 1 90 100 0 # sheet 1 x/y 90/100 rotation 0
-schematic submoduletest delete netchanger 1
+# schematic submoduletest add netchanger 1 90 100 0 # sheet 1 x/y 90/100 rotation 0
+# schematic submoduletest add netchanger 3 200 160 90 # sheet 1 x/y 90/100 rotation 90
+# schematic submoduletest delete netchanger 12
 
 # check
 schematic submoduletest check integrity
