@@ -10,6 +10,7 @@
 # schematic submoduletest delete unit R1 1
 
 # move
+# moving a unit disconnects it from net old segments and connects it with new segments:
 # schematic submoduletest move unit R1 1 absolute 2 210 100 # R1 unit sheet x y
 # schematic submoduletest move unit R1 1 relative -1 2 4 # IC1 unit B sheet dx dy
 # schematic submoduletest move name R1 1 relative 1 -4 # R1 unit 1 dx dy
@@ -20,6 +21,7 @@
 # schematic submoduletest move purpose R1 1 absolute 210 115 # R1 unit x y
 
 # rotate
+# rotating a unit disconnects it from net old segments and connects it with new segments:
 # schematic submoduletest rotate unit R1 1 absolute -270
 # schematic submoduletest rotate unit R1 1 relative 90
 # schematic submoduletest rotate name R1 1 0
@@ -42,7 +44,7 @@
 # schematic submoduletest set partcode R1 R_PAC_S_0805_VAL_100R
 
 # add device or unit
-# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 210 150 90 S_0805 # sheet 1 x y rotation [variant]
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 4 210 150 90 S_0805 # sheet 1 x y rotation [variant]
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 250 150 90 D # sheet 1 x y rotation [variant]
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 2 250 150 0 D # sheet 1 x y rotation [variant]
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 250 150 90 D
@@ -50,9 +52,9 @@
 # schematic submoduletest invoke unit IC1 P 4 60 90 0 # device unit sheet x y rotation
 
 # nets
-#schematic submoduletest rename net motor_on motor_on_n # on all sheets
-#schematic submoduletest rename net motor_on motor_on_n 1 # only on sheet 2
-#schematic submoduletest rename net motor_on motor_on_n 3 100 100 # only on sheet 2 strand starting at point 30 45
+# schematic submoduletest rename net motor_on motor_on_n # on all sheets
+# schematic submoduletest rename net motor_on motor_on_n 1 # only on sheet 2
+# schematic submoduletest rename net motor_on motor_on_n 3 100 100 # only on sheet 2 strand starting at point 30 45
 
 # schematic submoduletest delete net motor_on # on all sheets
 # schematic submoduletest delete net motor_on 3 # only on sheet 3
@@ -93,10 +95,17 @@
 # schematic submoduletest add netchanger 3 200 160 90 # sheet 1 x/y 90/100 rotation 90
 # schematic submoduletest delete netchanger 12
 
+# moving a netchanger disconnects it from net old segments and connects it with new segments:
+# schematic submoduletest move netchanger 2 absolute 7 25 100
+# schematic submoduletest move netchanger 2 relative 0 0 10
+# schematic submoduletest move netchanger 2 absolute 2 0 -10
+# schematic submoduletest move netchanger 2 absolute 3 200 160
 
-schematic submoduletest move netchanger 12 absolute 5 220 100
-schematic submoduletest move netchanger 12 relative 1 20 10
+# schematic submoduletest drag netchanger 2 absolute 220 250
+# schematic submoduletest drag netchanger 12 relative 20 -10
 
+# rotating a netchanger disconnects it from net old segments and connects it with new segments:
+# schematic submoduletest rotate netchanger 2 relative 180
 
 # check
 schematic submoduletest check integrity
@@ -105,11 +114,7 @@ schematic submoduletest check integrity
 
 # not supported yet:
 
-#schematic submoduletest drag netchanger 12 absolute 220 100
 
-# schematic submoduletest drag netchanger 12 absolute 220 100
-# schematic submoduletest move netchanger 12 absolute 2 220 100
-# schematic submoduletest rotate netchanger 12 absolute 90
 
 
 # schematic submoduletest add submodule OSC 2 50 60
@@ -118,13 +123,8 @@ schematic submoduletest check integrity
 # schematic submoduletest move submodule OSC relative 0 10 -15
 # schematic submoduletest delete submodule OSC
 
-# schematic submoduletest move netchanger 45 absolute 2 210 100
-# schematic submoduletest move netchanger 45 relative 0 10 -15
-# schematic submoduletest delete netchanger 45
 
 # schematic submoduletest move label CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
-
-# schematic submoduletest move net CLK 2 30 40 rel 0 5 # move point on net dx dy
 
 # 
 # schematic submoduletest write text 2 50 50 "hello"
