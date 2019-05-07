@@ -1,16 +1,22 @@
-# domain module verb noun parameter[s]
+# This is a sample script. Comments start with #. 
+# A short description on a command starts with ##.
+# Leave the lines related to the command description in comments.
+# Otherwise ET tries to interpret them and will most certainly complain.
+# Most commands have a verb-noun structure. Their meaning should be obvious.
 
-# set domain schematic
-# set module submoduletest
+# DOMAIN MODULE VERB NOUN PARAMETER[S]
+
 
 # supported commands:
 
-# delete
+## DELETING DEVICES AND UNITS
+#############################
 # schematic submoduletest delete device R1
 # schematic submoduletest delete unit R1 1
 
-# move
-# moving a unit disconnects it from net old segments and connects it with new segments:
+## MOVING UNITS AND PLACEHOLDERS FOR UNIT NAMES, VALUES AND PURPOSE
+## moving a unit disconnects it from net old segments and connects it with new segments.
+###############################################################################################
 # schematic submoduletest move unit R1 1 absolute 2 210 100 # R1 unit sheet x y
 # schematic submoduletest move unit R1 1 relative -1 2 4 # IC1 unit B sheet dx dy
 # schematic submoduletest move name R1 1 relative 1 -4 # R1 unit 1 dx dy
@@ -20,42 +26,54 @@
 # schematic submoduletest move purpose R1 1 relative 1 -4 # R1 unit 1 dx dy
 # schematic submoduletest move purpose R1 1 absolute 210 115 # R1 unit x y
 
-# rotate
-# rotating a unit disconnects it from net old segments and connects it with new segments:
+## ROTATING UNITS AND PLACEHOLDERS FOR UNIT NAMES, VALUES AND PURPOSE
+## rotating a unit disconnects it from net old segments and connects it with new segments.
+###############################################################################################
 # schematic submoduletest rotate unit R1 1 absolute -270
 # schematic submoduletest rotate unit R1 1 relative 90
 # schematic submoduletest rotate name R1 1 0
 # schematic submoduletest rotate value R1 1 90
 # schematic submoduletest rotate purpose R1 1 0
 
-# drag
+## DRAGGING UNITS
+## Dragging a unit drags the connected net segments too.
+## If ports of the unit end up where a net segment is, they are connected.
+###############################################################################################
 # schematic submoduletest drag unit R1 1 absolute 220 100 # R1 unit x y
 # schematic submoduletest drag unit R1 1 relative 10 0 # IC1 unit B x y
 
-# junction
+## PLACING A JUNCTION
+###############################################################################################
 # schematic submoduletest place junction 1 230 100 # sheet x y
 
-# rename
+## RENAMING A DEVICE
+###############################################################################################
 # schematic submoduletest rename device R1 R100
 
-# set value, purpose, partcode of a device
+## SETTING VALUE, PURPOSE, PARTCODE
+###############################################################################################
 # schematic submoduletest set value R1 2k2
 # schematic submoduletest set purpose R1 "brightnesss_control"
 # schematic submoduletest set partcode R1 R_PAC_S_0805_VAL_100R
 
-# add device or unit
+## ADDING A DEVICE OR UNIT
+###############################################################################################
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 4 210 150 90 S_0805 # sheet 1 x y rotation [variant]
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 250 150 90 D # sheet 1 x y rotation [variant]
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 2 250 150 0 D # sheet 1 x y rotation [variant]
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 250 150 90 D
 # schematic submoduletest invoke unit IC1 B 1 60 90 0 # device unit sheet x y rotation
 # schematic submoduletest invoke unit IC1 P 4 60 90 0 # device unit sheet x y rotation
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 90 100 0 S_0805
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 90  90 0 S_0805
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 0 40 0 S_0805
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 210 140 0 S_0805
 
-# nets
+## DRAWING NETS AND NET SEGMENTS
+###############################################################################################
 # schematic submoduletest rename net motor_on motor_on_n # on all sheets
 # schematic submoduletest rename net motor_on motor_on_n 1 # only on sheet 2
 # schematic submoduletest rename net motor_on motor_on_n 3 100 100 # only on sheet 2 strand starting at point 30 45
-
 # schematic submoduletest delete net motor_on # on all sheets
 # schematic submoduletest delete net motor_on 3 # only on sheet 3
 # schematic submoduletest delete net motor_on 3 100 100 # only on sheet 3 strand starting at point 100 100
@@ -65,49 +83,46 @@
 # schematic submoduletest delete segment motor_on 3 200 130
 # schematic submoduletest delete segment motor_on 3 120 100
 
-# Dragging a net segment requires the net name, sheet and point of attack.
-# Dragging requires further-on an argument for relative/absolute movement followed by the x and y position.
-# If movement is relative, x and y are handled as difference.
-# In the example below the net motor_on is attacked on sheet 1 at x/y 120/100. The point 120/100
-# is close to start point. So the start point will be dragged by dx/dy of 0/10.
-# The decision whether the start or end point (or both) will be dragged depends on the point of attack.
-# If the start or end point is tied to any port, no dragging will be performed.
-# Absolute dragging with the center of the segment is not supported.
-
-# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 90 100 0 S_0805
-# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 90  90 0 S_0805
+## Dragging a net segment requires the net name, sheet and point of attack.
+## Dragging requires further-on an argument for relative/absolute movement followed by the x and y position.
+## If movement is relative, x and y are handled as difference.
+## In the example below the net motor_on is attacked on sheet 1 at x/y 120/100. The point 120/100
+## is close to start point. So the start point will be dragged by dx/dy of 0/10.
+## The decision whether the start or end point (or both) will be dragged depends on the point of attack.
+## If the start or end point is tied to any port, no dragging will be performed.
+## Absolute dragging with the center of the segment is not supported.
 
 # schematic submoduletest drag segment motor_on 1 110 100 relative 0 -10 # point of attack 110 100 by dx dy
 # schematic submoduletest drag segment motor_on 1 110 89 relative 0 10 # point of attack 120 100 by dx dy
 # schematic submoduletest drag segment motor_on 1 120 100 absolute 90 105 # drag net segment to x y
 
-# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 0 40 0 S_0805
-# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 210 140 0 S_0805
-
-# draw net segment
 # schematic submoduletest draw net motor_on 1 200 140 10 40 # net segment on sheet 1 from 230/150 to 10/40
 # schematic submoduletest draw net motor_on 1 200 140 10 90 # net segment on sheet 1 from 230/150 to 10/40
 # schematic submoduletest draw net motor_on 1 200 300 300 300 # net segment on sheet 1 from 230/150 to 10/40
 # schematic submoduletest draw net motor_on 1 220 300 200 140 # net segment on sheet 1 from 230/150 to 10/40
 
-# netchangers
+## PLACING NETCHANGERS, MOVING, DRAGGING, DELETING
+###############################################################################################
 # schematic submoduletest add netchanger 1 90 100 0 # sheet 1 x/y 90/100 rotation 0
 # schematic submoduletest add netchanger 3 200 160 90 # sheet 1 x/y 90/100 rotation 90
 # schematic submoduletest delete netchanger 12
 
-# moving a netchanger disconnects it from net old segments and connects it with new segments:
+## Moving a netchanger disconnects it from net old segments and connects it with new segments:
 # schematic submoduletest move netchanger 2 absolute 7 25 100
 # schematic submoduletest move netchanger 2 relative 0 0 10
 # schematic submoduletest move netchanger 2 absolute 2 0 -10
 # schematic submoduletest move netchanger 2 absolute 3 200 160
 
+## Dragging a netchanger drags connected segment too:
 # schematic submoduletest drag netchanger 2 absolute 220 250
 # schematic submoduletest drag netchanger 12 relative 20 -10
 
-# rotating a netchanger disconnects it from net old segments and connects it with new segments:
+## Rotating a netchanger disconnects it from net old segments and connects it with new segments:
 # schematic submoduletest rotate netchanger 2 relative 180
 
-# check
+
+## ERC / DATABASE INTEGRITY CHECK
+###############################################################################################
 schematic submoduletest check integrity
 
 
@@ -115,6 +130,8 @@ schematic submoduletest check integrity
 # not supported yet:
 
 
+# set domain schematic
+# set module submoduletest
 
 
 # schematic submoduletest add submodule OSC 2 50 60
