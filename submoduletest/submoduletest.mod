@@ -112,7 +112,7 @@
 		size x 20 y 20
 		position_in_board x 232 y 310 rotation 0
 		view_mode origin
-		reference_offset 100
+		device_names_offset 100
 		[PORTS BEGIN]
 			[PORT BEGIN]
 				name out
