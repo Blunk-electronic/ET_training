@@ -17,71 +17,49 @@
 
 [NETS BEGIN]
 	[NET BEGIN]
-		name motor_on
+		name out
 		class default
 		scope local
 		[STRANDS BEGIN]
 			[STRAND BEGIN]
-				position sheet 1 x 100.00 y 100.00
+				position sheet 1 x 100 y 100
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
 						start x 100 y 100
 						end x 200 y 100
-						junction end
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x 100 y 100
+								rotation 0
+								size 1.30
+								style normal
+								line_width 0.00
+								appearance simple
+							[LABEL END]
+						[LABELS END]
 						[PORTS BEGIN]
-							submodule CLK_GENERATOR port out
 							device R1 port 1
-						[PORTS END]
-					[SEGMENT END]
-
-					[SEGMENT BEGIN]
-						start x 200 y 100
-						end x 200 y 150
-					[SEGMENT END]
-					
-				[SEGMENTS END]
-			[STRAND END]
-
-			[STRAND BEGIN]
-				position sheet 3 x 100.00 y 100.00
-				[SEGMENTS BEGIN]
-					[SEGMENT BEGIN]
-						start x 100 y 100
-						end x 200 y 100
-					[SEGMENT END]
-
-					[SEGMENT BEGIN]
-						start x 200 y 100
-						end x 200 y 150
-					[SEGMENT END]
-					
-				[SEGMENTS END]
-			[STRAND END]
-			
-		[STRANDS END]
-	[NET END]
-
-	[NET BEGIN]
-		name motor_on_res
-		class default
-		scope local
-		[STRANDS BEGIN]
-			[STRAND BEGIN]
-				position sheet 1 x 220.00 y 100.00
-				[SEGMENTS BEGIN]
-					[SEGMENT BEGIN]
-						start x 220 y 100
-						end x 300 y 100
-						[PORTS BEGIN]
-							device R1 port 2
+							netchanger 1 port master
+							netchanger 3 port slave
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
-			[STRAND END]			
+			[STRAND END]
 		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
 	[NET END]
-
 [NETS END]
+
+[NETCHANGERS BEGIN]
+	[NETCHANGER BEGIN]
+		name 1
+		position_in_schematic sheet 1 x 215 y 100
+		rotation_in_schematic 0
+		position_in_board x 234.4 y 99.0
+		layer 3
+	[NETCHANGER END]
+[NETCHANGERS END]
 
 [DRAWING_FRAMES BEGIN]
 	[SCHEMATIC BEGIN]
@@ -95,7 +73,7 @@
 [TEXTS BEGIN]
 	[TEXT BEGIN]
 		position sheet 1 x 100 y 200
-		content "ET Test Circuit"
+		content "clock generator template"
 		size 1.70
 		line_width 0.33
 		rotation 0
@@ -104,59 +82,14 @@
 	[TEXT END]
 [TEXTS END]
 
-[SUBMODULES BEGIN]
-	[SUBMODULE BEGIN]
-		name CLK_GENERATOR
-
-		--file templates/clock_generator.mod
-		--file ../templates/clock_generator.mod
-		--file /home/luno/tmp/templates/clock_generator.mod
-		file $TEMPLATES/clock_generator.mod
-		position sheet 1 x 150 y 85
-		size x 20 y 20
-		position_in_board x 232 y 310 rotation 0
-		view_mode origin
-		device_names_offset 100
-		[PORTS BEGIN]
-			[PORT BEGIN]
-				name out
-				position x 0 y 10
-			[PORT END]
-			[PORT BEGIN]
-				name out2
-				position x 1 y 10
-			[PORT END]
-		[PORTS END]
-	[SUBMODULE END]
-[SUBMODULES END]
-
-[NETCHANGERS BEGIN]
-	[NETCHANGER BEGIN]
-		name 1
-		position_in_schematic sheet 1 x 215 y 100
-		rotation_in_schematic 0
-		position_in_board x 234.4 y 99.0
-		layer 3
-	[NETCHANGER END]
-
-	[NETCHANGER BEGIN]
-		name 12
-		position_in_schematic sheet 2 x 215 y 100
-		rotation_in_schematic 0
-		position_in_board x 234.4 y 99.0
-		layer 3
-	[NETCHANGER END]	
-	
-[NETCHANGERS END]
-
 [DEVICES BEGIN]
 	[DEVICE BEGIN]
-		name R1
+		name R78
 		appearance sch_pcb
 		model $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev
-		value 100R
+		value 1k2
 		variant S_0805
-		partcode R_PAC_S_0805_VAL_100R
+		partcode R_PAC_S_0805_VAL_1k2
 		purpose "dummy"
 		bom yes
 		[PACKAGE BEGIN]
@@ -183,7 +116,7 @@
 		[UNITS BEGIN]
 			[UNIT BEGIN]
 				name 1
-				position sheet 1 x 210 y 100
+				position sheet 1 x 215 y 100
 				rotation 0
 				mirrored no
 				[PLACEHOLDERS BEGIN]
@@ -212,20 +145,6 @@
 [DEVICES END]
 
 [BOARD BEGIN]
-	[PCB_CONTOURS_NON_PLATED BEGIN]
-		[ARC BEGIN]
-			center x 150.000 y 75.000
-			start x 155.000 y 70.000
-			end x 0.000 y 210.000
-			locked no
-		[ARC END]
-		[ARC BEGIN]
-			center x 145.000 y 110.000
-			start x 150.000 y 115.000
-			end x 0.000 y 210.000
-			locked no
-		[ARC END]
-	[PCB_CONTOURS_NON_PLATED END]
 [BOARD END]
 
 -- ====================================================================================================
