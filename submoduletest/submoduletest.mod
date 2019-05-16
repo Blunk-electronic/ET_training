@@ -122,10 +122,6 @@
 				name out
 				position x 0 y 10
 			[PORT END]
-			[PORT BEGIN]
-				name out2
-				position x 1 y 10
-			[PORT END]
 		[PORTS END]
 	[SUBMODULE END]
 [SUBMODULES END]

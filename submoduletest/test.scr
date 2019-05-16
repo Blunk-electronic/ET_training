@@ -122,8 +122,8 @@
 
 
 #schematic submoduletest add submodule templates/clock_generator.mod OSC 2 50 60 20 20 # file instance sheet/x/y size_x/size_y
-#schematic submoduletest add submodule templates/clock_generator.mod OSC2 2 50 60 20 20 # file instance sheet/x/y size_x/size_y
-#schematic submoduletest add port OSC vcc_1 10 0
+schematic submoduletest add submodule templates/clock_generator.mod OSC2 2 50 60 20 20 # file instance sheet/x/y size_x/size_y
+schematic submoduletest add port OSC2 out 10 0
 #schematic submoduletest add port OSC vcc_2 20 0
 
 # schematic submoduletest set viewmode OSC origin/instance

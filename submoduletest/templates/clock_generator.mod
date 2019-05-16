@@ -39,8 +39,7 @@
 						[LABELS END]
 						[PORTS BEGIN]
 							device R1 port 1
-							netchanger 1 port master
-							netchanger 3 port slave
+							netchanger 1 port slave
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
