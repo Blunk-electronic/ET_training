@@ -108,10 +108,10 @@
 	[SUBMODULE BEGIN]
 		name CLK_GENERATOR
 
-		--file templates/clock_generator.mod
+		file templates/clock_generator.mod
 		--file ../templates/clock_generator.mod
 		--file /home/luno/tmp/templates/clock_generator.mod
-		file $TEMPLATES/clock_generator.mod
+		--file $TEMPLATES/clock_generator.mod
 		position sheet 1 x 150 y 85
 		size x 20 y 20
 		position_in_board x 232 y 310 rotation 0

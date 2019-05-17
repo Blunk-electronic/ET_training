@@ -120,14 +120,11 @@
 ## Rotating a netchanger disconnects it from net old segments and connects it with new segments:
 # schematic submoduletest rotate netchanger 2 relative 180
 
+schematic submoduletest add submodule templates/clock_generator.mod OSC2 1 300 90 30 30 # file instance sheet/x/y size_x/size_y
+schematic submoduletest add port OSC2 out 0 10
+schematic submoduletest delete port OSC2 out
 
-#schematic submoduletest add submodule templates/clock_generator.mod OSC 2 50 60 20 20 # file instance sheet/x/y size_x/size_y
-schematic submoduletest add submodule templates/clock_generator.mod OSC2 2 50 60 20 20 # file instance sheet/x/y size_x/size_y
-schematic submoduletest add port OSC2 out 10 0
-#schematic submoduletest add port OSC vcc_2 20 0
 
-# schematic submoduletest set viewmode OSC origin/instance
-# schematic submoduletest set device_name_offset OSC 100
 
 
 
@@ -141,6 +138,8 @@ schematic submoduletest check integrity
 
 # not supported yet:
 
+# schematic submoduletest set viewmode OSC origin/instance
+# schematic submoduletest set device_name_offset OSC 100
 
 # set domain schematic
 # set module submoduletest
@@ -148,7 +147,6 @@ schematic submoduletest check integrity
 # copying devices and submodules
 # set class of a net
 
-# schematic submoduletest add submodule OSC 2 50 60
 # schematic submoduletest move port OSC absolute 30 60
 # schematic submoduletest move submodule OSC absolute 2 210 100
 # schematic submoduletest move submodule OSC relative 0 10 -15
