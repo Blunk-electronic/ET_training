@@ -126,8 +126,8 @@ schematic submoduletest add port OSC2 out 0 10
 # schematic submoduletest move port OSC2 out absolute 300 100
 # schematic submoduletest move port OSC2 out relative 0 10
 # schematic submoduletest move port OSC2 out relative 0 -10
-
-
+# schematic submoduletest drag port OSC2 out relative 0 -10
+# schematic submoduletest drag port OSC2 out absolute 300 110
 
 
 
@@ -141,6 +141,13 @@ schematic submoduletest check integrity
 
 # not supported yet:
 
+
+# schematic submoduletest move submodule OSC absolute 2 210 100
+# schematic submoduletest move submodule OSC relative 0 10 -15
+# schematic submoduletest delete submodule OSC
+
+
+
 # schematic submoduletest set viewmode OSC origin/instance
 # schematic submoduletest set device_name_offset OSC 100
 
@@ -149,11 +156,6 @@ schematic submoduletest check integrity
 
 # copying devices and submodules
 # set class of a net
-
-# schematic submoduletest move port OSC absolute 30 60
-# schematic submoduletest move submodule OSC absolute 2 210 100
-# schematic submoduletest move submodule OSC relative 0 10 -15
-# schematic submoduletest delete submodule OSC
 
 
 # schematic submoduletest move label CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
