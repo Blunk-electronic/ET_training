@@ -120,15 +120,23 @@
 ## Rotating a netchanger disconnects it from net old segments and connects it with new segments:
 # schematic submoduletest rotate netchanger 2 relative 180
 
-# schematic submoduletest add submodule templates/clock_generator.mod OSC2 1 300 90 30 30 # file instance sheet/x/y size_x/size_y
-# schematic submoduletest add port OSC2 out 0 10
+schematic submoduletest add submodule templates/clock_generator.mod OSC2 1 300 90 30 30 # file instance sheet/x/y size_x/size_y
+schematic submoduletest add port OSC2 out 0 10
 # schematic submoduletest delete port OSC2 out
 # schematic submoduletest move port OSC2 out absolute 300 100
 # schematic submoduletest move port OSC2 out relative 0 10
 # schematic submoduletest move port OSC2 out relative 0 -10
 # schematic submoduletest drag port OSC2 out relative 0 -10
 # schematic submoduletest drag port OSC2 out absolute 300 110
-schematic submoduletest delete submodule CLK_GENERATOR
+# schematic submoduletest delete submodule CLK_GENERATOR
+
+# schematic submoduletest move submodule CLK_GENERATOR absolute 4 210 100
+# schematic submoduletest move submodule CLK_GENERATOR relative 2 0 0
+# schematic submoduletest move submodule CLK_GENERATOR absolute 1 300 90
+# schematic submoduletest move submodule OSC relative 0 10 -15
+
+schematic submoduletest drag submodule OSC2 relative 0 10
+# schematic submoduletest drag submodule OSC2 absolute 110 210
 
 
 ## ERC / DATABASE INTEGRITY CHECK
@@ -142,10 +150,6 @@ schematic submoduletest check integrity
 # not supported yet:
 
 
-# schematic submoduletest move submodule OSC absolute 2 210 100
-# schematic submoduletest move submodule OSC relative 0 10 -15
-
-
 
 
 # schematic submoduletest set viewmode OSC origin/instance
@@ -155,6 +159,7 @@ schematic submoduletest check integrity
 # set module submoduletest
 
 # copying devices and submodules
+
 # set class of a net
 
 

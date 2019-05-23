@@ -29,7 +29,6 @@
 						end x 200 y 100
 						junction end
 						[PORTS BEGIN]
-							submodule CLK_GENERATOR port out
 							device R1 port 1
 						[PORTS END]
 					[SEGMENT END]
