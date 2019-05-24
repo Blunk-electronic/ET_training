@@ -126,8 +126,12 @@ schematic submoduletest add port OSC2 out 0 10
 # schematic submoduletest move port OSC2 out absolute 300 100
 # schematic submoduletest move port OSC2 out relative 0 10
 # schematic submoduletest move port OSC2 out relative 0 -10
+
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 310 100 0 S_0805
+# dragging is not possible if above statement is un-commented:
 # schematic submoduletest drag port OSC2 out relative 0 -10
 # schematic submoduletest drag port OSC2 out absolute 300 110
+
 # schematic submoduletest delete submodule CLK_GENERATOR
 
 # schematic submoduletest move submodule CLK_GENERATOR absolute 4 210 100
@@ -135,7 +139,9 @@ schematic submoduletest add port OSC2 out 0 10
 # schematic submoduletest move submodule CLK_GENERATOR absolute 1 300 90
 # schematic submoduletest move submodule OSC relative 0 10 -15
 
-schematic submoduletest drag submodule OSC2 relative 0 10
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 310 100 0 S_0805
+# dragging is not possible if above statement is un-commented:
+# schematic submoduletest drag submodule OSC2 relative 0 10
 # schematic submoduletest drag submodule OSC2 absolute 110 210
 
 
@@ -162,6 +168,7 @@ schematic submoduletest check integrity
 
 # set class of a net
 
+# set accessories of devices
 
 # schematic submoduletest move label CLK 2 30 40 30 50 rel 0 10 # move net segment dx dy
 
