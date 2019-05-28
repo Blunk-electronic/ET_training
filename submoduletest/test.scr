@@ -56,7 +56,7 @@
 # schematic submoduletest set purpose R1 "brightnesss_control"
 # schematic submoduletest set partcode R1 R_PAC_S_0805_VAL_100R
 
-## ADDING A DEVICE OR UNIT
+## ADDING, COPYING A DEVICE OR UNIT
 ###############################################################################################
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 4 210 150 90 S_0805 # sheet 1 x y rotation [variant]
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 250 150 90 D # sheet 1 x y rotation [variant]
@@ -68,6 +68,8 @@
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 90  90 0 S_0805
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 0 40 0 S_0805
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 210 140 0 S_0805
+# schematic submoduletest copy device R1 1 210 100 0
+
 
 ## DRAWING NETS AND NET SEGMENTS
 ###############################################################################################
@@ -120,6 +122,9 @@
 ## Rotating a netchanger disconnects it from net old segments and connects it with new segments:
 # schematic submoduletest rotate netchanger 2 relative 180
 
+## ADDING, MOVING, DELETING, COPYING SUBMODULES
+## ADDING, MOVING, DELETING SUBMODULE PORTS
+###############################################################################################
 schematic submoduletest add submodule templates/clock_generator.mod OSC2 1 300 90 30 30 # file instance sheet/x/y size_x/size_y
 schematic submoduletest add port OSC2 out 0 10
 # schematic submoduletest delete port OSC2 out
@@ -143,6 +148,8 @@ schematic submoduletest add port OSC2 out 0 10
 # dragging is not possible if above statement is un-commented:
 # schematic submoduletest drag submodule OSC2 relative 0 10
 # schematic submoduletest drag submodule OSC2 absolute 110 210
+
+schematic submoduletest copy submodule OSC2 PM 1 300 90 # origin new sheet/x/y
 
 
 ## ERC / DATABASE INTEGRITY CHECK
