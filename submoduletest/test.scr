@@ -149,8 +149,9 @@ schematic submoduletest add port OSC2 out 0 10
 # schematic submoduletest drag submodule OSC2 relative 0 10
 # schematic submoduletest drag submodule OSC2 absolute 110 210
 
-schematic submoduletest copy submodule OSC2 PM 1 300 90 # origin new sheet/x/y
-
+# schematic submoduletest copy submodule OSC2 PM 1 300 90 # origin new sheet/x/y
+# schematic submoduletest add port OSC2 out 0 10
+# schematic submoduletest set submodule_file OSC2 templates/pacemaker.mod
 
 ## ERC / DATABASE INTEGRITY CHECK
 ###############################################################################################
@@ -166,12 +167,12 @@ schematic submoduletest check integrity
 
 
 # schematic submoduletest set viewmode OSC origin/instance
+
 # schematic submoduletest set device_name_offset OSC 100
 
 # set domain schematic
 # set module submoduletest
 
-# copying devices and submodules
 
 # set class of a net
 
