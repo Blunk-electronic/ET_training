@@ -125,8 +125,8 @@
 ## ADDING, MOVING, DELETING, COPYING SUBMODULES
 ## ADDING, MOVING, DELETING SUBMODULE PORTS
 ###############################################################################################
-schematic submoduletest add submodule templates/clock_generator.mod OSC2 1 300 90 30 30 # file instance sheet/x/y size_x/size_y
-schematic submoduletest add port OSC2 out 0 10
+# schematic submoduletest add submodule templates/clock_generator.mod OSC2 1 300 90 30 30 # file instance sheet/x/y size_x/size_y
+# schematic submoduletest add port OSC2 out 0 10
 # schematic submoduletest delete port OSC2 out
 # schematic submoduletest move port OSC2 out absolute 300 100
 # schematic submoduletest move port OSC2 out relative 0 10
@@ -152,6 +152,15 @@ schematic submoduletest add port OSC2 out 0 10
 # schematic submoduletest copy submodule OSC2 PM 1 300 90 # origin new sheet/x/y
 # schematic submoduletest add port OSC2 out 0 10
 # schematic submoduletest set submodule_file OSC2 templates/pacemaker.mod
+
+## NET LABELS
+# simple label:
+schematic submoduletest place label 1 120 100 0  5 90        # sheet 1 x 120 y 100 relative 0/5  angle 90
+# tag label (or off page label):
+schematic submoduletest place label 1 120 100 0 -5 90 output # sheet 1 x 120 y 100 relative 0/-5 angle 90 direction
+
+schematic submoduletest delete label 1 120 105 # sheet 1 x 120 y 105
+schematic submoduletest delete label 1 120  95 # sheet 1 x 120 y 95
 
 ## ERC / DATABASE INTEGRITY CHECK
 ###############################################################################################
