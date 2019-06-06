@@ -206,6 +206,23 @@
 	[DEVICE END]
 [DEVICES END]
 
+[ASSEMBLY_VARIANTS BEGIN]
+	[VARIANT BEGIN]
+		name low_cost
+		description "Assembly variant without temperature sensor."
+		device R1 not_mounted
+		device R2 value 270R partcode 12345 purpose "set temperature"
+	[VARIANT END]
+
+	[VARIANT BEGIN]
+		name comfortable
+		description "Assembly variant with all features."
+		device R10 not_mounted
+		device R12 value 270R partcode 12345 purpose "set temperature"
+	[VARIANT END]
+	
+[ASSEMBLY_VARIANTS END]
+
 [BOARD BEGIN]
 	[PCB_CONTOURS_NON_PLATED BEGIN]
 		[ARC BEGIN]
