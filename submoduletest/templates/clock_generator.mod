@@ -90,7 +90,6 @@
 		variant S_0805
 		partcode R_PAC_S_0805_VAL_1k2
 		purpose "dummy"
-		bom yes
 		[PACKAGE BEGIN]
 			position x 0 y 0 rotation 0.0 face top
 			[PLACEHOLDERS BEGIN]

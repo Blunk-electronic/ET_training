@@ -162,6 +162,15 @@ schematic submoduletest place label 1 120 100 0 -5 90 output # sheet 1 x 120 y 1
 schematic submoduletest delete label 1 120 105 # sheet 1 x 120 y 105
 schematic submoduletest delete label 1 120  95 # sheet 1 x 120 y 95
 
+## ASSEMBLY VARIANTS
+schematic submoduletest create variant low_cost_B
+schematic submoduletest describe variant low_cost_B "this is the low budget version B"
+schematic submoduletest delete variant low_cost_B
+# schematic submoduletest mount device low_cost_B R1 220R R_PAC_S_0805_VAL_220R brightnesss_control
+# schematic submoduletest unmount device low_cost_B R1
+# schematic submoduletest mount submodule OSC2 fixed_frequency
+
+
 ## ERC / DATABASE INTEGRITY CHECK
 ###############################################################################################
 schematic submoduletest check integrity
