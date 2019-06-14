@@ -165,10 +165,13 @@ schematic submoduletest delete label 1 120  95 # sheet 1 x 120 y 95
 ## ASSEMBLY VARIANTS
 schematic submoduletest create variant low_cost_B
 schematic submoduletest describe variant low_cost_B "this is the low budget version B"
-schematic submoduletest delete variant low_cost_B
-# schematic submoduletest mount device low_cost_B R1 220R R_PAC_S_0805_VAL_220R brightnesss_control
-# schematic submoduletest unmount device low_cost_B R1
-# schematic submoduletest mount submodule OSC2 fixed_frequency
+#schematic submoduletest delete variant low_cost_B
+
+#schematic submoduletest mount device low_cost_B R1 270R R_PAC_S_0805_VAL_270R
+schematic submoduletest mount device low_cost_B R1 220R R_PAC_S_0805_VAL_220R brightness_control
+#schematic submoduletest remove device low_cost_B R1
+
+
 
 
 ## ERC / DATABASE INTEGRITY CHECK
@@ -182,6 +185,7 @@ schematic submoduletest check integrity
 # not supported yet:
 
 
+# schematic submoduletest mount submodule OSC2 fixed_frequency
 
 
 # schematic submoduletest set viewmode OSC origin/instance
