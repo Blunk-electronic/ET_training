@@ -142,6 +142,14 @@
 	[DEVICE END]
 [DEVICES END]
 
+[ASSEMBLY_VARIANTS BEGIN]
+	[VARIANT BEGIN]
+		name fixed_frequency
+		description "Assembly variant with fixed frequency."
+		device R78 not_mounted
+	[VARIANT END]
+[ASSEMBLY_VARIANTS END]
+
 [BOARD BEGIN]
 [BOARD END]
 

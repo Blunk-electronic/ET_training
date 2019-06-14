@@ -218,6 +218,8 @@
 		description "Assembly variant with all features."
 		device R1 not_mounted
 		--device R1 value 270R partcode 12345 purpose "set temperature"
+		submodule CLK_GENERATOR variant fixed_frequency
+		submodule CLK_GENERATOR2 variant fixed_frequency
 	[VARIANT END]
 	
 [ASSEMBLY_VARIANTS END]
