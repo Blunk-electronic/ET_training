@@ -176,6 +176,8 @@ schematic submoduletest mount submodule low_cost_B CLK_GENERATOR fixed_frequency
 schematic submoduletest remove submodule low_cost_B CLK_GENERATOR
 
 
+schematic submoduletest set device_name_offset CLK_GENERATOR 300
+
 
 ## ERC / DATABASE INTEGRITY CHECK
 ###############################################################################################
@@ -192,7 +194,7 @@ schematic submoduletest check integrity
 
 # schematic submoduletest set viewmode OSC origin/instance
 
-# schematic submoduletest set device_name_offset OSC 100
+
 
 # set domain schematic
 # set module submoduletest
