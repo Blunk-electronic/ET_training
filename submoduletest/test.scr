@@ -172,6 +172,9 @@ schematic submoduletest mount device low_cost_B R1 220R R_PAC_S_0805_VAL_220R br
 #schematic submoduletest remove device low_cost_B R1
 
 
+schematic submoduletest mount submodule low_cost_B CLK_GENERATOR fixed_frequency # variant parent, submod instance, submod variant
+schematic submoduletest remove submodule low_cost_B CLK_GENERATOR
+
 
 
 ## ERC / DATABASE INTEGRITY CHECK
@@ -185,7 +188,6 @@ schematic submoduletest check integrity
 # not supported yet:
 
 
-# schematic submoduletest mount submodule OSC2 fixed_frequency
 
 
 # schematic submoduletest set viewmode OSC origin/instance
