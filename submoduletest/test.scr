@@ -183,6 +183,8 @@ schematic submoduletest copy device R1 2 60 60 0
 
 
 #schematic submoduletest renumber devices 100
+
+schematic submoduletest build submodules_tree
 #schematic submoduletest calculate device_index_ranges
 
 
