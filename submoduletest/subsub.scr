@@ -1,0 +1,28 @@
+# This is a sample script. Comments start with #. 
+# A short description on a command starts with ##.
+# Leave the lines related to the command description in comments.
+# Otherwise ET tries to interpret them and will most certainly complain.
+# Most commands have a verb-noun structure. Their meaning should be obvious.
+
+# DOMAIN MODULE VERB NOUN PARAMETER[S]
+
+
+schematic templates/clock_generator add submodule templates/filter.mod FLT1 1 300 90 30 30
+schematic submoduletest add submodule templates/filter.mod FLT1 1 300 90 30 30
+
+schematic submoduletest build submodules_tree
+
+#schematic submoduletest set device_name_offset CLK_GENERATOR 300
+
+schematic submoduletest calculate device_index_ranges
+
+
+
+## ERC / DATABASE INTEGRITY CHECK
+###############################################################################################
+schematic submoduletest check integrity
+
+
+
+
+# script end
