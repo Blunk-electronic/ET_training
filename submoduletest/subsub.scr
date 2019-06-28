@@ -8,11 +8,12 @@
 
 
 schematic templates/clock_generator add submodule templates/filter.mod FLT1 1 300 90 30 30
-schematic submoduletest add submodule templates/filter.mod FLT1 1 300 90 30 30
+schematic submoduletest add submodule templates/filter.mod FLT2 1 300 90 30 30
 
 schematic submoduletest build submodules_tree
 
-#schematic submoduletest set device_name_offset CLK_GENERATOR 300
+#schematic templates/clock_generator set device_name_offset FLT1 300
+#schematic templates/filter set device_name_offset FLT2 300
 
 schematic submoduletest calculate device_index_ranges
 
