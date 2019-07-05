@@ -170,6 +170,7 @@ schematic submoduletest add port OSC2 out 0 10
 
 # schematic submoduletest mount device low_cost_B R1 270R R_PAC_S_0805_VAL_270R
 # schematic submoduletest mount device low_cost_B R1 220R R_PAC_S_0805_VAL_220R brightness_control
+# schematic submoduletest unmount device low_cost R1
 # schematic submoduletest remove device low_cost_B R1
 
 # schematic submoduletest mount submodule low_cost_B CLK_GENERATOR fixed_frequency # variant parent, submod instance, submod variant
@@ -186,8 +187,8 @@ schematic submoduletest copy device R1 2 60 60 0
 
 #schematic templates/clock_generator add submodule templates/clock_generator.mod LOCAL_OSC 1 300 90 30 30
 
-#schematic submoduletest build submodules_tree
-#schematic submoduletest calculate device_index_ranges
+# schematic submoduletest build submodules_tree # automatically executed after adding, copying or deleting a submodule instance
+# schematic submoduletest set device_name_offsets
 
 
 

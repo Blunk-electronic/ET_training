@@ -6,17 +6,30 @@
 
 # DOMAIN MODULE VERB NOUN PARAMETER[S]
 
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 3 10 20 0 S_0805 # sheet 1 x y rotation [variant]
+#schematic submoduletest remove device low_cost R1
+schematic submoduletest unmount device low_cost R1
+
+schematic templates/clock_generator add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 10 10 0 S_0805 # sheet 1 x y rotation [variant]
+schematic templates/clock_generator add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 10 20 0 S_0805 # sheet 2 x y rotation [variant]
+schematic templates/clock_generator add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 10 30 0 S_0805 # sheet 3 x y rotation [variant]
+
+
+schematic templates/filter add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 10 20 0 S_0805 # sheet 1 x y rotation [variant]
+schematic templates/filter add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 2 10 30 0 S_0805 # sheet 1 x y rotation [variant]
+schematic templates/filter add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 3 10 10 0 S_0805 # sheet 1 x y rotation [variant]
+schematic templates/filter add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 4 10 10 0 S_0805 # sheet 1 x y rotation [variant]
 
 schematic templates/clock_generator add submodule templates/filter.mod FLT1 1 300 90 30 30
-schematic submoduletest add submodule templates/filter.mod FLT2 1 300 90 30 30
 
-schematic submoduletest build submodules_tree
+schematic submoduletest add submodule templates/filter.mod FLT2 1 300 90 30 30
 
 #schematic templates/clock_generator set device_name_offset FLT1 300
 #schematic templates/filter set device_name_offset FLT2 300
 
-schematic submoduletest calculate device_index_ranges
+schematic submoduletest set device_name_offsets
 
+schematic submoduletest make bom CAM/bom.csv low_cost # bom file, [variant]
 
 
 ## ERC / DATABASE INTEGRITY CHECK
