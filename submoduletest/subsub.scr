@@ -29,7 +29,9 @@ schematic submoduletest add submodule templates/filter.mod FLT2 1 300 90 30 30
 
 schematic submoduletest set device_name_offsets
 
-schematic submoduletest make bom CAM/bom.csv low_cost # bom file, [variant]
+schematic submoduletest make bom CAM/bom.csv comfortable #low_cost # bom file, [variant]
+
+schematic submoduletest make netlist CAM/netlist.net comfortable #low_cost # netlist file, [variant]
 
 
 ## ERC / DATABASE INTEGRITY CHECK
