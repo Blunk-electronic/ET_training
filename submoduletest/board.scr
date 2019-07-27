@@ -6,14 +6,17 @@
 
 # DOMAIN MODULE VERB NOUN PARAMETER[S]
 
-# board submoduletest move device R1 absolute 100 200
+board submoduletest move device R1 absolute 100 200
 # board submoduletest move device R1 relative 4 2.5
 
 # board submoduletest rotate device R1 absolute 70
-# board submoduletest rotate device R1 relative -5
+board submoduletest rotate device R1 relative -5
 
 board submoduletest flip device R1 bottom
-board submoduletest flip device R1 top
+# board submoduletest flip device R1 top
 
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R_virtual.dev 3 10 20 0 S_0805 # sheet 1 x y rotation [variant]
+
+board submoduletest make pnp CAM/pick_and_place.pnp # low_cost
 
 # script end

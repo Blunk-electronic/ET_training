@@ -7,7 +7,13 @@
 # DOMAIN MODULE VERB NOUN PARAMETER[S]
 
 schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 3 10 20 0 S_0805 # sheet 1 x y rotation [variant]
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R_virtual.dev 3 10 26 0 S_0805 # sheet 1 x y rotation [variant]
 #schematic submoduletest remove device low_cost R1
+
+board submoduletest move device R1 absolute 100 200
+board submoduletest rotate device R1 relative -5
+
+
 schematic submoduletest unmount device low_cost R1
 
 schematic templates/clock_generator add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 10 10 0 S_0805 # sheet 1 x y rotation [variant]
@@ -19,6 +25,7 @@ schematic templates/filter add device $HOME/git/BEL/ET_component_library/devices
 schematic templates/filter add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 2 10 30 0 S_0805 # sheet 1 x y rotation [variant]
 schematic templates/filter add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 3 10 10 0 S_0805 # sheet 1 x y rotation [variant]
 schematic templates/filter add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 4 10 10 0 S_0805 # sheet 1 x y rotation [variant]
+# schematic templates/filter add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R_virtual.dev 3 10 20 0 S_0805 # sheet 1 x y rotation [variant]
 
 schematic templates/clock_generator add submodule templates/filter.mod FLT1 1 300 90 30 30
 
@@ -31,8 +38,9 @@ schematic submoduletest set device_name_offsets
 
 schematic submoduletest make bom CAM/bom.csv comfortable #low_cost # bom file, [variant]
 
-schematic submoduletest make netlist CAM/netlist.net comfortable #low_cost # netlist file, [variant]
+#schematic submoduletest make netlist CAM/netlist.net comfortable #low_cost # netlist file, [variant]
 
+board submoduletest make pnp CAM/pick_and_place.pnp # low_cost
 
 ## ERC / DATABASE INTEGRITY CHECK
 ###############################################################################################
