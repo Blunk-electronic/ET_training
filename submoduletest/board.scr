@@ -6,7 +6,10 @@
 
 # DOMAIN MODULE VERB NOUN PARAMETER[S]
 
-# schematic submoduletest delete device R1
+schematic submoduletest delete device R1
+
+schematic templates/clock_generator add submodule templates/filter.mod FLT1 1 300 90 30 30
+board templates/clock_generator move submodule FLT1 absolute 70 70
 
 # board submoduletest move device R1 absolute 100 200
 # board submoduletest move device R1 relative 4 2.5

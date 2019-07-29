@@ -113,7 +113,7 @@
 		--file $TEMPLATES/clock_generator.mod
 		position sheet 1 x 150 y 85
 		size x 20 y 20
-		position_in_board x 200 y 300 rotation 0
+		position_in_board x 200 y 200 rotation 0
 		view_mode origin
 		device_names_offset 100
 		[PORTS BEGIN]
