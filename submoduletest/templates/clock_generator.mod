@@ -91,7 +91,7 @@
 		partcode R_PAC_S_0805_VAL_1k2
 		purpose "dummy"
 		[PACKAGE BEGIN]
-			position x 0 y 0 rotation 0.0 face top
+			position x 10 y 20 rotation 0.0 face top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silk_screen
