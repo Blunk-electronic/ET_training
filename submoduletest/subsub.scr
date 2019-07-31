@@ -31,10 +31,6 @@ schematic templates/clock_generator add submodule templates/filter.mod FLT1 1 30
 
 schematic submoduletest add submodule templates/filter.mod FLT2 1 300 90 30 30
 
-#schematic templates/clock_generator set device_name_offset FLT1 300
-#schematic templates/filter set device_name_offset FLT2 300
-
-schematic submoduletest set device_name_offsets
 
 schematic submoduletest make bom CAM/bom.csv comfortable #low_cost # bom file, [variant]
 

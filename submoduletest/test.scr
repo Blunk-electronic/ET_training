@@ -176,8 +176,6 @@ schematic submoduletest add port OSC2 out 0 10
 # schematic submoduletest mount submodule low_cost_B CLK_GENERATOR fixed_frequency # variant parent, submod instance, submod variant
 # schematic submoduletest remove submodule low_cost_B CLK_GENERATOR
 
-# schematic submoduletest set device_name_offset CLK_GENERATOR 300
-
 
 #schematic submoduletest rename device R1 R101
 schematic submoduletest copy device R1 2 60 60 0
@@ -187,8 +185,6 @@ schematic submoduletest copy device R1 2 60 60 0
 
 #schematic templates/clock_generator add submodule templates/clock_generator.mod LOCAL_OSC 1 300 90 30 30
 
-# schematic submoduletest build submodules_tree # automatically executed after adding, copying or deleting a submodule instance
-# schematic submoduletest set device_name_offsets
 
 
 

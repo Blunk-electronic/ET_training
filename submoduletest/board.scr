@@ -6,10 +6,24 @@
 
 # DOMAIN MODULE VERB NOUN PARAMETER[S]
 
-schematic submoduletest delete device R1
+# schematic submoduletest delete device R1
+
+schematic templates/filter add submodule templates/bypass.mod BY1 1 300 90 30 30
+board templates/filter move submodule BY1 absolute 7 7
+
 
 schematic templates/clock_generator add submodule templates/filter.mod FLT1 1 300 90 30 30
 board templates/clock_generator move submodule FLT1 absolute 70 70
+
+schematic templates/clock_generator add submodule templates/filter.mod FLT2 2 300 90 30 30
+board templates/clock_generator move submodule FLT2 absolute 60 60
+
+schematic submoduletest add submodule templates/filter.mod FLT3 5 300 90 30 30
+board submoduletest move submodule FLT3 absolute 100 100
+
+
+# schematic submoduletest build submodules_tree
+# schematic submoduletest set device_name_offsets
 
 # board submoduletest move device R1 absolute 100 200
 # board submoduletest move device R1 relative 4 2.5
@@ -20,8 +34,10 @@ board templates/clock_generator move submodule FLT1 absolute 70 70
 # board submoduletest flip device R1 bottom
 # board submoduletest flip device R1 top
 
-#schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R_virtual.dev 3 10 20 0 S_0805 # sheet 1 x y rotation [variant]
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R_virtual.dev 3 10 20 0 S_0805 # sheet 1 x y rotation [variant]
 
-board submoduletest make pnp CAM/pick_and_place.pnp # low_cost
+schematic submoduletest make bom CAM/bom.csv comfortable #low_cost # bom file, [variant]
+
+board submoduletest make pnp CAM/pick_and_place.pnp comfortable
 
 # script end
