@@ -125,7 +125,7 @@ schematic submoduletest invoke unit IC1 2 2 60 90 0 # device unit sheet x y rota
 ## ADDING, MOVING, DELETING SUBMODULE PORTS
 ###############################################################################################
 schematic submoduletest add submodule templates/clock_generator.mod OSC2 1 300 90 30 30 # file instance sheet/x/y size_x/size_y
-schematic submoduletest add port OSC2 out 0 10
+schematic submoduletest add port OSC2 out 0 10 slave
 # schematic submoduletest delete port OSC2 out
 # schematic submoduletest move port OSC2 out absolute 300 100
 # schematic submoduletest move port OSC2 out relative 0 10
