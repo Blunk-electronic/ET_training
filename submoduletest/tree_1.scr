@@ -1,0 +1,29 @@
+# This is a sample script. Comments start with #. 
+# A short description on a command starts with ##.
+# Leave the lines related to the command description in comments.
+# Otherwise ET tries to interpret them and will most certainly complain.
+# Most commands have a verb-noun structure. Their meaning should be obvious.
+
+# DOMAIN MODULE VERB NOUN PARAMETER[S]
+
+#schematic tree_1 add submodule templates/filter.mod FLT2 1 300 90 30 30
+
+#schematic submoduletest renumber devices 100
+
+schematic tree_1 add submodule templates/sub_1.mod OSC1 1 300 80 40 40
+schematic templates/sub_1 add netchanger 1 90 100 0
+schematic templates/sub_1 rotate netchanger 1 relative 180
+
+schematic tree_1 add port OSC1 out 0 20 master
+
+# schematic tree_1 make bom CAM/bom.csv
+schematic tree_1 make netlist CAM/netlist.net #comfortable
+# board tree_1 make pnp CAM/pick_and_place.pnp
+
+
+## ERC / DATABASE INTEGRITY CHECK
+###############################################################################################
+schematic tree_1 check integrity
+
+
+# script end
