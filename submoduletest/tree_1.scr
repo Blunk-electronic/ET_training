@@ -10,11 +10,12 @@
 
 #schematic submoduletest renumber devices 100
 
+
 schematic tree_1 add submodule templates/sub_1.mod OSC1 1 300 80 40 40
 schematic templates/sub_1 add netchanger 1 90 100 0
-schematic templates/sub_1 rotate netchanger 1 relative 180
+# schematic templates/sub_1 rotate netchanger 1 relative 180
 
-schematic tree_1 add port OSC1 out 0 20 master
+schematic tree_1 add port OSC1 out 0 20 slave
 
 # schematic tree_1 make bom CAM/bom.csv
 schematic tree_1 make netlist CAM/netlist.net #comfortable

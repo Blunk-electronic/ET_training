@@ -1,0 +1,18 @@
+# This is a sample script. Comments start with #. 
+# A short description on a command starts with ##.
+# Leave the lines related to the command description in comments.
+# Otherwise ET tries to interpret them and will most certainly complain.
+# Most commands have a verb-noun structure. Their meaning should be obvious.
+
+# DOMAIN MODULE VERB NOUN PARAMETER[S]
+
+#schematic tree_1 add submodule templates/filter.mod FLT2 1 300 90 30 30
+
+#schematic submoduletest renumber devices 100
+
+# project open module abc
+project create module templates/abc
+project save module templates/abc
+# project delete module templates/abc
+
+# script end
