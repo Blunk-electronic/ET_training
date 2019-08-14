@@ -14,6 +14,7 @@
 schematic tree_1 add submodule templates/sub_1.mod OSC1 1 300 80 40 40
 schematic templates/sub_1 add netchanger 1 90 100 0
 # schematic templates/sub_1 rotate netchanger 1 relative 180
+# schematic templates/sub_1 set scope out global
 
 schematic tree_1 add port OSC1 out 0 20 slave
 # schematic tree_1 add port OSC1 out 0 20 master
@@ -23,6 +24,7 @@ schematic tree_1 draw net AGND 1 120 10 200 10
 
 schematic tree_1 add netchanger 1 90 100 0 # sheet 1 x/y 90/100 rotation 0
 schematic tree_1 draw net NET_0 1 80 100 70 100 # net segment on sheet 1 from 80/100 to 70/100
+
 schematic templates/sub_1 draw net GND 1 10 10 100 10
 schematic templates/sub_1 add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 110 10 0 S_0805 # sheet 1 x y rotation [variant]
 schematic templates/sub_1 set scope GND global
@@ -30,7 +32,7 @@ schematic templates/sub_1 set scope GND global
 schematic tree_1 add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 60 100 0 S_0805 # sheet 1 x y rotation [variant]
 
 # schematic tree_1 make bom CAM/bom.csv
-schematic tree_1 make netlist CAM/netlist.net #comfortable
+schematic tree_1 make netlists
 # board tree_1 make pnp CAM/pick_and_place.pnp
 
 
