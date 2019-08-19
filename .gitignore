@@ -2,3 +2,5 @@
 ET
 *.kate-swp
 *~
+*/export
+test

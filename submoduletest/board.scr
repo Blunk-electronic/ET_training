@@ -36,10 +36,10 @@ board submoduletest move submodule FLT3 absolute 100 100
 
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R_virtual.dev 3 10 20 0 S_0805 # sheet 1 x y rotation [variant]
 
-# schematic submoduletest make netlist CAM/netlist.net comfortable #low_cost # netlist file, [variant]
+# schematic submoduletest make netlists
 
-schematic submoduletest make bom CAM/bom.csv comfortable #low_cost # bom file, [variant]
+# schematic submoduletest make bom
 
-# board submoduletest make pnp CAM/pick_and_place.pnp comfortable
+board submoduletest make pnp
 
 # script end

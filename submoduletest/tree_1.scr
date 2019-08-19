@@ -31,9 +31,9 @@ schematic templates/sub_1 set scope GND global
 
 schematic tree_1 add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 60 100 0 S_0805 # sheet 1 x y rotation [variant]
 
-# schematic tree_1 make bom CAM/bom.csv
+schematic tree_1 make bom
 schematic tree_1 make netlists
-# board tree_1 make pnp CAM/pick_and_place.pnp
+board tree_1 make pnp
 
 
 ## ERC / DATABASE INTEGRITY CHECK

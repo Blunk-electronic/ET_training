@@ -1,0 +1,17 @@
+# This is a sample script. Comments start with #. 
+# A short description on a command starts with ##.
+# Leave the lines related to the command description in comments.
+# Otherwise ET tries to interpret them and will most certainly complain.
+# Most commands have a verb-noun structure. Their meaning should be obvious.
+
+# DOMAIN MODULE VERB NOUN PARAMETER[S]
+
+project create module pwr_supply
+project save module pwr_supply
+
+## ERC / DATABASE INTEGRITY CHECK
+###############################################################################################
+schematic tree_1 check integrity
+
+
+# script end
