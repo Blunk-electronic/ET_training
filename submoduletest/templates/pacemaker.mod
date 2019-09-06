@@ -97,7 +97,7 @@
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silk_screen
-					meaning reference
+					meaning name
 					position x 0 y 2 rotation 0.00 face top
 					size width 1.000 height 1.000
 					line_width 0.150
@@ -121,7 +121,7 @@
 				mirrored no
 				[PLACEHOLDERS BEGIN]
 					[PLACEHOLDER BEGIN]
-						meaning reference
+						meaning name
 						position x 0 y 3
 						size 1.30
 						line_width 0.00
