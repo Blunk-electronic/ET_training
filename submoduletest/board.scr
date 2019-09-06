@@ -16,8 +16,8 @@ board tree_1 delete outline 40 0 1 # crossing 40/50, accuracy 1
 # board tree_1 route freetrack 1 arc 0.25 10 10 10 0 10 20 # layer 1, arc, width 0.25, center 10/10, from 10/0 to 20/0
 # board tree_1 ripup freetrack 1 12 10 2 # layer 1, crossing point 12/10, accuracy 2
 
-board tree_1 route net NET_1 2 line 0.3 102 120 160 133 # net reset_n, layer 1, line, width 0.25, line from 10/10 to 16/13
+board tree_1 route net NET_1 2 line 0.25 0 0 160 0 # net reset_n, layer 1, line, width 0.25, line from 0/0 to 160/0
 # board tree_1 route net NET_1 2 arc 0.3 10 10 10 0 10 20 # layer 1, arc, width 0.25, center 10/10, from 10/0 to 20/0
-board tree_1 ripup net NET_1 2 72 10 2 # layer 1, crossing point 12/10, accuracy 2
+board tree_1 ripup net NET_1 2 40 0 1 # layer 1, crossing point 40/0, accuracy 1
 
 # script end
