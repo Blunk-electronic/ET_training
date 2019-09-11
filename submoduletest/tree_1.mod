@@ -97,6 +97,7 @@
 		purpose "dummy"
 		[PACKAGE BEGIN]
 			position x 10 y 10 rotation 0.0 face top
+			flipped no
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silk_screen

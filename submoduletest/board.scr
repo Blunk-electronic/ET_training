@@ -6,6 +6,8 @@
 
 # DOMAIN MODULE VERB NOUN PARAMETER[S]
 
+# board tree_1 flip device R1 bottom
+# board tree_1 flip device R1 top
 
 # board tree_1 draw outline line 0 0 160 0 # from 0/0 to 160/0
 # board tree_1 draw outline arc 50 50 50 0 50 100 # center 50/50 from 50/0 to 50/100
