@@ -24,10 +24,10 @@
 # board tree_1 route net NET_1 2 line 0.25 0 0 160 0 # net reset_n, layer 1, line, width 0.25, line from 0/0 to 160/0
 # board tree_1 route net NET_1 2 arc 0.3 10 10 10 0 10 20 # layer 1, arc, width 0.25, center 10/10, from 10/0 to 20/0
 # board tree_1 ripup net NET_1 2 40 0 1 # layer 1, crossing point 40/0, accuracy 1
-board tree_1 route net NET_1 1 line 0.25 R1 1 direction -45 100 # done
+# board tree_1 route net NET_1 1 line 0.25 R1 1 direction -45 100 # done
 # board tree_1 route net NET_1 1 line 0.25 R1 1 direction 45 x 5
 # board tree_1 route net NET_1 1 line 0.25 R1 1 direction 45 y 5
-board tree_1 route net NET_1 2 line 0.25 R1 1 to 35 40 # done
+# board tree_1 route net NET_1 2 line 0.25 R1 1 to 35 40 # done
 # board tree_1 route net NET_1 1 line 0.25 R1 1 to x 5
 # board tree_1 route net NET_1 1 line 0.25 R1 1 to y 5
 
@@ -44,5 +44,9 @@ board tree_1 route net NET_1 2 line 0.25 R1 1 to 35 40 # done
 # board tree_1 draw silk top circle 2.5 50 50 fill cutout # top, circle, width 2.5mm, center 50/50 radius 50, fill cutout
 # board tree_1 draw silk top circle 2.5 50 50 fill hatched 0.5 1 # top, circle, width 2.5mm, center 50/50 radius 50, fill hatched, line width 0.5, spacing 1
 
+board tree_1 draw assy top line 2.5 0 0 160 0 # top, line, width 2.5mm, from 0/0 to 160/0
+board tree_1 draw assy top arc 2.5 50 50 0 50 100 0 # top, arc, width 2.5mm, center 50/50 from 50/0 to 50/100
+board tree_1 draw assy bottom circle 2.5 50 50 40 # top, circle, width 2.5mm, center 50/50 radius 40
+board tree_1 delete assy top 5 0 1
 
 # script end
