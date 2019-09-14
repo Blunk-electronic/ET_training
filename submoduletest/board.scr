@@ -6,6 +6,9 @@
 
 # DOMAIN MODULE VERB NOUN PARAMETER[S]
 
+# schematic tree_1 set grid 4 4
+# board tree_1 set grid 4 5
+
 # board tree_1 flip device R1 bottom
 # board tree_1 flip device R1 top
 
