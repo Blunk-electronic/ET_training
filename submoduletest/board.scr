@@ -49,4 +49,8 @@ board tree_1 draw assy top arc 2.5 50 50 0 50 100 0 # top, arc, width 2.5mm, cen
 board tree_1 draw assy bottom circle 2.5 50 50 40 # top, circle, width 2.5mm, center 50/50 radius 40
 board tree_1 delete assy top 5 0 1
 
+board tree_1 add layer 0.12 0.2
+board tree_1 set conductor 2 0.12
+board tree_1 set dielectic 1 2.0
+
 # script end
