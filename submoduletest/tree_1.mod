@@ -24,6 +24,16 @@
 	[BOARD END]
 [DRAWING_GRID END]
 
+[BOARD_LAYER_STACK BEGIN]
+	conductor 1 0.035
+	dielectric 1 1.500
+	conductor 2 0.018
+	dielectric 2 1.500
+	conductor 3 0.018
+	dielectric 3 1.500
+	conductor  4 0.035
+[BOARD_LAYER_STACK END]
+
 [NETS BEGIN]
 	[NET BEGIN]
 		name NET_1
