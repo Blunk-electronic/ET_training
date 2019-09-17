@@ -60,7 +60,7 @@
 
 # board tree_1 add layer 0.12 0.2
 board tree_1 delete layer 2
-# board tree_1 set conductor 2 0.12
-# board tree_1 set dielectic 1 2.0
+# board tree_1 set conductor 2 0.12 # CS
+# board tree_1 set dielectic 1 2.0 # CS
 
 # script end
