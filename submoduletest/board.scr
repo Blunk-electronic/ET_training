@@ -37,11 +37,11 @@
 # board tree_1 draw route_restrict [3] circle filled 50 50 40
 # board tree_1 delete route_restrict 20 10 1 # crossing 40/50, accuracy 1
 
-board tree_1 draw via_restrict [1-3] line 10 10 60 10
-board tree_1 draw via_restrict [2] arc 50 50 0 50 100 0
-board tree_1 draw via_restrict [3] circle 50 50 40
-board tree_1 draw via_restrict [3] circle filled 50 50 40
-board tree_1 delete via_restrict 20 10 1 # crossing 40/50, accuracy 1
+# board tree_1 draw via_restrict [1-3] line 10 10 60 10
+# board tree_1 draw via_restrict [2] arc 50 50 0 50 100 0
+# board tree_1 draw via_restrict [3] circle 50 50 40
+# board tree_1 draw via_restrict [3] circle filled 50 50 40
+# board tree_1 delete via_restrict 20 10 1 # crossing 40/50, accuracy 1
 
 
 # board tree_1 draw silk top line 2.5 0 0 160 0 # top, line, width 2.5mm, from 0/0 to 160/0
@@ -62,9 +62,10 @@ board tree_1 delete via_restrict 20 10 1 # crossing 40/50, accuracy 1
 # board tree_1 draw assy bottom circle 2.5 50 50 40 # top, circle, width 2.5mm, center 50/50 radius 40
 # board tree_1 delete assy top 5 0 1
 
-# board tree_1 draw keepout top line 2.5 0 0 160 0 # top, line, width 2.5mm, from 0/0 to 160/0
-# board tree_1 draw keepout bottom circle 2.5 50 50 40 # top, circle, width 2.5mm, center 50/50 radius 40
-# board tree_1 delete keepout top 5 0 1
+board tree_1 draw keepout top line 2.5 0 0 160 0 # top, line, width 2.5mm, from 0/0 to 160/0
+board tree_1 draw keepout bottom circle 50 50 40 # top, circle, not filled, center 50/50 radius 40
+board tree_1 draw keepout bottom circle filled 50 50 40 # top, circle, filled, center 50/50 radius 40
+board tree_1 delete keepout top 5 0 1
 
 # board tree_1 draw stop top line 2.5 0 0 160 0 # top, line, width 2.5mm, from 0/0 to 160/0
 # board tree_1 draw stop bottom circle 2.5 50 50 40 # top, circle, width 2.5mm, center 50/50 radius 40
