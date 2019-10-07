@@ -21,8 +21,8 @@
 # board tree_1 route freetrack 1 arc 0.25 10 10 10 0 10 20 # layer 1, arc, width 0.25, center 10/10, from 10/0 to 20/0
 # board tree_1 ripup freetrack 1 12 12 1 # layer 1, crossing point 12/12, accuracy 1
 
-# board tree_1 route net NET_1 2 line 0.25 0 0 160 0 # net reset_n, layer 1, line, width 0.25, line from 0/0 to 160/0
-# board tree_1 route net NET_1 2 arc 0.3 10 10 10 0 10 20 # layer 1, arc, width 0.25, center 10/10, from 10/0 to 20/0
+board tree_1 route net NET_1 2 line 0.25 0 0 160 0 # net reset_n, layer 1, line, width 0.25, line from 0/0 to 160/0
+board tree_1 route net NET_1 2 arc 0.3 10 10 10 0 10 20 # layer 1, arc, width 0.25, center 10/10, from 10/0 to 20/0
 # board tree_1 ripup net NET_1 2 40 0 1 # layer 1, crossing point 40/0, accuracy 1
 # board tree_1 route net NET_1 1 line 0.25 R1 1 direction -45 100 # done
 # board tree_1 route net NET_1 1 line 0.25 R1 1 direction 45 x 5

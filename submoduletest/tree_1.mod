@@ -54,6 +54,53 @@
 				[SEGMENTS END]
 			[STRAND END]
 		[STRANDS END]
+
+		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x 0.000 y 0.000
+				end x 160.000 y 0.000
+				layer 2
+				width 0.250
+			[LINE END]
+			[ARC BEGIN]
+				center x 10.000 y 10.000
+				start x 10.000 y 0.000
+				end x 10.000 y 20.000
+				width 0.300
+				layer 2
+			[ARC END]
+			[POLYGON BEGIN]
+				priority 0
+				layer 1
+				min_width 0.150
+				isolation 0.800
+				fill_style solid
+				hatching_line_width 0.508
+				hatching_line_spacing 2.000
+				corner_easing fillet
+				easing_radius 1.000
+				pad_connection thermal
+				pad_technology smt_and_tht
+				thermal_width 0.500
+				thermal_gap 0.600
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 1.000 y 2.000
+						end x 3.000 y 4.000
+					[LINE END]
+					[ARC BEGIN]
+						center x 10.000 y 10.000
+						start x 10.000 y 0.000
+						end x 10.000 y 20.000
+					[ARC END]
+					[CIRCLE BEGIN]
+						center x 10.000 y 10.000
+						radius 20
+					[CIRCLE END]
+				[CONTOURS END]				
+			[POLYGON END]		
+		[ROUTE END]
+
 	[NET END]
 
 	[NET BEGIN]
@@ -183,6 +230,33 @@
 [ASSEMBLY_VARIANTS END]
 
 [BOARD BEGIN]
+	[SILK_SCREEN BEGIN]
+		[TOP BEGIN]
+			[POLYGON BEGIN]
+				fill_style solid
+				hatching_line_width 0.508
+				hatching_line_spacing 2.000
+				corner_easing fillet
+				easing_radius 1.000
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 1.000 y 2.000
+						end x 3.000 y 4.000
+					[LINE END]
+					[ARC BEGIN]
+						center x 10.000 y 10.000
+						start x 10.000 y 0.000
+						end x 10.000 y 20.000
+					[ARC END]
+					[CIRCLE BEGIN]
+						center x 10.000 y 10.000
+						radius 20
+					[CIRCLE END]
+				[CONTOURS END]				
+			[POLYGON END]
+		[TOP END]
+	[SILK_SCREEN END]
+
 [BOARD END]
 
 -- ====================================================================================================
