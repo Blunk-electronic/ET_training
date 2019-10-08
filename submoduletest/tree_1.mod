@@ -69,7 +69,7 @@
 				width 0.300
 				layer 2
 			[ARC END]
-			[POLYGON BEGIN]
+			[FILL_ZONE BEGIN]
 				priority 0
 				layer 1
 				min_width 0.150
@@ -98,7 +98,26 @@
 						radius 20
 					[CIRCLE END]
 				[CONTOURS END]				
-			[POLYGON END]		
+			[FILL_ZONE END]		
+
+			[CUTOUT_ZONE BEGIN]
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 1.000 y 2.000
+						end x 3.000 y 4.000
+					[LINE END]
+					[ARC BEGIN]
+						center x 10.000 y 10.000
+						start x 10.000 y 0.000
+						end x 10.000 y 20.000
+					[ARC END]
+					[CIRCLE BEGIN]
+						center x 10.000 y 10.000
+						radius 20
+					[CIRCLE END]
+				[CONTOURS END]				
+			[CUTOUT_ZONE END]
+			
 		[ROUTE END]
 
 	[NET END]
@@ -232,7 +251,7 @@
 [BOARD BEGIN]
 	[SILK_SCREEN BEGIN]
 		[TOP BEGIN]
-			[POLYGON BEGIN]
+			[FILL_ZONE BEGIN]
 				fill_style solid
 				hatching_line_width 0.508
 				hatching_line_spacing 2.000
@@ -253,10 +272,113 @@
 						radius 20
 					[CIRCLE END]
 				[CONTOURS END]				
-			[POLYGON END]
+			[FILL_ZONE END]
+
+			[CUTOUT_ZONE BEGIN]
+				corner_easing fillet
+				easing_radius 1.000
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 1.000 y 2.000
+						end x 3.000 y 4.000
+					[LINE END]
+					[ARC BEGIN]
+						center x 10.000 y 10.000
+						start x 10.000 y 0.000
+						end x 10.000 y 20.000
+					[ARC END]
+					[CIRCLE BEGIN]
+						center x 10.000 y 10.000
+						radius 20
+					[CIRCLE END]
+				[CONTOURS END]				
+			[CUTOUT_ZONE END]
+			
 		[TOP END]
 	[SILK_SCREEN END]
 
+	[KEEPOUT BEGIN]
+		[TOP BEGIN]
+			[FILL_ZONE BEGIN]
+				filled yes
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 1.000 y 2.000
+						end x 3.000 y 4.000
+					[LINE END]
+					[ARC BEGIN]
+						center x 10.000 y 10.000
+						start x 10.000 y 0.000
+						end x 10.000 y 20.000
+					[ARC END]
+					[CIRCLE BEGIN]
+						center x 10.000 y 10.000
+						radius 20
+					[CIRCLE END]
+				[CONTOURS END]				
+			[FILL_ZONE END]
+
+			[CUTOUT_ZONE BEGIN]
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 1.000 y 2.000
+						end x 3.000 y 4.000
+					[LINE END]
+					[ARC BEGIN]
+						center x 10.000 y 10.000
+						start x 10.000 y 0.000
+						end x 10.000 y 20.000
+					[ARC END]
+					[CIRCLE BEGIN]
+						center x 10.000 y 10.000
+						radius 20
+					[CIRCLE END]
+				[CONTOURS END]				
+			[CUTOUT_ZONE END]
+			
+		[TOP END]
+	[KEEPOUT END]
+
+	[ROUTE_RESTRICT BEGIN]
+		[FILL_ZONE BEGIN]
+			filled yes
+			[CONTOURS BEGIN]
+				[LINE BEGIN]
+					start x 1.000 y 2.000
+					end x 3.000 y 4.000
+				[LINE END]
+				[ARC BEGIN]
+					center x 10.000 y 10.000
+					start x 10.000 y 0.000
+					end x 10.000 y 20.000
+				[ARC END]
+				[CIRCLE BEGIN]
+					center x 10.000 y 10.000
+					radius 20
+				[CIRCLE END]
+			[CONTOURS END]				
+		[FILL_ZONE END]
+
+		[CUTOUT_ZONE BEGIN]
+			[CONTOURS BEGIN]
+				[LINE BEGIN]
+					start x 1.000 y 2.000
+					end x 3.000 y 4.000
+				[LINE END]
+				[ARC BEGIN]
+					center x 10.000 y 10.000
+					start x 10.000 y 0.000
+					end x 10.000 y 20.000
+				[ARC END]
+				[CIRCLE BEGIN]
+					center x 10.000 y 10.000
+					radius 20
+				[CIRCLE END]
+			[CONTOURS END]				
+		[CUTOUT_ZONE END]
+	[ROUTE_RESTRICT END]
+	
+	
 [BOARD END]
 
 -- ====================================================================================================
