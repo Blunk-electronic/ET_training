@@ -342,6 +342,7 @@
 	[ROUTE_RESTRICT BEGIN]
 		[FILL_ZONE BEGIN]
 			filled yes
+			layers 1 2
 			[CONTOURS BEGIN]
 				[LINE BEGIN]
 					start x 1.000 y 2.000
