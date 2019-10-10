@@ -101,18 +101,19 @@
 			[FILL_ZONE END]		
 
 			[CUTOUT_ZONE BEGIN]
+				layer 3
 				[CONTOURS BEGIN]
 					[LINE BEGIN]
-						start x 1.000 y 2.000
+						start x 1.000 y 55.000
 						end x 3.000 y 4.000
 					[LINE END]
 					[ARC BEGIN]
-						center x 10.000 y 10.000
+						center x 10.000 y 55.000
 						start x 10.000 y 0.000
 						end x 10.000 y 20.000
 					[ARC END]
 					[CIRCLE BEGIN]
-						center x 10.000 y 10.000
+						center x 10.000 y 55.000
 						radius 20
 					[CIRCLE END]
 				[CONTOURS END]				
@@ -249,6 +250,27 @@
 [ASSEMBLY_VARIANTS END]
 
 [BOARD BEGIN]
+	[COPPER BEGIN]
+		[CUTOUT_ZONE BEGIN]
+			layer 5
+			[CONTOURS BEGIN]
+				[LINE BEGIN]
+					start x 11.000 y 44.000
+					end x 33.000 y 4.000
+				[LINE END]
+				[ARC BEGIN]
+					center x 10.000 y 44.000
+					start x 10.000 y 0.000
+					end x 10.000 y 20.000
+				[ARC END]
+				[CIRCLE BEGIN]
+					center x 10.000 y 44.000
+					radius 20
+				[CIRCLE END]
+			[CONTOURS END]				
+		[CUTOUT_ZONE END]
+	[COPPER END]
+
 	[SILK_SCREEN BEGIN]
 		[TOP BEGIN]
 			[FILL_ZONE BEGIN]
@@ -275,20 +297,20 @@
 			[FILL_ZONE END]
 
 			[CUTOUT_ZONE BEGIN]
-				corner_easing fillet
+				corner_easing chamfer
 				easing_radius 1.000
 				[CONTOURS BEGIN]
 					[LINE BEGIN]
-						start x 1.000 y 2.000
-						end x 3.000 y 4.000
+						start x -1.000 y 2.000
+						end x -3.000 y 4.000
 					[LINE END]
 					[ARC BEGIN]
-						center x 10.000 y 10.000
-						start x 10.000 y 0.000
-						end x 10.000 y 20.000
+						center x -10.000 y 10.000
+						start x -10.000 y 0.000
+						end x -10.000 y 20.000
 					[ARC END]
 					[CIRCLE BEGIN]
-						center x 10.000 y 10.000
+						center x -10.000 y 10.000
 						radius 20
 					[CIRCLE END]
 				[CONTOURS END]				
@@ -361,6 +383,7 @@
 		[FILL_ZONE END]
 
 		[CUTOUT_ZONE BEGIN]
+			layers 7 10
 			[CONTOURS BEGIN]
 				[LINE BEGIN]
 					start x 1.000 y 2.000
