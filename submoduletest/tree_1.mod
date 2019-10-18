@@ -214,7 +214,7 @@
 						meaning name
 						position x 0 y 3
 						size 1.30
-						line_width 0.00
+						line_width 0.20
 						rotation 0
 						style normal
 						alignment horizontal center vertical center
@@ -223,7 +223,7 @@
 						meaning value
 						position x 0 y -3
 						size 1.30
-						line_width 0.00
+						line_width 0.20
 						rotation 0
 						style normal
 						alignment horizontal center vertical center
