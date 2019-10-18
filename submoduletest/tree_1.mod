@@ -189,7 +189,7 @@
 					layer silk_screen
 					meaning name
 					position x 0 y 2 rotation 0.00 face top
-					size width 1.000 height 1.000
+					size 1.000
 					line_width 0.150
 					alignment horizontal center vertical bottom
 				[PLACEHOLDER END]
@@ -197,7 +197,7 @@
 					layer assembly_documentation
 					meaning value
 					position x 0 y 3 rotation 0.00 face top
-					size width 1.000 height 1.000
+					size 1.000
 					line_width 0.150
 					alignment horizontal center vertical bottom
 				[PLACEHOLDER END]
@@ -251,6 +251,12 @@
 
 [BOARD BEGIN]
 	[COPPER BEGIN]
+		[LINE BEGIN]
+			start x 1.111 y 2.222
+			end x 160.000 y 0.000
+			layer 4
+		[LINE END]
+
 		[CUTOUT_ZONE BEGIN]
 			layer 5
 			[CONTOURS BEGIN]
@@ -273,9 +279,16 @@
 
 	[SILK_SCREEN BEGIN]
 		[TOP BEGIN]
+			[LINE BEGIN]
+				start x 0.001 y 0.001
+				end x 160.000 y 0.001
+				width 2.501
+			[LINE END]
+
+			
 			[FILL_ZONE BEGIN]
-				fill_style solid
-				hatching_line_width 0.508
+				fill_style hatched
+				hatching_line_width 0.777
 				hatching_line_spacing 2.000
 				corner_easing fillet
 				easing_radius 1.000
@@ -401,7 +414,8 @@
 			[CONTOURS END]				
 		[CUTOUT_ZONE END]
 	[ROUTE_RESTRICT END]
-	
+
+
 	
 [BOARD END]
 

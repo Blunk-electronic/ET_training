@@ -160,7 +160,7 @@
 					layer silk_screen
 					meaning name
 					position x 0 y 2 rotation 0.00 face top
-					size width 1.000 height 1.000
+					size 1.000
 					line_width 0.150
 					alignment horizontal center vertical bottom
 				[PLACEHOLDER END]
@@ -168,7 +168,7 @@
 					layer assembly_documentation
 					meaning value
 					position x 0 y 3 rotation 0.00 face top
-					size width 1.000 height 1.000
+					size 1.000
 					line_width 0.150
 					alignment horizontal center vertical bottom
 				[PLACEHOLDER END]
