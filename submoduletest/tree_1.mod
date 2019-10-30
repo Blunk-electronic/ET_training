@@ -175,7 +175,7 @@
 [DEVICES BEGIN]
 	[DEVICE BEGIN]
 		name R1
-		appearance sch_pcb
+		appearance pcb
 		model $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev
 		value 100R
 		variant S_0805

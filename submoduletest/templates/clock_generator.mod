@@ -84,7 +84,7 @@
 [DEVICES BEGIN]
 	[DEVICE BEGIN]
 		name R78
-		appearance sch_pcb
+		appearance pcb
 		model $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev
 		value 1k2
 		variant S_0805
