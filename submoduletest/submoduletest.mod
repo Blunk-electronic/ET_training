@@ -84,10 +84,10 @@
 
 [DRAWING_FRAMES BEGIN]
 	[SCHEMATIC BEGIN]
-		template dummy_frame
+		template ../frames/dummy.frs
 	[SCHEMATIC END]
 	[BOARD BEGIN]
-		template dummy_frame
+		template ../frames/dummy.frb
 	[BOARD END]
 [DRAWING_FRAMES END]
 
