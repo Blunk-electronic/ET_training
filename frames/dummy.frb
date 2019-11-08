@@ -1,0 +1,147 @@
+-- SYSTEM ET drawing frame template
+-- date 2019-11-08T16:09:55
+-- ====================================================================================================
+
+domain pcb
+paper_size A4
+orientation landscape
+border_width 7
+size x 280 y 200
+sectors rows 7 columns 10
+[TITLE_BLOCK BEGIN]
+	position x 1 y 1
+	[LINES BEGIN]
+		[LINE BEGIN]
+			start x 10 y 10
+			end x 11 y 22
+		[LINE END]
+		[LINE BEGIN]
+			start x 25 y 16
+			end x 12 y 210
+		[LINE END]
+	[LINES END]
+	[TEXTS BEGIN]
+		[TEXT BEGIN]
+			position x 1 y 1
+			size 32
+			content "SCALE"
+		[TEXT END]
+	[TEXTS END]
+	[PLACEHOLDERS BEGIN]
+		[PROJECT_NAME BEGIN]
+			position x 1 y 1
+			size 3
+		[PROJECT_NAME END]
+		[MODULE_FILE_NAME BEGIN]
+			position x 1 y 1
+			size 3
+		[MODULE_FILE_NAME END]
+		[ACTIVE_ASSEMBLY_VARIANT BEGIN]
+			position x 1 y 1
+			size 3
+		[ACTIVE_ASSEMBLY_VARIANT END]
+		[COMPANY BEGIN]
+			position x 1 y 1
+			size 3
+		[COMPANY END]
+		[CUSTOMER BEGIN]
+			position x 1 y 1
+			size 3
+		[CUSTOMER END]
+		[PARTCODE BEGIN]
+			position x 1 y 1
+			size 3
+		[PARTCODE END]
+		[DRAWING_NUMBER BEGIN]
+			position x 1 y 1
+			size 3
+		[DRAWING_NUMBER END]
+		[REVISION BEGIN]
+			position x 1 y 1
+			size 3
+		[REVISION END]
+		[DRAWN_BY BEGIN]
+			position x 1 y 1
+			size 3
+		[DRAWN_BY END]
+		[CHECKED_BY BEGIN]
+			position x 1 y 1
+			size 3
+		[CHECKED_BY END]
+		[APPROVED_BY BEGIN]
+			position x 1 y 1
+			size 3
+		[APPROVED_BY END]
+		[DRAWN_DATE BEGIN]
+			position x 1 y 1
+			size 3
+		[DRAWN_DATE END]
+		[CHECKED_DATE BEGIN]
+			position x 1 y 1
+			size 3
+		[CHECKED_DATE END]
+		[APPROVED_DATE BEGIN]
+			position x 1 y 1
+			size 3
+		[APPROVED_DATE END]
+		[FACE BEGIN]
+			position x 1 y 1
+			size 3
+		[FACE END]
+		[SIGNAL_LAYER BEGIN]
+			position x 1 y 1
+			size 3
+		[SIGNAL_LAYER END]
+	[PLACEHOLDERS END]
+	[CAM_MARKERS BEGIN]
+		[FACE BEGIN]
+			position x 1 y 1
+			size 3
+			content "FACE"
+		[FACE END]
+		[SILK_SCREEN BEGIN]
+			position x 1 y 1
+			size 3
+			content "SILK SCREEN"
+		[SILK_SCREEN END]
+		[ASSY_DOC BEGIN]
+			position x 1 y 1
+			size 3
+			content "ASSEMBLY DOCUMENTATION"
+		[ASSY_DOC END]
+		[KEEPOUT BEGIN]
+			position x 1 y 1
+			size 3
+			content "KEEPOUT"
+		[KEEPOUT END]
+		[PLATED_MILLINGS BEGIN]
+			position x 1 y 1
+			size 3
+			content "PLATED MILLINGS"
+		[PLATED_MILLINGS END]
+		[PCB_OUTLINE BEGIN]
+			position x 1 y 1
+			size 3
+			content "PCB CONTOURS"
+		[PCB_OUTLINE END]
+		[ROUTE_RESTRICT BEGIN]
+			position x 1 y 1
+			size 3
+			content "ROUTE RESTRICT"
+		[ROUTE_RESTRICT END]
+		[VIA_RESTRICT BEGIN]
+			position x 1 y 1
+			size 3
+			content "VIA RESTRICT"
+		[VIA_RESTRICT END]
+		[SIGNAL_LAYER BEGIN]
+			position x 1 y 1
+			size 3
+			content "SIGNAL LAYER"
+		[SIGNAL_LAYER END]
+	[CAM_MARKERS END]
+[TITLE_BLOCK END]
+
+-- ====================================================================================================
+-- drawing frame template file end
+
