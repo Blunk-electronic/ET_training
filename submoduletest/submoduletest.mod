@@ -13,7 +13,7 @@
 		drawn_by "Joseph Miller"
 		checked_by "Dieter Krause"
 		approved_by "Sergey Komarow"
-		drawn_date 2019-01-04
+		drawn_date 2018-02-20
 		checked_date 2019-01-05
 		approved_date 2019-01-10
 	[SCHEMATIC END]
