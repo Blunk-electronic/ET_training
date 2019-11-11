@@ -3,8 +3,6 @@
 -- ====================================================================================================
 
 [META BEGIN]
-	active_assembly_variant low_cost
-	
 	[SCHEMATIC BEGIN]
 		company BEL
 		customer "ABC systems"
@@ -278,7 +276,8 @@
 		description "Assembly variant with all features."
 		device R1 value 270R partcode R_PAC_S_0805_VAL_270R purpose "set temperature"
 	[VARIANT END]
-	
+
+	active low_cost	
 [ASSEMBLY_VARIANTS END]
 
 [BOARD BEGIN]

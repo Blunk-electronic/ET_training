@@ -4,8 +4,6 @@
 
 
 [META BEGIN]
-	active_assembly_variant low_cost
-	
 	[SCHEMATIC BEGIN]
 		company BEL
 		customer "ABC systems"
@@ -254,6 +252,8 @@
 		device R1 value 270R partcode R_PAC_S_0805_VAL_270R purpose "set temperature"
 		submodule CLK_GENERATOR variant fixed_frequency
 	[VARIANT END]
+
+	active comfortable
 	
 [ASSEMBLY_VARIANTS END]
 

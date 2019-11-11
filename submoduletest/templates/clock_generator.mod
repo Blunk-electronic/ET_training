@@ -3,8 +3,6 @@
 -- ====================================================================================================
 
 [META BEGIN]
-	active_assembly_variant low_cost
-	
 	[SCHEMATIC BEGIN]
 		company BEL
 		customer "ABC systems"
@@ -180,6 +178,8 @@
 		description "Assembly variant with fixed frequency."
 		device R78 not_mounted
 	[VARIANT END]
+
+	active fixed_frequency	
 [ASSEMBLY_VARIANTS END]
 
 [BOARD BEGIN]
