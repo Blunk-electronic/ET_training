@@ -263,6 +263,7 @@
 			center x 150.000 y 75.000
 			start x 155.000 y 70.000
 			end x 0.000 y 210.000
+			direction CCW
 			locked no
 		[ARC END]
 		[ARC BEGIN]
@@ -270,6 +271,7 @@
 			start x 150.000 y 115.000
 			end x 0.000 y 210.000
 			locked no
+			direction CW
 		[ARC END]
 	[PCB_CONTOURS_NON_PLATED END]
 [BOARD END]
