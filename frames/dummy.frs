@@ -6,7 +6,7 @@ domain schematic
 paper_size A4
 orientation landscape
 border_width 7
-size x 280 y 200
+size x 280 y 207
 sectors rows 7 columns 10
 [TITLE_BLOCK BEGIN]
 	position x 200 y 8
