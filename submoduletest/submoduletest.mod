@@ -259,6 +259,14 @@
 
 [BOARD BEGIN]
 	[PCB_CONTOURS_NON_PLATED BEGIN]
+		[LINE BEGIN]
+			start x 10.0 y 20.0
+			end x 50.0 y 20.0
+		[LINE END]
+		[LINE BEGIN]
+			start x 10.0 y 40.0
+			end x 50.0 y 40.0
+		[LINE END]
 		[ARC BEGIN]
 			center x 150.000 y 75.000
 			start x 155.000 y 70.000

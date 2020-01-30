@@ -5,19 +5,27 @@
 domain pcb
 paper_size A4
 orientation landscape
-border_width 7
+border_width 5
 size x 280 y 200
 sectors rows 7 columns 10
 [TITLE_BLOCK BEGIN]
-	position x 1 y 1
+	position x 10 y 8
 	[LINES BEGIN]
 		[LINE BEGIN]
-			start x 10 y 10
-			end x 11 y 22
+			start x 0 y 0
+			end x 50 y 0
 		[LINE END]
 		[LINE BEGIN]
-			start x 25 y 16
-			end x 12 y 210
+			start x 50 y 0
+			end x 50 y 40
+		[LINE END]
+		[LINE BEGIN]
+			start x 50 y 40
+			end x 0 y 40
+		[LINE END]
+		[LINE BEGIN]
+			start x 0 y 40
+			end x 0 y 0
 		[LINE END]
 	[LINES END]
 	[TEXTS BEGIN]
