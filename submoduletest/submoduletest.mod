@@ -143,7 +143,7 @@
 		--file ../templates/clock_generator.mod
 		--file /home/luno/tmp/templates/clock_generator.mod
 		--file $TEMPLATES/clock_generator.mod
-		position sheet 1 x 150 y 85
+		position sheet 1 x 150 y 80
 		size x 20 y 20
 		position_in_board x 200 y 200 rotation 0
 		view_mode origin
@@ -258,6 +258,25 @@
 [ASSEMBLY_VARIANTS END]
 
 [BOARD BEGIN]
+	[SILK_SCREEN BEGIN]
+		[TOP BEGIN]
+			[LINE BEGIN]
+				start x 20.0 y 20.0
+				end x 60.0 y 20.0
+			[LINE END]
+			[ARC BEGIN]
+				center x 110.000 y 80.000
+				start x 1000.000 y 80.000
+				end x 120.000 y 80.000
+				direction CCW
+			[ARC END]
+			[CIRCLE BEGIN]
+				center x 110.000 y 170.000
+				radius 20.000
+			[CIRCLE END]
+		[TOP END]
+	[SILK_SCREEN END]
+
 	[PCB_CONTOURS_NON_PLATED BEGIN]
 		[LINE BEGIN]
 			start x 10.0 y 20.0
@@ -268,19 +287,17 @@
 			end x 50.0 y 40.0
 		[LINE END]
 		[ARC BEGIN]
-			center x 150.000 y 75.000
-			start x 155.000 y 70.000
-			end x 0.000 y 210.000
+			center x 100.000 y 80.000
+			start x 90.000 y 80.000
+			end x 110.000 y 80.000
 			direction CCW
 			locked no
 		[ARC END]
-		[ARC BEGIN]
-			center x 145.000 y 110.000
-			start x 150.000 y 115.000
-			end x 0.000 y 210.000
+		[CIRCLE BEGIN]
+			center x 100.000 y 170.000
+			radius 20.000
 			locked no
-			direction CW
-		[ARC END]
+		[CIRCLE END]
 	[PCB_CONTOURS_NON_PLATED END]
 [BOARD END]
 
