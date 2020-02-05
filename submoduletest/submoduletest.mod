@@ -263,16 +263,28 @@
 			[LINE BEGIN]
 				start x 20.0 y 20.0
 				end x 60.0 y 20.0
+				width 1.0
 			[LINE END]
+-- 			[ARC BEGIN]
+-- 				center x 150.000 y 50.000
+-- 				start x 160.00 y 50.000
+-- 				end x 170.000 y 50.000
+-- 				direction CCW
+-- 				width 0.5
+-- 			[ARC END]
 			[ARC BEGIN]
-				center x 110.000 y 80.000
-				start x 1000.000 y 80.000
-				end x 120.000 y 80.000
-				direction CCW
+				center x 130.000 y 80.000
+				start x 120.000 y 80.000
+				end x 140.000 y 80.000
+				width 0.5
+				direction CW
 			[ARC END]
+
+
 			[CIRCLE BEGIN]
-				center x 110.000 y 170.000
+				center x 110.000 y 180.000
 				radius 20.000
+				width 0.20
 			[CIRCLE END]
 		[TOP END]
 	[SILK_SCREEN END]
