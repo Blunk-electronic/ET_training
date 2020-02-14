@@ -215,22 +215,32 @@
 				[PLACEHOLDERS BEGIN]
 					[PLACEHOLDER BEGIN]
 						meaning name
-						position x 0 y 3
+						position x -3 y 3
 						size 1.30
 						line_width 0.20
-						rotation 0
+						rotation 90
 						style normal
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
 					[PLACEHOLDER BEGIN]
 						meaning value
-						position x 0 y -3
+						position x -3 y -3
 						size 1.30
 						line_width 0.30
 						rotation 0
 						style normal
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x -3 y -9
+						size 1.30
+						line_width 0.20
+						rotation 0
+						style normal
+						alignment horizontal center vertical bottom
+					[PLACEHOLDER END]
+
 				[PLACEHOLDERS END]
 			[UNIT END]
 		[UNITS END]
