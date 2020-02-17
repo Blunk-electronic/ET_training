@@ -210,7 +210,7 @@
 			[UNIT BEGIN]
 				name 1
 				position sheet 1 x 210 y 100
-				rotation 0
+				rotation -90
 				mirrored no
 				[PLACEHOLDERS BEGIN]
 					[PLACEHOLDER BEGIN]
@@ -218,7 +218,7 @@
 						position x -3 y 3
 						size 1.30
 						line_width 0.20
-						rotation 90
+						rotation 0
 						style normal
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
