@@ -1,0 +1,8 @@
+
+
+schematic submoduletest rotate unit R1 1 absolute 90
+#schematic submoduletest rotate unit R1 1 relative 90
+#project save module submoduletest
+
+
+# script end

@@ -181,10 +181,10 @@
 		name R1
 		appearance pcb
 		model $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev
-		value 100R
+		value 12M2
 		variant S_0805
 		partcode R_PAC_S_0805_VAL_100R
-		purpose "dummy"
+		purpose brightness
 		[PACKAGE BEGIN]
 			position x 0 y 0 rotation 0.0 face top
 			[PLACEHOLDERS BEGIN]
@@ -210,7 +210,7 @@
 			[UNIT BEGIN]
 				name 1
 				position sheet 1 x 210 y 100
-				rotation -90
+				rotation 0
 				mirrored no
 				[PLACEHOLDERS BEGIN]
 					[PLACEHOLDER BEGIN]
@@ -233,7 +233,7 @@
 					[PLACEHOLDER END]
 					[PLACEHOLDER BEGIN]
 						meaning purpose
-						position x -3 y -9
+						position x -3 y -6
 						size 1.30
 						line_width 0.20
 						rotation 0
