@@ -1,6 +1,7 @@
 
 
 schematic submoduletest rotate unit R1 1 absolute 90
+#schematic submoduletest zoom fit
 #schematic submoduletest rotate unit R1 1 relative 90
 #project save module submoduletest
 
