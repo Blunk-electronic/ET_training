@@ -271,11 +271,17 @@
 	[SILK_SCREEN BEGIN]
 		[TOP BEGIN]
 			[LINE BEGIN]
-				start x 20.0 y 20.0
+				start x -100.0 y 20.0
 				end x 60.0 y 20.0
 				width 1.0
 			[LINE END]
--- 			[ARC BEGIN]
+			[LINE BEGIN]
+				start x 20.0 y -100.0
+				end x 20.0 y 100.0
+				width 1.0
+			[LINE END]
+			
+			-- 			[ARC BEGIN]
 -- 				center x 150.000 y 50.000
 -- 				start x 160.00 y 50.000
 -- 				end x 170.000 y 50.000
@@ -289,8 +295,6 @@
 				width 0.5
 				direction CW
 			[ARC END]
-
-
 			[CIRCLE BEGIN]
 				center x 110.000 y 180.000
 				radius 20.000
@@ -300,26 +304,26 @@
 	[SILK_SCREEN END]
 
 	[PCB_CONTOURS_NON_PLATED BEGIN]
-		[LINE BEGIN]
-			start x 10.0 y 20.0
-			end x 50.0 y 20.0
-		[LINE END]
-		[LINE BEGIN]
-			start x 10.0 y 40.0
-			end x 50.0 y 40.0
-		[LINE END]
-		[ARC BEGIN]
-			center x 100.000 y 80.000
-			start x 90.000 y 80.000
-			end x 110.000 y 80.000
-			direction CCW
-			locked no
-		[ARC END]
 		[CIRCLE BEGIN]
-			center x 100.000 y 170.000
-			radius 20.000
-			locked no
+			center x 0.000 y 0.000
+			radius 10.000
 		[CIRCLE END]
+		[LINE BEGIN]
+			start x 0.0 y 0.0
+			end x 100.0 y 0.0
+		[LINE END]
+		[LINE BEGIN]
+			start x 100.0 y 0.0
+			end x 100.0 y 50.0
+		[LINE END]
+		[LINE BEGIN]
+			start x 100.0 y 50.0
+			end x 0.0 y 50.0
+		[LINE END]
+		[LINE BEGIN]
+			start x 0.0 y 50.0
+			end x 0.0 y 0.0
+		[LINE END]
 	[PCB_CONTOURS_NON_PLATED END]
 [BOARD END]
 
