@@ -220,7 +220,7 @@
 						line_width 0.20
 						rotation 0
 						style normal
-						alignment horizontal center vertical center
+						alignment horizontal right vertical top
 					[PLACEHOLDER END]
 					[PLACEHOLDER BEGIN]
 						meaning value
