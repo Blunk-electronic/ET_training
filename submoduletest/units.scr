@@ -1,0 +1,41 @@
+
+schematic submoduletest set grid 5 5
+
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 70 100 0 D
+schematic submoduletest invoke unit IC1 B 1 70 40 0 # device unit sheet x y rotation
+# schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 70 40 0 D
+# sheet 1 x y rotation [variant]
+
+
+# schematic submoduletest draw net motor_on 1 110 100 110 130
+# schematic submoduletest draw net motor_on 1 110 130 120 140
+# schematic submoduletest draw net motor_on 1 200 130 180 130
+# schematic submoduletest draw net motor_on 1 110 100 110 80
+# schematic submoduletest draw net motor_on 1 110 125 120 125
+
+
+# simple label
+# schematic submoduletest place label 1 130 100 0 5 0
+# schematic submoduletest draw net motor_on 1 150 100 150 130
+
+
+# tag label
+# These commands try to place a tag label but all of them
+# must be recjected because the given positions are no stubs:
+# schematic submoduletest place label 1 101 100 input
+# schematic submoduletest place label 1 120 140 input
+
+# These commands succeed in placing a tag label:
+# schematic submoduletest place label 1 200 150 input
+# schematic submoduletest place label 1 100 100 input
+# schematic submoduletest place label 1 150 130 input
+# schematic submoduletest place label 1 120 125 input
+# schematic submoduletest place label 1 110 80 input
+
+#schematic submoduletest rotate unit R1 1 absolute 90
+#schematic submoduletest zoom fit
+#schematic submoduletest rotate unit R1 1 relative 90
+#project save module submoduletest
+
+
+# script end
