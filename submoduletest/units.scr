@@ -5,7 +5,7 @@ schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/ac
 schematic submoduletest invoke unit IC1 B 1 70 40 0 # device unit sheet x y rotation
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 70 40 0 D
 # sheet 1 x y rotation [variant]
-
+schematic submoduletest rotate unit R1 1 relative 90
 
 # schematic submoduletest draw net motor_on 1 110 100 110 130
 # schematic submoduletest draw net motor_on 1 110 130 120 140
