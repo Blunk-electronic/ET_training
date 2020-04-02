@@ -1,11 +1,21 @@
 
 schematic submoduletest set grid 5 5
 
-schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 70 100 0 D
+# place a gate
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 85 100 0 D
+
+# drag the gate. the attached net must be dragged along
+schematic submoduletest drag unit IC1 A relative -5 -5
+
+# invoke a gate
 schematic submoduletest invoke unit IC1 B 1 70 40 0 # device unit sheet x y rotation
 # schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 70 40 0 D
-# sheet 1 x y rotation [variant]
-schematic submoduletest rotate unit R1 1 relative 90
+#schematic submoduletest rotate unit R1 1 relative 90
+
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/supply/gnd.dev 1 90 90 0
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R_vertical.dev 1 70 150 0 S_0805
+
+# schematic submoduletest move unit IC1 A relative 0 15 0
 
 # schematic submoduletest draw net motor_on 1 110 100 110 130
 # schematic submoduletest draw net motor_on 1 110 130 120 140
