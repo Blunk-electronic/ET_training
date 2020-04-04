@@ -78,6 +78,39 @@
 		[ROUTE BEGIN]
 		[ROUTE END]
 	[NET END]
+
+	[NET BEGIN]
+		name rf_out
+		class default
+		scope local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet 2 x 100 y 100
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x 100 y 100
+						end x 200 y 100
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x 100 y 100
+								rotation 0
+								size 1.30
+								style normal
+								line_width 0.00
+								appearance simple
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							netchanger 2 port master
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
+	[NET END]
+
 [NETS END]
 
 [NETCHANGERS BEGIN]

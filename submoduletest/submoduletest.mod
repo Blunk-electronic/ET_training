@@ -143,14 +143,29 @@
 		--file ../templates/clock_generator.mod
 		--file /home/luno/tmp/templates/clock_generator.mod
 		--file $TEMPLATES/clock_generator.mod
-		position sheet 1 x 150 y 80
-		size x 20 y 20
+		position sheet 1 x 150 y 30
+		size x 40 y 40
 		position_in_board x 200 y 200 rotation 0
 		view_mode origin
 		[PORTS BEGIN]
 			[PORT BEGIN]
 				name out
-				position x 0 y 10
+				position x 0 y 20
+				direction slave -- master
+			[PORT END]
+			[PORT BEGIN]
+				name in-r
+				position x 40 y 20
+				direction slave -- master
+			[PORT END]
+-- 			[PORT BEGIN]
+-- 				name in-b
+-- 				position x 30 y 0
+-- 				direction slave -- master
+-- 			[PORT END]
+			[PORT BEGIN]
+				name in-t
+				position x 20 y 40
 				direction slave -- master
 			[PORT END]
 		[PORTS END]
