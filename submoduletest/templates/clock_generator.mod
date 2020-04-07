@@ -62,14 +62,13 @@
 								position x 100 y 100
 								rotation 0
 								size 1.30
-								style normal
 								line_width 0.00
 								appearance simple
 							[LABEL END]
 						[LABELS END]
 						[PORTS BEGIN]
 							device R1 port 1
-							netchanger 1 port master
+							netchanger 1 port slave
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -95,7 +94,6 @@
 								position x 100 y 100
 								rotation 0
 								size 1.30
-								style normal
 								line_width 0.00
 								appearance simple
 							[LABEL END]
@@ -117,7 +115,7 @@
 	[NETCHANGER BEGIN]
 		name 1
 		position_in_schematic sheet 1 x 215 y 100
-		rotation_in_schematic 0
+		rotation_in_schematic 180
 		position_in_board x 234.4 y 99.0
 		layer 3
 	[NETCHANGER END]
@@ -139,7 +137,6 @@
 		size 1.70
 		line_width 0.33
 		rotation 0
-		style italic
 		alignment horizontal center vertical center
 	[TEXT END]
 [TEXTS END]
@@ -187,7 +184,6 @@
 						size 1.30
 						line_width 0.20
 						rotation 0
-						style normal
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
 					[PLACEHOLDER BEGIN]
@@ -196,7 +192,6 @@
 						size 1.30
 						line_width 0.20
 						rotation 0
-						style normal
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
 				[PLACEHOLDERS END]

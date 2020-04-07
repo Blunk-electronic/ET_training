@@ -191,7 +191,6 @@
 		size 1.70
 		line_width 0.33
 		rotation 0
-		style italic
 		alignment horizontal center vertical center
 	[TEXT END]
 [TEXTS END]
@@ -246,7 +245,6 @@
 						size 1.30
 						line_width 0.20
 						rotation 0
-						style normal
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
 					[PLACEHOLDER BEGIN]
@@ -255,7 +253,6 @@
 						size 1.30
 						line_width 0.20
 						rotation 0
-						style normal
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
 				[PLACEHOLDERS END]

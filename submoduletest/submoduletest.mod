@@ -125,12 +125,11 @@
 
 [TEXTS BEGIN]
 	[TEXT BEGIN]
-		position sheet 1 x 100 y 200
+		position sheet 1 x 30 y 180
 		content "ET Test Circuit"
-		size 1.70
+		size 10
 		line_width 0.33
 		rotation 0
-		style italic
 		alignment horizontal center vertical center
 	[TEXT END]
 [TEXTS END]
@@ -151,7 +150,7 @@
 			[PORT BEGIN]
 				name out
 				position x 0 y 20
-				direction slave -- master
+				direction master
 			[PORT END]
 			[PORT BEGIN]
 				name in-r
@@ -234,7 +233,6 @@
 						size 1.30
 						line_width 0.20
 						rotation 0
-						style normal
 						alignment horizontal right vertical top
 					[PLACEHOLDER END]
 					[PLACEHOLDER BEGIN]
@@ -243,7 +241,6 @@
 						size 1.30
 						line_width 0.30
 						rotation 0
-						style normal
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
 					[PLACEHOLDER BEGIN]
@@ -252,7 +249,6 @@
 						size 1.30
 						line_width 0.20
 						rotation 0
-						style normal
 						alignment horizontal center vertical bottom
 					[PLACEHOLDER END]
 

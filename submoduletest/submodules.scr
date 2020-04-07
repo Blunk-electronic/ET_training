@@ -1,6 +1,6 @@
 
 schematic submoduletest set grid 5 5
 
-#schematic submoduletest add port CLK_GENERATOR rf_out 0 10 slave
+schematic submoduletest add port CLK_GENERATOR rf_out 0 10 slave
 
 # script end
