@@ -127,10 +127,9 @@
 	[TEXT BEGIN]
 		position sheet 1 x 30 y 180
 		content "ET Test Circuit"
-		size 10
-		line_width 0.33
-		rotation 0
-		alignment horizontal center vertical center
+		size 5
+		rotation 90
+		alignment horizontal left vertical bottom
 	[TEXT END]
 [TEXTS END]
 
@@ -231,7 +230,6 @@
 						meaning name
 						position x -3 y 3
 						size 1.30
-						line_width 0.20
 						rotation 0
 						alignment horizontal right vertical top
 					[PLACEHOLDER END]
@@ -239,7 +237,6 @@
 						meaning value
 						position x -3 y -3
 						size 1.30
-						line_width 0.30
 						rotation 0
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
@@ -247,7 +244,6 @@
 						meaning purpose
 						position x -3 y -6
 						size 1.30
-						line_width 0.20
 						rotation 0
 						alignment horizontal center vertical bottom
 					[PLACEHOLDER END]

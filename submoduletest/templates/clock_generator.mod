@@ -135,7 +135,6 @@
 		position sheet 1 x 100 y 200
 		content "clock generator template"
 		size 1.70
-		line_width 0.33
 		rotation 0
 		alignment horizontal center vertical center
 	[TEXT END]
@@ -182,7 +181,6 @@
 						meaning name
 						position x 0 y 3
 						size 1.30
-						line_width 0.20
 						rotation 0
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
@@ -190,7 +188,6 @@
 						meaning value
 						position x 0 y -3
 						size 1.30
-						line_width 0.20
 						rotation 0
 						alignment horizontal center vertical center
 					[PLACEHOLDER END]
