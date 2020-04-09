@@ -141,7 +141,7 @@
 		--file ../templates/clock_generator.mod
 		--file /home/luno/tmp/templates/clock_generator.mod
 		--file $TEMPLATES/clock_generator.mod
-		position sheet 1 x 150 y 30
+		position sheet 1 x 100 y 160
 		size x 40 y 40
 		position_in_board x 200 y 200 rotation 0
 		view_mode origin
