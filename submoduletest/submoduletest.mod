@@ -117,6 +117,23 @@
 [DRAWING_FRAMES BEGIN]
 	[SCHEMATIC BEGIN]
 		template ../frames/dummy.frs
+		[SHEET_DESCRIPTIONS BEGIN]
+			[SHEET BEGIN]
+				number 1
+				category development
+				text "voltage regulator"
+			[SHEET END]
+			[SHEET BEGIN]
+				number 2
+				category development
+				text "motor driver"
+			[SHEET END]
+			[SHEET BEGIN]
+				number 3
+				category product
+				text "blood pressure sensor"
+			[SHEET END]
+		[SHEET_DESCRIPTIONS END]
 	[SCHEMATIC END]
 	[BOARD BEGIN]
 		template ../frames/dummy.frb
