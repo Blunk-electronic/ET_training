@@ -9,18 +9,18 @@ border_width 5
 size x 280 y 200
 sectors rows 7 columns 10
 [TITLE_BLOCK BEGIN]
-	position x 10 y 8
+	position x 100 y 8
 	[LINES BEGIN]
 		[LINE BEGIN]
 			start x 0 y 0
-			end x 50 y 0
+			end x 150 y 0
 		[LINE END]
 		[LINE BEGIN]
-			start x 50 y 0
-			end x 50 y 40
+			start x 150 y 0
+			end x 150 y 40
 		[LINE END]
 		[LINE BEGIN]
-			start x 50 y 40
+			start x 150 y 40
 			end x 0 y 40
 		[LINE END]
 		[LINE BEGIN]
@@ -30,66 +30,66 @@ sectors rows 7 columns 10
 	[LINES END]
 	[TEXTS BEGIN]
 		[TEXT BEGIN]
-			position x 1 y 1
-			size 32
+			position x 60 y 10
+			size 4
 			content "SCALE"
 		[TEXT END]
 	[TEXTS END]
 	[PLACEHOLDERS BEGIN]
 		[PROJECT_NAME BEGIN]
-			position x 1 y 1
+			position x 1 y 20
 			size 3
 		[PROJECT_NAME END]
 		[MODULE_FILE_NAME BEGIN]
-			position x 1 y 1
+			position x 1 y 15
 			size 3
 		[MODULE_FILE_NAME END]
 		[ACTIVE_ASSEMBLY_VARIANT BEGIN]
-			position x 1 y 1
+			position x 1 y 10
 			size 3
 		[ACTIVE_ASSEMBLY_VARIANT END]
 		[COMPANY BEGIN]
-			position x 1 y 1
+			position x 100 y 1
 			size 3
 		[COMPANY END]
 		[CUSTOMER BEGIN]
-			position x 1 y 1
+			position x 100 y 5
 			size 3
 		[CUSTOMER END]
 		[PARTCODE BEGIN]
-			position x 1 y 1
+			position x 100 y 10
 			size 3
 		[PARTCODE END]
 		[DRAWING_NUMBER BEGIN]
-			position x 1 y 1
+			position x 100 y 15
 			size 3
 		[DRAWING_NUMBER END]
 		[REVISION BEGIN]
-			position x 1 y 1
+			position x 100 y 20
 			size 3
 		[REVISION END]
 		[DRAWN_BY BEGIN]
-			position x 1 y 1
+			position x 100 y 25
 			size 3
 		[DRAWN_BY END]
 		[CHECKED_BY BEGIN]
-			position x 1 y 1
+			position x 100 y 30
 			size 3
 		[CHECKED_BY END]
 		[APPROVED_BY BEGIN]
-			position x 1 y 1
+			position x 100 y 35
 			size 3
 		[APPROVED_BY END]
 		[DRAWN_DATE BEGIN]
-			position x 1 y 1
+			position x 140 y 25
 			size 3
 		[DRAWN_DATE END]
 		[CHECKED_DATE BEGIN]
-			position x 1 y 1
+			position x 140 y 30
 			size 3
 		[CHECKED_DATE END]
 		[APPROVED_DATE BEGIN]
-			position x 1 y 1
+			position x 140 y 35
 			size 3
 		[APPROVED_DATE END]
 		[FACE BEGIN]
