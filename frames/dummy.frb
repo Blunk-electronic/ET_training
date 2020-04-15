@@ -93,7 +93,7 @@ sectors rows 7 columns 10
 			size 3
 		[APPROVED_DATE END]
 		[FACE BEGIN]
-			position x 1 y 1
+			position x 10 y 1
 			size 3
 		[FACE END]
 		[SIGNAL_LAYER BEGIN]
