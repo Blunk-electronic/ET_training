@@ -295,38 +295,199 @@
 	[SILK_SCREEN BEGIN]
 		[TOP BEGIN]
 			[LINE BEGIN]
-				start x -100.0 y 20.0
-				end x 60.0 y 20.0
+				start x 10.0 y 5.0
+				end x 60.0 y 5.0
 				width 1.0
 			[LINE END]
-			[LINE BEGIN]
-				start x 20.0 y -100.0
-				end x 20.0 y 100.0
-				width 1.0
-			[LINE END]
-			
-			-- 			[ARC BEGIN]
--- 				center x 150.000 y 50.000
--- 				start x 160.00 y 50.000
--- 				end x 170.000 y 50.000
--- 				direction CCW
--- 				width 0.5
--- 			[ARC END]
 			[ARC BEGIN]
-				center x 130.000 y 80.000
-				start x 120.000 y 80.000
-				end x 140.000 y 80.000
+				center x 40.000 y 7.000
+				start x 30.000 y 7.000
+				end x 50.000 y 7.000
 				width 0.5
 				direction CW
 			[ARC END]
 			[CIRCLE BEGIN]
-				center x 110.000 y 180.000
-				radius 20.000
+				center x 20.000 y 15.000
+				radius 5.000
 				width 0.20
 			[CIRCLE END]
 		[TOP END]
 	[SILK_SCREEN END]
 
+	[ASSEMBLY_DOCUMENTATION BEGIN]
+		[TOP BEGIN]
+			[LINE BEGIN]
+				start x 10.0 y 55.0
+				end x 60.0 y 55.0
+				width 1.0
+			[LINE END]
+			[ARC BEGIN]
+				center x 40.000 y 57.000
+				start x 30.000 y 57.000
+				end x 50.000 y 57.000
+				width 0.5
+				direction CW
+			[ARC END]
+			[CIRCLE BEGIN]
+				center x 20.000 y 65.000
+				radius 5.000
+				width 0.20
+			[CIRCLE END]
+		[TOP END]
+
+		[BOTTOM BEGIN]
+			[LINE BEGIN]
+				start x 10.0 y 65.0
+				end x 60.0 y 65.0
+				width 1.0
+			[LINE END]
+			[ARC BEGIN]
+				center x 40.000 y 67.000
+				start x 30.000 y 67.000
+				end x 50.000 y 67.000
+				width 0.5
+				direction CW
+			[ARC END]
+			[CIRCLE BEGIN]
+				center x 20.000 y 75.000
+				radius 5.000
+				width 0.20
+			[CIRCLE END]
+		[BOTTOM END]
+	[ASSEMBLY_DOCUMENTATION END]
+	
+	[KEEPOUT BEGIN]
+		[TOP BEGIN]
+			[LINE BEGIN]
+				start x 52.0 y 5.0
+				end x 110.0 y 5.0
+			[LINE END]
+			[ARC BEGIN]
+				center x 90.000 y 7.000
+				start x 80.000 y 7.000
+				end x 100.000 y 7.000
+				direction CW
+			[ARC END]
+			[CIRCLE BEGIN]
+				center x 70.000 y 15.000
+				radius 5.000
+			[CIRCLE END]
+		[TOP END]
+	[KEEPOUT END]
+
+	[STOP_MASK BEGIN]
+		[TOP BEGIN]
+			[LINE BEGIN]
+				start x 70.0 y 55.0
+				end x 110.0 y 55.0
+				width 1.20
+			[LINE END]
+			[ARC BEGIN]
+				center x 90.000 y 57.000
+				start x 80.000 y 57.000
+				end x 100.000 y 57.000
+				direction CW
+				width 1.20
+			[ARC END]
+			[CIRCLE BEGIN]
+				center x 70.000 y 65.000
+				radius 5.000
+				width 1.20
+			[CIRCLE END]
+		[TOP END]
+	[STOP_MASK END]
+
+	[STENCIL BEGIN]
+		[TOP BEGIN]
+			[LINE BEGIN]
+				start x 120.0 y 55.0
+				end x 150.0 y 55.0
+				width 1.20
+			[LINE END]
+			[ARC BEGIN]
+				center x 130.000 y 57.000
+				start x 120.000 y 57.000
+				end x 140.000 y 57.000
+				direction CW
+				width 1.20
+			[ARC END]
+			[CIRCLE BEGIN]
+				center x 120.000 y 65.000
+				radius 5.000
+				width 1.20
+			[CIRCLE END]
+		[TOP END]
+	[STENCIL END]
+
+	[ROUTE_RESTRICT BEGIN]
+		[LINE BEGIN]
+			start x 170.0 y 55.0
+			end x 200.0 y 55.0
+			layers 1 2 14
+		[LINE END]
+		[ARC BEGIN]
+			center x 180.000 y 57.000
+			start x 170.000 y 57.000
+			end x 190.000 y 57.000
+			direction CW
+			layers 4 6 10
+		[ARC END]
+		[CIRCLE BEGIN]
+			center x 170.000 y 65.000
+			radius 5.000
+			layers 10 12
+		[CIRCLE END]
+	[ROUTE_RESTRICT END]
+
+	[VIA_RESTRICT BEGIN]
+		[LINE BEGIN]
+			start x 170.0 y 65.0
+			end x 200.0 y 65.0
+			layers 1 2 14
+		[LINE END]
+		[ARC BEGIN]
+			center x 180.000 y 67.000
+			start x 170.000 y 67.000
+			end x 190.000 y 67.000
+			direction CCW
+			layers 4 6 10
+		[ARC END]
+		[CIRCLE BEGIN]
+			center x 170.000 y 75.000
+			radius 5.000
+			layers 10 12
+		[CIRCLE END]
+	[VIA_RESTRICT END]
+
+	[COPPER BEGIN]
+		[LINE BEGIN]
+			start x 10.0 y 80.0
+			end x 30.0 y 80.0
+			layer 1
+			width 1.0
+		[LINE END]
+		[ARC BEGIN]
+			center x 20.000 y 90.000
+			start x 10.000 y 90.000
+			end x 30.000 y 90.000
+			direction CW
+			layer 4
+			width 1.0
+		[ARC END]
+		[CIRCLE BEGIN]
+			center x 30.000 y 100.000
+			radius 5.000
+			layer 10
+			width 1.0
+		[CIRCLE END]
+		[CIRCLE BEGIN]
+			center x 60.000 y 100.000
+			radius 5.000
+			layer 10
+			filled yes			
+		[CIRCLE END]
+	[COPPER END]
+	
 	[PCB_CONTOURS_NON_PLATED BEGIN]
 		[CIRCLE BEGIN]
 			center x 0.000 y 0.000
@@ -334,18 +495,18 @@
 		[CIRCLE END]
 		[LINE BEGIN]
 			start x 0.0 y 0.0
-			end x 100.0 y 0.0
+			end x 200.0 y 0.0
 		[LINE END]
 		[LINE BEGIN]
-			start x 100.0 y 0.0
-			end x 100.0 y 50.0
+			start x 200.0 y 0.0
+			end x 200.0 y 100.0
 		[LINE END]
 		[LINE BEGIN]
-			start x 100.0 y 50.0
-			end x 0.0 y 50.0
+			start x 200.0 y 100.0
+			end x 0.0 y 100.0
 		[LINE END]
 		[LINE BEGIN]
-			start x 0.0 y 50.0
+			start x 0.0 y 100.0
 			end x 0.0 y 0.0
 		[LINE END]
 	[PCB_CONTOURS_NON_PLATED END]
