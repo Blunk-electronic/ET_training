@@ -1,0 +1,4 @@
+#board submoduletest zoom 0 0 4
+schematic submoduletest zoom center 200 100 4
+
+# script end

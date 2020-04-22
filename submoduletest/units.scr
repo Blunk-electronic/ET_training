@@ -47,7 +47,11 @@ schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/pa
 #schematic submoduletest rotate unit R1 1 relative 90
 #project save module submoduletest
 
-#schematic submoduletest zoom center 100 200
+
 #schematic submoduletest execute script rotate.scr
+
+schematic submoduletest zoom center 200 100 4
+#board submoduletest zoom center 0.0 0.0 4
+board submoduletest position cursor absolute 25 30
 
 # script end
