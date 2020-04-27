@@ -9,18 +9,18 @@ border_width 5
 size x 280 y 200
 sectors rows 7 columns 10
 [TITLE_BLOCK BEGIN]
-	position x 100 y 8
+	position x 55 y 6
 	[LINES BEGIN]
 		[LINE BEGIN]
 			start x 0 y 0
-			end x 150 y 0
+			end x 220 y 0
 		[LINE END]
 		[LINE BEGIN]
-			start x 150 y 0
-			end x 150 y 40
+			start x 220 y 0
+			end x 220 y 40
 		[LINE END]
 		[LINE BEGIN]
-			start x 150 y 40
+			start x 220 y 40
 			end x 0 y 40
 		[LINE END]
 		[LINE BEGIN]
@@ -29,124 +29,204 @@ sectors rows 7 columns 10
 		[LINE END]
 	[LINES END]
 	[TEXTS BEGIN]
+		-- column 1
 		[TEXT BEGIN]
-			position x 60 y 10
-			size 4
-			content "SCALE"
+			position x 2 y 36
+			size 3
+			content "Company:"
 		[TEXT END]
+		[TEXT BEGIN]
+			position x 2 y 31
+			size 3
+			content "Project:"
+		[TEXT END]
+		[TEXT BEGIN]
+			position x 2 y 26
+			size 3
+			content "Module:"
+		[TEXT END]
+		[TEXT BEGIN]
+			position x 2 y 21
+			size 3
+			content "Variant:"
+		[TEXT END]
+		[TEXT BEGIN]
+			position x 2 y 16
+			size 3
+			content "Customer:"
+		[TEXT END]
+		[TEXT BEGIN]
+			position x 2 y 11
+			size 3
+			content "Partcode:"
+		[TEXT END]
+		[TEXT BEGIN]
+			position x 2 y 6
+			size 3
+			content "Drwg. No:"
+		[TEXT END]
+		[TEXT BEGIN]
+			position x 2 y 1
+			size 3
+			content "Revision:"
+		[TEXT END]
+
+		-- column 3
+		[TEXT BEGIN]
+			position x 100 y 11
+			size 3
+			content "edited:"
+		[TEXT END]
+		[TEXT BEGIN]
+			position x 100 y 6
+			size 3
+			content "checked:"
+		[TEXT END]
+		[TEXT BEGIN]
+			position x 100 y 1
+			size 3
+			content "approved:"
+		[TEXT END]
+		
 	[TEXTS END]
+
 	[PLACEHOLDERS BEGIN]
+		-- column 2
+		[COMPANY BEGIN]
+			position x 30 y 36
+			size 3
+		[COMPANY END]
 		[PROJECT_NAME BEGIN]
-			position x 1 y 20
+			position x 30 y 31
 			size 3
 		[PROJECT_NAME END]
 		[MODULE_FILE_NAME BEGIN]
-			position x 1 y 15
+			position x 30 y 26
 			size 3
 		[MODULE_FILE_NAME END]
 		[ACTIVE_ASSEMBLY_VARIANT BEGIN]
-			position x 1 y 10
+			position x 30 y 21
 			size 3
 		[ACTIVE_ASSEMBLY_VARIANT END]
-		[COMPANY BEGIN]
-			position x 100 y 1
-			size 3
-		[COMPANY END]
 		[CUSTOMER BEGIN]
-			position x 100 y 5
+			position x 30 y 16
 			size 3
 		[CUSTOMER END]
 		[PARTCODE BEGIN]
-			position x 100 y 10
+			position x 30 y 11
 			size 3
 		[PARTCODE END]
 		[DRAWING_NUMBER BEGIN]
-			position x 100 y 15
+			position x 30 y 6
 			size 3
 		[DRAWING_NUMBER END]
 		[REVISION BEGIN]
-			position x 100 y 20
+			position x 30 y 1
 			size 3
 		[REVISION END]
-		[DRAWN_BY BEGIN]
-			position x 100 y 25
+
+		-- column 4
+		[FACE BEGIN]
+			position x 130 y 36
 			size 3
-		[DRAWN_BY END]
-		[CHECKED_BY BEGIN]
-			position x 100 y 30
+		[FACE END]
+		[SIGNAL_LAYER BEGIN]
+			position x 130 y 31
 			size 3
-		[CHECKED_BY END]
-		[APPROVED_BY BEGIN]
-			position x 100 y 35
-			size 3
-		[APPROVED_BY END]
+		[SIGNAL_LAYER END]
+
 		[DRAWN_DATE BEGIN]
-			position x 140 y 25
+			position x 130 y 11
 			size 3
 		[DRAWN_DATE END]
 		[CHECKED_DATE BEGIN]
-			position x 140 y 30
+			position x 130 y 6
 			size 3
 		[CHECKED_DATE END]
 		[APPROVED_DATE BEGIN]
-			position x 140 y 35
+			position x 130 y 1
 			size 3
 		[APPROVED_DATE END]
-		[FACE BEGIN]
-			position x 10 y 1
+
+		[DRAWN_BY BEGIN]
+			position x 165 y 11
 			size 3
-		[FACE END]
-		[SIGNAL_LAYER BEGIN]
-			position x 1 y 1
+		[DRAWN_BY END]
+		[CHECKED_BY BEGIN]
+			position x 165 y 6
 			size 3
-		[SIGNAL_LAYER END]
+		[CHECKED_BY END]
+		[APPROVED_BY BEGIN]
+			position x 165 y 1
+			size 3
+		[APPROVED_BY END]
 	[PLACEHOLDERS END]
+		
 	[CAM_MARKERS BEGIN]
+		-- column 3
+		[SIGNAL_LAYER BEGIN]
+			position x 100 y 31
+			size 3
+			content "SGNL LYR"
+		[SIGNAL_LAYER END]
+
 		[FACE BEGIN]
-			position x 1 y 1
+			position x 100 y 36
 			size 3
 			content "FACE"
 		[FACE END]
+
+		-- column 4	
 		[SILK_SCREEN BEGIN]
-			position x 1 y 1
+			position x 130 y 26
 			size 3
-			content "SILK SCREEN"
+			content "SILKSCREEN"
 		[SILK_SCREEN END]
 		[ASSY_DOC BEGIN]
-			position x 1 y 1
+			position x 165 y 26
 			size 3
-			content "ASSEMBLY DOCUMENTATION"
+			content "ASSEMBLY"
 		[ASSY_DOC END]
+
+		[PCB_OUTLINE BEGIN]
+			position x 130 y 21
+			size 3
+			content "OUTLINE"
+		[PCB_OUTLINE END]
+		[PLATED_MILLINGS BEGIN]
+			position x 155 y 21
+			size 3
+			content "PLTD MILLINGS"
+		[PLATED_MILLINGS END]
 		[KEEPOUT BEGIN]
-			position x 1 y 1
+			position x 195 y 21
 			size 3
 			content "KEEPOUT"
 		[KEEPOUT END]
-		[PLATED_MILLINGS BEGIN]
-			position x 1 y 1
-			size 3
-			content "PLATED MILLINGS"
-		[PLATED_MILLINGS END]
-		[PCB_OUTLINE BEGIN]
-			position x 1 y 1
-			size 3
-			content "PCB CONTOURS"
-		[PCB_OUTLINE END]
+
 		[ROUTE_RESTRICT BEGIN]
-			position x 1 y 1
+			position x 130 y 16
 			size 3
-			content "ROUTE RESTRICT"
+			content "ROUTE_RESTRICT"
 		[ROUTE_RESTRICT END]
 		[VIA_RESTRICT BEGIN]
-			position x 1 y 1
+			position x 175 y 16
 			size 3
-			content "VIA RESTRICT"
+			content "VIA_RESTRICT"
 		[VIA_RESTRICT END]
-		[SIGNAL_LAYER BEGIN]
-			position x 1 y 1
+
+		[STOP_MASK BEGIN]
+			position x 130 y 16
 			size 3
-			content "SIGNAL LAYER"
-		[SIGNAL_LAYER END]
+			content "STOP_MASK"
+		[STOP_MASK END]
+		[STENCIL BEGIN]
+			position x 175 y 16
+			size 3
+			content "STENCIL"
+		[STENCIL END]
+
+		
 	[CAM_MARKERS END]
 [TITLE_BLOCK END]
 
