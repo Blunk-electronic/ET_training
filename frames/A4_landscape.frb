@@ -167,13 +167,12 @@ sectors rows 7 columns 10
 		[SIGNAL_LAYER BEGIN]
 			position x 90 y 31
 			size 3
-			content "SGNL LYR"
+			content "SGNL_LYR:"
 		[SIGNAL_LAYER END]
 
 		[FACE BEGIN]
 			position x 90 y 36
 			size 3
-			content "FACE"
 		[FACE END]
 
 		-- column 4	

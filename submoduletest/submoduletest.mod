@@ -136,7 +136,7 @@
 		[SHEET_DESCRIPTIONS END]
 	[SCHEMATIC END]
 	[BOARD BEGIN]
-		template ../frames/dummy.frb
+		template ../frames/A4_landscape.frb
 	[BOARD END]
 [DRAWING_FRAMES END]
 
