@@ -100,11 +100,11 @@
 			[LINE END]
 			[VIA BEGIN]
 				position x 100.000 y 80.000
-				diameter 0.400
+				diameter 1.00
 				layer_start 1
 				layer_end 32
-				restring_outer_layers 0.100
-				restring_inner_layers 0.100
+				restring_outer_layers 0.2
+				restring_inner_layers 0.3
 			[VIA END]
 			[ARC BEGIN]
 				start x 100.000 y 80.000

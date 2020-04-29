@@ -1,6 +1,7 @@
 
-
-board submoduletest zoom center 100 80 10
+board submoduletest set grid 1 1
+board submoduletest position cursor absolute 100 80
+board submoduletest zoom center 100 80 50
 #board submoduletest position cursor absolute 25 30
 
 # script end
