@@ -90,6 +90,30 @@
 			[STRAND END]
 			
 		[STRANDS END]
+
+		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x 80.000 y 60.000
+				end x 100.000 y 80.000
+				layer 1
+				width 0.250
+			[LINE END]
+			[VIA BEGIN]
+				position x 100.000 y 80.000
+				diameter 0.400
+				layer_start 1
+				layer_end 32
+				restring_outer_layers 0.100
+				restring_inner_layers 0.100
+			[VIA END]
+			[ARC BEGIN]
+				start x 100.000 y 80.000
+				center x 110 y 80
+				end x 120.000 y 80.000
+				layer 2
+				width 0.250
+			[ARC END]
+		[ROUTE END]
 	[NET END]
 
 	[NET BEGIN]
