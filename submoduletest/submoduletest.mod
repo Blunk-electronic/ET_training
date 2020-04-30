@@ -47,6 +47,29 @@
 	[NET_CLASS END]
 [NET_CLASSES END]
 
+[DRAWING_GRID BEGIN]
+	[SCHEMATIC BEGIN]
+		default x 2.50 y 2.50
+	[SCHEMATIC END]
+	[BOARD BEGIN]
+		default x 2.500 y 2.500
+	[BOARD END]
+[DRAWING_GRID END]
+
+[BOARD_LAYER_STACK BEGIN]
+	conductor  1 0.035 -- top signal layer
+	dielectric 1 0.2 -- prepreg
+
+	conductor  2 0.018 -- inner signal layer
+	dielectric 2 1.0 -- core
+
+	conductor  3 0.018 -- inner signal layer
+	dielectric 3 0.2 -- prepreg
+	
+	conductor  4 0.035 -- bottom signal layer
+[BOARD_LAYER_STACK END]
+
+
 [NETS BEGIN]
 	[NET BEGIN]
 		name motor_on
@@ -96,7 +119,19 @@
 				start x 80.000 y 60.000
 				end x 100.000 y 80.000
 				layer 1
-				width 0.250
+				width 1.250
+			[LINE END]
+			[LINE BEGIN]
+				start x 80.000 y 80.000
+				end x 100.000 y 60.000
+				layer 2
+				width 1.250
+			[LINE END]
+			[LINE BEGIN]
+				start x 80.000 y 70.000
+				end x 100.000 y 70.000
+				layer 3
+				width 1.250
 			[LINE END]
 			[VIA BEGIN]
 				position x 100.000 y 80.000
@@ -484,6 +519,25 @@
 	[VIA_RESTRICT END]
 
 	[COPPER BEGIN]
+		[LINE BEGIN]
+			start x 100.000 y 60.000
+			end x 120.000 y 80.000
+			layer 1
+			width 1
+		[LINE END]
+		[LINE BEGIN]
+			start x 100.000 y 80.000
+			end x 120.000 y 60.000
+			layer 2
+			width 1
+		[LINE END]
+		[LINE BEGIN]
+			start x 100.000 y 70.000
+			end x 120.000 y 70.000
+			layer 3
+			width 1
+		[LINE END]
+
 		[LINE BEGIN]
 			start x 10.0 y 80.0
 			end x 30.0 y 80.0

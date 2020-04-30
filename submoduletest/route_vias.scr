@@ -1,7 +1,11 @@
 
-board submoduletest set grid 1 1
+board submoduletest set grid 0.5 0.5
 board submoduletest position cursor absolute 100 80
-board submoduletest zoom center 100 80 50
+board submoduletest zoom center 100 80 100
+board submoduletest display vias off
+board submoduletest display conductors 1 off
+board submoduletest display conductors 3 off
+board submoduletest display conductors 4 off
 #board submoduletest position cursor absolute 25 30
 
 # script end
