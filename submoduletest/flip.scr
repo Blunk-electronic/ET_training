@@ -1,0 +1,5 @@
+
+#board submoduletest flip device R1 top
+board submoduletest flip device R1 bottom
+
+# script end
