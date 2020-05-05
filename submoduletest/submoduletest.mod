@@ -275,12 +275,12 @@
 		partcode R_PAC_S_0805_VAL_100R
 		purpose brightness
 		[PACKAGE BEGIN]
-			position x 0 y 0 rotation 0.0 face top
+			position x 10 y 10 rotation 0.0 face top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silk_screen
 					meaning name
-					position x 0 y 2 rotation 0.00 face top
+					position x 3 y 2 rotation 0.00 face top
 					size 1.000
 					line_width 0.150
 					alignment horizontal center vertical bottom
@@ -288,7 +288,7 @@
 				[PLACEHOLDER BEGIN]
 					layer assembly_documentation
 					meaning value
-					position x 0 y 3 rotation 0.00 face top
+					position x 4 y 3 rotation 0.00 face top
 					size 1.000
 					line_width 0.150
 					alignment horizontal center vertical bottom
