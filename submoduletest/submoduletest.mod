@@ -361,7 +361,8 @@
 			[ARC BEGIN]
 				center x 40.000 y 7.000
 				start x 30.000 y 7.000
-				end x 50.000 y 7.000
+				--end x 50.000 y 7.000
+				end x 40.000 y 17.000
 				width 0.5
 				direction CW
 			[ARC END]
