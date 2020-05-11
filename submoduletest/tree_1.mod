@@ -137,11 +137,11 @@
 						start x 1.000 y 55.000
 						end x 3.000 y 4.000
 					[LINE END]
-					[ARC BEGIN]
-						center x 10.000 y 55.000
-						start x 10.000 y 0.000
-						end x 10.000 y 20.000
-					[ARC END]
+! 					[ARC BEGIN]
+! 						center x 10.000 y -20.000
+! 						start x 10.000 y 0.000
+! 						end x 10.000 y 20.000
+! 					[ARC END]
 					[CIRCLE BEGIN]
 						center x 10.000 y 55.000
 						radius 20
@@ -289,11 +289,11 @@
 					start x 11.000 y 44.000
 					end x 33.000 y 4.000
 				[LINE END]
-				[ARC BEGIN]
-					center x 10.000 y 44.000
-					start x 10.000 y 0.000
-					end x 10.000 y 20.000
-				[ARC END]
+! 				[ARC BEGIN]
+! 					center x 10.000 y 44.000
+! 					start x 10.000 y 0.000
+! 					end x 10.000 y 20.000
+! 				[ARC END]
 				[CIRCLE BEGIN]
 					center x 10.000 y 44.000
 					radius 20
