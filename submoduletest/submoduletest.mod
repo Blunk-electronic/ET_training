@@ -371,6 +371,34 @@
 				radius 5.000
 				width 0.20
 			[CIRCLE END]
+
+			[FILL_ZONE BEGIN]
+				fill_style solid
+	-- 			fill_style hatched
+	-- 			hatching_line_width 0.15
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 110.000 y 15.000
+						end x 140.000 y 15.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 140.000 y 15.000
+						end x 140.000 y 45.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 140.000 y 45.000
+						end x 110.000 y 35.000
+					[LINE END]
+					[ARC BEGIN]
+						start x 110.000 y 35.000
+						center x 110.000 y 25.000
+						end x 110.000 y 15.000
+						direction CCW
+					[ARC END]
+				[CONTOURS END]
+			[FILL_ZONE END]
+
+			
 		[TOP END]
 	[SILK_SCREEN END]
 
@@ -393,6 +421,51 @@
 				radius 5.000
 				width 0.20
 			[CIRCLE END]
+
+			[FILL_ZONE BEGIN]
+				fill_style solid
+	-- 			fill_style hatched
+	-- 			hatching_line_width 0.15
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 110.000 y 10.000
+						end x 140.000 y 10.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 140.000 y 10.000
+						end x 140.000 y 40.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 140.000 y 40.000
+						end x 110.000 y 30.000
+					[LINE END]
+					[ARC BEGIN]
+						start x 110.000 y 30.000
+						center x 110.000 y 20.000
+						end x 110.000 y 10.000
+						direction CCW
+					[ARC END]
+				[CONTOURS END]
+			[FILL_ZONE END]
+
+			[CUTOUT_ZONE BEGIN]
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 120.000 y 20.000
+						end x 130.000 y 20.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 130.000 y 20.000
+						end x 130.000 y 30.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 130.000 y 30.000
+						end x 120.000 y 20.000
+					[LINE END]
+				[CONTOURS END]
+			[CUTOUT_ZONE END]
+
+			
 		[TOP END]
 
 		[BOTTOM BEGIN]
@@ -565,6 +638,43 @@
 			layer 10
 			filled yes			
 		[CIRCLE END]
+
+		[FILL_ZONE BEGIN]
+			fill_style solid
+-- 			fill_style hatched
+			-- 			hatching_line_width 0.15
+			layer 4
+			[CONTOURS BEGIN]
+				[LINE BEGIN]
+					start x 50.000 y 5.000
+					end x 150.000 y 5.000
+				[LINE END]
+				[LINE BEGIN]
+					start x 150.000 y 5.000
+					end x 150.000 y 50.000
+				[LINE END]
+				[LINE BEGIN]
+					start x 150.000 y 50.000
+					end x 50.000 y 50.000
+				[LINE END]
+				[LINE BEGIN]
+					start x 50.000 y 50.000
+					end x 50.000 y 5.000
+				[LINE END]
+			[CONTOURS END]
+		[FILL_ZONE END]
+
+		[CUTOUT_ZONE BEGIN]
+			layer 4
+			[CONTOURS BEGIN]
+				[CIRCLE BEGIN]
+					center x 130.000 y 35.000
+					radius 10
+				[CIRCLE END]
+			[CONTOURS END]
+		[CUTOUT_ZONE END]
+
+		
 	[COPPER END]
 	
 	[PCB_CONTOURS_NON_PLATED BEGIN]

@@ -1,9 +1,11 @@
 board submoduletest display grid
-board submoduletest set grid 0.5 0.5
-board submoduletest position cursor absolute 12 15
-board submoduletest zoom center 12 15 70
+#board submoduletest set grid 0.5 0.5
+#board submoduletest position cursor absolute 12 15
+board submoduletest position cursor absolute 130 20
+#board submoduletest zoom center 12 15 70
+board submoduletest zoom center 130 20 10
 
-board submoduletest display silkscreen bottom
+board submoduletest display silkscreen top off
 
 #board submoduletest flip device R1 top
 #board submoduletest flip device R1 bottom
