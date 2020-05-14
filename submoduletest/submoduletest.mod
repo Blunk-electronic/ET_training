@@ -275,7 +275,7 @@
 		partcode R_PAC_S_0805_VAL_100R
 		purpose brightness
 		[PACKAGE BEGIN]
-			position x 12 y 15 rotation 0.0 face top
+			position x 50.5 y 12 rotation 0.0 face top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silk_screen
@@ -372,31 +372,31 @@
 				width 0.20
 			[CIRCLE END]
 
-			[FILL_ZONE BEGIN]
-				fill_style solid
-	-- 			fill_style hatched
-	-- 			hatching_line_width 0.15
-				[CONTOURS BEGIN]
-					[LINE BEGIN]
-						start x 110.000 y 15.000
-						end x 140.000 y 15.000
-					[LINE END]
-					[LINE BEGIN]
-						start x 140.000 y 15.000
-						end x 140.000 y 45.000
-					[LINE END]
-					[LINE BEGIN]
-						start x 140.000 y 45.000
-						end x 110.000 y 35.000
-					[LINE END]
-					[ARC BEGIN]
-						start x 110.000 y 35.000
-						center x 110.000 y 25.000
-						end x 110.000 y 15.000
-						direction CCW
-					[ARC END]
-				[CONTOURS END]
-			[FILL_ZONE END]
+-- 			[FILL_ZONE BEGIN]
+-- 				fill_style solid
+-- 	-- 			fill_style hatched
+-- 	-- 			hatching_line_width 0.15
+-- 				[CONTOURS BEGIN]
+-- 					[LINE BEGIN]
+-- 						start x 110.000 y 15.000
+-- 						end x 140.000 y 15.000
+-- 					[LINE END]
+-- 					[LINE BEGIN]
+-- 						start x 140.000 y 15.000
+-- 						end x 140.000 y 45.000
+-- 					[LINE END]
+-- 					[LINE BEGIN]
+-- 						start x 140.000 y 45.000
+-- 						end x 110.000 y 35.000
+-- 					[LINE END]
+-- 					[ARC BEGIN]
+-- 						start x 110.000 y 35.000
+-- 						center x 110.000 y 25.000
+-- 						end x 110.000 y 15.000
+-- 						direction CCW
+-- 					[ARC END]
+-- 				[CONTOURS END]
+-- 			[FILL_ZONE END]
 
 			
 		[TOP END]
