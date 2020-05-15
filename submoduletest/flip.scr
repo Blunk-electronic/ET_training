@@ -9,6 +9,7 @@ board submoduletest zoom center 50 12.5 150
 #board submoduletest display assy bottom off
 #board submoduletest display silkscreen top off
 #board submoduletest display silkscreen bottom
+board submoduletest display keepout top
 
 #board submoduletest flip device R1 top
 #board submoduletest flip device R1 bottom
