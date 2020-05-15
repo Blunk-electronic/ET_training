@@ -554,21 +554,32 @@
 
 	[ROUTE_RESTRICT BEGIN]
 		[LINE BEGIN]
-			start x 170.0 y 55.0
-			end x 200.0 y 55.0
-			layers 1 2 14
+			start x 20.0 y 10.0
+			end x 20.0 y 20.0
+			layers 1
+		[LINE END]
+		[LINE BEGIN]
+			start x 20.0 y 10.0
+			end x 30.0 y 10.0
+			layers 1
+		[LINE END]
+		[LINE BEGIN]
+			start x 25.0 y 5.0
+			end x 25.0 y 15.0
+			layers 1
 		[LINE END]
 		[ARC BEGIN]
-			center x 180.000 y 57.000
-			start x 170.000 y 57.000
-			end x 190.000 y 57.000
+			center x 30.000 y 20.000
+			start x 20.000 y 20.000
+			end x 40.000 y 20.000
 			direction CW
-			layers 4 6 10
+			layers 1
 		[ARC END]
 		[CIRCLE BEGIN]
-			center x 170.000 y 65.000
+			center x 10.000 y 10.000
 			radius 5.000
-			layers 10 12
+			layers 1
+			filled yes
 		[CIRCLE END]
 	[ROUTE_RESTRICT END]
 

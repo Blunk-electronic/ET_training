@@ -1,0 +1,17 @@
+board submoduletest display grid
+
+board submoduletest position cursor absolute 10 20
+#board submoduletest position cursor absolute 130 20
+board submoduletest zoom center 10 20 10
+#board submoduletest zoom center 130 20 10
+
+board submoduletest display assy top off
+board submoduletest display assy bottom off
+board submoduletest display silkscreen top off
+board submoduletest display silkscreen bottom off
+board submoduletest display restrict route 1
+
+#board submoduletest flip device R1 top
+#board submoduletest flip device R1 bottom
+
+# script end
