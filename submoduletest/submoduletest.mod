@@ -506,6 +506,24 @@
 				center x 70.000 y 15.000
 				radius 5.000
 			[CIRCLE END]
+
+			[FILL_ZONE BEGIN]
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 60.000 y 60.000
+						end x 80.000 y 60.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 80.000 y 60.000
+						end x 80.000 y 80.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 80.000 y 80.000
+						end x 60.000 y 60.000
+					[LINE END]
+				[CONTOURS END]
+			[FILL_ZONE END]
+			
 		[TOP END]
 	[KEEPOUT END]
 
@@ -550,6 +568,22 @@
 				radius 5.000
 				width 1.20
 			[CIRCLE END]
+			[FILL_ZONE BEGIN]
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 60.000 y 50.000
+						end x 80.000 y 50.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 80.000 y 50.000
+						end x 80.000 y 70.000
+					[LINE END]
+-- 					[LINE BEGIN]
+-- 						start x 80.000 y 50.000
+-- 						end x 60.000 y 50.000
+-- 					[LINE END]
+				[CONTOURS END]
+			[FILL_ZONE END]
 		[TOP END]
 	[STENCIL END]
 
@@ -694,6 +728,11 @@
 			center x 0.000 y 0.000
 			radius 10.000
 		[CIRCLE END]
+		[ARC BEGIN]
+			center x 0.000 y 0.000
+			start x 0 y 20
+			end x 20 y 0
+		[ARC END]
 		[LINE BEGIN]
 			start x 0.0 y 0.0
 			end x 200.0 y 0.0
