@@ -419,7 +419,8 @@
 			[CIRCLE BEGIN]
 				center x 20.000 y 65.000
 				radius 5.000
-				width 0.20
+				--width 0.20
+				filled yes
 			[CIRCLE END]
 
 			[FILL_ZONE BEGIN]

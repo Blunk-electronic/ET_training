@@ -2,7 +2,7 @@ board submoduletest display grid
 board submoduletest set grid 0.5 0.5
 board submoduletest position cursor absolute 50 12.5
 #board submoduletest position cursor absolute 130 20
-board submoduletest zoom center 50 12.5 150
+board submoduletest zoom center 50 10 140
 #board submoduletest zoom center 130 20 10
 
 #board submoduletest display assy top off
@@ -14,4 +14,5 @@ board submoduletest display keepout top
 #board submoduletest flip device R1 top
 #board submoduletest flip device R1 bottom
 
+board submoduletest zoom fit
 # script end
