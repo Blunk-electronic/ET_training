@@ -32,6 +32,19 @@
 	[BOARD END]
 [META END]
 
+[BOARD_LAYER_STACK BEGIN]
+	conductor  1 0.035 -- top signal layer
+	dielectric 1 0.2 -- prepreg
+
+	conductor  2 0.018 -- inner signal layer
+	dielectric 2 1.0 -- core
+
+	conductor  3 0.018 -- inner signal layer
+	dielectric 3 0.2 -- prepreg
+	
+	conductor  4 0.035 -- bottom signal layer
+[BOARD_LAYER_STACK END]
+
 [NET_CLASSES BEGIN]
 	[NET_CLASS BEGIN]
 		name default

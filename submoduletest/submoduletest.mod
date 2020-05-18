@@ -118,7 +118,7 @@
 			[LINE BEGIN]
 				start x 80.000 y 60.000
 				end x 100.000 y 80.000
-				layer 1
+				layer 4
 				width 1.250
 			[LINE END]
 			[LINE BEGIN]
@@ -137,7 +137,7 @@
 				position x 100.000 y 80.000
 				diameter 1.00
 				layer_start 1
-				layer_end 32
+				layer_end 3
 				restring_outer_layers 0.2
 				restring_inner_layers 0.3
 			[VIA END]
@@ -505,6 +505,7 @@
 			[CIRCLE BEGIN]
 				center x 70.000 y 15.000
 				radius 5.000
+				filled no
 			[CIRCLE END]
 
 			[FILL_ZONE BEGIN]
@@ -578,10 +579,10 @@
 						start x 80.000 y 50.000
 						end x 80.000 y 70.000
 					[LINE END]
--- 					[LINE BEGIN]
--- 						start x 80.000 y 50.000
--- 						end x 60.000 y 50.000
--- 					[LINE END]
+					[LINE BEGIN]
+						start x 80.000 y 70.000
+						end x 60.000 y 50.00
+					[LINE END]
 				[CONTOURS END]
 			[FILL_ZONE END]
 		[TOP END]
@@ -622,19 +623,19 @@
 		[LINE BEGIN]
 			start x 170.0 y 65.0
 			end x 200.0 y 65.0
-			layers 1 2 14
+			layers 1 2
 		[LINE END]
 		[ARC BEGIN]
 			center x 180.000 y 67.000
 			start x 170.000 y 67.000
 			end x 190.000 y 67.000
 			direction CCW
-			layers 4 6 10
+			layers 4 
 		[ARC END]
 		[CIRCLE BEGIN]
 			center x 170.000 y 75.000
 			radius 5.000
-			layers 10 12
+			layers 1 2 3 4
 		[CIRCLE END]
 	[VIA_RESTRICT END]
 
@@ -642,7 +643,7 @@
 		[LINE BEGIN]
 			start x 100.000 y 60.000
 			end x 120.000 y 80.000
-			layer 1
+			layer 3
 			width 1
 		[LINE END]
 		[LINE BEGIN]
@@ -675,13 +676,13 @@
 		[CIRCLE BEGIN]
 			center x 30.000 y 100.000
 			radius 5.000
-			layer 10
+			layer 1
 			width 1.0
 		[CIRCLE END]
 		[CIRCLE BEGIN]
 			center x 60.000 y 100.000
 			radius 5.000
-			layer 10
+			layer 1
 			filled yes			
 		[CIRCLE END]
 
@@ -719,8 +720,6 @@
 				[CIRCLE END]
 			[CONTOURS END]
 		[CUTOUT_ZONE END]
-
-		
 	[COPPER END]
 	
 	[PCB_CONTOURS_NON_PLATED BEGIN]

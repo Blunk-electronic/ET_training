@@ -116,39 +116,19 @@
 				[CONTOURS BEGIN]
 					[LINE BEGIN]
 						start x 1.000 y 2.000
-						end x 3.000 y 4.000
+						end x 10.000 y 2.000
 					[LINE END]
-					[ARC BEGIN]
-						center x 10.000 y 10.000
-						start x 10.000 y 0.000
-						end x 10.000 y 20.000
-					[ARC END]
-					[CIRCLE BEGIN]
-						center x 10.000 y 10.000
-						radius 20
-					[CIRCLE END]
+					[LINE BEGIN]
+						start x 10.000 y 2.000
+						end x 10.000 y 4.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 10.000 y 4.000
+						end x 1.000 y 2.000
+					[LINE END]
 				[CONTOURS END]				
 			[FILL_ZONE END]		
-
-			[CUTOUT_ZONE BEGIN]
-				layer 3
-				[CONTOURS BEGIN]
-					[LINE BEGIN]
-						start x 1.000 y 55.000
-						end x 3.000 y 4.000
-					[LINE END]
-! 					[ARC BEGIN]
-! 						center x 10.000 y -20.000
-! 						start x 10.000 y 0.000
-! 						end x 10.000 y 20.000
-! 					[ARC END]
-					[CIRCLE BEGIN]
-						center x 10.000 y 55.000
-						radius 20
-					[CIRCLE END]
-				[CONTOURS END]				
-			[CUTOUT_ZONE END]
-			
+		
 		[ROUTE END]
 
 	[NET END]
@@ -281,25 +261,6 @@
 			end x 160.000 y 0.000
 			layer 4
 		[LINE END]
-
-		[CUTOUT_ZONE BEGIN]
-			layer 5
-			[CONTOURS BEGIN]
-				[LINE BEGIN]
-					start x 11.000 y 44.000
-					end x 33.000 y 4.000
-				[LINE END]
-! 				[ARC BEGIN]
-! 					center x 10.000 y 44.000
-! 					start x 10.000 y 0.000
-! 					end x 10.000 y 20.000
-! 				[ARC END]
-				[CIRCLE BEGIN]
-					center x 10.000 y 44.000
-					radius 20
-				[CIRCLE END]
-			[CONTOURS END]				
-		[CUTOUT_ZONE END]
 	[COPPER END]
 
 	[SILK_SCREEN BEGIN]
@@ -309,135 +270,15 @@
 				end x 160.000 y 0.001
 				width 2.501
 			[LINE END]
-
-			
-			[FILL_ZONE BEGIN]
-				fill_style hatched
-				hatching_line_width 0.777
-				hatching_line_spacing 2.000
-				corner_easing fillet
-				easing_radius 1.000
-				[CONTOURS BEGIN]
-					[LINE BEGIN]
-						start x 1.000 y 2.000
-						end x 3.000 y 4.000
-					[LINE END]
-					[ARC BEGIN]
-						center x 10.000 y 10.000
-						start x 10.000 y 0.000
-						end x 10.000 y 20.000
-					[ARC END]
-					[CIRCLE BEGIN]
-						center x 10.000 y 10.000
-						radius 20
-					[CIRCLE END]
-				[CONTOURS END]				
-			[FILL_ZONE END]
-
-			[CUTOUT_ZONE BEGIN]
-				corner_easing chamfer
-				easing_radius 1.000
-				[CONTOURS BEGIN]
-					[LINE BEGIN]
-						start x -1.000 y 2.000
-						end x -3.000 y 4.000
-					[LINE END]
-					[ARC BEGIN]
-						center x -10.000 y 10.000
-						start x -10.000 y 0.000
-						end x -10.000 y 20.000
-					[ARC END]
-					[CIRCLE BEGIN]
-						center x -10.000 y 10.000
-						radius 20
-					[CIRCLE END]
-				[CONTOURS END]				
-			[CUTOUT_ZONE END]
-			
 		[TOP END]
 	[SILK_SCREEN END]
 
 	[KEEPOUT BEGIN]
 		[TOP BEGIN]
-			[FILL_ZONE BEGIN]
-				filled yes
-				[CONTOURS BEGIN]
-					[LINE BEGIN]
-						start x 1.000 y 2.000
-						end x 3.000 y 4.000
-					[LINE END]
-					[ARC BEGIN]
-						center x 10.000 y 10.000
-						start x 10.000 y 0.000
-						end x 10.000 y 20.000
-					[ARC END]
-					[CIRCLE BEGIN]
-						center x 10.000 y 10.000
-						radius 20
-					[CIRCLE END]
-				[CONTOURS END]				
-			[FILL_ZONE END]
-
-			[CUTOUT_ZONE BEGIN]
-				[CONTOURS BEGIN]
-					[LINE BEGIN]
-						start x 1.000 y 2.000
-						end x 3.000 y 4.000
-					[LINE END]
-					[ARC BEGIN]
-						center x 10.000 y 10.000
-						start x 10.000 y 0.000
-						end x 10.000 y 20.000
-					[ARC END]
-					[CIRCLE BEGIN]
-						center x 10.000 y 10.000
-						radius 20
-					[CIRCLE END]
-				[CONTOURS END]				
-			[CUTOUT_ZONE END]
-			
 		[TOP END]
 	[KEEPOUT END]
 
 	[ROUTE_RESTRICT BEGIN]
-		[FILL_ZONE BEGIN]
-			filled yes
-			layers 1 2
-			[CONTOURS BEGIN]
-				[LINE BEGIN]
-					start x 1.000 y 2.000
-					end x 3.000 y 4.000
-				[LINE END]
-				[ARC BEGIN]
-					center x 10.000 y 10.000
-					start x 10.000 y 0.000
-					end x 10.000 y 20.000
-				[ARC END]
-				[CIRCLE BEGIN]
-					center x 10.000 y 10.000
-					radius 20
-				[CIRCLE END]
-			[CONTOURS END]				
-		[FILL_ZONE END]
-
-		[CUTOUT_ZONE BEGIN]
-			layers 7 10
-			[CONTOURS BEGIN]
-				[LINE BEGIN]
-					start x 1.000 y 2.000
-					end x 3.000 y 4.000
-				[LINE END]
-				[ARC BEGIN]
-					center x 10.000 y 10.000
-					start x 10.000 y 0.000
-					end x 10.000 y 20.000
-				[ARC END]
-				[CIRCLE BEGIN]
-					center x 10.000 y 10.000
-					radius 20
-				[CIRCLE END]
-			[CONTOURS END]				
-		[CUTOUT_ZONE END]
 	[ROUTE_RESTRICT END]
 
 
