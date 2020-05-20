@@ -275,7 +275,8 @@
 		partcode R_PAC_S_0805_VAL_100R
 		purpose brightness
 		[PACKAGE BEGIN]
-			position x 50.5 y 12 rotation 0.0 face top
+			flipped no
+			position x 50.5 y 12 rotation 20.0 face top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silk_screen
