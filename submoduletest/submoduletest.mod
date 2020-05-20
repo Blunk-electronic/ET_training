@@ -276,7 +276,7 @@
 		purpose brightness
 		[PACKAGE BEGIN]
 			flipped no
-			position x 50.5 y 12 rotation 20.0 face top
+			position x 50.5 y 12 rotation 270.0 face top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silk_screen
