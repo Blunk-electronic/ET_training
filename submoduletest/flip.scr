@@ -1,3 +1,5 @@
+schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 85 100 0 D
+
 board submoduletest display grid
 board submoduletest set grid 0.5 0.5
 board submoduletest position cursor absolute 50 12
@@ -17,4 +19,6 @@ board submoduletest display restrict via 1
 #board submoduletest flip device R1 bottom
 
 #board submoduletest zoom fit
+board submoduletest zoom center 0 0 50
+#board submoduletest quit
 # script end
