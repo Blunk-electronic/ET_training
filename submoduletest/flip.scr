@@ -19,6 +19,6 @@ board submoduletest display restrict via 1
 #board submoduletest flip device R1 bottom
 
 #board submoduletest zoom fit
-board submoduletest zoom center 0 0 50
+#board submoduletest zoom center 0 0 50
 #board submoduletest quit
 # script end
