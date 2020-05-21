@@ -1,8 +1,8 @@
 board submoduletest display grid
 board submoduletest set grid 0.5 0.5
-board submoduletest position cursor absolute 50 12.5
+board submoduletest position cursor absolute 50 12
 #board submoduletest position cursor absolute 130 20
-board submoduletest zoom center 50 10 50
+board submoduletest zoom center 50 12 50
 #board submoduletest zoom center 130 20 140
 
 #board submoduletest display assy top off
