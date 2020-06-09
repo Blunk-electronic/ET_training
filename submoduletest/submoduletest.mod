@@ -354,6 +354,23 @@
 [BOARD BEGIN]
 	[SILK_SCREEN BEGIN]
 		[TOP BEGIN]
+
+			[TEXT BEGIN]
+				position x 1.0 y 10.0 rotation 90.0
+				content "ABC"
+				size 1
+				line_width 0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+
+			[PLACEHOLDER BEGIN]
+				position x 4.0 y 10.0 rotation 90.0
+				meaning partcode
+				size 1
+				line_width 0.15
+				alignment horizontal left vertical bottom
+			[PLACEHOLDER END]
+	
 			[LINE BEGIN]
 				start x 10.0 y 5.0
 				end x 60.0 y 5.0
@@ -405,6 +422,23 @@
 
 	[ASSEMBLY_DOCUMENTATION BEGIN]
 		[TOP BEGIN]
+
+			[TEXT BEGIN]
+				position x 1.0 y 1.0 rotation 0.0
+				content "ABC"
+				size 1
+				line_width 0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+
+			[PLACEHOLDER BEGIN]
+				position x 1.0 y 3.0 rotation 0.0
+				meaning company
+				size 1
+				line_width 0.15
+				alignment horizontal left vertical bottom
+			[PLACEHOLDER END]
+			
 			[LINE BEGIN]
 				start x 10.0 y 55.0
 				end x 60.0 y 55.0
@@ -471,6 +505,23 @@
 		[TOP END]
 
 		[BOTTOM BEGIN]
+
+			[TEXT BEGIN]
+				position x 1.0 y 1.0 rotation 0.0
+				content "ABC"
+				size 1
+				line_width 0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+
+			[PLACEHOLDER BEGIN]
+				position x 1.0 y 3.0 rotation 0.0
+				meaning company
+				size 1
+				line_width 0.15
+				alignment horizontal left vertical bottom
+			[PLACEHOLDER END]
+		
 			[LINE BEGIN]
 				start x 10.0 y 65.0
 				end x 60.0 y 65.0
@@ -531,24 +582,80 @@
 
 	[STOP_MASK BEGIN]
 		[TOP BEGIN]
+
+			[TEXT BEGIN]
+				position x 6.0 y 4.0 rotation 0.0
+				content "ATOP"
+				size 1
+				line_width 0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+		
 			[LINE BEGIN]
 				start x 70.0 y 55.0
 				end x 110.0 y 55.0
 				width 1.20
 			[LINE END]
 			[ARC BEGIN]
-				center x 90.000 y 57.000
-				start x 80.000 y 57.000
-				end x 100.000 y 57.000
+				start x 0.000 y 20.000
+				center x 10.000 y 20.000
+				end x 20.000 y 20.000
 				direction CW
 				width 1.20
 			[ARC END]
 			[CIRCLE BEGIN]
-				center x 70.000 y 65.000
+				center x 0.000 y 15.000
 				radius 5.000
 				width 1.20
 			[CIRCLE END]
+
+			[FILL_ZONE BEGIN]
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 1.000 y 1.000
+						end x 10.000 y 1.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 10.000 y 1.000
+						end x 10.000 y 20.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 10.000 y 20.000
+						end x 1.000 y 1.000
+					[LINE END]
+				[CONTOURS END]
+			[FILL_ZONE END]
+
+			[CUTOUT_ZONE BEGIN]
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x 2.000 y 2.000
+						end x 4.000 y 2.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 4.000 y 2.000
+						end x 5.000 y 4.000
+					[LINE END]
+					[LINE BEGIN]
+						start x 5.000 y 4.000
+						end x 2.000 y 2.000
+					[LINE END]
+				[CONTOURS END]
+			[CUTOUT_ZONE END]
+
+			
 		[TOP END]
+
+		[BOTTOM BEGIN]
+			[TEXT BEGIN]
+				position x 4.0 y 4.0 rotation 0.0
+				content "ABOT"
+				size 1
+				line_width 0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+		[BOTTOM END]
+			
 	[STOP_MASK END]
 
 	[STENCIL BEGIN]
@@ -641,6 +748,33 @@
 	[VIA_RESTRICT END]
 
 	[COPPER BEGIN]
+		[PLACEHOLDER BEGIN]
+			position x 5.0 y 5.0 rotation 0.0
+			meaning company
+			size 1
+			line_width 0.15
+			alignment horizontal left vertical bottom
+			layer 4
+		[PLACEHOLDER END]
+
+		[TEXT BEGIN]
+			position x 6.0 y 4.0 rotation 0.0
+			content "ATOP"
+			size 1
+			line_width 0.15
+			alignment horizontal left vertical bottom
+			layer 1
+		[TEXT END]
+		
+		[TEXT BEGIN]
+			position x 4.0 y 4.0 rotation 0.0
+			content "ABOT"
+			size 1
+			line_width 0.15
+			alignment horizontal left vertical bottom
+			layer 4
+		[TEXT END]
+		
 		[LINE BEGIN]
 			start x 100.000 y 60.000
 			end x 120.000 y 80.000

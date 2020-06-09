@@ -1,27 +1,34 @@
 schematic submoduletest add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 85 100 0 D
+board submoduletest move device IC1 absolute 30 50
+#schematic submoduletest set value IC1 7401
 
 board submoduletest display grid
-board submoduletest set grid 0.5 0.5
+board submoduletest set grid 0.1 0.1
 #board submoduletest position cursor absolute 50 12
-board submoduletest position cursor absolute 0 0
+#board submoduletest position cursor absolute 30 42
+board submoduletest position cursor absolute 30 50
 #board submoduletest zoom center 50 12 50
-board submoduletest zoom center 0 0 30
+#board submoduletest zoom center 30 42 240
+board submoduletest zoom center 30 50 60
 
-board submoduletest display assy top off
+board submoduletest display assy top
 board submoduletest display assy bottom off
 #board submoduletest display silkscreen top off
-board submoduletest display silkscreen bottom off
+board submoduletest display silkscreen bottom
 #board submoduletest display keepout top
-#board submoduletest display restrict route 1
+board submoduletest display restrict route 1
+board submoduletest display restrict route 4
 #board submoduletest display restrict via 1
 
-board submoduletest display conductors 1 off
+board submoduletest display conductors 1
 board submoduletest display conductors 2 off
 board submoduletest display conductors 3 off
-board submoduletest display conductors 4 off
+board submoduletest display conductors 4
 
 #board submoduletest flip device R1 top
 #board submoduletest flip device R1 bottom
+board submoduletest rotate device IC1 relative 10
+board submoduletest flip device IC1 bottom
 
 #board submoduletest zoom fit
 #board submoduletest zoom center 0 0 50
