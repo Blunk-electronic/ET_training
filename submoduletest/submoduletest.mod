@@ -356,13 +356,13 @@
 		[TOP BEGIN]
 
 			[TEXT BEGIN]
-				position x 1.0 y 10.0 rotation 90.0
-				content "ABC"
+				position x 1.0 y -2.0 rotation 0.0
+				content "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
 				size 1
 				line_width 0.15
 				alignment horizontal left vertical bottom
 			[TEXT END]
-
+			
 			[PLACEHOLDER BEGIN]
 				position x 4.0 y 10.0 rotation 90.0
 				meaning partcode
