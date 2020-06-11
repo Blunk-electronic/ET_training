@@ -409,6 +409,15 @@
 				alignment horizontal left vertical bottom
 			[TEXT END]
 			
+			[TEXT BEGIN]
+				position x 1.0 y -4.0 rotation 0.0
+				content "0123456789"
+				size 1
+				line_width 0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+
+			
 			[PLACEHOLDER BEGIN]
 				position x 5.0 y 25.0 rotation 0.0
 				meaning partcode

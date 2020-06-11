@@ -1,0 +1,6 @@
+board main display grid
+board main set grid 0.5 0.5
+board main position cursor absolute 4 -4
+board main zoom center 4 -4 80
+
+# script end
