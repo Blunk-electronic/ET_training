@@ -402,7 +402,7 @@
 			[PLACEHOLDER END]
 			
 			[TEXT BEGIN]
-				position x 1.0 y -2.0 rotation 0.0
+				position x 20.0 y 20.0 rotation 0.0
 				content "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
 				size 1
 				line_width 0.15
@@ -410,13 +410,20 @@
 			[TEXT END]
 			
 			[TEXT BEGIN]
-				position x 1.0 y -4.0 rotation 0.0
+				position x 20.0 y 18.0 rotation 0.0
 				content "0123456789"
 				size 1
 				line_width 0.15
 				alignment horizontal left vertical bottom
 			[TEXT END]
 
+			[TEXT BEGIN]
+				position x 20.0 y 16.0 rotation 0.0
+				content "0-1_2"
+				size 1
+				line_width 0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
 			
 			[PLACEHOLDER BEGIN]
 				position x 5.0 y 25.0 rotation 0.0
