@@ -186,7 +186,7 @@
 		appearance pcb
 		model $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev
 		value 220k
-		variant S_0805
+		variant S_1206
 		partcode R_PAC_S_0805_VAL_100R
 		purpose "dummy"
 		[PACKAGE BEGIN]
