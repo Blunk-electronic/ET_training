@@ -5,7 +5,9 @@ schematic main zoom center 40 100 10
 board main display grid
 board main set grid 0.1 0.1
 
-#schematic main add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 85 100 0 D
+schematic main add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 60 40 0 D
+board main move device IC1 absolute 40 20
+
 schematic main add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 40 40 0 T_0207 #  S_1206
 schematic main set value R1 330R
 schematic main set purpose R1 "brightness"
@@ -22,15 +24,15 @@ board main move device X1 absolute 5 40
 #schematic submoduletest set value IC1 7401
 
 # board submoduletest set grid 0.1 0.1
-board main position cursor absolute 40 40
+board main position cursor absolute 5 40
 #board submoduletest position cursor absolute 30 42
 # board submoduletest position cursor absolute 30 50
-board main zoom center 40 40 50
+board main zoom center 40 20 70
 #board submoduletest zoom center 30 42 240
 # board submoduletest zoom center 30 50 60
 
-# board submoduletest display assy top
-# board submoduletest display assy bottom off
+board main display stencil top
+board main display assy top off
 #board submoduletest display silkscreen top off
 # board submoduletest display silkscreen bottom
 board main display keepout top
@@ -38,10 +40,10 @@ board main display keepout top
 # board submoduletest display restrict route 4
 #board submoduletest display restrict via 1
 
-# board main display conductors 4 off
-# board submoduletest display conductors 2 off
-# board submoduletest display conductors 3 off
-# board submoduletest display conductors 4
+# board main display conductors 1 off
+board main display conductors 2 on
+# board main display conductors 3 off
+board main display conductors 4 off
 
 #board submoduletest flip device R1 top
 #board submoduletest flip device R1 bottom
