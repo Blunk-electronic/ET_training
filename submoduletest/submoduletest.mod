@@ -33,6 +33,10 @@
 	[BOARD END]
 [META END]
 
+[RULES BEGIN]
+	conventions ../conventions.txt
+	layout ../JLP_standard.dru
+[RULES END]
 
 [NET_CLASSES BEGIN]
 	[NET_CLASS BEGIN]
@@ -352,6 +356,36 @@
 [ASSEMBLY_VARIANTS END]
 
 [BOARD BEGIN]
+	[DEVICES_NON_ELECTRIC BEGIN]
+		[DEVICE BEGIN]
+			name FD1
+			model $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac
+			flipped no
+			position x 10 y 40 rotation 0.0 face top
+			[PLACEHOLDERS BEGIN]
+			
+				[PLACEHOLDER BEGIN]
+					layer silk_screen
+					meaning name
+					position x 2 y -2 rotation 0.00 face top
+					size 1.000
+					line_width 0.150
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+
+				[PLACEHOLDER BEGIN]
+					layer assembly_documentation
+					meaning value
+					position x 4 y 3 rotation 0.00 face top
+					size 2.000
+					line_width 0.150
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[DEVICE END]
+	[DEVICES_NON_ELECTRIC END]
+
+
 	[SILK_SCREEN BEGIN]
 		[TOP BEGIN]
 

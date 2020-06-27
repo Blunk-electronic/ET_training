@@ -27,14 +27,14 @@ board main move device X1 absolute 5 40
 board main position cursor absolute 5 40
 #board submoduletest position cursor absolute 30 42
 # board submoduletest position cursor absolute 30 50
-board main zoom center 40 20 70
+board main zoom center 40 20 40
 #board submoduletest zoom center 30 42 240
 # board submoduletest zoom center 30 50 60
 
 board main display stencil top
 board main display assy top off
-#board submoduletest display silkscreen top off
-# board submoduletest display silkscreen bottom
+board main display silkscreen top
+board main display silkscreen bottom
 board main display keepout top
 # board submoduletest display restrict route 1
 # board submoduletest display restrict route 4
@@ -43,15 +43,19 @@ board main display keepout top
 # board main display conductors 1 off
 board main display conductors 2 on
 # board main display conductors 3 off
-board main display conductors 4 off
+board main display conductors 4
 
 #board submoduletest flip device R1 top
 #board submoduletest flip device R1 bottom
 # board submoduletest rotate device IC1 relative 10
-# board submoduletest flip device IC1 bottom
 
 #board submoduletest zoom fit
-#board submoduletest zoom center 0 0 50
+
+board main set grid 0.5 0.5
+board main rotate device IC1 relative 10
+board main flip device IC1 bottom
+board main zoom center 40 20 50
+
 #board submoduletest quit
 
 # script end

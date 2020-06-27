@@ -1,0 +1,11 @@
+board main display grid
+board main set grid 1 1
+
+board main position cursor absolute 5 5
+board main zoom center 5 5 70
+
+board main display silkscreen top
+board main display assy top
+board main display keepout top
+
+# script end
