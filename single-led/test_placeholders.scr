@@ -33,8 +33,8 @@ schematic main add device $HOME/git/BEL/ET_component_library/devices/passive/hol
 
 # board main display stop top
 # board main display stop bottom
-board main display restrict route 1
-board main position cursor absolute 20 5
-board main zoom center 20 5 30
+# board main display restrict route 1
+# board main position cursor absolute 20 5
+# board main zoom center 20 5 30
 
 # script end

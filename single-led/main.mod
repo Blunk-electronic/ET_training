@@ -33,6 +33,10 @@
 	[BOARD END]
 [META END]
 
+[RULES BEGIN]
+-- 	layout JLP_ML_standard.dru
+[RULES END]
+
 
 [NET_CLASSES BEGIN]
 	[NET_CLASS BEGIN]
