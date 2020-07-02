@@ -1,0 +1,40 @@
+board main add device $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac FD 5 5 0 top
+# board main add device $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac FD 15 5 45 bottom
+
+schematic main add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 60 40 0 D
+schematic main set partcode IC1 IC_PAC_S_SO14_VAL_7400
+board main move device IC1 absolute 40 20
+# board main flip device IC1 bottom
+# board main rotate device IC1 relative 10
+
+schematic main add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 40 40 0 T_0207 #  S_1206
+schematic main set value R1 330R
+schematic main set partcode R1 R_PAC_T_0207_pitch_12mm_VAL_330R
+schematic main set purpose R1 "brightness"
+board main move device R1 absolute 40 40
+
+schematic main add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 40 60 0 S_1206
+schematic main set value C1 100n
+schematic main set partcode C1 C_PAC_S_1206_VAL_100n
+
+# connectors
+schematic main add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 20 60 0 T_male_blade
+schematic main set purpose X1 "PWR IN"
+schematic main set partcode X1 X_PAC_T_male_blade_single
+board main move device X1 absolute 5 40
+
+# board main flip device FD1 bottom
+
+board main add device $HOME/git/BEL/ET_component_library/packages/holes/mounting_hole_4.pac MH 20 5
+board main add device $HOME/git/BEL/ET_component_library/packages/holes/mounting_hole_4.pac MH 20 15
+schematic main add device $HOME/git/BEL/ET_component_library/devices/passive/holes/mounting_hole.dev 1 10 10 0 4mm
+
+# board main move device MH3 absolute 10 5
+
+board main display stop top
+# board main display stop bottom
+# board main display restrict route 1
+board main position cursor absolute 40 20
+board main zoom center 40 20 50
+
+# script end
