@@ -34,7 +34,7 @@
 [META END]
 
 [RULES BEGIN]
-	layout JLP_ML4_standard.dru
+	layout pcb-design-rules/JLP_ML4_standard.dru
 [RULES END]
 
 
