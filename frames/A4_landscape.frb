@@ -10,7 +10,9 @@ size x 280 y 200
 sectors rows 7 columns 10
 [TITLE_BLOCK BEGIN]
 	position x 55 y 6
+	
 	[LINES BEGIN]
+		-- outer lines
 		[LINE BEGIN]
 			start x 0 y 0
 			end x 220 y 0
@@ -27,7 +29,30 @@ sectors rows 7 columns 10
 			start x 0 y 40
 			end x 0 y 0
 		[LINE END]
+
+		-- inner lines
+		[LINE BEGIN] -- vertical 
+			start x 89 y 0
+			end x 89 y 40
+		[LINE END]
+		[LINE BEGIN] -- vertical 
+			start x 119 y 20
+			end x 119 y 0
+		[LINE END]
+		[LINE BEGIN] -- vertical 
+			start x 150 y 20
+			end x 150 y 0
+		[LINE END]
+		[LINE BEGIN] -- horizontal
+			start x 89 y 15
+			end x 220 y 15
+		[LINE END]
+		[LINE BEGIN] -- horizontal
+			start x 89 y 20
+			end x 220 y 20
+		[LINE END]
 	[LINES END]
+	
 	[TEXTS BEGIN]
 		-- column 1
 		[TEXT BEGIN]
@@ -71,7 +96,18 @@ sectors rows 7 columns 10
 			content "Revision:"
 		[TEXT END]
 
-		-- column 3
+		-- date / name
+		[TEXT BEGIN]
+			position x 120 y 16
+			size 3
+			content "date"
+		[TEXT END]
+		[TEXT BEGIN]
+			position x 152 y 16
+			size 3
+			content "name"
+		[TEXT END]
+	
 		[TEXT BEGIN]
 			position x 90 y 11
 			size 3
@@ -86,8 +122,7 @@ sectors rows 7 columns 10
 			position x 90 y 1
 			size 3
 			content "approved:"
-		[TEXT END]
-		
+		[TEXT END]		
 	[TEXTS END]
 
 	[PLACEHOLDERS BEGIN]
@@ -135,6 +170,7 @@ sectors rows 7 columns 10
 			size 3
 		[SIGNAL_LAYER END]
 
+		-- drawn / edited / approved
 		[DRAWN_DATE BEGIN]
 			position x 120 y 11
 			size 3
@@ -149,15 +185,15 @@ sectors rows 7 columns 10
 		[APPROVED_DATE END]
 
 		[DRAWN_BY BEGIN]
-			position x 155 y 11
+			position x 152 y 11
 			size 3
 		[DRAWN_BY END]
 		[CHECKED_BY BEGIN]
-			position x 155 y 6
+			position x 152 y 6
 			size 3
 		[CHECKED_BY END]
 		[APPROVED_BY BEGIN]
-			position x 155 y 1
+			position x 152 y 1
 			size 3
 		[APPROVED_BY END]
 	[PLACEHOLDERS END]
