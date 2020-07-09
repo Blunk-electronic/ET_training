@@ -34,8 +34,7 @@
 [META END]
 
 [RULES BEGIN]
-	conventions ../conventions.txt
-	layout ../JLP_standard.dru
+	layout pcb-design-rules/JLP_ML4_standard.dru
 [RULES END]
 
 [NET_CLASSES BEGIN]
@@ -217,7 +216,7 @@
 	[SUBMODULE BEGIN]
 		name CLK_GENERATOR
 
-		file templates/clock_generator.mod
+		file ../templates/clock_generator.mod
 		--file ../templates/clock_generator.mod
 		--file /home/luno/tmp/templates/clock_generator.mod
 		--file $TEMPLATES/clock_generator.mod
