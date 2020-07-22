@@ -1,0 +1,116 @@
+EESchema Schematic File Version 4
+LIBS:v5_libtest-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L bel_logic:7400 IC1
+U 1 1 5BC8349E
+P 4850 2850
+F 0 "IC1" H 4850 3270 51  0000 C CNN
+F 1 "7400" H 4850 3177 51  0000 C CNN
+F 2 "bel_ic:S_SO14" H 4725 3800 51  0001 L BNN
+F 3 "www.blunk-electronic.de" H 4725 3700 51  0001 L BNN
+F 4 "1975-02-21T23:04:22" H 4725 3600 51  0001 L BNN "commissioned"
+F 5 "2011-01-21T23:04:22" H 4725 3500 51  0001 L BNN "updated"
+F 6 "MBL" H 4725 3400 51  0001 L BNN "author"
+F 7 "IC_PAC_S_SO14_VAL_7400" H 4725 3300 51  0001 L BNN "partcode"
+F 8 "YES" H 4725 3200 51  0001 L BNN "bom"
+F 9 "?PURPOSE?" H 4725 3100 51  0001 L BNN "purpose"
+	1    4850 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L bel_primitive:RESISTOR R2
+U 1 1 5BD2C484
+P 4100 3250
+F 0 "R2" H 4170 3297 51  0000 L CNN
+F 1 "100R" H 4170 3204 51  0000 L CNN
+F 2 "bel_resistor:S_0805" H 4300 3550 51  0001 L BNN
+F 3 "www.blunk-electronic.de" H 4300 3450 51  0001 L BNN
+F 4 "1975-02-21T23:04:22" H 4300 3350 51  0001 L BNN "commissioned"
+F 5 "2011-01-21T23:04:22" H 4300 3250 51  0001 L BNN "updated"
+F 6 "MBL" H 4300 3150 51  0001 L BNN "author"
+F 7 "R_PAC_S_0805_VAL_100R" H 4300 3050 51  0001 L BNN "partcode"
+F 8 "YES" H 4300 2950 51  0001 L BNN "bom"
+F 9 "?PURPOSE?" H 4300 2850 51  0001 L BNN "purpose"
+	1    4100 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L bel_primitive:RESISTOR R3
+U 1 1 5BD2C566
+P 5650 3250
+F 0 "R3" H 5720 3297 51  0000 L CNN
+F 1 "100R" H 5720 3204 51  0000 L CNN
+F 2 "bel_resistor:S_0805" H 5850 3550 51  0001 L BNN
+F 3 "www.blunk-electronic.de" H 5850 3450 51  0001 L BNN
+F 4 "1975-02-21T23:04:22" H 5850 3350 51  0001 L BNN "commissioned"
+F 5 "2011-01-21T23:04:22" H 5850 3250 51  0001 L BNN "updated"
+F 6 "MBL" H 5850 3150 51  0001 L BNN "author"
+F 7 "R_PAC_S_0805_VAL_100R" H 5850 3050 51  0001 L BNN "partcode"
+F 8 "YES" H 5850 2950 51  0001 L BNN "bom"
+F 9 "?PURPOSE?" H 5850 2850 51  0001 L BNN "purpose"
+	1    5650 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2850 5650 2850
+Wire Wire Line
+	5650 2850 5650 3100
+Wire Wire Line
+	4250 2750 4100 2750
+Wire Wire Line
+	4100 2750 4100 2950
+Wire Wire Line
+	4250 2950 4100 2950
+Connection ~ 4100 2950
+Wire Wire Line
+	4100 2950 4100 3100
+Wire Wire Line
+	4100 3400 4100 3500
+Wire Wire Line
+	5650 3400 5650 3500
+Wire Wire Line
+	4100 3500 5650 3500
+Wire Wire Line
+	4650 2650 4650 2200
+$Comp
+L bel_primitive:RESISTOR R1
+U 1 1 5BD2C71C
+P 4650 2050
+F 0 "R1" H 4720 2097 51  0000 L CNN
+F 1 "100R" H 4720 2004 51  0000 L CNN
+F 2 "bel_resistor:S_0805" H 4850 2350 51  0001 L BNN
+F 3 "www.blunk-electronic.de" H 4850 2250 51  0001 L BNN
+F 4 "1975-02-21T23:04:22" H 4850 2150 51  0001 L BNN "commissioned"
+F 5 "2011-01-21T23:04:22" H 4850 2050 51  0001 L BNN "updated"
+F 6 "MBL" H 4850 1950 51  0001 L BNN "author"
+F 7 "R_PAC_S_0805_VAL_100R" H 4850 1850 51  0001 L BNN "partcode"
+F 8 "YES" H 4850 1750 51  0001 L BNN "bom"
+F 9 "?PURPOSE?" H 4850 1650 51  0001 L BNN "purpose"
+	1    4650 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1900 4650 1800
+Wire Wire Line
+	4650 1800 5250 1800
+Wire Wire Line
+	5250 1800 5250 3200
+Wire Wire Line
+	5250 3200 4650 3200
+Wire Wire Line
+	4650 3200 4650 3050
+$EndSCHEMATC

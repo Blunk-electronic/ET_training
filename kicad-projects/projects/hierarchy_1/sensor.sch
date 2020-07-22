@@ -1,0 +1,107 @@
+EESchema Schematic File Version 2
+LIBS:bel_supply
+LIBS:bel_primitive
+LIBS:bel_logic
+LIBS:hierarchy_1-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 11
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	4650 3350 4650 3600
+Wire Wire Line
+	4650 4100 4650 4750
+Text GLabel 4650 4750 3    51   UnSpc ~ 0
+SENSE_2
+Text GLabel 4650 3350 1    51   Input ~ 0
+SENSE_1
+Wire Wire Line
+	5500 3500 5500 3550
+Connection ~ 4650 3500
+Wire Wire Line
+	5500 4550 5500 4600
+Connection ~ 4650 4600
+Wire Wire Line
+	5500 4600 4650 4600
+Wire Wire Line
+	5500 3500 4650 3500
+Wire Wire Line
+	5500 3850 5500 4000
+Wire Wire Line
+	5500 4000 5850 4000
+Wire Wire Line
+	5500 4250 5500 4150
+Wire Wire Line
+	5500 4150 5850 4150
+Text HLabel 5850 4000 2    51   Input ~ 0
+SENSOR_VCC
+Text HLabel 5850 4150 2    51   Input ~ 0
+SENSOR_GND
+$Comp
+L RESISTOR_PHOTO RPH19
+U 1 1 5A991D18
+P 4650 3850
+AR Path="/5B7CFC57/5A991D18" Ref="RPH19"  Part="1" 
+AR Path="/59F17FDE/5A991D18" Ref="RPH1"  Part="1" 
+F 0 "RPH19" V 4730 3850 51  0000 C CNN
+F 1 "100R" V 4650 3850 51  0000 C CNN
+F 2 "bel_resistor:S_0805" H 4850 4150 51  0001 L BNN
+F 3 "www.blunk-electronic.de" H 4850 4050 51  0001 L BNN
+F 4 "1975-02-21T23:04:22" H 4850 3950 51  0001 L BNN "commissioned"
+F 5 "2011-01-21T23:04:22" H 4850 3850 51  0001 L BNN "updated"
+F 6 "MBL" H 4850 3750 51  0001 L BNN "author"
+F 7 "RPH_PAC_S_0805_VAL_100R" H 4850 3650 51  0001 L BNN "partcode"
+F 8 "YES" H 4850 3550 51  0001 L BNN "bom"
+F 9 "OUTSIDE BRIGHTNESS" V 4300 3500 51  0000 L BNN "purpose"
+	1    4650 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L RESISTOR R211
+U 1 1 5A991D9E
+P 5500 3700
+AR Path="/5B7CFC57/5A991D9E" Ref="R211"  Part="1" 
+AR Path="/59F17FDE/5A991D9E" Ref="R2"  Part="1" 
+F 0 "R211" V 5580 3700 51  0000 C CNN
+F 1 "330R" V 5650 3700 51  0000 C CNN
+F 2 "bel_resistor:S_0805" H 5700 4000 51  0001 L BNN
+F 3 "www.blunk-electronic.de" H 5700 3900 51  0001 L BNN
+F 4 "1975-02-21T23:04:22" H 5700 3800 51  0001 L BNN "commissioned"
+F 5 "2011-01-21T23:04:22" H 5700 3700 51  0001 L BNN "updated"
+F 6 "MBL" H 5700 3600 51  0001 L BNN "author"
+F 7 "R_PAC_S_0805_VAL_330R" H 5700 3500 51  0001 L BNN "partcode"
+F 8 "YES" H 5700 3400 51  0001 L BNN "bom"
+F 9 "?PURPOSE?" H 5700 3300 51  0001 L BNN "purpose"
+	1    5500 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L RESISTOR R312
+U 1 1 5A991E16
+P 5500 4400
+AR Path="/5B7CFC57/5A991E16" Ref="R312"  Part="1" 
+AR Path="/59F17FDE/5A991E16" Ref="R3"  Part="1" 
+F 0 "R312" V 5580 4400 51  0000 C CNN
+F 1 "330R" V 5650 4400 51  0000 C CNN
+F 2 "bel_resistor:S_0805" H 5700 4700 51  0001 L BNN
+F 3 "www.blunk-electronic.de" H 5700 4600 51  0001 L BNN
+F 4 "1975-02-21T23:04:22" H 5700 4500 51  0001 L BNN "commissioned"
+F 5 "2011-01-21T23:04:22" H 5700 4400 51  0001 L BNN "updated"
+F 6 "MBL" H 5700 4300 51  0001 L BNN "author"
+F 7 "R_PAC_S_0805_VAL_330R" H 5700 4200 51  0001 L BNN "partcode"
+F 8 "YES" H 5700 4100 51  0001 L BNN "bom"
+F 9 "?PURPOSE?" H 5700 4000 51  0001 L BNN "purpose"
+	1    5500 4400
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

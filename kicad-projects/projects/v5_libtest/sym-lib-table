@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name bel_connector_and_jumper)(type Legacy)(uri /home/luno/git/BEL/kicad-training/lbr/bel_connector_and_jumper.lib)(options "")(descr ""))
+  (lib (name bel_logic)(type Legacy)(uri /home/luno/git/BEL/kicad-training/lbr/bel_logic.lib)(options "")(descr ""))
+  (lib (name bel_primitive)(type Legacy)(uri /home/luno/git/BEL/kicad-training/lbr/bel_primitive.lib)(options "")(descr ""))
+)

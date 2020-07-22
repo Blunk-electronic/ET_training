@@ -1,0 +1,211 @@
+EESchema Schematic File Version 2
+LIBS:nucleo_core-rescue
+LIBS:bel_connectors_and_jumpers
+LIBS:bel_primitives
+LIBS:bel_stm32
+LIBS:bel_supply
+LIBS:nucleo_core-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	2800 2100 4100 2100
+Wire Wire Line
+	2800 3100 4100 3100
+Wire Wire Line
+	2800 3200 4100 3200
+Wire Wire Line
+	2800 3300 4100 3300
+Wire Wire Line
+	2800 3400 4100 3400
+Text GLabel 4100 2100 2    58   BiDi ~ 0
+MCU_RST_N
+Text GLabel 4100 3100 2    58   BiDi ~ 0
+MCU_PA0
+Text GLabel 4100 3200 2    58   BiDi ~ 0
+MCU_PA1
+Text GLabel 4100 3300 2    58   BiDi ~ 0
+MCU_PA4
+Text GLabel 4100 3400 2    58   BiDi ~ 0
+MCU_PB0
+Text GLabel 1800 2100 0    58   BiDi ~ 0
+ARDU_RST_N
+Text GLabel 1800 3100 0    58   BiDi ~ 0
+ARDU_A0
+Text GLabel 1800 3200 0    58   BiDi ~ 0
+ARDU_A1
+Text GLabel 1800 3300 0    58   BiDi ~ 0
+ARDU_A2
+Text GLabel 1800 3400 0    58   BiDi ~ 0
+ARDU_A3
+Text GLabel 1800 3500 0    58   BiDi ~ 0
+ARDU_A4
+Text GLabel 1800 3600 0    58   BiDi ~ 0
+ARDU_A5
+Wire Wire Line
+	1800 2100 2400 2100
+Wire Wire Line
+	1800 3100 2400 3100
+Wire Wire Line
+	1800 3200 2400 3200
+Wire Wire Line
+	1800 3300 2400 3300
+Wire Wire Line
+	1800 3400 2400 3400
+Wire Wire Line
+	1800 3500 2400 3500
+Wire Wire Line
+	1800 3600 2400 3600
+Text GLabel 4100 3500 2    58   BiDi ~ 0
+MORPHO_ARDU_A4
+Text GLabel 4100 3600 2    58   BiDi ~ 0
+MORPHO_ARDU_A5
+Wire Wire Line
+	2800 3500 4100 3500
+Wire Wire Line
+	2800 3600 4100 3600
+$Comp
+L NETCHANGER N106
+U 1 1 59EF10C3
+P 2600 3600
+AR Path="/59EF10C3" Ref="N106"  Part="1" 
+AR Path="/58751184/59EF10C3" Ref="N106"  Part="1" 
+F 0 "N106" H 2600 3600 39  0000 C CNN
+F 1 "NETCHANGER" H 2600 3750 60  0001 C CNN
+F 2 "bel_netchanger:N_0.2MM" H 2600 3600 60  0001 C CNN
+F 3 "" H 2600 3600 60  0001 C CNN
+F 4 "1974-12-22T23:04:22" H 3250 3700 60  0000 C CNN "commissioned"
+F 5 "2017-01-22T23:04:22" H 3250 3600 60  0000 C CNN "updated"
+F 6 "MBL" H 3050 3500 60  0000 C CNN "author"
+F 7 "" H 3350 3800 60  0000 C CNN "partcode"
+F 8 "NO" H 3350 3800 60  0000 C CNN "bom"
+F 9 "?purpose?" H 2550 4100 50  0001 C CNN "purpose"
+	1    2600 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L NETCHANGER N105
+U 1 1 59EF1133
+P 2600 3500
+AR Path="/59EF1133" Ref="N105"  Part="1" 
+AR Path="/58751184/59EF1133" Ref="N105"  Part="1" 
+F 0 "N105" H 2600 3500 39  0000 C CNN
+F 1 "NETCHANGER" H 2600 3650 60  0001 C CNN
+F 2 "bel_netchanger:N_0.2MM" H 2600 3500 60  0001 C CNN
+F 3 "" H 2600 3500 60  0001 C CNN
+F 4 "1974-12-22T23:04:22" H 3250 3600 60  0000 C CNN "commissioned"
+F 5 "2017-01-22T23:04:22" H 3250 3500 60  0000 C CNN "updated"
+F 6 "MBL" H 3050 3400 60  0000 C CNN "author"
+F 7 "" H 3350 3700 60  0000 C CNN "partcode"
+F 8 "NO" H 3350 3700 60  0000 C CNN "bom"
+F 9 "?purpose?" H 2550 4000 50  0001 C CNN "purpose"
+	1    2600 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L NETCHANGER N104
+U 1 1 59EF115D
+P 2600 3400
+AR Path="/59EF115D" Ref="N104"  Part="1" 
+AR Path="/58751184/59EF115D" Ref="N104"  Part="1" 
+F 0 "N104" H 2600 3400 39  0000 C CNN
+F 1 "NETCHANGER" H 2600 3550 60  0001 C CNN
+F 2 "bel_netchanger:N_0.2MM" H 2600 3400 60  0001 C CNN
+F 3 "" H 2600 3400 60  0001 C CNN
+F 4 "1974-12-22T23:04:22" H 3250 3500 60  0000 C CNN "commissioned"
+F 5 "2017-01-22T23:04:22" H 3250 3400 60  0000 C CNN "updated"
+F 6 "MBL" H 3050 3300 60  0000 C CNN "author"
+F 7 "" H 3350 3600 60  0000 C CNN "partcode"
+F 8 "NO" H 3350 3600 60  0000 C CNN "bom"
+F 9 "?purpose?" H 2550 3900 50  0001 C CNN "purpose"
+	1    2600 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L NETCHANGER N103
+U 1 1 59EF1182
+P 2600 3300
+AR Path="/59EF1182" Ref="N103"  Part="1" 
+AR Path="/58751184/59EF1182" Ref="N103"  Part="1" 
+F 0 "N103" H 2600 3300 39  0000 C CNN
+F 1 "NETCHANGER" H 2600 3450 60  0001 C CNN
+F 2 "bel_netchanger:N_0.2MM" H 2600 3300 60  0001 C CNN
+F 3 "" H 2600 3300 60  0001 C CNN
+F 4 "1974-12-22T23:04:22" H 3250 3400 60  0000 C CNN "commissioned"
+F 5 "2017-01-22T23:04:22" H 3250 3300 60  0000 C CNN "updated"
+F 6 "MBL" H 3050 3200 60  0000 C CNN "author"
+F 7 "" H 3350 3500 60  0000 C CNN "partcode"
+F 8 "NO" H 3350 3500 60  0000 C CNN "bom"
+F 9 "?purpose?" H 2550 3800 50  0001 C CNN "purpose"
+	1    2600 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L NETCHANGER N102
+U 1 1 59EF11AA
+P 2600 3200
+AR Path="/59EF11AA" Ref="N102"  Part="1" 
+AR Path="/58751184/59EF11AA" Ref="N102"  Part="1" 
+F 0 "N102" H 2600 3200 39  0000 C CNN
+F 1 "NETCHANGER" H 2600 3350 60  0001 C CNN
+F 2 "bel_netchanger:N_0.2MM" H 2600 3200 60  0001 C CNN
+F 3 "" H 2600 3200 60  0001 C CNN
+F 4 "1974-12-22T23:04:22" H 3250 3300 60  0000 C CNN "commissioned"
+F 5 "2017-01-22T23:04:22" H 3250 3200 60  0000 C CNN "updated"
+F 6 "MBL" H 3050 3100 60  0000 C CNN "author"
+F 7 "" H 3350 3400 60  0000 C CNN "partcode"
+F 8 "NO" H 3350 3400 60  0000 C CNN "bom"
+F 9 "?purpose?" H 2550 3700 50  0001 C CNN "purpose"
+	1    2600 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L NETCHANGER N101
+U 1 1 59EF11D5
+P 2600 3100
+AR Path="/59EF11D5" Ref="N101"  Part="1" 
+AR Path="/58751184/59EF11D5" Ref="N101"  Part="1" 
+F 0 "N101" H 2600 3100 39  0000 C CNN
+F 1 "NETCHANGER" H 2600 3250 60  0001 C CNN
+F 2 "bel_netchanger:N_0.2MM" H 2600 3100 60  0001 C CNN
+F 3 "" H 2600 3100 60  0001 C CNN
+F 4 "1974-12-22T23:04:22" H 3250 3200 60  0000 C CNN "commissioned"
+F 5 "2017-01-22T23:04:22" H 3250 3100 60  0000 C CNN "updated"
+F 6 "MBL" H 3050 3000 60  0000 C CNN "author"
+F 7 "" H 3350 3300 60  0000 C CNN "partcode"
+F 8 "NO" H 3350 3300 60  0000 C CNN "bom"
+F 9 "?purpose?" H 2550 3600 50  0001 C CNN "purpose"
+	1    2600 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L NETCHANGER N100
+U 1 1 59EF1203
+P 2600 2100
+AR Path="/59EF1203" Ref="N100"  Part="1" 
+AR Path="/58751184/59EF1203" Ref="N100"  Part="1" 
+F 0 "N100" H 2600 2100 39  0000 C CNN
+F 1 "NETCHANGER" H 2600 2250 60  0001 C CNN
+F 2 "bel_netchanger:N_0.2MM" H 2600 2100 60  0001 C CNN
+F 3 "" H 2600 2100 60  0001 C CNN
+F 4 "1974-12-22T23:04:22" H 3250 2200 60  0000 C CNN "commissioned"
+F 5 "2017-01-22T23:04:22" H 3250 2100 60  0000 C CNN "updated"
+F 6 "MBL" H 3050 2000 60  0000 C CNN "author"
+F 7 "" H 3350 2300 60  0000 C CNN "partcode"
+F 8 "NO" H 3350 2300 60  0000 C CNN "bom"
+F 9 "?purpose?" H 2550 2600 50  0001 C CNN "purpose"
+	1    2600 2100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

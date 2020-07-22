@@ -1,0 +1,106 @@
+EESchema Schematic File Version 2
+LIBS:bel_supply
+LIBS:bel_primitive
+LIBS:bel_logic
+LIBS:hierarchy_1-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 11
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 7400 IC2
+U 1 1 5B851D80
+P 3800 2800
+AR Path="/5B851D3B/5B851D80" Ref="IC2"  Part="1" 
+AR Path="/5B852748/5B851D80" Ref="IC3"  Part="1" 
+AR Path="/59F17F64/59F18F3E/5B852A16/5B851D80" Ref="IC4"  Part="1" 
+F 0 "IC4" H 3675 2525 51  0000 L BNN
+F 1 "7400" H 3675 2450 51  0000 L BNN
+F 2 "bel_ic:S_SO14" H 3675 3750 51  0001 L BNN
+F 3 "www.blunk-electronic.de" H 3675 3650 51  0001 L BNN
+F 4 "1975-02-21T23:04:22" H 3675 3550 51  0001 L BNN "commissioned"
+F 5 "2011-01-21T23:04:22" H 3675 3450 51  0001 L BNN "updated"
+F 6 "MBL" H 3675 3350 51  0001 L BNN "author"
+F 7 "IC_PAC_S_SO14_VAL_7400" H 3675 3250 51  0001 L BNN "partcode"
+F 8 "YES" H 3675 3150 51  0001 L BNN "bom"
+F 9 "?PURPOSE?" H 3675 3050 51  0001 L BNN "purpose"
+	1    3800 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 7400 IC2
+U 4 1 5B851DD7
+P 3800 3900
+AR Path="/5B851D3B/5B851DD7" Ref="IC2"  Part="4" 
+AR Path="/5B852748/5B851DD7" Ref="IC3"  Part="4" 
+AR Path="/59F17F64/59F18F3E/5B852A16/5B851DD7" Ref="IC4"  Part="4" 
+F 0 "IC4" H 3675 3625 51  0000 L BNN
+F 1 "7400" H 3675 3550 51  0000 L BNN
+F 2 "bel_ic:S_SO14" H 3675 4850 51  0001 L BNN
+F 3 "www.blunk-electronic.de" H 3675 4750 51  0001 L BNN
+F 4 "1975-02-21T23:04:22" H 3675 4650 51  0001 L BNN "commissioned"
+F 5 "2011-01-21T23:04:22" H 3675 4550 51  0001 L BNN "updated"
+F 6 "MBL" H 3675 4450 51  0001 L BNN "author"
+F 7 "IC_PAC_S_SO14_VAL_7400" H 3675 4350 51  0001 L BNN "partcode"
+F 8 "YES" H 3675 4250 51  0001 L BNN "bom"
+F 9 "?PURPOSE?" H 3675 4150 51  0001 L BNN "purpose"
+	4    3800 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2700 2500 2700
+Wire Wire Line
+	3200 2900 3050 2900
+Wire Wire Line
+	3050 2900 3050 3350
+Wire Wire Line
+	3050 3350 4400 3350
+Wire Wire Line
+	4400 3350 4400 3900
+Wire Wire Line
+	4400 2800 5250 2800
+Wire Wire Line
+	5250 2800 5250 4300
+Wire Wire Line
+	5250 4300 3200 4300
+Wire Wire Line
+	3200 4300 3200 4000
+Wire Wire Line
+	3200 3800 2550 3800
+Wire Wire Line
+	2550 3800 2550 3750
+Text Label 4750 2800 0    51   ~ 0
+Q_N
+Text Label 4200 3350 0    51   ~ 0
+Q
+Text Label 2600 2700 0    51   ~ 0
+SET_N
+Text Label 2600 3800 0    51   ~ 0
+RESET_N
+Wire Wire Line
+	3600 2600 3600 2250
+Wire Wire Line
+	3600 2250 3850 2250
+Text Label 3600 2250 0    51   ~ 0
+TOP_VCC
+Wire Wire Line
+	3600 3000 3600 3000
+Wire Wire Line
+	3600 3000 3600 3200
+Wire Wire Line
+	3600 3200 4700 3200
+Text Label 4300 3200 0    51   ~ 0
+TOP_GND
+Text Notes 6350 3900 0    60   ~ 0
+DUMMY TEXT IN LOGIC
+$EndSCHEMATC

@@ -1,0 +1,11 @@
+(fp_lib_table
+  (lib (name bel_connector_and_jumper)(type KiCad)(uri /home/luno/git/BEL/kicad-training/lbr/bel_connector_and_jumper.pretty)(options "")(descr ""))
+  (lib (name bel_resistor)(type KiCad)(uri /home/luno/git/BEL/kicad-training/lbr/bel_resistor.pretty)(options "")(descr ""))
+  (lib (name bel_ic)(type KiCad)(uri /home/luno/git/BEL/kicad-training/lbr/bel_ic.pretty)(options "")(descr ""))
+  (lib (name bel_battery)(type KiCad)(uri /home/luno/git/BEL/kicad-training/lbr/bel_battery.pretty)(options "")(descr ""))
+  (lib (name bel_capacitor)(type KiCad)(uri /home/luno/git/BEL/kicad-training/lbr/bel_capacitor.pretty)(options "")(descr ""))
+  (lib (name bel_heatsink)(type KiCad)(uri /home/luno/git/BEL/kicad-training/lbr/bel_heatsink.pretty)(options "")(descr ""))
+  (lib (name bel_opto)(type KiCad)(uri /home/luno/git/BEL/kicad-training/lbr/bel_opto.pretty)(options "")(descr ""))
+  (lib (name bel_netchanger)(type KiCad)(uri /home/luno/git/BEL/kicad-training/lbr/bel_netchanger.pretty)(options "")(descr ""))
+  (lib (name bel_transformer)(type KiCad)(uri /home/luno/git/BEL/kicad-training/lbr/bel_transformer.pretty)(options "")(descr ""))
+)

@@ -1,0 +1,297 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:bel_connectors_and_jumpers
+LIBS:bel_primitives
+LIBS:bel_stm32
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L STM32F030C6Tx IC1
+U 1 1 586B6341
+P 14900 -950
+F 0 "IC1" H 12600 775 50  0000 L BNN
+F 1 "STM32F030C6Tx" H 17200 775 50  0000 R BNN
+F 2 "LQFP48" H 17200 725 50  0000 R TNN
+F 3 "" H 14900 -950 50  0000 C CNN
+	1    14900 -950
+	1    0    0    -1  
+$EndComp
+$Comp
+L MALE_01X06 XS2
+U 1 1 586B657A
+P 26500 -1650
+F 0 "XS2" H 26500 -1300 50  0000 C CNN
+F 1 "MALE_01X06" V 26600 -1650 50  0000 C CNN
+F 2 "" H 26500 -1650 50  0000 C CNN
+F 3 "" H 26500 -1650 50  0000 C CNN
+	1    26500 -1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MALE_02X19 XS_CORE_1
+U 1 1 586B66CF
+P 20800 -1900
+F 0 "XS_CORE_1" H 20850 -1800 50  0000 C CNN
+F 1 "MALE_02X19" V 20850 -2800 50  0000 C CNN
+F 2 "" H 20850 -3800 50  0000 C CNN
+F 3 "" H 20850 -3800 50  0000 C CNN
+F 4 "function?" H 20950 -1700 60  0000 C CNN "function"
+	1    20800 -1900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MALE_02X19 XS_SHIELD_1
+U 1 1 586B6759
+P 23800 -1900
+F 0 "XS_SHIELD_1" H 23850 -1800 50  0000 C CNN
+F 1 "MALE_02X19" V 23850 -2800 50  0000 C CNN
+F 2 "" H 23850 -3800 50  0000 C CNN
+F 3 "" H 23850 -3800 50  0000 C CNN
+F 4 "function?" H 23950 -1700 60  0000 C CNN "function"
+	1    23800 -1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MALE_01X06 XS1
+U 1 1 586B6B71
+P 27950 -1650
+F 0 "XS1" H 27950 -1300 50  0000 C CNN
+F 1 "MALE_01X06" V 28050 -1650 50  0000 C CNN
+F 2 "" H 27950 -1650 50  0000 C CNN
+F 3 "" H 27950 -1650 50  0000 C CNN
+	1    27950 -1650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MALE_01X06 IC2
+U 1 1 586B6C74
+P 31700 -1650
+F 0 "IC2" H 31700 -1300 50  0000 C CNN
+F 1 "MALE_01X06" V 31800 -1650 50  0000 C CNN
+F 2 "" H 31700 -1650 50  0000 C CNN
+F 3 "" H 31700 -1650 50  0000 C CNN
+	1    31700 -1650
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	23200 -2400 26750 -2400
+Wire Notes Line
+	26750 -2400 26750 300 
+Wire Notes Line
+	26750 300  23200 300 
+Wire Notes Line
+	23200 300  23200 -2400
+Wire Notes Line
+	27600 -2400 32200 -2400
+Wire Notes Line
+	32200 -2400 32200 300 
+Wire Notes Line
+	32200 300  27600 300 
+Wire Notes Line
+	27600 300  27600 -2400
+Wire Notes Line
+	12000 -3200 21650 -3200
+Wire Notes Line
+	21650 -3200 21650 1700
+Wire Notes Line
+	21650 1700 12000 1700
+Wire Notes Line
+	12000 1700 12000 -3200
+Wire Notes Line
+	12350 -2950 18150 -2950
+Wire Notes Line
+	18150 -2950 18150 1350
+Wire Notes Line
+	18150 1350 12350 1350
+Wire Notes Line
+	12350 1350 12350 -2950
+Wire Notes Line
+	29800 -2150 31950 -2150
+Wire Notes Line
+	31950 -2150 31950 -1050
+Wire Notes Line
+	31950 -1050 29800 -1050
+Wire Notes Line
+	29800 -1050 29800 -2150
+Text Notes 20450 -3050 0    60   ~ 0
+CORE_STM32_NUCLEO
+Text Notes 17000 -2850 0    60   ~ 0
+MCU_STM32F030
+Wire Notes Line
+	18350 -2950 19650 -2950
+Wire Notes Line
+	19650 -2950 19650 -1650
+Wire Notes Line
+	19650 -1650 18350 -1650
+Wire Notes Line
+	18350 -1650 18350 -2950
+Text Notes 18600 -2800 0    60   ~ 0
+DEBUG_ST-LINK_V2
+Text Notes 25900 -2250 0    60   ~ 0
+SHIELD_GENERIC
+Text Notes 31650 -2250 0    60   ~ 0
+PUMP
+Text Notes 31500 -2050 0    60   ~ 0
+STEPPER
+$Comp
+L NetChanger N_CORE_1
+U 1 1 586B77FD
+P 18150 -1050
+F 0 "N_CORE_1" H 18150 -1050 39  0000 C CNN
+F 1 "NetChanger" H 18150 -900 60  0001 C CNN
+F 2 "" H 18150 -1050 60  0001 C CNN
+F 3 "" H 18150 -1050 60  0001 C CNN
+	1    18150 -1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L NetChanger N_SHIELD_1
+U 1 1 586B784C
+P 25050 -1900
+F 0 "N_SHIELD_1" H 25050 -1900 39  0000 C CNN
+F 1 "NetChanger" H 25050 -1750 60  0001 C CNN
+F 2 "" H 25050 -1900 60  0001 C CNN
+F 3 "" H 25050 -1900 60  0001 C CNN
+	1    25050 -1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L NetChanger N_PUMP_1
+U 1 1 586B7A7F
+P 29800 -1900
+F 0 "N_PUMP_1" H 29800 -1900 39  0000 C CNN
+F 1 "NetChanger" H 29800 -1750 60  0001 C CNN
+F 2 "" H 29800 -1900 60  0001 C CNN
+F 3 "" H 29800 -1900 60  0001 C CNN
+	1    29800 -1900
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	11750 -3750 33000 -3750
+Wire Notes Line
+	33000 -3750 33000 1900
+Wire Notes Line
+	33000 1900 11750 1900
+Wire Notes Line
+	11750 1900 11750 -3750
+Text Notes 32800 -3650 0    60   ~ 0
+RIG
+$Comp
+L STM32F030C6Tx P_IC1
+U 1 1 586B7CB3
+P 14850 5100
+F 0 "P_IC1" H 12550 6825 50  0000 L BNN
+F 1 "STM32F030C6Tx" H 17150 6825 50  0000 R BNN
+F 2 "LQFP48" H 17150 6775 50  0000 R TNN
+F 3 "" H 14850 5100 50  0000 C CNN
+	1    14850 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MALE_01X06 P_IC2
+U 1 1 586B7DD0
+P 29650 4850
+F 0 "P_IC2" H 29650 5200 50  0000 C CNN
+F 1 "MALE_01X06" V 29750 4850 50  0000 C CNN
+F 2 "" H 29650 4850 50  0000 C CNN
+F 3 "" H 29650 4850 50  0000 C CNN
+	1    29650 4850
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	12150 2850 30950 2850
+Wire Notes Line
+	30950 2850 30950 7850
+Wire Notes Line
+	30950 7850 12150 7850
+Wire Notes Line
+	12150 7850 12150 2850
+Text Notes 30400 3050 0    60   ~ 0
+PRODUCT
+Wire Wire Line
+	19550 4600 29450 4600
+Text Label 19550 4950 0    60   ~ 0
+P_PUMP_STEPPER_DIR
+Wire Wire Line
+	17250 5000 19550 5000
+Text Label 19550 4750 0    60   ~ 0
+P_MOD_PUMP_STEPPER_DIR
+Wire Wire Line
+	31500 -1900 29950 -1900
+Text Label 30350 -1900 0    60   ~ 0
+STEPPER_DIR
+Wire Wire Line
+	28150 -1900 29650 -1900
+Text Label 28150 -1900 0    60   ~ 0
+BACK_PUMP_STEPPER_DIR
+Wire Wire Line
+	26300 -1900 25200 -1900
+Text Label 25250 -1900 0    60   ~ 0
+PUMP_STEPPER_DIR
+Wire Wire Line
+	24900 -1900 24100 -1900
+Text Label 24350 -1900 0    60   ~ 0
+XS1.2
+Wire Wire Line
+	20500 -1900 19750 -1900
+Text Label 19950 -1900 0    60   ~ 0
+XS1.2
+Wire Wire Line
+	19750 -1900 19750 -1050
+Wire Wire Line
+	19750 -1050 18300 -1050
+Wire Wire Line
+	18000 -1050 17300 -1050
+Text Label 17350 -1050 0    60   ~ 0
+MCU_PA0
+Wire Notes Line
+	23050 -1200 21950 -1200
+Wire Notes Line
+	27500 -1650 26900 -1650
+Text Notes 22250 -1250 0    60   ~ 0
+CABLE
+Text Notes 27050 -1700 0    60   ~ 0
+CABLE
+Wire Wire Line
+	19550 5000 19550 4600
+$EndSCHEMATC

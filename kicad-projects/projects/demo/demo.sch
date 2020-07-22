@@ -1,0 +1,124 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 74xx:7400 U1
+U 1 1 5F109B74
+P 3050 2550
+F 0 "U1" H 3050 2875 50  0000 C CNN
+F 1 "7400" H 3050 2784 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 3050 2550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn7400" H 3050 2550 50  0001 C CNN
+	1    3050 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4001 D1
+U 1 1 5F10C989
+P 3600 2550
+F 0 "D1" H 3600 2334 50  0000 C CNN
+F 1 "1N4001" H 3600 2425 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3600 2375 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3600 2550 50  0001 C CNN
+	1    3600 2550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3450 2550 3350 2550
+Wire Wire Line
+	3750 2550 3900 2550
+Wire Wire Line
+	3900 2550 3900 2700
+Wire Wire Line
+	3900 3000 3900 3200
+$Comp
+L power:GND #PWR?
+U 1 1 5F1103F5
+P 3900 3200
+F 0 "#PWR?" H 3900 2950 50  0001 C CNN
+F 1 "GND" H 3905 3027 50  0000 C CNN
+F 2 "" H 3900 3200 50  0001 C CNN
+F 3 "" H 3900 3200 50  0001 C CNN
+	1    3900 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2650 2600 2650
+Wire Wire Line
+	2600 2650 2600 2850
+Wire Wire Line
+	2750 2450 2250 2450
+Wire Wire Line
+	2250 2450 2250 2850
+$Comp
+L Device:R R1
+U 1 1 5F11175D
+P 2250 3000
+F 0 "R1" H 2320 3046 50  0000 L CNN
+F 1 "1k" H 2320 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2180 3000 50  0001 C CNN
+F 3 "~" H 2250 3000 50  0001 C CNN
+	1    2250 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3150 2250 3300
+Wire Wire Line
+	2600 3150 2600 3300
+$Comp
+L power:GND #PWR?
+U 1 1 5F11331B
+P 2600 3300
+F 0 "#PWR?" H 2600 3050 50  0001 C CNN
+F 1 "GND" H 2605 3127 50  0000 C CNN
+F 2 "" H 2600 3300 50  0001 C CNN
+F 3 "" H 2600 3300 50  0001 C CNN
+	1    2600 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F113723
+P 2250 3300
+F 0 "#PWR?" H 2250 3050 50  0001 C CNN
+F 1 "GND" H 2255 3127 50  0000 C CNN
+F 2 "" H 2250 3300 50  0001 C CNN
+F 3 "" H 2250 3300 50  0001 C CNN
+	1    2250 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F1140E4
+P 2600 3000
+F 0 "R2" H 2670 3046 50  0000 L CNN
+F 1 "1k" H 2670 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2530 3000 50  0001 C CNN
+F 3 "~" H 2600 3000 50  0001 C CNN
+	1    2600 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5F1143CF
+P 3900 2850
+F 0 "R3" H 3970 2896 50  0000 L CNN
+F 1 "1k" H 3970 2805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3830 2850 50  0001 C CNN
+F 3 "~" H 3900 2850 50  0001 C CNN
+	1    3900 2850
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
