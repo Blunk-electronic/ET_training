@@ -1,7 +1,7 @@
 
 schematic main display grid
-schematic main position cursor absolute 100 120
-schematic main zoom center 100 120 10
+schematic main position cursor absolute 130 120
+schematic main zoom center 130 120 10
 
 board main display grid
 board main set grid 1 1
@@ -11,10 +11,12 @@ schematic main invoke unit IC1 C 1 101 121 0
 
 schematic main add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 80 100 90 T_0207 #  S_1206
 schematic main set value R1 330R
+schematic main set partcode R1 R_PAC_T_0207_VAL_330R
 schematic main set purpose R1 "brightness"
 
 schematic main add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 80 130 90 S_1206
 schematic main set value C1 100n
+schematic main set partcode C1 C_PAC_S_1206_VAL_10n
 
 # connectors
 schematic main add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
@@ -22,6 +24,11 @@ schematic main set purpose X1 "PWR IN POS"
 
 schematic main add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 80 0 T_male_blade
 schematic main set purpose X2 "PWR IN GND"
+
+# GND symbol
+schematic main add device $HOME/git/BEL/ET_component_library/devices/supply/gnd.dev 1 120 90 0
+
+schematic main add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 130 120 0 D
 
 # nets
 schematic main draw net P3V3 1 62.5 150 80 150
@@ -64,8 +71,8 @@ board main position cursor absolute 30 20
 board main zoom center 30 20 10
 
 # make CAM data
-schematic main make netlists
-schematic main make bom
+#schematic main make netlists
+#schematic main make bom
 
 # board main display stencil top
 # board main display assy top off
@@ -113,5 +120,14 @@ schematic main make bom
 # project save module main
 
 #board submoduletest quit
+
+#schematic main draw net IN 1 80 125 80 105
+#schematic main draw net CLK 1 100 140 140 140
+#schematic main drag segment CLK 1 120 140 absolute 110 150
+#schematic main draw net CLK 1 100 140 140 140
+
+#schematic main drag unit R1 1 absolute 95 100
+
+#schematic main move unit IC1 R relative 0 10 10
 
 # script end
