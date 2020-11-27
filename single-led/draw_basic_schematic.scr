@@ -1,7 +1,7 @@
 
 schematic main display grid
-schematic main position cursor absolute 130 120
-schematic main zoom center 130 120 10
+schematic main position cursor absolute 100 120
+schematic main zoom center 100 120 10
 
 board main display grid
 board main set grid 1 1
@@ -35,7 +35,32 @@ schematic main draw net P3V3 1 62.5 150 80 150
 schematic main place label 1 70 150 0 1 0 # simple label
 schematic main draw net P3V3 1 80 150 80 135
 
-#schematic main draw net P3V3 1 87.50 142.50 80.00 142.50
+schematic main draw net P3V3 1 90 150 120 150
+schematic main place label 1 90 150 0 1 0 # simple label
+schematic main draw net P3V3 1 90 140 120 140
+schematic main place label 1 90 140 0 1 0 # simple label
+schematic main draw net P3V3 2 90 100 120 100
+schematic main place label 2 90 100 0 1 0 # simple label
+
+#schematic main rename net P3V3 VCC 1 #90 140
+#schematic main rename net P3V3 VCC 2 #90 100
+
+
+# connect two strands -- must work
+#schematic main draw net P3V3 1 100 140 100 150
+
+# redundant connection -- must raise error
+#schematic main draw net P3V3 1 110 140 110 150
+
+# crossing - must work
+#schematic main draw net P12V 1 110 135 110 155
+
+# net collision - must raise error
+#schematic main draw net P5V 1 110 140 110 150
+
+# net collision - must raise error
+#schematic main draw net P5V 1 120 150 130 150
+
 
 schematic main draw net IN 1 80 125 80 105
 schematic main draw net IN 1 85 122.5 80 122.5
@@ -129,5 +154,8 @@ board main zoom center 30 20 10
 #schematic main drag unit R1 1 absolute 95 100
 
 #schematic main move unit IC1 R relative 0 10 10
+schematic main delete unit IC2 1
+
+#schematic main rename device R1 R1
 
 # script end
