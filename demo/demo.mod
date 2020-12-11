@@ -89,14 +89,56 @@
 	[DEVICES_NON_ELECTRIC END]
 	[SILK_SCREEN BEGIN]
 		[TOP BEGIN]
+			[TEXT BEGIN]
+				content "SILK SCREEN TOP"
+				position  x 5.000 y 115.000 rotation 0.00
+				size  2.00
+				line_width  0.3
+				alignment horizontal left vertical bottom
+			[TEXT END]
 		[TOP END]
 		[BOTTOM BEGIN]
+			[TEXT BEGIN]
+				content "SILK SCREEN BOT"
+				position  x 32.000 y 75.000 rotation 0.00
+				size  2.00
+				line_width  0.3
+				alignment horizontal left vertical bottom
+			[TEXT END]
 		[BOTTOM END]
 	[SILK_SCREEN END]
 	[ASSEMBLY_DOCUMENTATION BEGIN]
 		[TOP BEGIN]
+			[TEXT BEGIN]
+				content "ASSY DOC TOP"
+				position  x 35.000 y 115.000 rotation 0.00
+				size  2.00
+				line_width  0.3
+				alignment horizontal left vertical bottom
+			[TEXT END]
+			[TEXT BEGIN]
+				content "STENCIL TOP"
+				position  x 87.000 y 115.000 rotation 0.00
+				size  1.00
+				line_width  0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+			[TEXT BEGIN]
+				content "STENCIL BOT"
+				position  x 87.000 y 75.000 rotation 0.00
+				size  1.00
+				line_width  0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
 		[TOP END]
 		[BOTTOM BEGIN]
+			[TEXT BEGIN]
+				content "ASSY DOC BOT"
+				position  x 62.000 y 75.000 rotation 0.00
+				size  2.00
+				line_width  0.3
+				alignment horizontal left vertical bottom
+			[TEXT END]
 		[BOTTOM END]
 	[ASSEMBLY_DOCUMENTATION END]
 	[STENCIL BEGIN]
