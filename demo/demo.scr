@@ -77,10 +77,12 @@ schematic demo place label 1 70 80 0 1 0 # simple label
 #schematic submoduletest set value IC1 7401
 
 # draw board outline
-board demo draw outline line 0 0 60 0
-board demo draw outline line 60 0 60 40
-board demo draw outline line 60 40 0 40
-board demo draw outline line 0 40 0 0
+board demo draw outline line 0 0 180 0
+#board demo draw outline line 180 0 180 120
+board demo draw outline arc 180 60 180 0 180 120 ccw
+board demo draw outline line 180 120 0 120
+board demo draw outline line 0 120 0 0
+board demo draw outline circle 130 20 5
 
 # position devices in board
 board demo move device X1 absolute 3 22
@@ -142,7 +144,6 @@ board demo draw stencil bottom circle 1 90 68 2
 board demo draw stencil bottom circle solid 95 68 2
 board demo display stencil bottom
 
-
 # keepout
 board demo draw keepout top line 105 100 110 100
 board demo draw keepout top arc 1 107.5 102 105 102 110 102 cw
@@ -154,6 +155,25 @@ board demo draw keepout bottom arc 1 107.5 62 105 62 80 102 cw
 board demo draw keepout bottom circle filled 105 68 2
 board demo draw keepout bottom circle 111 68 2
 board demo display keepout bottom
+
+# route restrict
+board demo draw route_restrict [1] line 135 60 145 60
+board demo draw route_restrict [1] arc 140 62 135 62 145 62 cw
+board demo draw route_restrict [1] circle filled 140 70 2 
+board demo display restrict route 1
+
+# via restrict
+board demo draw via_restrict [1] line 135 90 145 90
+board demo draw via_restrict [1] arc 140 92 135 92 145 92 cw
+board demo draw via_restrict [1] circle filled 140 100 2 
+board demo display restrict via 1
+
+# freetracks
+board demo route freetrack 1 line 0.5 150 100 160 100
+
+# route signal
+board demo route net in 1 line 0.5 IC1 1 direction 90 5
+board demo route net in 1 line 0.5 ic1 2 to 6 36.51
 
 
 
