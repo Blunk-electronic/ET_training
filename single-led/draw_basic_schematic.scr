@@ -158,4 +158,11 @@ schematic main delete unit IC2 1
 
 #schematic main rename device R1 R1
 
+board main display stop top
+board main display stop bottom
+board main display stencil top
+board main display stencil bottom
+board main display keepout top
+board main display keepout bottom
+
 # script end
