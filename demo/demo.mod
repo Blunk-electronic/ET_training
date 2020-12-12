@@ -4,33 +4,35 @@
 
 [META BEGIN]
 	[SCHEMATIC BEGIN]
-		company "N/A"
-		customer "N/A"
-		partcode N/A
-		drawing_number N/A
-		revision N/A
-		drawn_by "N/A"
+		company "Blunk electronic"
+		customer "classified"
+		partcode NCC-1701-D
+		drawing_number DR34/7
+		revision 0.3
+		drawn_by "Mario Blunk"
 		drawn_date 2020-12-11
-		checked_by "N/A"
-		checked_date 1901-01-01
-		approved_by "N/A"
-		approved_date 1901-01-01
+		checked_by "Sergey Komarov"
+		checked_date 2021-01-01
+		approved_by "Steve Carpenter"
+		approved_date 2021-01-03
 		[PREFERRED_LIBRARIES BEGIN]
+			path $HOME/git/BEL/ET_component_library/devices/
 		[PREFERRED_LIBRARIES END]
 	[SCHEMATIC END]
 	[BOARD BEGIN]
-		company "N/A"
-		customer "N/A"
-		partcode N/A
-		drawing_number N/A
-		revision N/A
-		drawn_by "N/A"
-		drawn_date 2020-12-11
-		checked_by "N/A"
-		checked_date 1901-01-01
-		approved_by "N/A"
-		approved_date 1901-01-01
+		company "Blunk electronic"
+		customer "classified"
+		partcode NCC-1701-E
+		drawing_number LY426
+		revision 0.1
+		drawn_by "Mario Blunk"
+		drawn_date 2020-12-21
+		checked_by "Dimitry Mishin"
+		checked_date 2021-03-04
+		approved_by "Tatjana Philipow"
+		approved_date 2021-03-05
 		[PREFERRED_LIBRARIES BEGIN]
+			path $HOME/git/BEL/ET_component_library/packages/
 		[PREFERRED_LIBRARIES END]
 	[BOARD END]
 [META END]
@@ -51,7 +53,16 @@
 [DRAWING_GRID END]
 ----------------------------------------------------------------------------------------------------
 [BOARD_LAYER_STACK BEGIN]
-	conductor  1 0.035 -- bottom signal layer
+	conductor  1 0.035 -- top signal layer
+	dielectric 1 0.25  -- prepreg
+	
+	conductor  2 0.018
+	dielectric 2 1.4   -- core
+	
+	conductor  3 0.018
+	dielectric 3 0.25  -- prepreg
+	
+	conductor  4 0.035 -- bottom signal layer
 [BOARD_LAYER_STACK END]
 ----------------------------------------------------------------------------------------------------
 [NETS BEGIN]
@@ -61,6 +72,21 @@
 	[SCHEMATIC BEGIN]
 		template dummy_frame.frs
 		[SHEET_DESCRIPTIONS BEGIN]
+			[SHEET BEGIN]
+				number 1
+				category product
+				text "input filter"
+			[SHEET END]
+			[SHEET BEGIN]
+				number 2
+				category development
+				text "test points"
+			[SHEET END]
+			[SHEET BEGIN]
+				number 3
+				category routing
+				text "core to motor-driver"
+			[SHEET END]
 		[SHEET_DESCRIPTIONS END]
 	[SCHEMATIC END]
 	[BOARD BEGIN]
@@ -130,7 +156,22 @@
 				line_width  0.15
 				alignment horizontal left vertical bottom
 			[TEXT END]
+			[TEXT BEGIN]
+				content "ROUTE RESTRIC"
+				position  x 130 y 74 rotation 0.00
+				size  2.00
+				line_width  0.3
+				alignment horizontal left vertical bottom
+			[TEXT END]
+			[TEXT BEGIN]
+				content "VIA RESTRIC"
+				position  x 130 y 104 rotation 0.00
+				size  2.00
+				line_width  0.3
+				alignment horizontal left vertical bottom
+			[TEXT END]
 		[TOP END]
+
 		[BOTTOM BEGIN]
 			[TEXT BEGIN]
 				content "ASSY DOC BOT"
