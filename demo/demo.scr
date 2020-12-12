@@ -167,6 +167,11 @@ board demo draw route_restrict [1] circle filled 140 70 2
 board demo display restrict route 1
 board demo draw route_restrict [2] line 135 58 145 58
 board demo display restrict route 2
+board demo draw route_restrict [3] line 135 56 145 56
+board demo display restrict route 3
+board demo draw route_restrict [4] line 135 54 145 54
+board demo display restrict route 4
+
 
 # via restrict
 board demo draw via_restrict [1] line 135 90 145 90

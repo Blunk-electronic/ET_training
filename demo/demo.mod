@@ -157,14 +157,49 @@
 				alignment horizontal left vertical bottom
 			[TEXT END]
 			[TEXT BEGIN]
-				content "ROUTE RESTRIC"
+				content "ROUTE RESTRICT"
 				position  x 130 y 74 rotation 0.00
 				size  2.00
 				line_width  0.3
 				alignment horizontal left vertical bottom
 			[TEXT END]
 			[TEXT BEGIN]
-				content "VIA RESTRIC"
+				content "L1"
+				position  x 143 y 70 rotation 0.00
+				size  1.00
+				line_width  0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+			[TEXT BEGIN]
+				content "L1"
+				position  x 146 y 59.5 rotation 0.00
+				size  1.00
+				line_width  0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+			[TEXT BEGIN]
+				content "L2"
+				position  x 146 y 57.5 rotation 0.00
+				size  1.00
+				line_width  0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+			[TEXT BEGIN]
+				content "L3"
+				position  x 146 y 55.5 rotation 0.00
+				size  1.00
+				line_width  0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+			[TEXT BEGIN]
+				content "L4"
+				position  x 146 y 53.5 rotation 0.00
+				size  1.00
+				line_width  0.15
+				alignment horizontal left vertical bottom
+			[TEXT END]
+			[TEXT BEGIN]
+				content "VIA RESTRICT"
 				position  x 130 y 104 rotation 0.00
 				size  2.00
 				line_width  0.3
