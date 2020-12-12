@@ -103,6 +103,8 @@ board demo draw silkscreen top circle 1 15 108 2
 board demo draw silkscreen top circle solid 21 108 2
 #CS: board demo draw silkscreen top circle cutout 22 107 1
 
+#board demo place silkscreen top text 0.15 1 100 100 0 "SILKSCREEN"
+
 board demo draw silkscreen bottom line 1 15 60 20 60
 board demo draw silkscreen bottom arc 1 17.5 62 15 62 20 62 cw
 board demo draw silkscreen bottom circle 1 15 68 2
