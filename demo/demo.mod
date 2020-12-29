@@ -91,7 +91,7 @@
 	[SCHEMATIC END]
 	[BOARD BEGIN]
 		template dummy_frame.frb
-		origin  x 20.000 y 50.000
+		--origin  x 20.000 y 50.000
 	[BOARD END]
 [DRAWING_FRAMES END]
 ----------------------------------------------------------------------------------------------------
@@ -115,106 +115,14 @@
 	[DEVICES_NON_ELECTRIC END]
 	[SILK_SCREEN BEGIN]
 		[TOP BEGIN]
-			[TEXT BEGIN]
-				content "SILK SCREEN TOP"
-				position  x 5.000 y 115.000 rotation 0.00
-				size  2.00
-				line_width  0.3
-				alignment horizontal left vertical bottom
-			[TEXT END]
 		[TOP END]
 		[BOTTOM BEGIN]
-			[TEXT BEGIN]
-				content "SILK SCREEN BOT"
-				position  x 32.000 y 75.000 rotation 0.00
-				size  2.00
-				line_width  0.3
-				alignment horizontal left vertical bottom
-			[TEXT END]
 		[BOTTOM END]
 	[SILK_SCREEN END]
 	[ASSEMBLY_DOCUMENTATION BEGIN]
 		[TOP BEGIN]
-			[TEXT BEGIN]
-				content "ASSY DOC TOP"
-				position  x 35.000 y 115.000 rotation 0.00
-				size  2.00
-				line_width  0.3
-				alignment horizontal left vertical bottom
-			[TEXT END]
-			[TEXT BEGIN]
-				content "STENCIL TOP"
-				position  x 87.000 y 115.000 rotation 0.00
-				size  1.00
-				line_width  0.15
-				alignment horizontal left vertical bottom
-			[TEXT END]
-			[TEXT BEGIN]
-				content "STENCIL BOT"
-				position  x 87.000 y 75.000 rotation 0.00
-				size  1.00
-				line_width  0.15
-				alignment horizontal left vertical bottom
-			[TEXT END]
-			[TEXT BEGIN]
-				content "ROUTE RESTRICT"
-				position  x 130 y 74 rotation 0.00
-				size  2.00
-				line_width  0.3
-				alignment horizontal left vertical bottom
-			[TEXT END]
-			[TEXT BEGIN]
-				content "L1"
-				position  x 143 y 70 rotation 0.00
-				size  1.00
-				line_width  0.15
-				alignment horizontal left vertical bottom
-			[TEXT END]
-			[TEXT BEGIN]
-				content "L1"
-				position  x 146 y 59.5 rotation 0.00
-				size  1.00
-				line_width  0.15
-				alignment horizontal left vertical bottom
-			[TEXT END]
-			[TEXT BEGIN]
-				content "L2"
-				position  x 146 y 57.5 rotation 0.00
-				size  1.00
-				line_width  0.15
-				alignment horizontal left vertical bottom
-			[TEXT END]
-			[TEXT BEGIN]
-				content "L3"
-				position  x 146 y 55.5 rotation 0.00
-				size  1.00
-				line_width  0.15
-				alignment horizontal left vertical bottom
-			[TEXT END]
-			[TEXT BEGIN]
-				content "L4"
-				position  x 146 y 53.5 rotation 0.00
-				size  1.00
-				line_width  0.15
-				alignment horizontal left vertical bottom
-			[TEXT END]
-			[TEXT BEGIN]
-				content "VIA RESTRICT"
-				position  x 130 y 104 rotation 0.00
-				size  2.00
-				line_width  0.3
-				alignment horizontal left vertical bottom
-			[TEXT END]
 		[TOP END]
-
 		[BOTTOM BEGIN]
-			[TEXT BEGIN]
-				content "ASSY DOC BOT"
-				position  x 62.000 y 75.000 rotation 0.00
-				size  2.00
-				line_width  0.3
-				alignment horizontal left vertical bottom
-			[TEXT END]
 		[BOTTOM END]
 	[ASSEMBLY_DOCUMENTATION END]
 	[STENCIL BEGIN]

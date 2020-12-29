@@ -77,6 +77,7 @@ schematic demo place label 1 70 80 0 1 0 # simple label
 #schematic submoduletest set value IC1 7401
 
 # draw board outline
+board demo place text outline 0.2 5 54 1 0 "OUTLINE / CONTOUR"
 board demo draw outline line 0 0 180 0
 #board demo draw outline line 180 0 180 120
 board demo draw outline arc 180 60 180 0 180 120 ccw
@@ -97,14 +98,14 @@ board demo move device C1 absolute 20 15
 board demo rotate device C1 relative 90
 
 # silkscreen
+board demo place text silkscreen top 0.15 1 14 115 0 "SILKSCREEN"
 board demo draw silkscreen top line 1 15 100 20 100
 board demo draw silkscreen top arc 1 17.5 102 15 102 20 102 cw
 board demo draw silkscreen top circle 1 15 108 2
 board demo draw silkscreen top circle solid 21 108 2
 #CS: board demo draw silkscreen top circle cutout 22 107 1
 
-#board demo place silkscreen top text 0.15 1 100 100 0 "SILKSCREEN"
-
+board demo place text silkscreen bottom 0.15 1 23 75 0 "SILKSCREEN"
 board demo draw silkscreen bottom line 1 15 60 20 60
 board demo draw silkscreen bottom arc 1 17.5 62 15 62 20 62 cw
 board demo draw silkscreen bottom circle 1 15 68 2
@@ -112,12 +113,14 @@ board demo draw silkscreen bottom circle solid 21 68 2
 board demo display silkscreen bottom
 
 # assembly documentation
+board demo place text assy top 0.15 1 45 115 0 "ASSY DOC"
 board demo draw assy top line 1 45 100 50 100
 board demo draw assy top arc 1 47.5 102 45 102 50 102 cw
 board demo draw assy top circle 1 45 108 2
 board demo draw assy top circle solid 51 108 2
 #CS: board demo draw assy top circle cutout 52 107 1
 
+board demo place text assy bottom 0.15 1 52 75 0 "ASSY DOC"
 board demo draw assy bottom line 1 45 60 50 60
 board demo draw assy bottom arc 1 47.5 62 45 62 50 62 cw
 board demo draw assy bottom circle 1 45 68 2
@@ -125,12 +128,14 @@ board demo draw assy bottom circle solid 51 68 2
 board demo display assy bottom
 
 # stop mask
+board demo place text stop top 0.15 1 73 115 0 "STOP MASK"
 board demo draw stop top line 1 75 100 80 100
 board demo draw stop top arc 1 77.5 102 75 102 80 102 cw
 board demo draw stop top circle 1 75 108 2
 board demo draw stop top circle solid 81 108 2
 #CS: board demo draw stop top circle cutout 82 107 1
 
+board demo place text stop bottom 0.15 1 83 75 0 "STOP MASK"
 board demo draw stop bottom line 1 75 60 80 60
 board demo draw stop bottom arc 1 77.5 62 75 62 80 62 cw
 board demo draw stop bottom circle 1 75 68 2
@@ -138,12 +143,14 @@ board demo draw stop bottom circle solid 81 68 2
 board demo display stop bottom
 
 # stencil
+board demo place text stencil top 0.15 1 87 115 0 "STENCIL TOP"
 board demo draw stencil top line 1 90 100 95 100
 board demo draw stencil top arc 1 92.5 102 90 102 95 102 cw
 board demo draw stencil top circle 1 90 108 2
 board demo draw stencil top circle solid 95 108 2
 #CS: board demo draw stencil top circle cutout 82 107 1
 
+board demo place text stencil top 0.15 1 87 75 0 "STENCIL BOTTOM"
 board demo draw stencil bottom line 1 90 60 95 60
 board demo draw stencil bottom arc 1 92.5 62 90 62 95 62 cw
 board demo draw stencil bottom circle 1 90 68 2
@@ -151,11 +158,13 @@ board demo draw stencil bottom circle solid 95 68 2
 board demo display stencil bottom
 
 # keepout
+board demo place text keepout top 0.15 1 103 115 0 "KEEPOUT TOP"
 board demo draw keepout top line 105 100 110 100
 board demo draw keepout top arc 107.5 102 105 102 110 102 cw
 board demo draw keepout top circle filled 105 108 2
 board demo draw keepout top circle 111 108 2
 
+board demo place text keepout top 0.15 1 103 75 0 "KEEPOUT BOTTOM"
 board demo draw keepout bottom line 105 60 110 60
 board demo draw keepout bottom arc 107.5 62 105 62 110 62 cw
 board demo draw keepout bottom circle filled 105 68 2
@@ -166,23 +175,64 @@ board demo display keepout bottom
 board demo draw route_restrict [1] line 135 60 145 60
 board demo draw route_restrict [1] arc 140 62 135 62 145 62 cw
 board demo draw route_restrict [1] circle filled 140 70 2 
+board demo place text route_restrict 1 0.15 1 143 70 0 "ROUTE RESTRICT L1"
+board demo place text route_restrict 1 0.15 1 146 59.5 0 "ROUTE RESTRICT L1"
 board demo display restrict route 1
+
 board demo draw route_restrict [2] line 135 58 145 58
+board demo place text route_restrict 2 0.15 1 146 57.5 0 "ROUTE RESTRICT L2"
 board demo display restrict route 2
+
 board demo draw route_restrict [3] line 135 56 145 56
+board demo place text route_restrict 3 0.15 1 146 55.5 0 "ROUTE RESTRICT L3"
 board demo display restrict route 3
+
 board demo draw route_restrict [4] line 135 54 145 54
+board demo place text route_restrict 4 0.15 1 146 53.5 0 "ROUTE RESTRICT L4"
 board demo display restrict route 4
 
 
 # via restrict
-board demo draw via_restrict [1] line 135 90 145 90
+board demo place text via_restrict 1 0.15 1 143 99 0 "VIA RESTRICT L1"
 board demo draw via_restrict [1] arc 140 92 135 92 145 92 cw
 board demo draw via_restrict [1] circle filled 140 100 2 
+
+board demo draw via_restrict [1] line 135 90 145 90
+board demo place text via_restrict 1 0.15 1 146 89.5 0 "VIA RESTRICT L1"
 board demo display restrict via 1
 
+board demo draw via_restrict [2] line 135 88 145 88
+board demo place text via_restrict 2 0.15 1 146 87.5 0 "VIA RESTRICT L2"
+board demo display restrict via 2
+
+board demo draw via_restrict [3] line 135 86 145 86
+board demo place text via_restrict 3 0.15 1 146 85.5 0 "VIA RESTRICT L3"
+board demo display restrict via 3
+
+board demo draw via_restrict [4] line 135 84 145 84
+board demo place text via_restrict 4 0.15 1 146 83.5 0 "VIA RESTRICT L4"
+board demo display restrict via 4
+
+
 # freetracks
-board demo route freetrack 1 line 0.5 150 100 160 100
+# L1 / TOP
+board demo route freetrack 1 line 0.5 160 100 180 100
+board demo place text conductor 1 0.15 1 182 99.5 0 "L1/TOP"
+
+# L2
+board demo route freetrack 2 line 0.5 160 98 180 98
+board demo place text conductor 2 0.15 1 182 97.5 0 "L2"
+
+# L3
+board demo route freetrack 3 line 0.5 160 96 180 96
+board demo place text conductor 3 0.15 1 182 95.5 0 "L3"
+
+# L4 / BOTTOM
+board demo route freetrack 4 line 0.5 160 94 180 94
+board demo place text conductor 4 0.15 1 187 93.5 0 "L4/BOT"
+
+
+#place text conductor 1 1 5 100 100 0 "TEST*"
 
 # route signal
 board demo route net in 1 line 0.5 IC1 1 direction 90 5
