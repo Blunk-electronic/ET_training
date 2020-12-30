@@ -128,14 +128,14 @@ board demo draw assy bottom circle solid 51 68 2
 board demo display assy bottom
 
 # stop mask
-board demo place text stop top 0.15 1 73 115 0 "STOP MASK"
+board demo place text stop top 0.15 1 73 115 0 "STOP MASK TOP"
 board demo draw stop top line 1 75 100 80 100
 board demo draw stop top arc 1 77.5 102 75 102 80 102 cw
 board demo draw stop top circle 1 75 108 2
 board demo draw stop top circle solid 81 108 2
 #CS: board demo draw stop top circle cutout 82 107 1
 
-board demo place text stop bottom 0.15 1 83 75 0 "STOP MASK"
+board demo place text stop bottom 0.15 1 83 75 0 "STOP MASK BOTTOM"
 board demo draw stop bottom line 1 75 60 80 60
 board demo draw stop bottom arc 1 77.5 62 75 62 80 62 cw
 board demo draw stop bottom circle 1 75 68 2
@@ -150,7 +150,7 @@ board demo draw stencil top circle 1 90 108 2
 board demo draw stencil top circle solid 95 108 2
 #CS: board demo draw stencil top circle cutout 82 107 1
 
-board demo place text stencil top 0.15 1 87 75 0 "STENCIL BOTTOM"
+board demo place text stencil bottom 0.15 1 99 75 0 "STENCIL BOTTOM"
 board demo draw stencil bottom line 1 90 60 95 60
 board demo draw stencil bottom arc 1 92.5 62 90 62 95 62 cw
 board demo draw stencil bottom circle 1 90 68 2
@@ -164,7 +164,7 @@ board demo draw keepout top arc 107.5 102 105 102 110 102 cw
 board demo draw keepout top circle filled 105 108 2
 board demo draw keepout top circle 111 108 2
 
-board demo place text keepout top 0.15 1 103 75 0 "KEEPOUT BOTTOM"
+board demo place text keepout bottom 0.15 1 103 75 0 "KEEPOUT BOTTOM"
 board demo draw keepout bottom line 105 60 110 60
 board demo draw keepout bottom arc 107.5 62 105 62 110 62 cw
 board demo draw keepout bottom circle filled 105 68 2
