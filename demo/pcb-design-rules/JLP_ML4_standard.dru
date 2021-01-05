@@ -1,0 +1,31 @@
+-- SYSTEM ET PCB Design Rules File
+-- date 2019-02-21T09:50:36
+-- ====================================================================================================
+
+
+[CLEARANCES BEGIN]
+	between_conductors 0.2
+	between_conductors_of_same_net 0.2
+	conductor_to_board_edge 0.4
+	edge_to_edge 0.4
+[CLEARANCES END]
+
+[SIZES BEGIN]
+	tracks 0.1
+	drills 0.2
+	
+	[RESTRING BEGIN]
+		inner 0.2
+		outer 0.15
+		delta 0.05
+	[RESTRING END]
+
+[SIZES END]
+
+[STOP_MASK BEGIN]
+	expansion_min 0.075
+[STOP_MASK END]
+
+-- ====================================================================================================
+-- date 2019-02-21T09:50:36
+-- pcb design rules end
