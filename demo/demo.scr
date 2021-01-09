@@ -238,11 +238,23 @@ board demo place text conductor 4 0.15 1 187 93.5 0 "L4/BOT"
 board demo route net in 1 line 0.5 IC1 1 direction 90 5
 board demo route net in 1 line 0.5 ic1 2 to 6 36.51
 
+# vias
+board demo place text assy top 0.15 1 39 42 0 "VIAS"
+board demo place text assy top 0.15 1 41 39.5 0 "THROUGH"
+board demo place via GND 40 40
 
+board demo place text assy top 0.15 1 41 37.5 0 "BLIND DRILLED FROM TOP TO L2"
+board demo place via GND 40 38 blind top 2
+
+board demo place text assy top 0.15 1 41 35.5 0 "BLIND DRILLED FROM BOTTOM TO L3"
+board demo place via GND 40 36 blind bottom 3
+
+board demo place text assy top 0.15 1 41 33.5 0 "BURIED FROM L2 TO L3"
+board demo place via GND 40 34 buried 2 3
 
 # set cursor and zoom center
-board demo position cursor absolute 100 100
-#board demo zoom center 30 20 10
+board demo position cursor absolute 40 40
+board demo zoom center 40 40 10
 
 # make CAM data
 #schematic demo make netlists

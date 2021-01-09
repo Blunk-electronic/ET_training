@@ -12,12 +12,12 @@
 
 [SIZES BEGIN]
 	tracks 0.1
-	drills 0.2
+	drills 0.3
 	
 	[RESTRING BEGIN]
 		inner 0.2
 		outer 0.15
-		delta 0.05
+		delta 0.03
 	[RESTRING END]
 
 [SIZES END]
