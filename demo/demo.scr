@@ -239,12 +239,21 @@ board demo route net in 1 line 0.5 IC1 1 direction 90 5
 board demo route net in 1 line 0.5 ic1 2 to 6 36.51
 
 # vias
+#board demo set via restring inner 0.2
+#board demo set via restring outer 0.2
+
 board demo place text assy top 0.15 1 39 42 0 "VIAS"
 board demo place text assy top 0.15 1 41 39.5 0 "THROUGH"
+board demo place via GND 38 40
+board demo set via drill 0.5
 board demo place via GND 40 40
+board demo set via drill dru
 
 board demo place text assy top 0.15 1 41 37.5 0 "BLIND DRILLED FROM TOP TO L2"
+board demo place via GND 38 38 blind top 2
+board demo set via drill 0.6
 board demo place via GND 40 38 blind top 2
+board demo set via drill dru
 
 board demo place text assy top 0.15 1 41 35.5 0 "BLIND DRILLED FROM BOTTOM TO L3"
 board demo place via GND 40 36 blind bottom 3
