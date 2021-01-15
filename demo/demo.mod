@@ -114,14 +114,14 @@
 [BOARD BEGIN]
 	[USER_SETTINGS BEGIN]
 		[VIAS BEGIN]
-			--drill 0.6
-			drill dru -- default
+			drill 0.6
+			--drill dru -- default
 			
-			--restring_inner 0.5
-			restring_inner dru -- default
+			restring_inner 0.3
+			--restring_inner dru -- default
 			
-			--restring_outer 0.4
-			restring_outer dru -- default
+			restring_outer 0.35
+			--restring_outer dru -- default
 		[VIAS END]
 	[USER_SETTINGS END]
 	[DEVICES_NON_ELECTRIC BEGIN]

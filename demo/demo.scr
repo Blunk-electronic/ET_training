@@ -258,8 +258,15 @@ board demo set via drill dru
 board demo place text assy top 0.15 1 41 35.5 0 "BLIND DRILLED FROM BOTTOM TO L3"
 board demo place via GND 40 36 blind bottom 3
 
-board demo place text assy top 0.15 1 41 33.5 0 "BURIED FROM L2 TO L3"
-board demo place via GND 40 34 buried 2 3
+board demo place text assy top 0.15 1 41 33.5 0 "BLIND DRILLED FROM TOP TO L3"
+board demo place via GND 40 34 blind top 3
+
+board demo place text assy top 0.15 1 41 31.5 0 "BLIND DRILLED FROM BOTTOM TO L2"
+board demo place via GND 40 32 blind bottom 2
+
+board demo place text assy top 0.15 1 41 29.5 0 "BURIED FROM L2 TO L3"
+board demo place via GND 40 30 buried 2 3
+board demo set via drill 0.3
 
 # set cursor and zoom center
 board demo position cursor absolute 40 40
