@@ -335,11 +335,18 @@ schematic demo delete unit IC2 1
 
 #schematic demo rename device R1 R1
 
-board demo display stop top
-board demo display stop bottom
-board demo display stencil top
-board demo display stencil bottom
+board demo display stop top off
+board demo display stop bottom off
+board demo display stencil top off 
+board demo display stencil bottom off
+board demo display conductors 1 on
+board demo display conductors 2 on
+board demo display conductors 3 off
+board demo display conductors 4 off
+
 board demo display keepout top
 board demo display keepout bottom
+
+board demo zoom center 12 15 50
 
 # script end
