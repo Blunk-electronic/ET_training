@@ -161,62 +161,6 @@
 	[VIA_RESTRICT BEGIN]
 	[VIA_RESTRICT END]
 	[CONDUCTOR BEGIN]
-		[FILL_ZONE BEGIN]
-			fill_style solid
-			corner_easing none
-			--easing_radius 0.4
-			min_width 0.5
-			layer 1
-			priority 1
-			isolation 0.5
-			[CONTOURS BEGIN]
-				[LINE BEGIN]
-					start x 5 y 5
-					end x 20 y 5
-				[LINE END]
-				[LINE BEGIN]
-					start x 20 y 5
-					end x 20 y 20
-				[LINE END]
-				[LINE BEGIN]
-					start x 20 y 20
-					end x 5 y 20
-				[LINE END]
-				[LINE BEGIN]
-					start x 5 y 20
-					end x 5 y 5
-				[LINE END]
-			[CONTOURS END]
-		[FILL_ZONE END]
-
-		[FILL_ZONE BEGIN]
-			fill_style solid
-			corner_easing none
-			--easing_radius 0.4
-			min_width 0.5
-			layer 1
-			priority 1
-			isolation 0.5
-			[CONTOURS BEGIN]
-				[LINE BEGIN]
-					start x 38 y 29
-					end x 42 y 29
-				[LINE END]
-				[LINE BEGIN]
-					start x 42 y 29
-					end x 42 y 32
-				[LINE END]
-				[LINE BEGIN]
-					start x 42 y 32
-					end x 38 y 32
-				[LINE END]
-				[LINE BEGIN]
-					start x 38 y 32
-					end x 38 y 29
-				[LINE END]
-			[CONTOURS END]
-		[FILL_ZONE END]
-
 	[CONDUCTOR END]
 	[PCB_CONTOURS_NON_PLATED BEGIN]
 	[PCB_CONTOURS_NON_PLATED END]

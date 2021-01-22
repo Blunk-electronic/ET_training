@@ -27,7 +27,7 @@ schematic demo set purpose X2 "PWR IN GND"
 # GND symbol
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/supply/gnd.dev 1 120 90 0
 
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 130 120 0 D
+#schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 130 120 0 D
 
 # nets
 schematic demo draw net P3V3 1 62.5 150 80 150
@@ -219,6 +219,8 @@ board demo display restrict via 4
 board demo route freetrack 1 line 0.5 160 100 180 100
 board demo place text conductor 1 0.15 1 182 99.5 0 "L1/TOP"
 
+board demo route freetrack 1 polygon 0.25 line 0 0 45 0 line 45 0 45 30 arc 22.5 30 45 30 0 30 ccw line 0 30 0 0
+
 # L2
 board demo route freetrack 2 line 0.5 160 98 180 98
 board demo place text conductor 2 0.15 1 182 97.5 0 "L2"
@@ -230,7 +232,7 @@ board demo place text conductor 3 0.15 1 182 95.5 0 "L3"
 # L4 / BOTTOM
 board demo route freetrack 4 line 0.5 160 94 180 94
 board demo place text conductor 4 0.15 1 187 93.5 0 "L4/BOT"
-
+board demo route freetrack 4 polygon 0.25 line 40 0 60 0 line 60 0 60 30 line 60 30 40 30 line 40 30 40 0
 
 #place text conductor 1 1 5 100 100 0 "TEST*"
 
@@ -331,7 +333,7 @@ board demo zoom center 40 40 10
 #schematic demo drag unit R1 1 absolute 95 100
 
 #schematic demo move unit IC1 R relative 0 10 10
-schematic demo delete unit IC2 1
+# schematic demo delete unit IC2 1
 
 #schematic demo rename device R1 R1
 
@@ -340,13 +342,13 @@ board demo display stop bottom off
 board demo display stencil top off 
 board demo display stencil bottom off
 board demo display conductors 1 on
-board demo display conductors 2 on
+board demo display conductors 2 off
 board demo display conductors 3 off
-board demo display conductors 4 off
+board demo display conductors 4 on
 
 board demo display keepout top
 board demo display keepout bottom
 
-board demo zoom center 12 15 50
+board demo zoom center 38 24 50
 
 # script end
