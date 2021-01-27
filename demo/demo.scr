@@ -219,7 +219,21 @@ board demo display restrict via 4
 board demo route freetrack 1 line 0.5 160 100 180 100
 board demo place text conductor 1 0.15 1 182 99.5 0 "L1/TOP"
 
-board demo route freetrack 1 polygon 0.25 line 0 0 45 0 line 45 0 45 30 arc 22.5 30 45 30 0 30 ccw line 0 30 0 0
+board demo set polygon fill solid # hatched
+board demo set polygon width 0.35
+board demo set polygon isolation 0.3
+board demo set polygon easing style fillet # chamfer, none, fillet
+board demo set polygon easing radius 0.6
+board demo set polygon connection thermal # solid
+
+board demo set polygon thermal width 0.2
+board demo set polygon thermal gap 0.33
+
+board demo set polygon hatching width 0.3
+board demo set polygon hatching border 0.4
+board demo set polygon hatching spacing 1.1
+
+board demo route freetrack 1 polygon line 0 0 45 0 line 45 0 45 30 arc 22.5 30 45 30 0 30 ccw line 0 30 0 0
 
 # L2
 board demo route freetrack 2 line 0.5 160 98 180 98
@@ -232,7 +246,7 @@ board demo place text conductor 3 0.15 1 182 95.5 0 "L3"
 # L4 / BOTTOM
 board demo route freetrack 4 line 0.5 160 94 180 94
 board demo place text conductor 4 0.15 1 187 93.5 0 "L4/BOT"
-board demo route freetrack 4 polygon 0.25 line 40 0 60 0 line 60 0 60 30 line 60 30 40 30 line 40 30 40 0
+#board demo route freetrack 4 polygon line 40 0 60 0 line 60 0 60 30 line 60 30 40 30 line 40 30 40 0
 
 #place text conductor 1 1 5 100 100 0 "TEST*"
 
@@ -341,14 +355,14 @@ board demo display stop top off
 board demo display stop bottom off
 board demo display stencil top off 
 board demo display stencil bottom off
-board demo display conductors 1 on
-board demo display conductors 2 off
+board demo display conductors 1 on	
+board demo display conductors 2 on
 board demo display conductors 3 off
-board demo display conductors 4 on
+board demo display conductors 4 off
 
 board demo display keepout top
 board demo display keepout bottom
 
-board demo zoom center 38 24 50
+#board demo zoom center 38 24 1
 
 # script end
