@@ -233,7 +233,7 @@ board demo set polygon hatching width 0.3
 board demo set polygon hatching border 0.4
 board demo set polygon hatching spacing 1.1
 
-#board demo route freetrack 1 polygon line 0 0 45 0 line 45 0 45 30 arc 22.5 30 45 30 0 30 ccw line 0 30 0 0
+board demo route freetrack 1 polygon line 0 0 45 0 line 45 0 45 30 arc 22.5 30 45 30 0 30 ccw line 0 30 0 0
 
 # L2
 board demo route freetrack 2 line 0.5 160 98 180 98
@@ -356,14 +356,15 @@ board demo display stop top off
 board demo display stop bottom off
 board demo display stencil top off 
 board demo display stencil bottom off
-board demo display conductors 1 off	
-board demo display conductors 2 on
+board demo display conductors 1 on	
+board demo display conductors 2 off
 board demo display conductors 3 off
 board demo display conductors 4 off
 
 board demo display keepout top
 board demo display keepout bottom
 
-#board demo zoom center 38 24 1
+board demo position cursor absolute 5 18
+board demo zoom center 5 18 50
 
 # script end
