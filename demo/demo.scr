@@ -254,6 +254,12 @@ board demo place text conductor 4 0.15 1 187 93.5 0 "L4/BOT"
 board demo route net in 1 line 0.5 IC1 1 direction 90 5
 board demo route net in 1 line 0.5 ic1 2 to 6 36.51
 board demo route net in 2 polygon line 2 2 40 2 line 40 2 40 20 line 40 20 2 20 line 2 20 2 2
+board demo route net gnd 1 line 0.2 38 40 40 40
+board demo route net gnd 2 line 0.2 38 38 40 40
+
+board demo route net gnd 1 line 0.2 X2 1 direction 0 5
+board demo route net gnd 1 line 0.2 R1 2 direction -90 5
+board demo route net gnd 1 line 0.2 16 10 8 4
 
 # vias
 #board demo set via restring inner 0.2
@@ -357,14 +363,17 @@ board demo display stop bottom off
 board demo display stencil top off 
 board demo display stencil bottom off
 board demo display conductors 1 on	
-board demo display conductors 2 off
+#board demo display conductors 2 off
 board demo display conductors 3 off
 board demo display conductors 4 off
 
 board demo display keepout top
 board demo display keepout bottom
 
-board demo position cursor absolute 5 18
-board demo zoom center 5 18 50
+#board demo position cursor absolute 39 39
+#board demo zoom center 5 18 50
+board demo position cursor absolute 11 8
+#board demo zoom center 39 39 70
+board demo zoom center 11 8 50
 
 # script end
