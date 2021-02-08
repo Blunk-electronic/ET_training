@@ -234,6 +234,8 @@ board demo set polygon hatching border 0.4
 board demo set polygon hatching spacing 1.1
 
 board demo route freetrack 1 polygon line 0 0 45 0 line 45 0 45 30 arc 22.5 30 45 30 0 30 ccw line 0 30 0 0
+board demo fill polygon # optional net name
+# board demo hide polygon # optional net name
 
 # L2
 board demo route freetrack 2 line 0.5 160 98 180 98
