@@ -78,10 +78,22 @@ schematic demo place label 1 70 80 0 1 0 # simple label
 
 # draw board outline
 board demo place text outline 0.2 5 54 1 0 "OUTLINE / CONTOUR"
-board demo draw outline line 0 0 180 0
-#board demo draw outline line 180 0 180 120
-board demo draw outline arc 180 60 180 0 180 120 ccw
+board demo draw outline line 0 0 35 0
+board demo draw outline line 35 0 35 4.15
+board demo draw outline line 35 4.15 40 4.15
+board demo draw outline line 40 4.15 40 0
+board demo draw outline line 40 0 180 0
+
 board demo draw outline line 180 120 0 120
+# board demo draw outline arc 180 60 180 0 180 120 ccw
+board demo draw outline line 180 120 220 80
+board demo draw outline line 220 80 235 4.15
+
+board demo draw outline line 235 4.15 225 1
+
+board demo draw outline line 225 1 210 4.15
+board demo draw outline line 210 4.15 180 0
+
 board demo draw outline line 0 120 0 0
 board demo draw outline circle 130 20 5
 
@@ -220,7 +232,7 @@ board demo route freetrack 1 line 0.5 160 100 180 100
 board demo place text conductor 1 0.15 1 182 99.5 0 "L1/TOP"
 
 board demo set polygon fill solid # hatched
-board demo set polygon width 0.35
+board demo set polygon width 0.3
 board demo set polygon isolation 0.3
 board demo set polygon easing style fillet # chamfer, none, fillet
 board demo set polygon easing radius 0.6
@@ -233,9 +245,7 @@ board demo set polygon hatching width 0.3
 board demo set polygon hatching border 0.4
 board demo set polygon hatching spacing 1.1
 
-board demo route freetrack 1 polygon line 0 0 45 0 line 45 0 45 30 arc 22.5 30 45 30 0 30 ccw line 0 30 0 0
-board demo fill polygon # optional net name
-# board demo hide polygon # optional net name
+# board demo route freetrack 1 polygon line 0 0 45 0 line 45 0 45 30 arc 22.5 30 45 30 0 30 ccw line 0 30 0 0
 
 # L2
 board demo route freetrack 2 line 0.5 160 98 180 98
@@ -255,13 +265,14 @@ board demo place text conductor 4 0.15 1 187 93.5 0 "L4/BOT"
 # route signal
 board demo route net in 1 line 0.5 IC1 1 direction 90 5
 board demo route net in 1 line 0.5 ic1 2 to 6 36.51
-board demo route net in 2 polygon line 2 2 40 2 line 40 2 40 20 line 40 20 2 20 line 2 20 2 2
+# board demo route net in 2 polygon line 2 2 40 2 line 40 2 40 20 line 40 20 2 20 line 2 20 2 2
 board demo route net gnd 1 line 0.2 38 40 40 40
 board demo route net gnd 2 line 0.2 38 38 40 40
 
 board demo route net gnd 1 line 0.2 X2 1 direction 0 5
 board demo route net gnd 1 line 0.2 R1 2 direction -90 5
 board demo route net gnd 1 line 0.2 16 10 8 4
+board demo route net gnd 1 polygon line -2 11 1 11 line 1 11 1 4 line 1 4 6 4 line 6 4 6 10 line 6 10 20 10 line 20 10 20 20 line 20 20 -2 20 line -2 20 -2 11
 
 # vias
 #board demo set via restring inner 0.2
@@ -292,6 +303,11 @@ board demo place via GND 40 32 blind bottom 2
 board demo place text assy top 0.15 1 41 29.5 0 "BURIED FROM L2 TO L3"
 board demo place via GND 40 30 buried 2 3
 board demo set via drill 0.3
+
+
+board demo fill polygon # optional net name
+# board demo hide polygon # optional net name
+
 
 # set cursor and zoom center
 board demo position cursor absolute 40 40
