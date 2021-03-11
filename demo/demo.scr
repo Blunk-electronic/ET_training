@@ -77,12 +77,23 @@ schematic demo place label 1 70 80 0 1 0 # simple label
 #schematic submoduletest set value IC1 7401
 
 # draw board outline
-board demo place text outline 0.2 5 54 1 0 "OUTLINE / CONTOUR"
+board demo place text outline 0.2 5 40 20 0 "OUTLINE / CONTOUR"
 board demo draw outline line 0 0 35 0
 board demo draw outline line 35 0 35 4.15
 board demo draw outline line 35 4.15 40 4.15
 board demo draw outline line 40 4.15 40 0
-board demo draw outline line 40 0 180 0
+board demo draw outline line 40 0 50 0
+
+board demo draw outline arc 60 0 50 0 70 0 cw
+board demo draw outline line 70 0 75 0
+board demo draw outline arc 75 3 75 0 75 6 ccw
+board demo draw outline line 75 6 79 10
+# board demo draw outline arc 75 3 75 0 75 6 ccw
+
+board demo draw outline line 79 10 79 0
+board demo draw outline line 79 0 180 0
+
+board demo draw outline circle 45 3 2
 
 board demo draw outline line 180 120 0 120
 # board demo draw outline arc 180 60 180 0 180 120 ccw
@@ -274,6 +285,9 @@ board demo route net gnd 1 line 0.2 R1 2 direction -90 5
 board demo route net gnd 1 line 0.2 16 10 8 4
 board demo route net gnd 1 polygon line -2 11 1 11 line 1 11 1 4 line 1 4 6 4 line 6 4 6 10 line 6 10 20 10 line 20 10 20 20 line 20 20 -2 20 line -2 20 -2 11
 
+board demo set polygon width 1.2
+board demo route net gnd 1 polygon line 23 0 240 0 line 240 0 240 33 line 240 33 30 33 line 30 33 23 0
+
 # vias
 #board demo set via restring inner 0.2
 #board demo set via restring outer 0.2
@@ -310,8 +324,11 @@ board demo fill polygon # optional net name
 
 
 # set cursor and zoom center
-board demo position cursor absolute 40 40
-board demo zoom center 40 40 10
+#board demo position cursor absolute 40 40
+#board demo zoom center 40 40 10
+
+board demo position cursor absolute 4 10
+board demo zoom center 4 10 25
 
 # make CAM data
 #schematic demo make netlists
@@ -390,8 +407,8 @@ board demo display keepout bottom
 
 #board demo position cursor absolute 39 39
 #board demo zoom center 5 18 50
-board demo position cursor absolute 11 8
+# board demo position cursor absolute 11 8
 #board demo zoom center 39 39 70
-board demo zoom center 11 8 50
+# board demo zoom center 11 8 50
 
 # script end
