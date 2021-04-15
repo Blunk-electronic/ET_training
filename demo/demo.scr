@@ -87,11 +87,14 @@ board demo draw outline line 40 0 50 0
 board demo draw outline arc 60 0 50 0 70 0 cw
 board demo draw outline line 70 0 75 0
 board demo draw outline arc 75 3 75 0 75 6 ccw
-board demo draw outline line 75 6 79 10
-# board demo draw outline arc 75 3 75 0 75 6 ccw
+board demo draw outline line 75 6 85 12
 
-board demo draw outline line 79 10 79 0
-board demo draw outline line 79 0 180 0
+board demo draw outline line 85 12 85 7
+board demo draw outline arc 85 4 85 7 85 1 ccw
+#board demo draw outline line 85 7 85 1
+
+board demo draw outline line 85 1 85 0
+board demo draw outline line 85 0 180 0
 
 board demo draw outline circle 45 3 2
 
@@ -243,7 +246,7 @@ board demo route freetrack 1 line 0.5 160 100 180 100
 board demo place text conductor 1 0.15 1 182 99.5 0 "L1/TOP"
 
 board demo set polygon fill solid # hatched
-board demo set polygon width 0.3
+board demo set polygon width 0.2
 board demo set polygon isolation 0.3
 board demo set polygon easing style fillet # chamfer, none, fillet
 board demo set polygon easing radius 0.6
@@ -252,7 +255,7 @@ board demo set polygon connection thermal # solid
 board demo set polygon thermal width 0.2
 board demo set polygon thermal gap 0.33
 
-board demo set polygon hatching width 0.3
+board demo set polygon hatching width 0.5
 board demo set polygon hatching border 0.4
 board demo set polygon hatching spacing 1.1
 
@@ -283,10 +286,19 @@ board demo route net gnd 2 line 0.2 38 38 40 40
 board demo route net gnd 1 line 0.2 X2 1 direction 0 5
 board demo route net gnd 1 line 0.2 R1 2 direction -90 5
 board demo route net gnd 1 line 0.2 16 10 8 4
-board demo route net gnd 1 polygon line -2 11 1 11 line 1 11 1 4 line 1 4 6 4 line 6 4 6 10 line 6 10 20 10 line 20 10 20 20 line 20 20 -2 20 line -2 20 -2 11
+#board demo route net gnd 1 polygon line -2 11 1 11 line 1 11 1 4 line 1 4 6 4   line 6 4 6 5.6 line 6 5.6 15 5.6 line 15 5.6 15 6.8 line 15 6.8 6 6.8 line 6 6.8 6 10   line 6 10 20 10 line 20 10 20 20 line 20 20 -2 20 line -2 20 -2 11
 
-board demo set polygon width 1.2
-board demo route net gnd 1 polygon line 23 0 232 0 line 232 0 232 33 line 232 33 30 33 line 30 33 23 0
+board demo set polygon width 0.15
+#board demo route net gnd 1 polygon line 23 0 232 0 line 232 0 232 33 line 232 33 100 33 line 100 33 23 0
+
+#board demo route net gnd 1 polygon line 25 9 26 9 line 26 9 28 9.3 line 28 9.3 30 9.3 line 30 9.3 32 9 line 32 9 34 9 line 34 9 34 12 line 34 12 30 12 line 30 12 28 11.5 line 28 11.5 27 11.5 line 27 11.5 26 12 line 26 12 25 12 line 25 12 25 9
+#board demo route net gnd 1 polygon line 25 9 26 9 line 26 9 28 9.3 line 28 9.3 30 9.3 line 30 9.3 32 9 line 32 9 230 9 line 230 9 230 12 line 230 12 229 12 line 229 12 28 11.5 line 28 11.5 27 11.5 line 27 11.5 26 12 line 26 12 25 12 line 25 12 25 9 
+
+#board demo route net gnd 1 polygon line 25 13 27 13 arc 30 13 27 13 33 13 cw line 33 13 35 13 line 35 13 35 20 line 35 20 25 20 line 25 20 25 13
+board demo route net gnd 1 polygon line 25 13 27 13 arc 30 13 27 13 33 13 cw line 33 13 35 13 line 35 13 35 17 arc 35 20 35 17 32 20 cw line 32 20 28 20 arc 25 20 28 20 25 17 cw line 25 17 25 13
+
+board demo set polygon width 0.21
+board demo route net gnd 1 polygon line 25 30 30 30 line 30 30 30 32 line 30 32 28 33 line 28 33 27 33 line 27 33 25 32 line 25 32 25 30
 
 # vias
 #board demo set via restring inner 0.2
@@ -327,8 +339,12 @@ board demo fill polygon # optional net name
 #board demo position cursor absolute 40 40
 #board demo zoom center 40 40 10
 
-board demo position cursor absolute 4 10
-board demo zoom center 4 10 25
+board demo set grid 0.1 0.1
+# board demo position cursor absolute 32 18
+# board demo zoom center 32 18 100
+board demo position cursor absolute 27 32 18
+board demo zoom center 27 32 100
+
 
 # make CAM data
 #schematic demo make netlists
