@@ -21,7 +21,8 @@ schematic demo set partcode C1 C_PAC_S_1206_VAL_10n
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
 schematic demo set purpose X1 "PWR IN POS"
 
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 80 0 T_male_blade
+#schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 80 0 T_male_blade
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 80 0 T_male_blade_holes
 schematic demo set purpose X2 "PWR IN GND"
 
 # GND symbol
@@ -84,6 +85,9 @@ board demo draw outline line 35 4.15 40 4.15
 board demo draw outline line 40 4.15 40 0
 board demo draw outline line 40 0 50 0
 
+# board demo draw outline line .. arc .. line line ...
+# board demo draw hole line .. arc .. line line ...
+
 board demo draw outline arc 60 0 50 0 70 0 cw
 board demo draw outline line 70 0 75 0
 board demo draw outline arc 75 3 75 0 75 6 ccw
@@ -96,7 +100,7 @@ board demo draw outline arc 85 4 85 7 85 1 ccw
 board demo draw outline line 85 1 85 0
 board demo draw outline line 85 0 180 0
 
-board demo draw outline circle 45 3 2
+# board demo draw outline circle 45 3 2
 
 board demo draw outline line 180 120 0 120
 # board demo draw outline arc 180 60 180 0 180 120 ccw
@@ -109,7 +113,7 @@ board demo draw outline line 225 1 210 4.15
 board demo draw outline line 210 4.15 180 0
 
 board demo draw outline line 0 120 0 0
-board demo draw outline circle 130 20 5
+# board demo draw outline circle 130 20 5
 
 # fiducials
 board demo add device $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac FD 28 5
@@ -286,22 +290,43 @@ board demo route net gnd 2 line 0.2 38 38 40 40
 board demo route net gnd 1 line 0.2 X2 1 direction 0 5
 board demo route net gnd 1 line 0.2 R1 2 direction -90 5
 board demo route net gnd 1 line 0.2 16 10 8 4
-board demo route net gnd 1 polygon line -2 11 1 11 line 1 11 1 4 line 1 4 6 4   line 6 4 6 5.6 line 6 5.6 15 5.6 line 15 5.6 15 6.8 line 15 6.8 6 6.8 line 6 6.8 6 10   line 6 10 20 10 line 20 10 20 20 line 20 20 -2 20 line -2 20 -2 11
+
+# unten linke ecke:
+# board demo route net gnd 1 polygon line -2 11 1 11 line 1 11 1 4 line 1 4 6 4   line 6 4 6 5.6 line 6 5.6 15 5.6 line 15 5.6 15 6.8 line 15 6.8 6 6.8 line 6 6.8 6 10   line 6 10 20 10 line 20 10 20 20 line 20 20 -2 20 line -2 20 -2 11
 
 board demo set polygon width 0.15
-#board demo route net gnd 1 polygon line 23 0 232 0 line 232 0 232 33 line 232 33 100 33 line 100 33 23 0
 
-#board demo route net gnd 1 polygon line 25 9 26 9 line 26 9 28 9.3 line 28 9.3 30 9.3 line 30 9.3 32 9 line 32 9 34 9 line 34 9 34 12 line 34 12 30 12 line 30 12 28 11.5 line 28 11.5 27 11.5 line 27 11.5 26 12 line 26 12 25 12 line 25 12 25 9
-board demo route net gnd 1 polygon line 25 9 26 9 line 26 9 28 9.3 line 28 9.3 30 9.3 line 30 9.3 32 9 line 32 9 230 9 line 230 9 230 12 line 230 12 229 12 line 229 12 28 11.5 line 28 11.5 27 11.5 line 27 11.5 26 12 line 26 12 25 12 line 25 12 25 9 
+# großes unten rechts:
+# board demo route net gnd 1 polygon line 23 0 232 0 line 232 0 232 33 line 232 33 100 33 line 100 33 23 0
 
-#board demo route net gnd 1 polygon line 25 13 27 13 arc 30 13 27 13 33 13 cw line 33 13 35 13 line 35 13 35 20 line 35 20 25 20 line 25 20 25 13
-#board demo route net gnd 1 polygon line 25 13 27 13 arc 30 13 27 13 33 13 cw line 33 13 35 13 line 35 13 35 17 arc 35 20 35 17 32 20 cw line 32 20 28 20 arc 25 20 28 20 25 17 cw line 25 17 25 13
-board demo route net gnd 1 polygon line 25 25 27 25 arc 30 25 27 25 30 28 ccw line 30 28 30 30 line 30 30 29 30 arc 27 30 29 30 25 30 cw arc 25 27.5 25 30 25 25 ccw
+# board demo route net gnd 1 polygon line 25 9 26 9 line 26 9 28 9.3 line 28 9.3 30 9.3 line 30 9.3 32 9 line 32 9 34 9 line 34 9 34 12 line 34 12 30 12 line 30 12 28 11.5 line 28 11.5 27 11.5 line 27 11.5 26 12 line 26 12 25 12 line 25 12 25 9
+# board demo route net gnd 1 polygon line 25 9 26 9 line 26 9 28 9.3 line 28 9.3 30 9.3 line 30 9.3 32 9 line 32 9 230 9 line 230 9 230 12 line 230 12 229 12 line 229 12 28 11.5 line 28 11.5 27 11.5 line 27 11.5 26 12 line 26 12 25 12 line 25 12 25 9 
+
+# brücke:
+# board demo route net gnd 1 polygon line 25 13 27 13 arc 30 13 27 13 33 13 cw line 33 13 35 13 line 35 13 35 20 line 35 20 25 20 line 25 20 25 13
+# board demo route net gnd 1 polygon line 25 13 27 13 arc 30 13 27 13 33 13 cw line 33 13 35 13 line 35 13 35 17 arc 35 20 35 17 32 20 cw line 32 20 28 20 arc 25 20 28 20 25 17 cw line 25 17 25 13
+
+# seerose
+# board demo route net gnd 1 polygon line 25 25 27 25 arc 30 25 27 25 30 28 ccw line 30 28 30 30 line 30 30 29 30 arc 27 30 29 30 25 30 cw arc 25 27.5 25 30 25 25 ccw
 
 board demo set polygon width 0.21
-#board demo route net gnd 1 polygon line 25 30 30 30 line 30 30 30 32 line 30 32 28 33 line 28 33 27 33 line 27 33 25 32 line 25 32 25 30
-board demo route net gnd 1 polygon line 25 31 30 31 line 30 31 30 33 line 30 33 28 34 line 28 34 27 34 line 27 34 25 33 line 25 33 25 31
+
+# haus:
+# board demo route net gnd 1 polygon line 25 31 30 31 line 30 31 30 33 line 30 33 28 34 line 28 34 27 34 line 27 34 25 33 line 25 33 25 31
+
+# kreis:
 board demo route net gnd 1 polygon circle 35 30 3
+
+# vase:
+# board demo route net gnd 1 polygon line 13 22 16 22 line 16 22 16 23 arc 16 24 16 23 16 25 ccw line 16 25 16 26 line 16 26 13 26 line 13 26 13 25 arc 13 24 13 25 13 23 ccw line 13 23 13 22
+
+board demo set polygon width 0.20 
+# board demo set polygon width 0.25
+board demo set polygon width 0.15
+
+# stopschild:
+# board demo route net gnd 1 polygon line 13 27 13 26.5 line 13 26.5 16 26.5 line 16 26.5 16 27 line 16 27 18 28 line 18 28 18 30 line 18 30 16 31 line 16 31 16 31.5 line 16 31.5 13 31.5 line 13 31.5 13 31 line 13 31 11 30 line 11 30 11 28 line 11 28 13 27
+
 
 # vias
 #board demo set via restring inner 0.2
@@ -334,7 +359,7 @@ board demo place via GND 40 30 buried 2 3
 board demo set via drill 0.3
 
 
-board demo fill polygon # optional net name
+#board demo fill polygon # optional net name
 # board demo hide polygon # optional net name
 
 
@@ -345,8 +370,8 @@ board demo fill polygon # optional net name
 board demo set grid 0.001 0.001
 # board demo position cursor absolute 32 18
 # board demo zoom center 32 18 100
-board demo position cursor absolute 28 9.3 27
-board demo zoom center 28 9.3 500
+board demo position cursor absolute 14.5 24
+board demo zoom center 14.5 24 100
 
 
 # make CAM data
