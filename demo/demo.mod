@@ -169,23 +169,23 @@
 				--radius 40
 			--[CIRCLE END]	
 
-			[LINE BEGIN]
-				start x 0 y 10
-				end x 100 y 10
-			[LINE END]
-			[ARC BEGIN]
-				start x 0 y 10
-				center x 50 y 10
-				end x 100 y 10
-				direction cw
-			[ARC END]
+			--[LINE BEGIN]
+				--start x 0 y 10
+				--end x 100 y 10
+			--[LINE END]
+			--[ARC BEGIN]
+				--start x 0 y 10
+				--center x 50 y 10
+				--end x 100 y 10
+				--direction cw
+			--[ARC END]
 		[OUTLINE END]
 		
 		[HOLE BEGIN]
-			[CIRCLE BEGIN]
-				center x 45 y 3
-				radius 2
-			[CIRCLE END]	
+			--[CIRCLE BEGIN]
+				--center x 45 y 3
+				--radius 2
+			--[CIRCLE END]	
 			--[LINE BEGIN]
 				--start x -1 y -1
 				--end x 1 y -1
@@ -203,16 +203,16 @@
 				--center x 0 y -2.5
 				--radius 1
 			--[CIRCLE END]	
-			[LINE BEGIN]
-				start x 50 y 16
-				end x 60 y 16
-			[LINE END]
-			[ARC BEGIN]
-				start x 50 y 16
-				center x 55 y 16
-				end x 60 y 16
-				direction cw
-			[ARC END]
+			--[LINE BEGIN]
+				--start x 50 y 16
+				--end x 60 y 16
+			--[LINE END]
+			--[ARC BEGIN]
+				--start x 50 y 16
+				--center x 55 y 16
+				--end x 60 y 16
+				--direction cw
+			--[ARC END]
 		[HOLE END]
 	[PCB_CONTOURS_NON_PLATED END]
 [BOARD END]
