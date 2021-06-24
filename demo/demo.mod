@@ -161,6 +161,32 @@
 	[VIA_RESTRICT BEGIN]
 	[VIA_RESTRICT END]
 	[CONDUCTOR BEGIN]
+		[FILL_ZONE BEGIN]
+			[CONTOURS BEGIN]
+				[LINE BEGIN]
+					start x 10 y 60
+					end x 30 y 60
+				[LINE END]
+				[LINE BEGIN]
+					start x 30 y 60
+					end x 30 y 90
+				[LINE END]
+				[LINE BEGIN]
+					start x 30 y 90
+					end x 10 y 60
+				[LINE END]
+			[CONTOURS END]
+		[FILL_ZONE END]
+			
+		[CUTOUT_ZONE BEGIN]
+			[CONTOURS BEGIN]
+				[CIRCLE BEGIN]
+					center x 90 y 10
+					radius 2
+				[CIRCLE END]
+			[CONTOURS END]
+		[CUTOUT_ZONE END]
+			
 	[CONDUCTOR END]
 	[PCB_CONTOURS_NON_PLATED BEGIN]
 		[OUTLINE BEGIN]
@@ -182,10 +208,10 @@
 		[OUTLINE END]
 		
 		[HOLE BEGIN]
-			--[CIRCLE BEGIN]
-				--center x 45 y 3
-				--radius 2
-			--[CIRCLE END]	
+			[CIRCLE BEGIN]
+				center x 80 y 11
+				radius 2
+			[CIRCLE END]	
 			--[LINE BEGIN]
 				--start x -1 y -1
 				--end x 1 y -1
