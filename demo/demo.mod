@@ -224,7 +224,7 @@
 			--[ARC END]
 		[HOLE END]
 		
-		[HOLE BEGIN]
+		--[HOLE BEGIN]
 			--[CIRCLE BEGIN]
 				--center x 0 y -2.5
 				--radius 1
@@ -239,7 +239,7 @@
 				--end x 60 y 16
 				--direction cw
 			--[ARC END]
-		[HOLE END]
+		--[HOLE END]
 	[PCB_CONTOURS_NON_PLATED END]
 [BOARD END]
 ----------------------------------------------------------------------------------------------------

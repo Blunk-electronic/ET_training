@@ -86,8 +86,15 @@ board demo place text outline 0.2 5 40 20 0 "OUTLINE / CONTOUR"
 # board demo draw hole line 50 50 arc 60 50 70 50 ccw
 
 #board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 220 120 line 0 120
-# board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
-board demo draw outline line 0 0 line 100 0 line 90 5 line 100 100 line 0 100
+#board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
+
+board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
+#board demo draw outline line 0 0 line 50 0 line 232 0 line 200 120 line 0 120
+
+# board demo draw outline line 0 0 line 100 0 line 90 5 line 100 100 line 0 100
+# board demo draw hole circle 130 40 10
+board demo draw hole circle 130 20 15
+board demo draw hole line 150 3 line 170 10 line 169 30
 
 # fiducials
 board demo add device $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac FD 28 5
@@ -267,11 +274,11 @@ board demo route net gnd 1 line 0.2 16 10 8 4
 
 # unten linke ecke:
 board demo set polygon width 1
-#board demo route net gnd 1 polygon line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
+# board demo route net gnd 1 polygon line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
 
 
 # großes unten rechts:
-board demo route net gnd 1 polygon line 23 0 line 232 0 line 232 33 line 100 33
+# board demo route net gnd 1 polygon line 23 0 line 232 0 line 232 33 line 100 33
 
 
 # brücke:
@@ -279,7 +286,7 @@ board demo route net gnd 1 polygon line 23 0 line 232 0 line 232 33 line 100 33
 
 
 # seerose
-# board demo route net gnd 1 polygon line 25 25 arc 30 25 27 25 ccw line 30 28 line 30 30 arc 27 30 29 30 cw arc 25 27.5 25 30 ccw
+board demo route net gnd 1 polygon line 25 25 arc 30 25 27 25 ccw line 30 28 line 30 30 arc 27 30 29 30 cw arc 25 27.5 25 30 ccw
 
 board demo set polygon width 0.21
 
@@ -343,8 +350,11 @@ board demo fill polygon # optional net name
 # board demo position cursor absolute 32 18
 # board demo zoom center 32 18 100
 board demo set grid 0.001 0.001
-board demo position cursor absolute 90 5
-board demo zoom center 90 5 50
+# board demo position cursor absolute 90 5
+# board demo zoom center 90 5 50
+board demo position cursor absolute 27 25
+board demo zoom center 27 25 50
+
 
 # make CAM data
 #schematic demo make netlists
