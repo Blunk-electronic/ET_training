@@ -249,9 +249,8 @@ board demo set zone connection thermal # solid
 board demo set zone thermal width 0.2
 board demo set zone thermal gap 0.33
 
-board demo set zone hatching width 0.5
-board demo set zone hatching border 0.4
-board demo set zone hatching spacing 1.1
+board demo set zone width 0.5
+board demo set zone spacing 1.1
 
 # board demo route freetrack 1 zone line 0 0 line 45 0 arc 22.5 30 45 30 ccw line 0 30
 
