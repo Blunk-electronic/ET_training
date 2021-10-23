@@ -1,0 +1,119 @@
+schematic demo display grid
+schematic demo position cursor absolute 100 120
+schematic demo zoom center 100 120 10
+
+board demo display grid
+board demo set grid 1 1
+
+
+# nets
+schematic demo draw net GND 1 80 80 62.5 80
+schematic demo place label 1 70 80 0 1 0 # simple label
+
+
+# EURO card format:
+#board demo draw outline line 0 0 line 160 0 line 160 80 line 0 80
+
+# 0.5 EURO format
+# board demo draw outline line 0 0 line 80 0 line 80 80 line 0 80
+# um -10 in x und versetzt
+# board demo draw outline line -10 -10 line 70 -10 line 70 70 line -10 70
+
+# diagonal halbiertes 0.5 Euro format
+# von links nach rechts steigend:
+# board demo draw outline line 0 0 line 80 0 line 80 80
+# von links nach rechts fallend:
+# board demo draw outline line 0 0 line 80 0 line 0 80
+
+# halbkreis concav in unterkante
+# board demo draw outline line 0 0 arc 20 0 10 0 cw line 30 0 line 80 0 line 80 80 line 0 80
+
+# halbkreis covex in unterkante
+# board demo draw outline line 0 0 arc 20 0 10 0 ccw line 30 0 line 80 0 line 80 80 line 0 80
+
+# viertelkreis covex in rechts unten
+# board demo draw outline line 0 0 arc 80 0 60 0 cw line 80 20 line 80 80 line 0 80
+
+# halbkreis concav in rechter kante
+# board demo draw outline line 0 0 line 80 0 arc 80 40 80 20 cw line 80 60 line 80 80 line 0 80
+
+# board demo draw outline line 0 0 line 80 0 line 80 80 line 0 80 arc 0 40 0 50 cw line 0 30
+
+# kreis auf 0/0:
+# board demo draw outline circle 0 0 20
+# board demo draw outline circle 50 50 20
+# board demo draw outline circle 10 0 10
+# board demo draw hole line 50 50 arc 60 50 70 50 ccw
+
+#board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 220 120 line 0 120
+#board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
+
+# 3/4 kreis links unten, trapez rechts:
+board demo move board relative 20 20
+board demo draw outline arc 0 0 0 20 ccw line 20 0 line 100 0 line 130 20 line 130 80 line 100 100 line 1 101
+board demo draw hole line 100 10 line 120 30 line 120 70 line 100 90
+board demo draw hole circle 0 0 5.5
+board demo draw hole circle 47 35 5.5
+board demo draw hole line 65 40 line 75 40 arc 70 50 75 50 ccw line 65 50
+board demo set polygon fill solid # hatched
+board demo set polygon width 0.3
+# board demo set polygon width 2.9
+board demo set polygon isolation 0.2
+
+
+# rechteckig 100x50 überstand nach links unten
+# board demo route net gnd 1 polygon line -1 -1 line 100 -1 line 100 50 line -1 50
+# board demo route net gnd 1 polygon line -1 -1 line 99 1 line 100 50 line -1 50
+
+# rechteckig innen ohne überstand
+# board demo route net gnd 1 polygon line 10 10 line 70 10 line 70 50 line 10 50
+# halbkreis concav in unterkante:
+# board demo route net gnd 1 polygon line 10 10 arc 30 10 20 10 cw line 40 10 line 70 10 line 70 50 line 10 50
+
+# halbkreis covex in unterkante:
+# board demo route net gnd 1 polygon line 10 10 arc 30 10 20 10 ccw line 40 10 line 70 10 line 70 50 line 10 50
+
+# rechteckig 30x30 zentriert auf 0/0
+# board demo route net gnd 1 polygon line -15 -15 line 15 -15 line 15 15 line -15 15
+# board demo route net gnd 1 polygon circle 50 50 1
+# halbkreis links:
+# board demo route net gnd 1 polygon line 50 60 arc 50 50 50 40 cw
+# halbkreis links, rechteck rechts:
+# board demo route net gnd 1 polygon arc 50 50 50 60 ccw line 50 40 line 60 40 line 60 60
+#board demo route net gnd 1 polygon arc 0 0 10 10 ccw line 10 -10
+# board demo route net gnd 1 polygon arc 0 0 13 8 ccw line 13 -8
+# board demo route net gnd 1 polygon arc 0 0 -5 10 ccw line 5 10
+# board demo route net gnd 3 polygon line 10 25 line 50 25 line 49 45 line 11 45
+#board demo route net gnd 3 polygon line -22 -22 line 135 -22 line 135 105 line -22 105
+
+# board demo route net gnd 3 polygon line 0 0 line 135 0 line 135 70 line 0 70
+# board demo place text conductor 3 0.5 10 11 5 45 "ab/Si"
+# board demo place text conductor 3 0.15 1 20 5 0 "LY3"
+
+board demo route net gnd 4 polygon line 0 0 line 135 0 line 135 110 line 0 110
+# board demo place text conductor 4 0.15 5 123 25 90 "KEEP CLEAR"
+board demo place text conductor 4 0.5 5 90 25 0 "KEEP CLEAR"
+board demo place text conductor 4 0.15 5 10 1.1 90 "KEEP CLEAR"
+board demo place text conductor 4 0.6 5 45 60 45.33 "KEEP CLEAR"
+# board demo place text conductor 4 0.15 5 70 70 -5 "KEEP CLEAR"
+# board demo place text conductor 4 0.15 3 10 85 45 "BOT"
+
+# board demo route net gnd 1 polygon line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
+# board demo place text conductor 1 0.15 2 2 16 0 "TOP"
+
+board demo set grid 0.01 0.01
+
+board demo fill polygon # optional net name
+# board demo hide polygon # optional net name
+
+board demo position cursor absolute 50 25
+board demo zoom center 50 25 5
+
+board demo display conductors 1 on	
+board demo display conductors 2 on
+board demo display conductors 3 off
+board demo display conductors 4 on
+
+
+# schematic demo exit # CS does not work (gtk error)
+# script end

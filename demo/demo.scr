@@ -41,6 +41,7 @@ schematic demo draw net P3V3 1 90 140 120 140
 schematic demo place label 1 90 140 0 1 0 # simple label
 schematic demo draw net P3V3 2 90 100 120 100
 schematic demo place label 2 90 100 0 1 0 # simple label
+# schematic demo set class P3V3 pwr
 
 #schematic demo rename net P3V3 VCC 1 #90 140
 #schematic demo rename net P3V3 VCC 2 #90 100
@@ -93,7 +94,7 @@ board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 210 
 
 # board demo draw outline line 0 0 line 100 0 line 90 5 line 100 100 line 0 100
 # board demo draw hole circle 130 40 10
-board demo draw hole circle 130 20 15
+# board demo draw hole circle 130 20 15
 board demo draw hole line 150 3 line 170 10 line 169 30
 
 # fiducials
@@ -101,10 +102,13 @@ board demo add device $HOME/git/BEL/ET_component_library/packages/fiducials/cros
 board demo add device $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac FD 230 60
 
 # position devices in board
-board demo move device X1 absolute 3 22
+board demo move device X1 absolute 3 25
 board demo move device X2 absolute 3 4
+# board demo flip device X2 bottom
 board demo move device R1 absolute 10 15
 board demo move device IC1 absolute 6 34
+board demo rotate device IC1 relative 20
+# board demo flip device IC1 bottom
 board demo move device C1 absolute 20 15
 board demo rotate device C1 relative 90
 
@@ -231,8 +235,8 @@ board demo route freetrack 1 line 0.5 160 100 180 100
 board demo place text conductor 1 0.15 1 182 99.5 0 "L1/TOP"
 
 board demo set polygon fill solid # hatched
-board demo set polygon width 0.2
-board demo set polygon isolation 0.3
+# board demo set polygon width 0.2
+board demo set polygon isolation 0.4
 board demo set polygon easing style fillet # chamfer, none, fillet
 board demo set polygon easing radius 0.6
 board demo set polygon connection thermal # solid
@@ -262,19 +266,35 @@ board demo place text conductor 4 0.15 1 187 93.5 0 "L4/BOT"
 #place text conductor 1 1 5 100 100 0 "TEST*"
 
 # route signal
-board demo route net in 1 line 0.5 IC1 1 direction 90 5
-board demo route net in 1 line 0.5 ic1 2 to 6 36.51
+# board demo route net in 1 line 0.5 IC1 1 direction 90 5
+# board demo route net in 1 line 0.5 ic1 2 to 6 36.51
 # board demo route net in 2 polygon line 2 2 line 40 2 line 40 20 line 2 20
-board demo route net gnd 1 line 0.2 38 40 40 40
-board demo route net gnd 2 line 0.2 38 38 40 40
 
-board demo route net gnd 1 line 0.2 X2 1 direction 0 5
-board demo route net gnd 1 line 0.2 R1 2 direction -90 5
-board demo route net gnd 1 line 0.2 16 10 8 4
+# board demo route net P3V3 1 line 0.2 X1 1 direction -90 5
+board demo route net P3V3 1 arc 0.2 3 17 3 22 8 17 cw
+# board demo route net gnd 1 line 0.2 38 40 40 40
+# board demo route net gnd 2 line 0.2 38 38 40 40
+
+board demo route net in 1 line 0.2 X2 1 direction 0 5
+# board demo route net in 1 line 0.2 R1 2 direction -90 3
+board demo route net in 1 line 0.2 16 12 8 4
+board demo set via drill 0.2
+board demo place via in 16 12
 
 # unten linke ecke:
-board demo set polygon width 1
+# board demo set polygon fill hatched
+board demo set polygon width 0.4
+# board demo set polygon width 2.0
 # board demo route net gnd 1 polygon line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
+board demo route net gnd 1 polygon line 0 0 line 50 0 line 50 50 line 0 50
+# board demo route net gnd 4 polygon line 0 10 line 30 10 line 30 40 line 0 40
+
+# board demo flip device IC1 bottom
+
+# board demo display conductors 1 off
+# board demo display conductors 2 on
+board demo display conductors 3 off
+board demo display conductors 4 off
 
 
 # großes unten rechts:
@@ -286,9 +306,10 @@ board demo set polygon width 1
 
 
 # seerose
-board demo route net gnd 1 polygon line 25 25 arc 30 25 27 25 ccw line 30 28 line 30 30 arc 27 30 29 30 cw arc 25 27.5 25 30 ccw
+# board demo route net gnd 1 polygon line 25 25 arc 30 25 27 25 ccw line 30 28 line 30 30 arc 27 30 29 30 cw arc 25 27.5 25 30 ccw
+# board demo route net gnd 1 polygon line 25 25 arc 30 25 27 25 ccw line 30 28 line 25 28
 
-board demo set polygon width 0.21
+# board demo set polygon width 0.21
 
 # haus:
 # board demo route net gnd 1 polygon line 25 31 line 30 31 line 30 33 line 28 34 line 27 34 line 25 33
@@ -299,9 +320,9 @@ board demo set polygon width 0.21
 # vase:
 # board demo route net gnd 1 polygon line 13 22 line 16 22 arc 16 24 16 23 ccw line 16 25 line 16 26 line 13 26 arc 13 24 13 25 ccw line 13 23
 
-board demo set polygon width 0.20 
+# board demo set polygon width 0.20 
 # board demo set polygon width 0.25
-board demo set polygon width 0.15
+# board demo set polygon width 0.15
 
 # stopschild:
 # board demo route net gnd 1 polygon line 13 27 line 13 26.5 line 16 26.5 line 16 27 line 18 28 line 18 30 line 16 31 line 16 31.5 line 13 31.5 line 13 31 line 11 30 line 11 28
@@ -313,6 +334,9 @@ board demo set polygon width 0.15
 
 board demo place text assy top 0.15 1 39 42 0 "VIAS"
 board demo place text assy top 0.15 1 41 39.5 0 "THROUGH"
+board demo set via drill 0.5
+board demo place via P3V3 36 40
+board demo set via drill 0.2
 board demo place via GND 38 40
 board demo set via drill 0.5
 board demo place via GND 40 40
@@ -337,6 +361,11 @@ board demo place text assy top 0.15 1 41 29.5 0 "BURIED FROM L2 TO L3"
 board demo place via GND 40 30 buried 2 3
 board demo set via drill 0.3
 
+# board demo set polygon width 2.5
+# board demo route net gnd 3 polygon line 10 25 line 50 25 line 49 45 line 11 45
+# board demo place text conductor 3 0.15 3 25 25 45 "XSIi"
+
+board demo set grid 0.01 0.01
 
 board demo fill polygon # optional net name
 # board demo hide polygon # optional net name
@@ -349,11 +378,11 @@ board demo fill polygon # optional net name
 # board demo set grid 0.001 0.001
 # board demo position cursor absolute 32 18
 # board demo zoom center 32 18 100
-board demo set grid 0.001 0.001
+# board demo set grid 0.001 0.001
 # board demo position cursor absolute 90 5
 # board demo zoom center 90 5 50
-board demo position cursor absolute 27 25
-board demo zoom center 27 25 50
+# board demo position cursor absolute 22 26
+# board demo zoom center 22 26 20
 
 
 # make CAM data
@@ -361,8 +390,8 @@ board demo zoom center 27 25 50
 #schematic demo make bom
 
 # board demo display stencil top
-# board demo display assy top off
-# board demo display silkscreen top
+board demo display assy top off
+board demo display silkscreen top off
 # board demo display silkscreen bottom
 # board demo display keepout top
 # board submoduletest display restrict route 1
@@ -405,7 +434,7 @@ board demo zoom center 27 25 50
 
 # project save module demo
 
-#board submoduletest quit
+
 
 #schematic demo draw net IN 1 80 125 80 105
 #schematic demo draw net CLK 1 100 140 140 140
@@ -423,18 +452,25 @@ board demo display stop top off
 board demo display stop bottom off
 board demo display stencil top off 
 board demo display stencil bottom off
-board demo display conductors 1 on	
-#board demo display conductors 2 off
-board demo display conductors 3 off
-board demo display conductors 4 off
+# board demo display conductors 1 off
+# board demo display conductors 2 on
+# board demo display conductors 3 off
+# board demo display conductors 4 off
 
 board demo display keepout top
 board demo display keepout bottom
 
 #board demo position cursor absolute 39 39
 #board demo zoom center 5 18 50
-# board demo position cursor absolute 11 8
-#board demo zoom center 39 39 70
+
+# board demo position cursor absolute 6 35
+# board demo zoom center 6 35 70
+
+board demo position cursor absolute 8 21
+board demo zoom center 8 21 50
+
+
 # board demo zoom center 11 8 50
 
+# schematic demo exit # CS does not work (gtk error)
 # script end

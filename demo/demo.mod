@@ -29,7 +29,7 @@
 		drawn_date 2020-12-21
 		checked_by "Dimitry Mishin"
 		checked_date 2021-03-04
-		approved_by "Tatjana Philipow"
+		approved_by "Tatjana Philipowa"
 		approved_date 2021-03-05
 		[PREFERRED_LIBRARIES BEGIN]
 			path $HOME/git/BEL/ET_component_library/packages/
@@ -42,6 +42,16 @@
 [RULES END]
 ----------------------------------------------------------------------------------------------------
 [NET_CLASSES BEGIN]
+	[NET_CLASS BEGIN]
+		name pwr
+		description "power class"
+		clearance  1.0000
+		track_width_min  0.3000
+		via_drill_min  0.4000
+		via_restring_min  0.1000
+		micro_via_drill_min  0.1000
+		micro_via_restring_min  0.1000
+	[NET_CLASS END]
 [NET_CLASSES END]
 ----------------------------------------------------------------------------------------------------
 [DRAWING_GRID BEGIN]
@@ -128,8 +138,20 @@
 	[DEVICES_NON_ELECTRIC END]
 	[SILK_SCREEN BEGIN]
 		[TOP BEGIN]
+			[TEXT BEGIN]
+				content "SILKSCREEN TOP TEST"
+				position x 10 y 10 rotation 45
+				line_width 0.15
+				size 1.0
+			[TEXT END]
 		[TOP END]
 		[BOTTOM BEGIN]
+			[TEXT BEGIN]
+				content "SILKSCREEN BOTTOM TEST"
+				position x 10 y 40 rotation 45
+				line_width 0.5
+				size 2.0
+			[TEXT END]
 		[BOTTOM END]
 	[SILK_SCREEN END]
 	[ASSEMBLY_DOCUMENTATION BEGIN]
@@ -157,35 +179,71 @@
 		[BOTTOM END]
 	[KEEPOUT END]
 	[ROUTE_RESTRICT BEGIN]
+		[TEXT BEGIN]
+			layer 1
+			content "ROUTE RESTRICT 1 TEST"
+			position x 10 y 30 rotation 5
+			line_width 0.15
+			size 1.0
+		[TEXT END]
+		[TEXT BEGIN]
+			layer 4
+			content "ROUTE RESTRICT 4 TEST"
+			position x 10 y 30 rotation 5
+			line_width 0.15
+			size 1.0
+		[TEXT END]
+		[LINE BEGIN]
+			start x 70 y 0
+			end x 70 y 120
+			layers 1 4
+		[LINE END]
 	[ROUTE_RESTRICT END]
 	[VIA_RESTRICT BEGIN]
 	[VIA_RESTRICT END]
 	[CONDUCTOR BEGIN]
-		[FILL_ZONE BEGIN]
-			[CONTOURS BEGIN]
-				[LINE BEGIN]
-					start x 10 y 60
-					end x 30 y 60
-				[LINE END]
-				[LINE BEGIN]
-					start x 30 y 60
-					end x 30 y 90
-				[LINE END]
-				[LINE BEGIN]
-					start x 30 y 90
-					end x 10 y 60
-				[LINE END]
-			[CONTOURS END]
-		[FILL_ZONE END]
+		[TEXT BEGIN]
+			layer 1
+			content "CONDUCTOR 1 TEST"
+			position x 10 y 20 rotation 5
+			line_width 0.15
+			size 1.0
+		[TEXT END]
+		[TEXT BEGIN]
+			layer 4
+			content "CONDUCTOR 4 TEST"
+			position x 10 y 20 rotation 5
+			line_width 0.15
+			size 1.0
+		[TEXT END]
+
+		
+		
+		--[FILL_ZONE BEGIN]
+			--[CONTOURS BEGIN]
+				--[LINE BEGIN]
+					--start x 10 y 60
+					--end x 30 y 60
+				--[LINE END]
+				--[LINE BEGIN]
+					--start x 30 y 60
+					--end x 30 y 90
+				--[LINE END]
+				--[LINE BEGIN]
+					--start x 30 y 90
+					--end x 10 y 60
+				--[LINE END]
+			--[CONTOURS END]
+		--[FILL_ZONE END]
 			
-		[CUTOUT_ZONE BEGIN]
-			[CONTOURS BEGIN]
-				[CIRCLE BEGIN]
-					center x 90 y 10
-					radius 2
-				[CIRCLE END]
-			[CONTOURS END]
-		[CUTOUT_ZONE END]
+		--[CUTOUT_ZONE BEGIN]
+			--[CONTOURS BEGIN]
+				--[CIRCLE BEGIN]
+					--center x 90 y 10
+					--radius 2
+				--[CIRCLE END]
+			--[CONTOURS END]
+		--[CUTOUT_ZONE END]
 			
 	[CONDUCTOR END]
 	[PCB_CONTOURS_NON_PLATED BEGIN]
@@ -207,11 +265,11 @@
 			--[ARC END]
 		[OUTLINE END]
 		
-		[HOLE BEGIN]
-			[CIRCLE BEGIN]
-				center x 80 y 11
-				radius 2
-			[CIRCLE END]	
+		--[HOLE BEGIN]
+			--[CIRCLE BEGIN]
+				--center x 80 y 11
+				--radius 2
+			--[CIRCLE END]	
 			--[LINE BEGIN]
 				--start x -1 y -1
 				--end x 1 y -1
@@ -222,7 +280,7 @@
 				--end x 1 y -1
 				--direction cw
 			--[ARC END]
-		[HOLE END]
+		--[HOLE END]
 		
 		--[HOLE BEGIN]
 			--[CIRCLE BEGIN]
