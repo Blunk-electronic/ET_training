@@ -1,0 +1,28 @@
+-- SYSTEM ET rig configuration file
+-- date 2021-12-03T19:17:49
+-- ====================================================================================================
+
+[MODULE_INSTANCES BEGIN]
+	[MODULE BEGIN]
+		generic_name thermostat
+		instance_name MOD1
+	[MODULE END]
+[MODULE_INSTANCES END]
+
+[MODULE_CONNECTIONS BEGIN]
+	[CONNECTOR BEGIN]
+		-- instance_A MOD1
+		-- purpose_A "power_in"
+
+		-- instance_B power_supply
+		-- purpose_B "power_out"
+
+		-- net_comparator on
+		-- warn_only on
+	[CONNECTOR END]
+[MODULE_CONNECTIONS END]
+
+-- ====================================================================================================
+-- date 2021-12-03T19:17:49
+-- rig configuration file end
+
