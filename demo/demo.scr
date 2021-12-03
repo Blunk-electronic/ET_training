@@ -41,7 +41,7 @@ schematic demo draw net P3V3 1 90 140 120 140
 schematic demo place label 1 90 140 0 1 0 # simple label
 schematic demo draw net P3V3 2 90 100 120 100
 schematic demo place label 2 90 100 0 1 0 # simple label
-# schematic demo set class P3V3 pwr
+schematic demo set class P3V3 pwr
 
 #schematic demo rename net P3V3 VCC 1 #90 140
 #schematic demo rename net P3V3 VCC 2 #90 100
@@ -74,6 +74,7 @@ schematic demo place junction 1 80 117.5
 schematic demo draw net GND 1 80 95 80 80
 schematic demo draw net GND 1 80 80 62.5 80
 schematic demo place label 1 70 80 0 1 0 # simple label
+schematic demo set class IN pwr
 
 # board submoduletest move device IC1 absolute 30 50
 #schematic submoduletest set value IC1 7401
@@ -89,7 +90,7 @@ board demo place text outline 0.2 5 40 20 0 "OUTLINE / CONTOUR"
 #board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 220 120 line 0 120
 #board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
 
-board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
+board demo draw outline line 0 0 arc 30 0 25 0 ccw line 35 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
 #board demo draw outline line 0 0 line 50 0 line 232 0 line 200 120 line 0 120
 
 # board demo draw outline line 0 0 line 100 0 line 90 5 line 100 100 line 0 100
@@ -125,7 +126,7 @@ board demo draw silkscreen bottom line 1 15 60 20 60
 board demo draw silkscreen bottom arc 1 17.5 62 15 62 20 62 cw
 board demo draw silkscreen bottom circle 1 15 68 2
 board demo draw silkscreen bottom circle solid 21 68 2
-board demo display silkscreen bottom
+# board demo display silkscreen bottom
 
 # assembly documentation
 board demo place text assy top 0.15 1 45 115 0 "ASSY DOC"
@@ -140,7 +141,7 @@ board demo draw assy bottom line 1 45 60 50 60
 board demo draw assy bottom arc 1 47.5 62 45 62 50 62 cw
 board demo draw assy bottom circle 1 45 68 2
 board demo draw assy bottom circle solid 51 68 2
-board demo display assy bottom
+# board demo display assy bottom
 
 # stop mask
 board demo place text stop top 0.15 1 73 115 0 "STOP MASK TOP"
@@ -155,7 +156,7 @@ board demo draw stop bottom line 1 75 60 80 60
 board demo draw stop bottom arc 1 77.5 62 75 62 80 62 cw
 board demo draw stop bottom circle 1 75 68 2
 board demo draw stop bottom circle solid 81 68 2
-board demo display stop bottom
+# board demo display stop bottom
 
 # stencil
 board demo place text stencil top 0.15 1 87 115 0 "STENCIL TOP"
@@ -170,7 +171,7 @@ board demo draw stencil bottom line 1 90 60 95 60
 board demo draw stencil bottom arc 1 92.5 62 90 62 95 62 cw
 board demo draw stencil bottom circle 1 90 68 2
 board demo draw stencil bottom circle solid 95 68 2
-board demo display stencil bottom
+# board demo display stencil bottom
 
 # keepout
 board demo place text keepout top 0.15 1 103 115 0 "KEEPOUT TOP"
@@ -184,7 +185,7 @@ board demo draw keepout bottom line 105 60 110 60
 board demo draw keepout bottom arc 107.5 62 105 62 110 62 cw
 board demo draw keepout bottom circle filled 105 68 2
 board demo draw keepout bottom circle 111 68 2
-board demo display keepout bottom
+# board demo display keepout bottom
 
 # route restrict
 board demo draw route_restrict [1] line 135 60 145 60
@@ -192,19 +193,19 @@ board demo draw route_restrict [1] arc 140 62 135 62 145 62 cw
 board demo draw route_restrict [1] circle filled 140 70 2 
 board demo place text route_restrict 1 0.15 1 143 70 0 "ROUTE RESTRICT L1"
 board demo place text route_restrict 1 0.15 1 146 59.5 0 "ROUTE RESTRICT L1"
-board demo display restrict route 1
+# board demo display restrict route 1
 
 board demo draw route_restrict [2] line 135 58 145 58
 board demo place text route_restrict 2 0.15 1 146 57.5 0 "ROUTE RESTRICT L2"
-board demo display restrict route 2
+# board demo display restrict route 2
 
 board demo draw route_restrict [3] line 135 56 145 56
 board demo place text route_restrict 3 0.15 1 146 55.5 0 "ROUTE RESTRICT L3"
-board demo display restrict route 3
+# board demo display restrict route 3
 
 board demo draw route_restrict [4] line 135 54 145 54
 board demo place text route_restrict 4 0.15 1 146 53.5 0 "ROUTE RESTRICT L4"
-board demo display restrict route 4
+# board demo display restrict route 4
 
 
 # via restrict
@@ -214,19 +215,19 @@ board demo draw via_restrict [1] circle filled 140 100 2
 
 board demo draw via_restrict [1] line 135 90 145 90
 board demo place text via_restrict 1 0.15 1 146 89.5 0 "VIA RESTRICT L1"
-board demo display restrict via 1
+# board demo display restrict via 1
 
 board demo draw via_restrict [2] line 135 88 145 88
 board demo place text via_restrict 2 0.15 1 146 87.5 0 "VIA RESTRICT L2"
-board demo display restrict via 2
+# board demo display restrict via 2
 
 board demo draw via_restrict [3] line 135 86 145 86
 board demo place text via_restrict 3 0.15 1 146 85.5 0 "VIA RESTRICT L3"
-board demo display restrict via 3
+# board demo display restrict via 3
 
 board demo draw via_restrict [4] line 135 84 145 84
 board demo place text via_restrict 4 0.15 1 146 83.5 0 "VIA RESTRICT L4"
-board demo display restrict via 4
+# board demo display restrict via 4
 
 
 # freetracks
@@ -283,10 +284,10 @@ board demo place via in 16 12
 
 # unten linke ecke:
 # board demo set polygon fill hatched
-board demo set polygon width 0.4
+board demo set polygon width 1
 # board demo set polygon width 2.0
 # board demo route net gnd 1 polygon line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
-board demo route net gnd 1 polygon line 0 0 line 50 0 line 50 50 line 0 50
+board demo route net gnd 1 polygon line 0 -10 line 50 -10 line 50 50 line 0 50
 # board demo route net gnd 4 polygon line 0 10 line 30 10 line 30 40 line 0 40
 
 # board demo flip device IC1 bottom
@@ -367,7 +368,9 @@ board demo set via drill 0.3
 
 board demo set grid 0.01 0.01
 
-board demo fill polygon # optional net name
+# board demo set polygon log HIGH
+# board demo fill polygon # optional net names
+# board demo fill polygon GND GND2
 # board demo hide polygon # optional net name
 
 
@@ -457,8 +460,8 @@ board demo display stencil bottom off
 # board demo display conductors 3 off
 # board demo display conductors 4 off
 
-board demo display keepout top
-board demo display keepout bottom
+# board demo display keepout top
+# board demo display keepout bottom
 
 #board demo position cursor absolute 39 39
 #board demo zoom center 5 18 50

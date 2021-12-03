@@ -103,6 +103,7 @@ board demo place text conductor 4 0.6 5 45 60 45.33 "KEEP CLEAR"
 
 board demo set grid 0.01 0.01
 
+# board demo set polygon log H	IGH
 board demo fill polygon # optional net name
 # board demo hide polygon # optional net name
 
