@@ -31,17 +31,17 @@ schematic demo add device $HOME/git/BEL/ET_component_library/devices/supply/gnd.
 #schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 130 120 0 D
 
 # nets
-schematic demo draw net P3V3 1 62.5 150 80 150
-schematic demo place label 1 70 150 0 1 0 # simple label
-schematic demo draw net P3V3 1 80 150 80 135
+# schematic demo draw net P3V3 1 62.5 150 80 150
+# schematic demo place label 1 70 150 0 1 0 # simple label
+# schematic demo draw net P3V3 1 80 150 80 135
 
-schematic demo draw net P3V3 1 90 150 120 150
-schematic demo place label 1 90 150 0 1 0 # simple label
-schematic demo draw net P3V3 1 90 140 120 140
-schematic demo place label 1 90 140 0 1 0 # simple label
-schematic demo draw net P3V3 2 90 100 120 100
-schematic demo place label 2 90 100 0 1 0 # simple label
-schematic demo set class P3V3 pwr
+# schematic demo draw net P3V3 1 90 150 120 150
+# schematic demo place label 1 90 150 0 1 0 # simple label
+# schematic demo draw net P3V3 1 90 140 120 140
+# schematic demo place label 1 90 140 0 1 0 # simple label
+# schematic demo draw net P3V3 2 90 100 120 100
+# schematic demo place label 2 90 100 0 1 0 # simple label
+# schematic demo set class P3V3 pwr
 
 #schematic demo rename net P3V3 VCC 1 #90 140
 #schematic demo rename net P3V3 VCC 2 #90 100
@@ -63,18 +63,18 @@ schematic demo set class P3V3 pwr
 #schematic demo draw net P5V 1 120 150 130 150
 
 
-schematic demo draw net IN 1 80 125 80 105
-schematic demo draw net IN 1 85 122.5 80 122.5
-schematic demo draw net IN 1 85 117.5 80 117.5
-schematic demo draw net IN 1 80 122.5 70 122.5
-schematic demo place label 1 70 122.5 input # tag label
-schematic demo place junction 1 80 122.5
-schematic demo place junction 1 80 117.5
+# schematic demo draw net IN 1 80 125 80 105
+# schematic demo draw net IN 1 85 122.5 80 122.5
+# schematic demo draw net IN 1 85 117.5 80 117.5
+# schematic demo draw net IN 1 80 122.5 70 122.5
+# schematic demo place label 1 70 122.5 input # tag label
+# schematic demo place junction 1 80 122.5
+# schematic demo place junction 1 80 117.5
 
 schematic demo draw net GND 1 80 95 80 80
 schematic demo draw net GND 1 80 80 62.5 80
-schematic demo place label 1 70 80 0 1 0 # simple label
-schematic demo set class IN pwr
+# schematic demo place label 1 70 80 0 1 0 # simple label
+# schematic demo set class IN pwr
 
 # board submoduletest move device IC1 absolute 30 50
 #schematic submoduletest set value IC1 7401
@@ -272,15 +272,15 @@ board demo place text conductor 4 0.15 1 187 93.5 0 "L4/BOT"
 # board demo route net in 2 polygon line 2 2 line 40 2 line 40 20 line 2 20
 
 # board demo route net P3V3 1 line 0.2 X1 1 direction -90 5
-board demo route net P3V3 1 arc 0.2 3 17 3 22 8 17 cw
+# board demo route net P3V3 1 arc 0.2 3 17 3 22 8 17 cw
 # board demo route net gnd 1 line 0.2 38 40 40 40
 # board demo route net gnd 2 line 0.2 38 38 40 40
 
-board demo route net in 1 line 0.2 X2 1 direction 0 5
+# board demo route net in 1 line 0.2 X2 1 direction 0 5
 # board demo route net in 1 line 0.2 R1 2 direction -90 3
-board demo route net in 1 line 0.2 16 12 8 4
-board demo set via drill 0.2
-board demo place via in 16 12
+# board demo route net in 1 line 0.2 16 12 8 4
+# board demo set via drill 0.2
+# board demo place via in 16 12
 
 # unten linke ecke:
 # board demo set polygon fill hatched
@@ -336,31 +336,31 @@ board demo display conductors 4 off
 board demo place text assy top 0.15 1 39 42 0 "VIAS"
 board demo place text assy top 0.15 1 41 39.5 0 "THROUGH"
 board demo set via drill 0.5
-board demo place via P3V3 36 40
+# board demo place via P3V3 36 40
 board demo set via drill 0.2
-board demo place via GND 38 40
+board demo place via GND 20 35
 board demo set via drill 0.5
-board demo place via GND 40 40
+board demo place via GND 25 38
 board demo set via drill dru
 
 board demo place text assy top 0.15 1 41 37.5 0 "BLIND DRILLED FROM TOP TO L2"
-board demo place via GND 38 38 blind top 2
+board demo place via GND 32 30 blind top 2
 board demo set via drill 0.6
-board demo place via GND 40 38 blind top 2
+board demo place via GND 38 27 blind top 2
 board demo set via drill dru
 
-board demo place text assy top 0.15 1 41 35.5 0 "BLIND DRILLED FROM BOTTOM TO L3"
-board demo place via GND 40 36 blind bottom 3
+# board demo place text assy top 0.15 1 41 35.5 0 "BLIND DRILLED FROM BOTTOM TO L3"
+# board demo place via GND 40 36 blind bottom 3
 
-board demo place text assy top 0.15 1 41 33.5 0 "BLIND DRILLED FROM TOP TO L3"
-board demo place via GND 40 34 blind top 3
+# board demo place text assy top 0.15 1 41 33.5 0 "BLIND DRILLED FROM TOP TO L3"
+# board demo place via GND 40 34 blind top 3
 
-board demo place text assy top 0.15 1 41 31.5 0 "BLIND DRILLED FROM BOTTOM TO L2"
-board demo place via GND 40 32 blind bottom 2
+# board demo place text assy top 0.15 1 41 31.5 0 "BLIND DRILLED FROM BOTTOM TO L2"
+# board demo place via GND 40 32 blind bottom 2
 
-board demo place text assy top 0.15 1 41 29.5 0 "BURIED FROM L2 TO L3"
-board demo place via GND 40 30 buried 2 3
-board demo set via drill 0.3
+# board demo place text assy top 0.15 1 41 29.5 0 "BURIED FROM L2 TO L3"
+# board demo place via GND 40 30 buried 2 3
+# board demo set via drill 0.3
 
 # board demo set polygon width 2.5
 # board demo route net gnd 3 polygon line 10 25 line 50 25 line 49 45 line 11 45
@@ -469,8 +469,10 @@ board demo display stencil bottom off
 # board demo position cursor absolute 6 35
 # board demo zoom center 6 35 70
 
-board demo position cursor absolute 8 21
-board demo zoom center 8 21 50
+board demo update ratsnest
+
+board demo position cursor absolute 27 30
+board demo zoom center 27 30 20
 
 
 # board demo zoom center 11 8 50
