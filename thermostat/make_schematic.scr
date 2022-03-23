@@ -1,16 +1,21 @@
 schematic thermostat display grid
-# schematic thermostat position cursor absolute 100 120
-# schematic thermostat zoom center 100 120 10
+schematic thermostat position cursor absolute 12 170
+# schematic thermostat zoom center 60 180 10
 
 
-schematic thermostat add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 80 100 90 T_0207 #  S_1206
-# schematic thermostat set value R1 330R
+schematic thermostat add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 20 180 0 T_0207 #  S_1206
+#schematic thermostat set value R1 330R
 # schematic thermostat set partcode R1 R_PAC_T_0207_VAL_330R
 # schematic thermostat set purpose R1 "brightness"
 
-schematic thermostat add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 80 130 90 S_1206
+schematic thermostat add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R_adjustable.dev 1 50 180 0 T_0207
+
+schematic thermostat add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 20 160 0 S_1206
 # schematic thermostat set value C1 100n
 # schematic thermostat set partcode C1 C_PAC_S_1206_VAL_10n
+
+schematic thermostat add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C_polarized.dev 1 50 160 0 S_1206
+
 
 # connectors
 # schematic thermostat add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
