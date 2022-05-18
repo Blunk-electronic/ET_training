@@ -239,21 +239,21 @@ board demo place text via_restrict 4 0.15 1 146 83.5 0 "VIA RESTRICT L4"
 board demo route freetrack 1 line 0.5 160 100 180 100
 board demo place text conductor 1 0.15 1 182 99.5 0 "L1/TOP"
 
-board demo set polygon fill solid # hatched
-# board demo set polygon width 0.2
-board demo set polygon isolation 0.4
-board demo set polygon easing style fillet # chamfer, none, fillet
-board demo set polygon easing radius 0.6
-board demo set polygon connection thermal # solid
+board demo set zone fill solid # hatched
+# board demo set zone width 0.2
+board demo set zone isolation 0.4
+board demo set zone easing style fillet # chamfer, none, fillet
+board demo set zone easing radius 0.6
+board demo set zone connection thermal # solid
 
-board demo set polygon thermal width 0.2
-board demo set polygon thermal gap 0.33
+board demo set zone thermal width 0.2
+board demo set zone thermal gap 0.33
 
-board demo set polygon hatching width 0.5
-board demo set polygon hatching border 0.4
-board demo set polygon hatching spacing 1.1
+board demo set zone hatching width 0.5
+board demo set zone hatching border 0.4
+board demo set zone hatching spacing 1.1
 
-# board demo route freetrack 1 polygon line 0 0 line 45 0 arc 22.5 30 45 30 ccw line 0 30
+# board demo route freetrack 1 zone line 0 0 line 45 0 arc 22.5 30 45 30 ccw line 0 30
 
 # L2
 board demo route freetrack 2 line 0.5 160 98 180 98
@@ -266,7 +266,7 @@ board demo place text conductor 3 0.15 1 182 95.5 0 "L3"
 # L4 / BOTTOM
 board demo route freetrack 4 line 0.5 160 94 180 94
 board demo place text conductor 4 0.15 1 187 93.5 0 "L4/BOT"
-#board demo route freetrack 4 polygon line 40 0 line 60 0 line 60 30 line 40 30
+#board demo route freetrack 4 zone line 40 0 line 60 0 line 60 30 line 40 30
 
 #place text conductor 1 1 5 100 100 0 "TEST*"
 
@@ -281,7 +281,7 @@ board demo route net GND 1 arc 0.2 25 30 20 30 30 30 ccw
 # board demo route net GND 1 arc 0.2 25 20 20 20 30 20 ccw
 # board demo route net in 1 line 0.5 IC1 1 direction 90 5
 # board demo route net in 1 line 0.5 ic1 2 to 6 36.51
-# board demo route net in 2 polygon line 2 2 line 40 2 line 40 20 line 2 20
+# board demo route net in 2 zone line 2 2 line 40 2 line 40 20 line 2 20
 
 # board demo route net P3V3 1 line 0.2 X1 1 direction -90 5
 # board demo route net P3V3 1 arc 0.2 3 17 3 22 8 17 cw
@@ -295,12 +295,12 @@ board demo set via drill 0.2
 board demo place via in 16 12
 
 # unten linke ecke:
-# board demo set polygon fill hatched
-board demo set polygon width 1
-# board demo set polygon width 2.0
-# board demo route net gnd 1 polygon line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
-board demo route net gnd 1 polygon line 0 -10 line 50 -10 line 50 50 line 0 50
-# board demo route net gnd 4 polygon line 0 10 line 30 10 line 30 40 line 0 40
+# board demo set zone fill hatched
+board demo set zone width 1
+# board demo set zone width 2.0
+# board demo route net gnd 1 zone line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
+board demo route net gnd 1 zone line 0 -10 line 50 -10 line 50 50 line 0 50
+# board demo route net gnd 4 zone line 0 10 line 30 10 line 30 40 line 0 40
 
 # board demo flip device IC1 bottom
 
@@ -311,34 +311,34 @@ board demo display conductors 4 off
 
 
 # großes unten rechts:
-# board demo route net gnd 1 polygon line 23 0 line 232 0 line 232 33 line 100 33
+# board demo route net gnd 1 zone line 23 0 line 232 0 line 232 33 line 100 33
 
 
 # brücke:
-# board demo route net gnd 1 polygon line 25 13 arc 30 13 27 13 cw line 33 13 line 35 13 line 35 20 line 25 20
+# board demo route net gnd 1 zone line 25 13 arc 30 13 27 13 cw line 33 13 line 35 13 line 35 20 line 25 20
 
 
 # seerose
-# board demo route net gnd 1 polygon line 25 25 arc 30 25 27 25 ccw line 30 28 line 30 30 arc 27 30 29 30 cw arc 25 27.5 25 30 ccw
-# board demo route net gnd 1 polygon line 25 25 arc 30 25 27 25 ccw line 30 28 line 25 28
+# board demo route net gnd 1 zone line 25 25 arc 30 25 27 25 ccw line 30 28 line 30 30 arc 27 30 29 30 cw arc 25 27.5 25 30 ccw
+# board demo route net gnd 1 zone line 25 25 arc 30 25 27 25 ccw line 30 28 line 25 28
 
-# board demo set polygon width 0.21
+# board demo set zone width 0.21
 
 # haus:
-# board demo route net gnd 1 polygon line 25 31 line 30 31 line 30 33 line 28 34 line 27 34 line 25 33
+# board demo route net gnd 1 zone line 25 31 line 30 31 line 30 33 line 28 34 line 27 34 line 25 33
 
 # kreis:
-# board demo route net gnd 1 polygon circle 35 30 3
+# board demo route net gnd 1 zone circle 35 30 3
 
 # vase:
-# board demo route net gnd 1 polygon line 13 22 line 16 22 arc 16 24 16 23 ccw line 16 25 line 16 26 line 13 26 arc 13 24 13 25 ccw line 13 23
+# board demo route net gnd 1 zone line 13 22 line 16 22 arc 16 24 16 23 ccw line 16 25 line 16 26 line 13 26 arc 13 24 13 25 ccw line 13 23
 
-# board demo set polygon width 0.20 
-# board demo set polygon width 0.25
-# board demo set polygon width 0.15
+# board demo set zone width 0.20 
+# board demo set zone width 0.25
+# board demo set zone width 0.15
 
 # stopschild:
-# board demo route net gnd 1 polygon line 13 27 line 13 26.5 line 16 26.5 line 16 27 line 18 28 line 18 30 line 16 31 line 16 31.5 line 13 31.5 line 13 31 line 11 30 line 11 28
+# board demo route net gnd 1 zone line 13 27 line 13 26.5 line 16 26.5 line 16 27 line 18 28 line 18 30 line 16 31 line 16 31.5 line 13 31.5 line 13 31 line 11 30 line 11 28
 
 
 # vias
@@ -374,16 +374,16 @@ board demo set via drill dru
 # board demo place via GND 40 30 buried 2 3
 # board demo set via drill 0.3
 
-# board demo set polygon width 2.5
-# board demo route net gnd 3 polygon line 10 25 line 50 25 line 49 45 line 11 45
+# board demo set zone width 2.5
+# board demo route net gnd 3 zone line 10 25 line 50 25 line 49 45 line 11 45
 # board demo place text conductor 3 0.15 3 25 25 45 "XSIi"
 
 board demo set grid 0.01 0.01
 
-# board demo set polygon log HIGH
-# board demo fill polygon # optional net names
-# board demo fill polygon GND GND2
-# board demo hide polygon # optional net name
+# board demo set zone log HIGH
+# board demo fill zone # optional net names
+board demo fill zone GND GND2
+# board demo hide zone # optional net name
 
 
 # set cursor and zoom center
