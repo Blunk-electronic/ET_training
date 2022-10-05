@@ -31,13 +31,19 @@ board demo draw hole circle 32 5 0.6
 board demo draw hole line 45.5 0.5 line 48 0.5 line 48 8 line 47 8
 
 board demo route net GND 1 line 0.5  6 3   8 3
+# board demo route net GND 2 line 0.5  8 3  10 1
 board demo route net GND 1 line 0.5  3 3.4  6 3
 board demo route net GND 1 line 0.5  32 4   32 2
+board demo place via GND 8 3
+
+# board demo place via GND 25 11 blind bottom 3
+# board demo place via GND 25 11 blind top 3
+# board demo place via GND 25 11 buried 2 3
 
 board demo route net P5V 1 line 0.5  30 6.5   20 45
 
 board demo display restrict route 1 on
-board demo draw route_restrict [1] line 0 34  30 20
+# board demo draw route_restrict [1] line 0 34  30 20
 
 # um -10 in x und versetzt
 # board demo draw outline line -10 -10 line 70 -10 line 70 70 line -10 70
@@ -79,9 +85,9 @@ board demo draw route_restrict [1] line 0 34  30 20
 # board demo draw hole circle 47 35 5.5
 # board demo draw hole line 65 40 line 75 40 arc 70 50 75 50 ccw line 65 50
 board demo set zone fill solid # hatched
-board demo set zone width 0.37
+board demo set zone width 0.15
 # board demo set zone width 2.9
-board demo set zone isolation 0.2
+# board demo set zone isolation 0.2
 
 
 # rechteckig 100x50 überstand nach links unten
@@ -116,7 +122,9 @@ board demo set zone isolation 0.2
 #board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 51 line -1 51
 #board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 30 line -1 30
 
-board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 7 line -1 7
+board demo route net GND 2 zone line -1 -1 line 51 -1 line 51 7 line -1 7
+#board demo route freetrack 1 zone line 18 9 line 30 9 line 30 13 line 18 13
+# board demo set zone isolation 0.2
 board demo route freetrack 1 zone line 18 9 line 30 9 line 30 13 line 18 13
 
 board demo set zone fill hatched
@@ -133,7 +141,8 @@ board demo route freetrack 1 zone line 25 15 line 40 15 line 40 20 line 20 20
 # board demo place text conductor 4 0.15 3 10 85 45 "BOT"
 
 # board demo route net gnd 1 zone line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
-# board demo place text conductor 1 0.15 2 2 16 0 "TOP"
+# board demo place text conductor 1 0.15 1 19 11 0 "T"
+# board demo place text conductor 1 0.15 1 4.0 0.9 0 "T S"
 
 board demo set grid 0.1 0.1
 
@@ -144,13 +153,14 @@ board demo fill zone # optional net name
 # board demo position cursor absolute 0 0
 # board demo zoom center 0 0 50
 
-board demo position cursor absolute 23 5
-board demo zoom center 23 5 10
+# board demo position cursor absolute 23 5
+# board demo zoom center 4 0 10
+board demo zoom center 8 3 100
 
 
-# board demo display conductors 1 on	
-# board demo display conductors 2 on
-# board demo display conductors 3 off
+board demo display conductors 1 off	
+board demo display conductors 2 on
+board demo display conductors 3 off
 # board demo display conductors 4 on
 
 

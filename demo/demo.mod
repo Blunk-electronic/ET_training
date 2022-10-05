@@ -193,22 +193,17 @@
 			line_width 0.15
 			size 1.0
 		[TEXT END]
-		[LINE BEGIN]
-			start x 70 y 0
-			end x 70 y 120
-			layers 1 4
-		[LINE END]
 	[ROUTE_RESTRICT END]
 	[VIA_RESTRICT BEGIN]
 	[VIA_RESTRICT END]
 	[CONDUCTOR BEGIN]
-		[TEXT BEGIN]
-			layer 1
-			content "CONDUCTOR 1 TEST"
-			position x 10 y 20 rotation 5
-			line_width 0.15
-			size 1.0
-		[TEXT END]
+--		[TEXT BEGIN]
+--			layer 1
+--			content "CONDUCTOR 1 TEST"
+--			position x 10 y 20 rotation 5
+--			line_width 0.15
+--			size 1.0
+--		[TEXT END]
 		[TEXT BEGIN]
 			layer 4
 			content "CONDUCTOR 4 TEST"

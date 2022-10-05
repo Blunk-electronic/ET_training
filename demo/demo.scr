@@ -504,8 +504,8 @@ board demo route net GND 1 line 0.2 11 30 16 32
 
 # board demo display stop top
 
-board demo position cursor absolute 3 2.5
-board demo zoom center 3 2.5 80
+board demo position cursor absolute 32 30
+board demo zoom center 32 30 80
 
 
 # board demo zoom center 11 8 50
