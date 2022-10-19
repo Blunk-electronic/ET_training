@@ -137,22 +137,22 @@
 	[DEVICES_NON_ELECTRIC BEGIN]
 	[DEVICES_NON_ELECTRIC END]
 	[SILK_SCREEN BEGIN]
-		[TOP BEGIN]
-			[TEXT BEGIN]
-				content "SILKSCREEN TOP TEST"
-				position x 10 y 10 rotation 45
-				line_width 0.15
-				size 1.0
-			[TEXT END]
-		[TOP END]
-		[BOTTOM BEGIN]
-			[TEXT BEGIN]
-				content "SILKSCREEN BOTTOM TEST"
-				position x 10 y 40 rotation 45
-				line_width 0.5
-				size 2.0
-			[TEXT END]
-		[BOTTOM END]
+		--[TOP BEGIN]
+			--[TEXT BEGIN]
+				--content "SILKSCREEN TOP TEST"
+				--position x 10 y 10 rotation 45
+				--line_width 0.15
+				--size 1.0
+			--[TEXT END]
+		--[TOP END]
+		--[BOTTOM BEGIN]
+			--[TEXT BEGIN]
+				--content "SILKSCREEN BOTTOM TEST"
+				--position x 10 y 40 rotation 45
+				--line_width 0.5
+				--size 2.0
+			--[TEXT END]
+		--[BOTTOM END]
 	[SILK_SCREEN END]
 	[ASSEMBLY_DOCUMENTATION BEGIN]
 		[TOP BEGIN]
@@ -179,20 +179,20 @@
 		[BOTTOM END]
 	[KEEPOUT END]
 	[ROUTE_RESTRICT BEGIN]
-		[TEXT BEGIN]
-			layer 1
-			content "ROUTE RESTRICT 1 TEST"
-			position x 10 y 30 rotation 5
-			line_width 0.15
-			size 1.0
-		[TEXT END]
-		[TEXT BEGIN]
-			layer 4
-			content "ROUTE RESTRICT 4 TEST"
-			position x 10 y 30 rotation 5
-			line_width 0.15
-			size 1.0
-		[TEXT END]
+		--[TEXT BEGIN]
+			--layer 1
+			--content "ROUTE RESTRICT 1 TEST"
+			--position x 10 y 30 rotation 5
+			--line_width 0.15
+			--size 1.0
+		--[TEXT END]
+		--[TEXT BEGIN]
+			--layer 4
+			--content "ROUTE RESTRICT 4 TEST"
+			--position x 10 y 30 rotation 5
+			--line_width 0.15
+			--size 1.0
+		--[TEXT END]
 	[ROUTE_RESTRICT END]
 	[VIA_RESTRICT BEGIN]
 	[VIA_RESTRICT END]
@@ -204,13 +204,13 @@
 --			line_width 0.15
 --			size 1.0
 --		[TEXT END]
-		[TEXT BEGIN]
-			layer 4
-			content "CONDUCTOR 4 TEST"
-			position x 10 y 20 rotation 5
-			line_width 0.15
-			size 1.0
-		[TEXT END]
+		--[TEXT BEGIN]
+			--layer 4
+			--content "CONDUCTOR 4 TEST"
+			--position x 10 y 20 rotation 5
+			--line_width 0.15
+			--size 1.0
+		--[TEXT END]
 
 		
 		

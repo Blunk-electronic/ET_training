@@ -272,6 +272,7 @@ board demo place text conductor 4 0.15 1 187 93.5 0 "L4/BOT"
 # route signal
 # board demo route net GND 1 line 0.2 11 30 16 32
 board demo route net GND 1 arc 0.2 25 30 20 30 30 30 ccw
+board demo route net GND 1 line 0.2 11 30 16 32
 # board demo move device IC1 relative 30 -10
 # board demo rotate device IC1 absolute 0
 # board demo flip device IC1 bottom
@@ -298,7 +299,7 @@ board demo place via in 16 12
 board demo set zone width 1
 # board demo set zone width 2.0
 # board demo route net gnd 1 zone line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
-board demo route net gnd 1 zone line 0 -10 line 50 -10 line 50 50 line 0 50
+board demo route net P3V3 1 zone line 0 -10 line 50 -10 line 50 50 line 0 50
 # board demo route net gnd 4 zone line 0 10 line 30 10 line 30 40 line 0 40
 
 # board demo flip device IC1 bottom
@@ -381,7 +382,7 @@ board demo set grid 0.01 0.01
 
 # board demo set zone log HIGH
 # board demo fill zone # optional net names
-board demo fill zone GND GND2
+board demo fill zone P3V3 #GND GND2
 # board demo hide zone # optional net name
 
 
@@ -500,7 +501,7 @@ board demo display stencil bottom off
 
 # board demo move board relative 100 50
 
-board demo route net GND 1 line 0.2 11 30 16 32
+
 
 # board demo display stop top
 
