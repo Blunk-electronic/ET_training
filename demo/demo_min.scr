@@ -23,12 +23,15 @@ board demo move device C1 absolute 7 20
 board demo rotate device C1 relative 20
 # board demo flip device C1 bottom
 schematic demo draw net GND 1 80 125 80 100
+schematic demo place label 1 80 110 -1 0 90 # simple label
 schematic demo draw net IN 1 80 135 80 150
+schematic demo place label 1 80 145 -1 0 90 # simple label
 
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
 schematic demo set purpose X1 "PWR IN POS"
-schematic demo draw net GND 1 62.5 150  65 150
-board demo move device X1 absolute 14 22
+schematic demo draw net GND 1 62.5 150  75 150
+schematic demo place label 1 65 150 0 1 0 # simple label
+board demo move device X1 absolute 14 24
 # board demo flip device X1 bottom
 board demo rotate device X1 relative 10
 
@@ -45,7 +48,10 @@ board demo rotate device R1 relative 10
 
 
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 100 130 90 S_1206
+schematic demo draw net GND 1 100 125  120 125
 board demo move device C2 absolute 40 11
+board demo rotate device C2 relative 10
+
 
 # EURO card format:
 #board demo draw outline line 0 0 line 160 0 line 160 80 line 0 80
@@ -54,6 +60,13 @@ board demo move device C2 absolute 40 11
 # board demo draw outline line 0 0 line 50 0 line 50 50 line 0 50
 # board demo draw outline line 0 0 line 10 0 line 10 40 line 20 40 line 20 0 line 50 0 line 50 50 line 0 50
 board demo draw outline line 0 0 arc 20 0 10 0 cw line 30 0 line 50 0 line 50 50 line 0 50
+
+# mounting holes (with 3mm diameter)
+board demo draw hole circle  3 47 1.5
+board demo draw hole circle 48 47 1.5
+board demo draw hole circle  3 12 1.5
+board demo draw hole circle 48 12 1.5
+
 board demo draw hole circle 39 4 4
 board demo draw hole circle 26 40 3
 board demo draw hole circle 39 40 3
@@ -68,6 +81,9 @@ board demo route net GND 1 line 0.5  6 3   8 3
 board demo route net GND 1 line 0.5  3 3.4  6 3
 board demo route net GND 1 line 0.5  32 4   32 2
 board demo place via GND 8 3
+
+board demo route net GND 1 line 0.2 2.5 23  4 23
+board demo route net GND 1 arc  0.2  6 23  4 23   8 23  CW
 
 # board demo place via GND 25 11 blind bottom 3
 # board demo place via GND 25 11 blind top 3
@@ -156,8 +172,9 @@ board demo set zone width 0.15
 #board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 30 line -1 30
  
 # board demo route net P5V 4 zone line -1 15 line 18 15 line 18 25 line 1 25
-board demo route net P5V 2 zone line -1 15 line 18 15 line 18 25 line 1 25
-# board demo route net P5V 1 zone line -1 15 line 18 15 line 18 25 line 1 25
+# board demo route net P5V 2 zone line -1 15 line 18 15 line 18 25 line 1 25
+board demo route net GND 1 zone line -1 15 line 18 15 line 18 25 line 1 25
+board demo place text conductor 1 0.15 1 4 15.5 0 "GND"
 
 board demo route net P5V 1 zone line -1 -1 line 51 -1 line 51 7 line -1 7
 #board demo route freetrack 1 zone line 18 9 line 30 9 line 30 13 line 18 13
@@ -172,7 +189,6 @@ board demo route net P5V 1 zone line 6 27 line 51 27 line 51 55 line 6 55
 
 board demo route freetrack 1 zone line 25 15 line 40 15 line 40 20 line 20 20
 
-# board demo place text conductor 1 0.2 2 1 11 0 "AB"
 # board demo place text conductor 1 0.2 2 1 11 0 "ABCDEFGHIJKLM"
 # board demo place text conductor 1 0.2 2 1 11 0 "NOPQRSTUVWXYZ"
 
@@ -199,7 +215,8 @@ board demo fill zone # optional net name
 # board demo position cursor absolute 23 5
 # board demo zoom center 4 0 10
 # board demo zoom center 20 10 50
-board demo zoom center 40 11 50
+# board demo zoom center 4 23	50
+board demo zoom center 7 20	50
 
 
 board demo display conductors 1 on
