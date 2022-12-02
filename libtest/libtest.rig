@@ -1,0 +1,28 @@
+-- SYSTEM ET rig configuration file
+-- date 2022-12-02T16:24:08
+-- ====================================================================================================
+
+[MODULE_INSTANCES BEGIN]
+	[MODULE BEGIN]
+		generic_name libtest
+		instance_name MOD1
+	[MODULE END]
+[MODULE_INSTANCES END]
+
+[MODULE_CONNECTIONS BEGIN]
+	[CONNECTOR BEGIN]
+		-- instance_A MOD1
+		-- purpose_A "power_in"
+
+		-- instance_B power_supply
+		-- purpose_B "power_out"
+
+		-- net_comparator on
+		-- warn_only on
+	[CONNECTOR END]
+[MODULE_CONNECTIONS END]
+
+-- ====================================================================================================
+-- date 2022-12-02T16:24:08
+-- rig configuration file end
+

@@ -1,0 +1,40 @@
+schematic libtest display grid
+schematic libtest position cursor absolute 100 100
+schematic libtest zoom center 100 100 30
+
+board libtest display grid
+board libtest set grid 1 1
+
+
+schematic libtest add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 20 100 90 S_1206
+schematic libtest set value C1 100n
+board libtest move device C1 absolute 10 40
+
+schematic libtest add device $HOME/git/BEL/ET_component_library/devices/active/opto/single-led.dev 1 35 100 90 S_1206
+schematic libtest set value LED1 green
+board libtest move device LED1 absolute 20 40
+
+schematic libtest add device $HOME/git/BEL/ET_component_library/devices/active/diode/single-diode.dev 1 50 100 90 S_0805
+schematic libtest set value D1 1N4148
+board libtest move device D1 absolute 30 40
+
+
+# EURO card format:
+board libtest draw outline line 0 0 line 160 0 line 160 80 line 0 80
+
+board libtest position cursor absolute 80 40
+# board libtest zoom center 4 0 10
+# board libtest zoom center 20 10 50
+# board libtest zoom center 4 23	50
+board libtest zoom center 80 40	50
+
+# 
+# board libtest display conductors 1 on
+# board libtest display conductors 2 on
+# board libtest display conductors 3 off
+# board libtest display conductors 4 off
+# 
+
+
+# schematic libtest exit # CS does not work (gtk error)
+# script end
