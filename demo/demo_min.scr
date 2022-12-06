@@ -134,7 +134,9 @@ board demo display restrict route 1 on
 # board demo draw hole circle 47 35 5.5
 # board demo draw hole line 65 40 line 75 40 arc 70 50 75 50 ccw line 65 50
 board demo set zone fill solid # hatched
-board demo set zone width 0.15
+board demo set zone linewidth 0.15
+board demo set zone relief gap_max 0.4
+board demo set zone relief width_min 0.31
 # board demo set zone width 2.9
 # board demo set zone isolation 0.2
 
@@ -216,7 +218,7 @@ board demo fill zone # optional net name
 # board demo zoom center 4 0 10
 # board demo zoom center 20 10 50
 # board demo zoom center 4 23	50
-board demo zoom center 7 20	50
+# board demo zoom center 7 20	50
 
 
 board demo display conductors 1 on
