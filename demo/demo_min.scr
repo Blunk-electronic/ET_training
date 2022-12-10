@@ -5,7 +5,7 @@ schematic demo zoom center 100 120 10
 board demo display grid
 board demo set grid 1 1
 
-board demo display silkscreen top off
+# board demo display silkscreen top off
 
 
 # nets
@@ -19,8 +19,14 @@ schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/cap
 schematic demo set value C1 100n
 schematic demo set partcode C1 C_PAC_S_1206_VAL_10n
 
+# Fehler hängt:
+# board demo move device C1 absolute 7 20
+# board demo rotate device C1 relative 20
+
 board demo move device C1 absolute 7 20
 board demo rotate device C1 relative 20
+
+
 # board demo flip device C1 bottom
 schematic demo draw net GND 1 80 125 80 100
 schematic demo place label 1 80 110 -1 0 90 # simple label
@@ -31,7 +37,7 @@ schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/con
 schematic demo set purpose X1 "PWR IN POS"
 schematic demo draw net GND 1 62.5 150  75 150
 schematic demo place label 1 65 150 0 1 0 # simple label
-board demo move device X1 absolute 14 24
+board demo move device X1 absolute -14 24
 # board demo flip device X1 bottom
 board demo rotate device X1 relative 10
 
@@ -39,10 +45,11 @@ board demo rotate device X1 relative 10
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 65 120 90 T_0207 #  S_1206
 schematic demo set value R1 330R
 schematic demo set partcode R1 R_PAC_T_0207_VAL_330R
-schematic demo set purpose R1 "brightness"
+# schematic demo set purpose R1 "brightness"
 schematic demo draw net GND 1 65 125  65 130
 schematic demo draw net IN 1 65 115  65 110
 board demo move device R1 absolute 6 17
+# board demo move device R1 absolute -11 17
 # board demo flip device R1 bottom
 board demo rotate device R1 relative 10
 
@@ -82,8 +89,8 @@ board demo route net GND 1 line 0.5  3 3.4  6 3
 board demo route net GND 1 line 0.5  32 4   32 2
 board demo place via GND 8 3
 
-board demo route net GND 1 line 0.2 2.5 23  4 23
-board demo route net GND 1 arc  0.2  6 23  4 23   8 23  CW
+# board demo route net GND 1 line 0.2 2.5 23  4 23
+# board demo route net GND 1 arc  0.2  6 23  4 23   8 23  CW
 
 # board demo place via GND 25 11 blind bottom 3
 # board demo place via GND 25 11 blind top 3
@@ -134,7 +141,7 @@ board demo display restrict route 1 on
 # board demo draw hole circle 47 35 5.5
 # board demo draw hole line 65 40 line 75 40 arc 70 50 75 50 ccw line 65 50
 board demo set zone fill solid # hatched
-board demo set zone linewidth 0.15
+board demo set zone linewidth 0.5
 board demo set zone relief gap_max 0.4
 board demo set zone relief width_min 0.31
 # board demo set zone width 2.9
@@ -173,8 +180,7 @@ board demo set zone relief width_min 0.31
 #board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 51 line -1 51
 #board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 30 line -1 30
  
-# board demo route net P5V 4 zone line -1 15 line 18 15 line 18 25 line 1 25
-# board demo route net P5V 2 zone line -1 15 line 18 15 line 18 25 line 1 25
+
 board demo route net GND 1 zone line -1 15 line 18 15 line 18 25 line 1 25
 board demo place text conductor 1 0.15 1 4 15.5 0 "GND"
 
@@ -214,8 +220,8 @@ board demo fill zone # optional net name
 # board demo position cursor absolute 0 0
 # board demo zoom center 0 0 50
 
-# board demo position cursor absolute 23 5
-# board demo zoom center 4 0 10
+board demo position cursor absolute 9 20
+board demo zoom center 9 20 60
 # board demo zoom center 20 10 50
 # board demo zoom center 4 23	50
 # board demo zoom center 7 20	50
@@ -226,7 +232,7 @@ board demo display conductors 2 on
 board demo display conductors 3 off
 board demo display conductors 4 off
 
-board demo display silkscreen top off
+# board demo display silkscreen top off
 
 # schematic demo exit # CS does not work (gtk error)
 # script end
