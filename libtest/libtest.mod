@@ -105,14 +105,14 @@
 		[VIAS END]
 		[FILL_ZONES_CONDUCTOR BEGIN]
 			fill_style solid
-			fill_linewidth  0.0500000000
+			linewidth  0.0500000000
 			priority  0
 			isolation  0.0500000000
-			hatching_line_spacing  0.0500000000
-			pad_connection thermal
+			spacing  0.0500000000
+			connection thermal
 			pad_technology smt_and_tht
-			thermal_width  0.0500000000
-			thermal_gap_max  0.0500000000
+			relief_width_min  0.0500000000
+			relief_gap_max  0.0500000000
 			easing_style none
 			easing_radius  0.0000000000
 		[FILL_ZONES_CONDUCTOR END]
