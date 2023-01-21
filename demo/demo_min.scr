@@ -12,6 +12,7 @@ board demo set grid 1 1
 # nets
 schematic demo draw net GND 1 80 80  60 80
 schematic demo place label 1 70 80 0 1 0 # simple label
+schematic demo place label 1 80 80 input # tag label
 
 schematic demo draw net P5V 1 80 90 62.5 90
 schematic demo place label 1 70 90 0 1 0 # simple label
@@ -108,6 +109,15 @@ board demo route net GND 1 line 0.5  6 3   8 3
 board demo route net GND 1 line 0.5  3 3.4  6 3
 board demo route net GND 1 line 0.5  32 4   32 2
 board demo place via GND 8 3
+
+
+# stencil test
+board demo add device $HOME/git/BEL/ET_component_library/packages/test/stencil.pac ST 40 40
+board demo rotate device ST1 relative 10
+
+# stop mask test
+board demo add device $HOME/git/BEL/ET_component_library/packages/test/stop.pac SM 40 40
+board demo rotate device SM1 relative 10
 
 # board demo route net GND 1 line 0.2 2.5 23  4 23
 # board demo route net GND 1 arc  0.2  6 23  4 23   8 23  CW
@@ -238,18 +248,22 @@ board demo route freetrack 1 zone line 25 15 line 40 15 line 40 20 line 20 20
 board demo set grid 0.1 0.1
 
 # board demo set zone log HIGH
-board demo fill zone # optional net name
+
+# board demo fill zone # optional net name
+
 # board demo hide zone # optional net name
 
 # board demo position cursor absolute 0 0
 # board demo zoom center 0 0 50
 
-board demo position cursor absolute 25 25
-board demo zoom center 25 25 10
+board demo position cursor absolute 5 20
+board demo zoom center 5 20 50
 # board demo zoom center 20 10 50
 # board demo zoom center 4 23	50
 # board demo zoom center 7 20	50
 
+# board demo display stencil top
+board demo display stop top
 
 board demo display conductors 1 on
 board demo display conductors 2 on
@@ -260,7 +274,12 @@ board demo display restrict route 1 off
 board demo display restrict route 4 off
 board demo display keepout top on
 board demo display keepout bottom on
-# board demo display silkscreen top off
+
+board demo display silkscreen top on
+board demo display silkscreen bottom on
+
+board demo display assy top
+board demo display assy bottom
 
 # schematic demo exit # CS does not work (gtk error)
 # script end
