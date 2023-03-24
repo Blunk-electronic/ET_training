@@ -1,7 +1,5 @@
 schematic libtest display grid
 schematic libtest set grid 2 2
-schematic libtest position cursor absolute 100 100
-schematic libtest zoom center 20 120 30
 
 board libtest display grid
 board libtest set grid 1 1
@@ -9,31 +7,47 @@ board libtest set grid 1 1
 
 schematic libtest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 20 120 0 T_0207
 schematic libtest set value R1 100R
+board libtest move device R1 absolute 10 75
 
 schematic libtest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/RA.dev 1 34 120 0 T_0207
 schematic libtest set value RA1 100R
 schematic libtest set purpose RA1 TEMP
+board libtest move device RA1 absolute 30 75
 
 schematic libtest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/RP.dev 1 50 120 0 T_0207
 schematic libtest set value RP1 220R
 schematic libtest set purpose RP1 VOLUME
+board libtest move device RP1 absolute 50 75
 
 
-schematic libtest add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 20 100 0 S_1206
+schematic libtest add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 20 100 0 S_0805
 schematic libtest set value C1 100n
-# board libtest move device C1 absolute 10 40
+board libtest move device C1 absolute 5 65
 
 schematic libtest add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C_pol.dev 1 34 100 0 S_1206
 schematic libtest set value C2 100n
-# board libtest move device C2 absolute 10 40
+board libtest move device C2 absolute 15 65
 
-schematic libtest add device $HOME/git/BEL/ET_component_library/devices/active/opto/single-led.dev 1 20 85 0 S_1206
+# LED
+schematic libtest add device $HOME/git/BEL/ET_component_library/devices/active/opto/single-led.dev 1 20 84 0 S_0805
 schematic libtest set value LED1 green
+schematic libtest set purpose LED1 sys-ready
+board libtest move device LED1 absolute 5 55
+
+schematic libtest add device $HOME/git/BEL/ET_component_library/devices/active/opto/single-led.dev 1 34 84 0 S_1206
+schematic libtest set value LED2 red
+schematic libtest set purpose LED2 sys-fail
+board libtest move device LED2 absolute 15 55
+
 # board libtest move device LED1 absolute 20 40
 # 
 # schematic libtest add device $HOME/git/BEL/ET_component_library/devices/active/diode/single-diode.dev 1 50 100 90 S_0805
 # schematic libtest set value D1 1N4148
 # board libtest move device D1 absolute 30 40
+
+schematic libtest position cursor absolute 20 84
+schematic libtest zoom center 20 84 30
+
 
 
 # schematic libtest position cursor absolute 35 100
@@ -42,11 +56,11 @@ schematic libtest set value LED1 green
 # EURO card format:
 board libtest draw outline line 0 0 line 160 0 line 160 80 line 0 80
 
-board libtest position cursor absolute 80 40
+board libtest position cursor absolute 25 60
 # board libtest zoom center 4 0 10
 # board libtest zoom center 20 10 50
 # board libtest zoom center 4 23	50
-board libtest zoom center 80 40	50
+board libtest zoom center 25 60 20
 
 # 
 # board libtest display conductors 1 on
