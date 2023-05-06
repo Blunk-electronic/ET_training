@@ -10,34 +10,35 @@ board demo set grid 1 1
 
 
 # nets
+# schematic demo draw net X_OPEN 1 80 70  60 70
 schematic demo draw net GND 1 80 80  60 80
 schematic demo place label 1 70 80 0 1 0 # simple label
 schematic demo place label 1 80 80 input # tag label
 
-schematic demo draw net P5V 1 80 90 62.5 90
-schematic demo place label 1 70 90 0 1 0 # simple label
+# schematic demo draw net P5V 1 80 90 62.5 90
+# schematic demo place label 1 70 90 0 1 0 # simple label
 
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 80 130 0 S_1206
-schematic demo set value C1 100n
-schematic demo set partcode C1 C_PAC_S_1206_VAL_10n
+# schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 80 130 0 S_1206
+# schematic demo set value C1 100n
+# schematic demo set partcode C1 C_PAC_S_1206_VAL_10n
 
 # Fehler hängt:
 # board demo move device C1 absolute 7 20
 # board demo rotate device C1 relative 20
-board demo rotate device C1 relative 19
+# board demo rotate device C1 relative 19
 
 
 # board demo flip device C1 bottom
 schematic demo draw net GND 1 80 126 80 100
 schematic demo place label 1 80 110 -1 0 90 # simple label
-schematic demo draw net IN 1 80 134 80 150
-schematic demo place label 1 80 145 -1 0 90 # simple label
+# schematic demo draw net IN 1 80 134 80 150
+# schematic demo place label 1 80 145 -1 0 90 # simple label
 
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
-schematic demo set purpose X1 "PWR IN POS"
+# schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
+# schematic demo set purpose X1 "PWR IN POS"
 schematic demo draw net GND 1 62.5 150  75 150
 schematic demo place label 1 65 150 0 1 0 # simple label
-board demo move device X1 absolute 15 35
+# board demo move device X1 absolute 15 35
 # board demo flip device X1 bottom
 # board demo rotate device X1 relative 10
 
@@ -49,15 +50,15 @@ schematic demo set value R1 330R
 # schematic demo set purpose R1 "brightness"
 schematic demo draw net GND 1 66 124  66 130
 schematic demo draw net IN 1 66 116  66 110
-board demo move device R1 absolute 5 21
-board demo rotate device R1 relative 10
+board demo move device R1 absolute 2 0
+# board demo rotate device R1 relative 10
 # board demo flip device R1 bottom
 
 
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 100 130 90 S_1206
 schematic demo draw net GND 1 100 125  120 125
-board demo move device C2 absolute 40 11
-board demo rotate device C2 relative 10
+# board demo move device C2 absolute 40 11
+# board demo rotate device C2 relative 10
 
 
 # EURO card format:
@@ -101,14 +102,19 @@ board demo rotate device MH2 relative 11
 board demo add device $HOME/git/BEL/ET_component_library/packages/holes/mounting_hole_round_4mm_metal.pac MH 44 32
 
 # electrical mounting holes:
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/holes/mounting_hole.dev 1 58 80 0 round_4mm
-board demo move device MH4 absolute 32 46
+# schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/holes/mounting_hole.dev 1 58 80 0 round_4mm
+# board demo move device MH4 absolute 32 46
 
 board demo route net GND 1 line 0.5  6 3   8 3
 # board demo route net GND 2 line 0.5  8 3  10 1
 board demo route net GND 1 line 0.5  3 3.4  6 3
-board demo route net GND 1 line 0.5  32 4   32 2
-board demo place via GND 8 3
+# board demo route net GND 1 line 0.5  32 4   32 2
+board demo route net IN 1 line 0.5  6 2   8 2
+
+# board demo display vias off
+# board demo place via GND 8 3
+# board demo place via GND 9 3 buried 2 3
+# board demo place via GND 8 2 blind top 2
 
 
 # stencil test
@@ -126,7 +132,7 @@ board demo rotate device SM1 relative 10
 # board demo place via GND 25 11 blind top 3
 # board demo place via GND 25 11 buried 2 3
 
-board demo route net GND 1 line 0.5  30 6.5   20 45
+# board demo route net GND 1 line 0.5  30 6.5   20 45
 
 board demo display restrict route 1 on
 # board demo draw route_restrict [1] line 0 34  30 20
@@ -210,11 +216,12 @@ board demo set zone relief width_min 0.31
 #board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 51 line -1 51
 #board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 30 line -1 30
  
-
+board demo route freetrack 3 line 0.2 20 30 22 30
+ 
 board demo route net GND 1 zone line -1 15 line 18 15 line 18 25 line 1 25
 board demo place text conductor 1 0.15 1 4 15.5 0 "GND"
 
-board demo route net P5V 1 zone line -1 -1 line 51 -1 line 51 7 line -1 7
+# board demo route net P5V 1 zone line -1 -1 line 51 -1 line 51 7 line -1 7
 #board demo route freetrack 1 zone line 18 9 line 30 9 line 30 13 line 18 13
 board demo set zone isolation 0.2
 #board demo route freetrack 1 zone line 0 9 line 50 9 line 50 14 line 0 14
@@ -223,7 +230,7 @@ board demo route net GND 1 zone line 0 9 line 50 9 line 50 14 line 0 14
 
 # board demo set zone fill hatched
 board demo set zone spacing 1.1
-board demo route net P5V 1 zone line 6 27 line 51 27 line 51 55 line 6 55
+# board demo route net P5V 1 zone line 6 27 line 51 27 line 51 55 line 6 55
 
 board demo route freetrack 1 zone line 25 15 line 40 15 line 40 20 line 20 20
 
@@ -247,6 +254,36 @@ board demo route freetrack 1 zone line 25 15 line 40 15 line 40 20 line 20 20
 
 board demo set grid 0.1 0.1
 
+board demo place text assy top 0.15 3 33 23 0 "ASSY DOC 1"
+board demo place text assy top 0.15 2 33 22 0 "ASSY DOC 2"
+board demo place text assy bottom 0.15 3 32 23 0 "ASSY DOC 3"
+board demo place text assy bottom 0.15 2 32 22 0 "ASSY DOC 4"
+
+board demo place text silkscreen top 0.15 3 33 33 0 "SILK 1"
+board demo place text silkscreen top 0.15 2 33 32 0 "SILK 2"
+board demo place text silkscreen bottom 0.15 3 32 33 0 "SILK 3"
+board demo place text silkscreen bottom 0.15 2 32 32 0 "SILK 4"
+
+board demo place text stop top 0.15 3 33 43 0 "STOP 1"
+board demo place text stop top 0.15 2 33 42 0 "STOP 2"
+board demo place text stop bottom 0.15 3 32 43 0 "STOP 3"
+board demo place text stop bottom 0.15 2 32 42 0 "STOP 4"
+
+board demo place text conductor 1 0.15 2 33 28 0 "L1"
+board demo place text conductor 2 0.15 2 33 27 0 "L2"
+
+board demo draw assy top line 1 1 11  20 11
+board demo draw assy top line 1 1 10  20 10
+
+board demo draw silkscreen top line 1 1 14  20 14
+board demo draw silkscreen top line 1 1 13  20 13
+
+
+
+# board demo route net GND 1 line 0.5  33 10  36 10
+# board demo route net GND 1 line 0.5  36 10  36  9
+board demo route net GND 1 line 0.5  36  9  33  9
+
 # board demo set zone log HIGH
 
 # board demo fill zone # optional net name
@@ -256,14 +293,15 @@ board demo set grid 0.1 0.1
 # board demo position cursor absolute 0 0
 # board demo zoom center 0 0 50
 
-board demo position cursor absolute 5 20
-board demo zoom center 5 20 50
+board demo position cursor absolute 1 11
+board demo zoom center 1 11 100
 # board demo zoom center 20 10 50
 # board demo zoom center 4 23	50
 # board demo zoom center 7 20	50
 
 # board demo display stencil top
 board demo display stop top
+board demo display stop bottom
 
 board demo display conductors 1 on
 board demo display conductors 2 on
@@ -280,6 +318,9 @@ board demo display silkscreen bottom on
 
 board demo display assy top
 board demo display assy bottom
+
+#schematic demo drag segment P5V 1 78 90 relative 2 2
+# schematic demo drag segment P5V 1 78 90 absolute 78 92
 
 # schematic demo exit # CS does not work (gtk error)
 # script end

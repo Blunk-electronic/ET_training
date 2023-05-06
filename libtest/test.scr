@@ -4,7 +4,7 @@ schematic libtest set grid 2 2
 board libtest display grid
 board libtest set grid 1 1
 
-
+# RESISTORS
 schematic libtest add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 20 120 0 T_0207
 schematic libtest set value R1 100R
 board libtest move device R1 absolute 10 75
@@ -20,6 +20,7 @@ schematic libtest set purpose RP1 VOLUME
 board libtest move device RP1 absolute 50 75
 
 
+# CAPACITORS
 schematic libtest add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 20 100 0 S_0805
 schematic libtest set value C1 100n
 board libtest move device C1 absolute 5 65
@@ -45,8 +46,13 @@ board libtest move device LED2 absolute 15 55
 # schematic libtest set value D1 1N4148
 # board libtest move device D1 absolute 30 40
 
-schematic libtest position cursor absolute 20 84
-schematic libtest zoom center 20 84 30
+# TRANSISTORS
+schematic libtest add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 20 64 0 S_SOT23
+schematic libtest set value T1 BC548C
+board libtest move device T1 absolute 6 45
+
+schematic libtest position cursor absolute 20 64
+schematic libtest zoom center 20 64 30
 
 
 
