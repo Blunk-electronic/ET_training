@@ -1,0 +1,12 @@
+#schematic demo display grid
+schematic demo set grid 20 20
+#schematic demo position cursor absolute 100 120
+#schematic demo zoom center 100 120 10
+
+#board demo display grid
+board demo set grid 30 30
+
+# board demo display silkscreen top off
+
+
+# script end

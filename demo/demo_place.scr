@@ -1,0 +1,98 @@
+schematic demo display grid
+schematic demo position cursor absolute 100 120
+schematic demo zoom center 100 120 10
+
+board demo display grid
+board demo set grid 1 1
+
+# schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 100 120 0 D
+# schematic demo invoke unit IC1 C 1 120 110 0
+# schematic demo invoke unit IC1 P 1 140 160 0
+
+# schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 80 100 90 T_0207 #  S_1206
+# schematic demo set value R1 330R
+# schematic demo set partcode R1 R_PAC_T_0207_VAL_330R
+# schematic demo set purpose R1 "brightness"
+
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 80 130 90 S_1206
+schematic demo set value C1 100n
+schematic demo set partcode C1 C_PAC_S_1206_VAL_10n
+
+# connectors
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
+schematic demo set purpose X1 "PWR IN POS"
+
+#schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 80 0 T_male_blade
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 80 0 T_male_blade_holes
+schematic demo set purpose X2 "PWR IN GND"
+
+# GND symbol
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/supply/gnd.dev 1 140 142.5 0
+
+#schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 130 120 0 D
+
+schematic demo display ports
+
+# nets
+schematic demo draw net P3V3 1 62.5 150 80 150
+schematic demo place label 1 70 150 0 1 0 # simple label
+schematic demo draw net P3V3 1 80 150 80 135
+
+schematic demo draw net P3V3 1 120 170 140 170
+schematic demo place label 1 120 170 0 1 0 # simple label
+schematic demo draw net P3V3 1 90 140 120 140
+schematic demo place label 1 90 140 0 1 0 # simple label
+schematic demo draw net P3V3 2 90 100 120 100
+schematic demo place label 2 90 100 0 1 0 # simple label
+schematic demo set class P3V3 pwr
+
+
+schematic demo draw net IN 1 80 125 80 105
+schematic demo draw net IN 1 85 122.5 80 122.5
+schematic demo draw net IN 1 85 117.5 80 117.5
+schematic demo draw net IN 1 80 122.5 70 122.5
+schematic demo place label 1 70 122.5 input # tag label
+schematic demo place junction 1 80 122.5
+schematic demo place junction 1 80 117.5
+
+schematic demo draw net GND 1 80 95 80 80
+schematic demo draw net GND 1 80 80 62.5 80
+schematic demo place label 1 70 80 0 1 0 # simple label
+schematic demo draw net GND 1 140 147.5 140 150
+schematic demo set class IN pwr
+
+
+board demo draw outline line 0 0 arc 30 0 25 0 ccw line 35 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
+board demo draw hole line 150 3 line 170 10 line 169 30
+
+
+# position devices in board
+board demo move device X1 absolute 3 25
+board demo move device X2 absolute 3 4
+# board demo move device R1 absolute 10 15
+# board demo move device IC1 absolute 6 34
+# board demo rotate device IC1 relative 20
+# board demo flip device IC1 bottom
+board demo move device C1 absolute 20 15
+board demo rotate device C1 relative 90
+
+
+# route signal
+# board demo route net GND 1 line 0.2 11 30 16 32
+# board demo route net GND 1 arc 0.2 25 30 20 30 30 30 ccw
+
+board demo place via GND 16 12
+
+# board demo update ratsnest
+# schematic demo make netlists
+
+# board demo move board relative 100 50
+
+board demo position cursor absolute 16 12
+board demo zoom center 16 12 100
+
+
+# board demo zoom center 11 8 50
+
+# schematic demo exit # CS does not work (gtk error)
+# script end

@@ -1,0 +1,21 @@
+
+schematic main display grid
+schematic main position cursor absolute 100 120
+schematic main zoom center 100 120 10
+
+board main display grid
+board main set grid 1 1
+
+schematic main add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 100 120 0 D
+#schematic main invoke unit IC1 C 1 101 121 0
+
+
+schematic main draw net IN 1 80 125 80 105
+schematic main draw net IN 1 85 122.5 80 122.5
+#schematic main draw net IN 1 85 117.5 80 117.5
+#schematic main draw net IN 1 80 122.5 70 122.5
+#schematic main place label 1 70 122.5 input # tag label
+#schematic main place junction 1 80 122.5
+#schematic main place junction 1 80 117.5
+
+# script end
