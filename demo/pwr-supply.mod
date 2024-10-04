@@ -137,14 +137,14 @@
 	[DEVICES_NON_ELECTRIC BEGIN]
 	[DEVICES_NON_ELECTRIC END]
 	[SILK_SCREEN BEGIN]
-		--[TOP BEGIN]
-			--[TEXT BEGIN]
-				--content "SILKSCREEN TOP TEST"
-				--position x 10 y 10 rotation 45
-				--line_width 0.15
-				--size 1.0
-			--[TEXT END]
-		--[TOP END]
+		[TOP BEGIN]
+			[TEXT BEGIN]
+				content "SILKSCREEN TOP TEST"
+				position x 10 y 10 rotation 45
+				line_width 0.15
+				size 1.0
+			[TEXT END]
+		[TOP END]
 		--[BOTTOM BEGIN]
 			--[TEXT BEGIN]
 				--content "SILKSCREEN BOTTOM TEST"
