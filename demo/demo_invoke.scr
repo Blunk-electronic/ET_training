@@ -1,0 +1,2 @@
+schematic demo set grid off
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400.dev 1 100 100 0 D

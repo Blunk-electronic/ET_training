@@ -7,6 +7,12 @@
 		generic_name demo
 		instance_name MOD1
 	[MODULE END]
+	
+	[MODULE BEGIN]
+		generic_name pwr-supply
+		instance_name PWR1
+	[MODULE END]
+	
 [MODULE_INSTANCES END]
 
 [MODULE_CONNECTIONS BEGIN]
