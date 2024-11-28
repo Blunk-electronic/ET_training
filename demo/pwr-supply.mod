@@ -56,10 +56,14 @@
 ----------------------------------------------------------------------------------------------------
 [DRAWING_GRID BEGIN]
 	[SCHEMATIC BEGIN]
-		default x 2.50 y 2.50
+		spacing x 2.50 y 2.50
+		on_off on
+		style dots
 	[SCHEMATIC END]
 	[BOARD BEGIN]
-		default x 2.500 y 2.500
+		spacing x 2.500 y 2.500
+		on_off on
+		style dots
 	[BOARD END]
 [DRAWING_GRID END]
 ----------------------------------------------------------------------------------------------------
@@ -141,7 +145,7 @@
 			[TEXT BEGIN]
 				content "SILKSCREEN TOP TEST"
 				position x 10 y 10 rotation 45
-				line_width 0.15
+				linewidth 0.15
 				size 1.0
 			[TEXT END]
 		[TOP END]
