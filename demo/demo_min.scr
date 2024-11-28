@@ -2,7 +2,7 @@ schematic demo set grid on
 schematic demo set grid spacing 2 2
 schematic demo set cursor 80 130 10
 
-board demo move frame absolute 100 -80
+board demo move frame absolute -200 -80
 board demo set grid on
 board demo set grid spacing 1 1
 board demo set cursor 30 17 10
@@ -12,10 +12,10 @@ board demo display outline
 board demo display conductors 1
 board demo display conductors 2 off
 board demo display conductors 3 off
-board demo display conductors 4 #off
+board demo display conductors 4 off
 
-board demo display stop top
-board demo display stop bottom
+board demo display stop top off
+board demo display stop bottom off
 
 board demo display stencil top
 board demo display stencil bottom
@@ -42,13 +42,15 @@ schematic demo place label 1 80 80 input # tag label
 schematic demo draw net P5V 1 80 90 62.5 90
 schematic demo place label 1 70 90 0 1 0 # simple label
 
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 120 130 0 T_TO220H
+board demo move device T1 absolute 8 30
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 80 130 0 S_1206
 schematic demo set value C1 100n
 schematic demo set partcode C1 C_PAC_S_1206_VAL_10n
 
 # Fehler hängt:
 # board demo move device C1 absolute 10 10
-board demo move device C1 absolute 20 120
+board demo move device C1 absolute 44 30
 board demo rotate device C1 relative 20
 # board demo rotate device C1 relative 19
 # board demo flip device C1 bottom
@@ -67,9 +69,9 @@ schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/con
 # schematic demo set purpose X1 "PWR IN POS"
 schematic demo draw net GND 1 62.5 150  75 150
 # schematic demo place label 1 65 150 0 1 0 # simple label
-board demo move device X1 absolute -115 -150
+board demo move device X1 absolute 45 20
 # board demo flip device X1 bottom
-board demo rotate device X1 relative -90
+board demo rotate device X1 relative 180
 
 
 # schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 66 120 0 T_0207 #  S_1206
@@ -222,6 +224,7 @@ board demo set zone relief width_min 0.31
 
 # rechteckig 100x50 überstand nach links unten
 board demo route net gnd 1 zone line -1 -1 line 100 -1 line 100 50 line -1 50
+# board demo route freetrack 1 zone line -1 -1 line 100 -1 line 100 50 line -1 50
 # board demo route net gnd 1 zone line -1 -1 line 99 1 line 100 50 line -1 50
 
 # rechteckig innen ohne überstand
