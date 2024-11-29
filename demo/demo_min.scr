@@ -149,7 +149,7 @@ board demo route net GND 1 line 0.5  3 3.4  6 3
 board demo route net IN 1 line 0.5  6 2   8 2
 
 # board demo display vias off
-# board demo place via GND 8 3
+board demo place via GND 8 3
 # board demo place via GND 9 3 buried 2 3
 # board demo place via GND 8 2 blind top 2
 
