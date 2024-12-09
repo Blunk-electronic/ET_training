@@ -172,10 +172,10 @@ board demo place via GND 8 3
 # board demo route net GND 1 line 0.5  30 6.5   20 45
 
 board demo display restrict route 1 on
-board demo draw route_restrict [1] 0.2 line 50 30 70 30
-board demo draw route_restrict [1] 0.2 arc 60 40  50 40  70 40 ccw
-board demo draw route_restrict [1] 0.2 circle 60 40  5
-
+board demo draw route_restrict [1] line 50 30 70 30
+board demo draw route_restrict [1] arc 60 40  50 40  70 40 ccw
+board demo draw route_restrict [1] circle 60 40  5
+# board demo delete route_restrict 50 30 10
 # um -10 in x und versetzt
 # board demo draw outline line -10 -10 line 70 -10 line 70 70 line -10 70
 
@@ -255,7 +255,8 @@ board demo place text conductor 3 0.15 1 20 5 0 "LY3"
 #board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 51 line -1 51
 #board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 30 line -1 30
  
-board demo route freetrack 3 line 0.2 20 30 22 30
+board demo route freetrack 1 line 0.2 20 28 22 28
+board demo route freetrack 1 line 0.2 20 30 22 30
  
 # board demo route net GND 1 zone line -1 15 line 18 15 line 18 25 line 1 25
 board demo place text conductor 1 0.15 1 4 15.5 0 "GND"
@@ -315,7 +316,7 @@ board demo draw assy top line 1  21 11  40 11
 board demo draw assy top line 1  21 10  40 10
 
 board demo draw silkscreen top line 1  27 31   30 31
-# board demo draw silkscreen top line 1 1 13  20 13
+board demo draw silkscreen top line 1  27 30   30 31
 
 
 
