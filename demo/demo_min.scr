@@ -171,10 +171,15 @@ board demo place via GND 8 3
 
 # board demo route net GND 1 line 0.5  30 6.5   20 45
 
-board demo display restrict route 1 on
+board demo display restrict route 1
 board demo draw route_restrict [1] line 50 30 70 30
 board demo draw route_restrict [1] arc 60 40  50 40  70 40 ccw
 board demo draw route_restrict [1] circle 60 40  5
+board demo draw route_restrict [1] zone line 50 50 line 70 50 line 70 70 line 50 70
+
+board demo display restrict via 1
+board demo draw via_restrict   [1] zone line 40 40 line 50 40 line 45 50
+
 # board demo delete route_restrict 50 30 10
 # um -10 in x und versetzt
 # board demo draw outline line -10 -10 line 70 -10 line 70 70 line -10 70
