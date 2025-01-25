@@ -160,8 +160,20 @@
 	[SILKSCREEN END]
 	[ASSEMBLY_DOCUMENTATION BEGIN]
 		[TOP BEGIN]
+			[PLACEHOLDER BEGIN]
+				meaning module
+				position x 2 y 44 rotation 0
+				linewidth 0.2
+				size 2.0
+			[PLACEHOLDER END]
 		[TOP END]
 		[BOTTOM BEGIN]
+			[PLACEHOLDER BEGIN]
+				meaning module
+				position x 8 y 47 rotation 0
+				linewidth 0.2
+				size 2.0
+			[PLACEHOLDER END]
 		[BOTTOM END]
 	[ASSEMBLY_DOCUMENTATION END]
 	[STENCIL BEGIN]
