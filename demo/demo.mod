@@ -213,13 +213,20 @@
 	[VIA_RESTRICT BEGIN]
 	[VIA_RESTRICT END]
 	[CONDUCTOR BEGIN]
---		[TEXT BEGIN]
---			layer 1
---			content "CONDUCTOR 1 TEST"
---			position x 10 y 20 rotation 5
---			line_width 0.15
---			size 1.0
---		[TEXT END]
+		[PLACEHOLDER BEGIN]
+			layer 1
+			meaning module
+			position x 14 y 47 rotation 0
+			linewidth 0.2
+			size 2.0
+		[PLACEHOLDER END]
+		[TEXT BEGIN]
+			layer 1
+			content "CONDUCTOR 1 TEST"
+			position x 10 y 20 rotation 5
+			linewidth 0.15
+			size 1.0
+		[TEXT END]
 		--[TEXT BEGIN]
 			--layer 4
 			--content "CONDUCTOR 4 TEST"
