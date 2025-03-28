@@ -102,7 +102,8 @@ schematic demo draw net GND 1 100 125  120 125
 #board demo draw outline line 0 0 line 160 0 line 160 80 line 0 80
 
 # 0.5 EURO format
-board demo draw outline line 0 0 line 50 0 line 50 50 line 0 50
+# board demo draw outline line 0 0 line 50 0 line 50 50 line 0 50
+board demo draw outline line 0 0 arc 50 25  50 0 ccw line 50 50 line 0 50
 # board demo draw outline line 0 0 line 10 0 line 10 40 line 20 40 line 20 0 line 50 0 line 50 50 line 0 50
 # board demo draw outline line 0 0 arc 20 0 10 0 cw line 30 0 line 50 0 line 50 50 line 0 50
 
@@ -120,6 +121,10 @@ board demo draw hole circle 9 7 1.2
 board demo draw hole circle 34 1.5 0.2
 board demo draw hole circle 32 5 0.6
 board demo draw hole line 45.5 0.5 line 48 0.5 line 48 8 line 47 8
+
+# board demo draw hole line 9 14  line 20 14  line 20 18 line 9 18
+board demo draw hole line 9 14  arc 20 16  20 14 ccw  line 20 18  line 9 18
+# board demo draw hole line 9 14 arc 12 14  11 14 cw line 13 14 line 20 14 line 20 18 line 9 18
 
 # fiducials
 board demo add device $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac FD 40 50
@@ -156,7 +161,7 @@ board demo place via GND 8 3
 
 # keepout test
 board demo draw keepout top zone line 0 70 line 10 70 line 10 80 line 0 80
-board demo display keepout top off
+board demo display keepout top on
 
 
 # stencil test
