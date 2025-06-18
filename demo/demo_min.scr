@@ -1,5 +1,5 @@
 schematic demo set grid on
-schematic demo set grid spacing 2 2
+schematic demo set grid spacing 1 1
 schematic demo set cursor 80 130 10
 
 board demo move frame absolute -200 -80
@@ -9,16 +9,16 @@ board demo set cursor 30 17 10
 
 board demo display outline
 
-board demo display conductors 1
+board demo display conductors 1 on
 board demo display conductors 2 off
-board demo display conductors 3
-board demo display conductors 4
+board demo display conductors 3 off
+board demo display conductors 4 on
 
 board demo display stopmask top on
-board demo display stopmask bottom on
+board demo display stopmask bottom off
 
-board demo display stencil top on
-board demo display stencil bottom on
+board demo display stencil top off
+board demo display stencil bottom off
 
 board demo display assy top on
 board demo display assy bottom on
@@ -32,15 +32,15 @@ board demo display silkscreen bottom on
 
 
 # nets
-schematic demo draw net X_OPEN 1 80 70  60 70
-schematic demo draw net GND 1 80 80  60 80
-schematic demo place label 1 70 80 0 1 0 # simple label
-schematic demo place label 1 60 80 input # tag label
-schematic demo place label 1 80 80 input # tag label
+# schematic demo draw net X_OPEN 1 80 70  60 70
+# schematic demo draw net GND 1 80 80  60 80
+# schematic demo place label 1 70 80 0 1 0 # simple label
+# schematic demo place label 1 60 80 input # tag label
+# schematic demo place label 1 80 80 input # tag label
 
 
-schematic demo draw net P5V 1 80 90 62.5 90
-schematic demo place label 1 70 90 0 1 0 # simple label
+# schematic demo draw net P5V 1 80 90 62.5 90
+# schematic demo place label 1 70 90 0 1 0 # simple label
 
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 120 130 0 T_TO220H
 board demo move device T1 absolute 8 30
@@ -57,21 +57,32 @@ board demo rotate device C1 relative 20
 
 
 # board demo flip device C1 bottom
-schematic demo draw net GND 1 80 126 80 100
-schematic demo place label 1 80 100 input # tag label
-schematic demo place label 1 80 126 input # tag label
+# schematic demo draw net GND 1 80 126 80 100
+# schematic demo draw net GND 1 80 100 100 100
+# schematic demo place label 1 100 100 input # tag label
 
-schematic demo place label 1 80 110 -1 0 90 # simple label
-schematic demo draw net IN 1 80 134 80 150
-schematic demo place label 1 80 145 -1 0 90 # simple label
+# schematic demo draw net GND 2 80 126 80 100
+# schematic demo draw net GND 2 80 100 100 100
+
+# schematic demo drag segment GND 1 80 100 2 absolute 70 90
+
+# schematic demo place label 1 80 100 input # tag label
+# schematic demo place label 1 80 126 input # tag label
+
+# schematic demo place label 1 80 110 -1 0 90 # simple label
+# schematic demo draw net IN 1 78 150 90 150
+# schematic demo place label 1 78 150 input # tag label
+# schematic demo place label 1 90 150 input # tag label
+# schematic demo draw net IN 1 80 134 80 150
+# schematic demo place label 1 80 145 -1 0 90 # simple label
 
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
 # schematic demo set purpose X1 "PWR IN POS"
-schematic demo draw net GND 1 62.5 150  75 150
+# schematic demo draw net GND 1 62.5 150  75 150
 # schematic demo place label 1 65 150 0 1 0 # simple label
 board demo move device X1 absolute 45 20
 # board demo flip device X1 bottom
-board demo rotate device X1 relative 180
+# board demo rotate device X1 relative 180
 
 
 # schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 66 120 0 T_0207 #  S_1206
@@ -79,8 +90,8 @@ board demo rotate device X1 relative 180
 # schematic demo set value R1 330R
 # schematic demo set partcode R1 R_PAC_T_0207_VAL_330R
 # schematic demo set purpose R1 "brightness"
-schematic demo draw net GND 1 66 124  66 130
-schematic demo draw net IN 1 66 116  66 110
+# schematic demo draw net GND 1 66 124  66 130
+# schematic demo draw net IN 1 66 116  66 110
 # board demo move device R1 absolute 10 5
 # board demo rotate device R1 relative 10
 # board demo flip device R1 bottom
@@ -88,7 +99,7 @@ schematic demo draw net IN 1 66 116  66 110
 
 #schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 100 130 90 S_1206
 # schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 100 130 0 S_1206
-schematic demo draw net GND 1 100 125  120 125
+# schematic demo draw net GND 1 100 125  120 125
 # board demo move device C2 absolute 40 11
 # board demo rotate device C2 relative 10
 
@@ -149,12 +160,14 @@ board demo add device $HOME/git/BEL/ET_component_library/packages/holes/mounting
 
 board demo route net GND 1 line 0.5  6 3   8 3
 # board demo route net GND 2 line 0.5  8 3  10 1
-board demo route net GND 1 line 0.5  3 3.4  6 3
+# board demo route net GND 1 line 0.5  3 3.4  6 3
 # board demo route net GND 1 line 0.5  32 4   32 2
-board demo route net IN 1 line 0.5  6 2   8 2
+board demo place via GND 8 3
+
+board demo route net IN 1 line 0.5  6 1   8 1
+board demo place via IN 8 1
 
 # board demo display vias off
-board demo place via GND 8 3
 # board demo place via GND 9 3 buried 2 3
 # board demo place via GND 8 2 blind top 2
 
@@ -404,5 +417,19 @@ board demo place placeholder stopmask       bottom 0.15 2 21 44 0 module
 
 board demo place placeholder assy       top   0.15 2 21 40 0 customer
 board demo place placeholder silkscreen top   0.15 2 21 38 0 customer
+
+
+# schematic demo delete segment 1 80 120 2
+# schematic demo drag segment 1 80 100 2 absolute 70 90
+# schematic demo drag segment 1 80 100 2 relative -10 -10
+
+schematic demo draw net GND 1 70 100  80 100
+schematic demo draw net GND 1 80 126  80 100
+# schematic demo draw net GND 1 70 100 100 100
+# schematic demo draw net GND 1 70 110  80 110
+# schematic demo draw net GND 1 70 110  70 120
+# schematic demo draw net GND 1 80 100  80  90
+# schematic demo place label 1 100 100 input # tag label
+
 
 # script end
