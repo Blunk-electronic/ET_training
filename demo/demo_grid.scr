@@ -1,5 +1,6 @@
 #schematic demo display grid
-schematic demo set grid 20 20
+schematic demo set grids spacing 20 20
+# schematic demo set cursor 110 100 5
 #schematic demo position cursor absolute 100 120
 #schematic demo zoom center 100 120 10
 

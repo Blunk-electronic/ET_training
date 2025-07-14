@@ -423,8 +423,51 @@ board demo place placeholder silkscreen top   0.15 2 21 38 0 customer
 # schematic demo drag segment 1 80 100 2 absolute 70 90
 # schematic demo drag segment 1 80 100 2 relative -10 -10
 
-schematic demo draw net GND 1 70 100  80 100
-schematic demo draw net GND 1 80 126  80 100
+# schematic demo draw net GND 1 70 100  90 100
+# schematic demo draw net GND 1 90 100  90 110
+# schematic demo draw net GND 1 80 110  90 110
+
+# schematic demo draw net VCC 1 80 110  90 110
+
+
+# schematic demo draw net VCC 1 70 101  90 101
+
+# waagerechtes Segment links:
+# waagerechtes Segment rechts:
+# waagerechtes Segment dazwischen als Verbindung:
+schematic demo draw net GND 1 80 100  90 100
+schematic demo place label 1 80 100 input # tag label
+# schematic demo place label 1 81 100  0 1  0 # simple label
+schematic demo draw net GND 1 100 100  110 100
+# schematic demo place label 1 100 100 input # tag label
+# schematic demo place label 1 101 100  0 1  0
+schematic demo draw net GND 1 90 100  100 100
+
+# schematic demo execute script demo_grid.scr
+
+# schematic demo set cursor 90 100
+# schematic demo zoom center 90 100 10
+
+# senkrechtes Segment links und rechts
+# Querverbindung oben
+# schematic demo draw net GND 1 80 126  80 100
+# schematic demo draw net GND 1 90 126  90 100
+# schematic demo place label 1 90 100 input # tag label
+# schematic demo draw net GND 1 80 126  90 126
+
+# waagerechtes Segment links
+# senkrechtes Segment rechs
+# waagerechtes Segment rechts
+# waagerechtes Segment dazwischen als Verbindung
+# schematic demo draw net GND 1 80 100  90 100
+# schematic demo place label 1 81 100  0 1  0
+# schematic demo draw net GND 1 100 100  100 110
+# schematic demo draw net GND 1 100 100  110 100
+# schematic demo draw net GND 1 90 100  100 100
+
+
+# schematic demo drag segment 1 80 100 2 relative 10 0
+
 # schematic demo draw net GND 1 70 100 100 100
 # schematic demo draw net GND 1 70 110  80 110
 # schematic demo draw net GND 1 70 110  70 120
