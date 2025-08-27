@@ -34,15 +34,19 @@ board demo display silkscreen bottom on
 # nets
 # schematic demo draw net X_OPEN 1 80 70  60 70
 # schematic demo draw net GND 1 80 80  60 80
-# schematic demo place label 1 70 80 0 1 0 # simple label
-# schematic demo place label 1 60 80 input # tag label
-# schematic demo place label 1 80 80 input # tag label
+# schematic demo place net_label 1 70 80
+# schematic demo place net_connector 1 60 80 input
+# schematic demo place net_connector 1 80 80 input
 
 
 # schematic demo draw net P5V 1 80 90 62.5 90
-# schematic demo place label 1 70 90 0 1 0 # simple label
+# schematic demo place net_label 1 70 90
 
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 120 130 0 T_TO220H
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 100 140 0 D
+board demo move device IC1 absolute 56 40
+
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 90 120 0 T_TO220H
+#schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 90 132 0 T_TO220H
 board demo move device T1 absolute 8 30
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 80 130 0 S_1206
 schematic demo set value C1 100n
@@ -55,31 +59,38 @@ board demo rotate device C1 relative 20
 # board demo rotate device C1 relative 19
 # board demo flip device C1 bottom
 
+schematic demo draw net GND 1 80 126  80 100
+schematic demo place net_label 1 80 123
+schematic demo draw net GND 2 80 126  80 110
+
+schematic demo draw net GND 1 90 126  100 126
+schematic demo place net_connector 1 100 126 input
+
 
 # board demo flip device C1 bottom
 # schematic demo draw net GND 1 80 126 80 100
 # schematic demo draw net GND 1 80 100 100 100
-# schematic demo place label 1 100 100 input # tag label
+# schematic demo place net_connector 1 100 100 input
 
 # schematic demo draw net GND 2 80 126 80 100
 # schematic demo draw net GND 2 80 100 100 100
 
 # schematic demo drag segment GND 1 80 100 2 absolute 70 90
 
-# schematic demo place label 1 80 100 input # tag label
-# schematic demo place label 1 80 126 input # tag label
+# schematic demo place net_connector 1 80 100 input
+# schematic demo place net_connector 1 80 126 input
 
-# schematic demo place label 1 80 110 -1 0 90 # simple label
+# schematic demo place net_label 1 80 110
 # schematic demo draw net IN 1 78 150 90 150
-# schematic demo place label 1 78 150 input # tag label
-# schematic demo place label 1 90 150 input # tag label
+# schematic demo place net_connector 1 78 150 input
+# schematic demo place net_connector 1 90 150 input
 # schematic demo draw net IN 1 80 134 80 150
-# schematic demo place label 1 80 145 -1 0 90 # simple label
+# schematic demo place net_label 1 80 145
 
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
 # schematic demo set purpose X1 "PWR IN POS"
 # schematic demo draw net GND 1 62.5 150  75 150
-# schematic demo place label 1 65 150 0 1 0 # simple label
+# schematic demo place net_label 1 65 150
 board demo move device X1 absolute 45 20
 # board demo flip device X1 bottom
 # board demo rotate device X1 relative 180
@@ -435,15 +446,19 @@ board demo place placeholder silkscreen top   0.15 2 21 38 0 customer
 # waagerechtes Segment links:
 # waagerechtes Segment rechts:
 # waagerechtes Segment dazwischen als Verbindung:
-schematic demo draw net GND 1 80 100  90 100
-schematic demo place label 1 80 100 input # tag label
-# schematic demo place label 1 81 100  0 1  0 # simple label
-schematic demo draw net GND 1 100 100  110 100
-# schematic demo place label 1 100 100 input # tag label
-# schematic demo place label 1 101 100  0 1  0
-schematic demo draw net GND 1 90 100  100 100
+# schematic demo draw net GND 1 80 100  90 100
+# schematic demo place net_connector 1 80 100 input
+# schematic demo place net_label 1 81 100
+# schematic demo draw net GND 1 100 100  110 100
+# schematic demo place net_connector 1 100 100 input
+# schematic demo place net_label 1 101 100
+# schematic demo draw net GND 1 90 100  100 100
+
+# schematic demo draw net
+# schematic demo draw net GND 2 90 100  100 100
 
 # schematic demo execute script demo_grid.scr
+
 
 # schematic demo set cursor 90 100
 # schematic demo zoom center 90 100 10
@@ -451,20 +466,43 @@ schematic demo draw net GND 1 90 100  100 100
 # senkrechtes Segment links und rechts
 # Querverbindung oben
 # schematic demo draw net GND 1 80 126  80 100
-# schematic demo draw net GND 1 90 126  90 100
-# schematic demo place label 1 90 100 input # tag label
+# schematic demo draw net GND 2 80 126  80 110
+# schematic demo draw net GND 1 90 126  100 126
 # schematic demo draw net GND 1 80 126  90 126
+# schematic demo draw net GND 1 80 126  70 126
+# schematic demo draw net GND 1 70 100  90 100
+# schematic demo draw net GND 1 80 100  80 80
+
+# 
+schematic demo draw net P5V 1 90 114  100 114
+schematic demo place net_label 1 95 114
+schematic demo place net_connector 1 100 114 input
+schematic demo draw net P5V 1 80 134   80 140
+schematic demo draw net P5V 2 60 130  100 130
+
+# rename strand
+# schematic demo rename net GND GNDA 1 95 126 2
+
+# rename on a single sheet:
+# schematic demo rename net GND GNDA 1
+
+# rename whole net:
+schematic demo rename net GND GNDA
+
 
 # waagerechtes Segment links
 # senkrechtes Segment rechs
 # waagerechtes Segment rechts
 # waagerechtes Segment dazwischen als Verbindung
 # schematic demo draw net GND 1 80 100  90 100
-# schematic demo place label 1 81 100  0 1  0
+# schematic demo place net_label 1 81 100
 # schematic demo draw net GND 1 100 100  100 110
 # schematic demo draw net GND 1 100 100  110 100
-# schematic demo draw net GND 1 90 100  100 100
+schematic demo draw net GND 1 90 100  100 100
+schematic demo place net_label 1 93 100
 
+
+schematic demo fetch unit IC1 C 1 70 100 0
 
 # schematic demo drag segment 1 80 100 2 relative 10 0
 
@@ -472,7 +510,7 @@ schematic demo draw net GND 1 90 100  100 100
 # schematic demo draw net GND 1 70 110  80 110
 # schematic demo draw net GND 1 70 110  70 120
 # schematic demo draw net GND 1 80 100  80  90
-# schematic demo place label 1 100 100 input # tag label
+# schematic demo place net_connector 1 100 100 input
 
 
 # script end
