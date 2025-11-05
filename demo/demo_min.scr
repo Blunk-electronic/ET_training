@@ -42,10 +42,14 @@ board demo display silkscreen bottom on
 # schematic demo draw net P5V 1 80 90 62.5 90
 # schematic demo place net_label 1 70 90
 
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/supply/gnd.dev 1 60 140 0
+
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 100 140 0 D
 board demo move device IC1 absolute 56 40
 
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 90 120 0 T_TO220H
+schematic demo set value T1 SD236
+schematic demo set purpose T1 Heating
 #schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 90 132 0 T_TO220H
 board demo move device T1 absolute 8 30
 schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 80 130 0 S_1206
@@ -175,8 +179,8 @@ board demo route net GND 1 line 0.5  6 3   8 3
 # board demo route net GND 1 line 0.5  32 4   32 2
 board demo place via GND 8 3
 
-board demo route net IN 1 line 0.5  6 1   8 1
-board demo place via IN 8 1
+# board demo route net IN 1 line 0.5  6 1   8 1
+# board demo place via IN 8 1
 
 # board demo display vias off
 # board demo place via GND 9 3 buried 2 3
@@ -264,7 +268,10 @@ board demo draw stopmask top zone line 52 0 line 60 0 line 60 4 line 52 4
 # board demo draw hole circle 0 0 5.5
 # board demo draw hole circle 47 35 5.5
 # board demo draw hole line 65 40 line 75 40 arc 70 50 75 50 ccw line 65 50
-board demo set zone fill solid # hatched
+
+board demo set zone fill solid
+# board demo set zone fill hatched
+# board demo set zone spacing 1.1
 board demo set zone linewidth 0.3
 board demo set zone relief gap_max 0.4
 board demo set zone relief width_min 0.31
@@ -487,7 +494,7 @@ schematic demo draw net P5V 2 60 130  100 130
 # schematic demo rename net GND GNDA 1
 
 # rename whole net:
-schematic demo rename net GND GNDA
+# schematic demo rename net GND GNDA
 
 
 # waagerechtes Segment links
@@ -501,8 +508,28 @@ schematic demo rename net GND GNDA
 schematic demo draw net GND 1 90 100  100 100
 schematic demo place net_label 1 93 100
 
+schematic demo draw net GNDA 1 80 120  84 120
 
 schematic demo fetch unit IC1 C 1 70 100 0
+schematic demo fetch unit IC1 D 2 70 100 0
+
+# schematic demo move unit IC1 C absolute 1 60 100
+# schematic demo move unit IC1 C absolute 1 70 100
+schematic demo move unit IC1 C relative 1 -10 0
+schematic demo move unit IC1 C relative -1 10 0
+
+# schematic demo rotate unit IC1 C absolute -90
+# schematic demo rotate unit IC1 C relative 90
+schematic demo rename device IC1 IC20
+schematic demo rotate unit IC20 A relative 90
+
+schematic demo move name T1 1 relative 10 0
+schematic demo rotate name T1 1 vertical
+schematic demo rotate name T1 1 horizontal
+
+schematic demo move unit T1 1 absolute 1 100 140
+
+# schematic demo show net GND
 
 # schematic demo drag segment 1 80 100 2 relative 10 0
 

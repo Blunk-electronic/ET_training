@@ -1,0 +1,10 @@
+schematic demo set grid on
+schematic demo set grid spacing 1 1
+schematic demo set cursor 80 130 10
+
+schematic demo draw net GND 1 100 126  80 126
+schematic demo place net_connector 1 100 126 input
+
+
+
+# script end

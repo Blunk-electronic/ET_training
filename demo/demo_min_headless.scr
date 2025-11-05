@@ -7,8 +7,8 @@
 
 
 # nets
-schematic demo draw net GND 1 80 80 62.5 80
-schematic demo place label 1 70 80 0 1 0 # simple label
+schematic demo draw net GND 1 80 80 60 80
+# schematic demo place label 1 70 80 0 1 0 # simple label
 
 
 # EURO card format:
@@ -49,16 +49,16 @@ schematic demo place label 1 70 80 0 1 0 # simple label
 #board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
 
 # 3/4 kreis links unten, trapez rechts:
-board demo move board relative 20 20
-board demo draw outline arc 0 0 0 20 ccw line 20 0 line 100 0 line 130 20 line 130 80 line 100 100 line 1 101
-board demo draw hole line 100 10 line 120 30 line 120 70 line 100 90
-board demo draw hole circle 0 0 5.5
-board demo draw hole circle 47 35 5.5
-board demo draw hole line 65 40 line 75 40 arc 70 50 75 50 ccw line 65 50
-board demo set zone fill solid # hatched
-board demo set zone width 0.3
+# board demo move board relative 20 20
+# board demo draw outline arc 0 0 0 20 ccw line 20 0 line 100 0 line 130 20 line 130 80 line 100 100 line 1 101
+# board demo draw hole line 100 10 line 120 30 line 120 70 line 100 90
+# board demo draw hole circle 0 0 5.5
+# board demo draw hole circle 47 35 5.5
+# board demo draw hole line 65 40 line 75 40 arc 70 50 75 50 ccw line 65 50
+# board demo set zone fill solid # hatched
+# board demo set zone width 0.3
 # board demo set zone width 2.9
-board demo set zone isolation 0.2
+# board demo set zone isolation 0.2
 
 
 # rechteckig 100x50 überstand nach links unten
@@ -90,11 +90,11 @@ board demo set zone isolation 0.2
 # board demo place text conductor 3 0.5 10 11 5 45 "ab/Si"
 # board demo place text conductor 3 0.15 1 20 5 0 "LY3"
 
-board demo route net gnd 4 zone line 0 0 line 135 0 line 135 110 line 0 110
-board demo place text conductor 4 0.15 5 123 25 90 "KEEP CLEAR"
-board demo place text conductor 4 0.5 5 90 25 0 "KEEP CLEAR"
+# board demo route net gnd 4 zone line 0 0 line 135 0 line 135 110 line 0 110
+# board demo place text conductor 4 0.15 5 123 25 90 "KEEP CLEAR"
+# board demo place text conductor 4 0.5 5 90 25 0 "KEEP CLEAR"
 # board demo place text conductor 4 0.15 5 10 1.1 90 "KEEP CLEAR"
-board demo place text conductor 4 0.6 5 45 60 45.33 "KEEP CLEAR"
+# board demo place text conductor 4 0.6 5 45 60 45.33 "KEEP CLEAR"
 # board demo place text conductor 4 0.15 5 70 70 -5 "KEEP CLEAR"
 # board demo place text conductor 4 0.15 3 10 85 45 "BOT"
 
@@ -103,7 +103,7 @@ board demo place text conductor 4 0.6 5 45 60 45.33 "KEEP CLEAR"
 
 # board demo set grid 0.01 0.01
 
-board demo fill zone # optional net name
+# board demo fill zone # optional net name
 # board demo hide zone # optional net name
 
 # board demo position cursor absolute 50 25
