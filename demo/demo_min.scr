@@ -539,5 +539,18 @@ schematic demo move unit T1 1 absolute 1 100 140
 # schematic demo draw net GND 1 80 100  80  90
 # schematic demo place net_connector 1 100 100 input
 
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 60 130 0 S_1206
+schematic demo rename device C2 C10
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 60 120 0 S_1206
+
+board demo add device $HOME/git/BEL/ET_component_library/packages/S_1206.pac C 7 14
+
+schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 60 110 0 S_1206
+
+board demo add device $HOME/git/BEL/ET_component_library/packages/S_1206.pac C 10 14
+
+
+board demo move name IC20 silkscreen top 1 relative 5 0
+
 
 # script end
