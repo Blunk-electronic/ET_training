@@ -1,556 +1,568 @@
-schematic demo set grid on
-schematic demo set grid spacing 1 1
-schematic demo set cursor 80 130 10
+schematic demo_test set grid on
+schematic demo_test set grid spacing 1 1
+schematic demo_test set cursor 80 130 10
 
-board demo move frame absolute -200 -80
-board demo set grid on
-board demo set grid spacing 1 1
-board demo set cursor 30 17 10
+board demo_test move frame absolute -200 -80
+board demo_test set grid on
+board demo_test set grid spacing 1 1
+board demo_test set cursor 50 30 30
 
-board demo display outline
+board demo_test display outline
 
-board demo display conductors 1 on
-board demo display conductors 2 off
-board demo display conductors 3 off
-board demo display conductors 4 on
+board demo_test display conductors 1 on
+board demo_test display conductors 2 off
+board demo_test display conductors 3 off
+board demo_test display conductors 4 on
 
-board demo display stopmask top on
-board demo display stopmask bottom off
+board demo_test display stopmask top on
+board demo_test display stopmask bottom off
 
-board demo display stencil top off
-board demo display stencil bottom off
+board demo_test display stencil top off
+board demo_test display stencil bottom off
 
-board demo display assy top on
-board demo display assy bottom on
+board demo_test display assy top on
+board demo_test display assy bottom on
 
 
 
-schematic demo display ports
+schematic demo_test display ports
 
-board demo display silkscreen top on
-board demo display silkscreen bottom on
+board demo_test display silkscreen top on
+board demo_test display silkscreen bottom on
 
 
 # nets
-# schematic demo draw net X_OPEN 1 80 70  60 70
-# schematic demo draw net GND 1 80 80  60 80
-# schematic demo place net_label 1 70 80
-# schematic demo place net_connector 1 60 80 input
-# schematic demo place net_connector 1 80 80 input
+# schematic demo_test draw net X_OPEN 1 80 70  60 70
+# schematic demo_test draw net GND 1 80 80  60 80
+# schematic demo_test place net_label 1 70 80
+# schematic demo_test place net_connector 1 60 80 input
+# schematic demo_test place net_connector 1 80 80 input
 
 
-# schematic demo draw net P5V 1 80 90 62.5 90
-# schematic demo place net_label 1 70 90
+# schematic demo_test draw net P5V 1 80 90 62.5 90
+# schematic demo_test place net_label 1 70 90
 
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/supply/gnd.dev 1 60 140 0
+schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/supply/gnd.dev 1 60 140 0
 
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 100 140 0 D
-board demo move device IC1 absolute 56 40
+schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 1 100 140 0 D
+board demo_test move device IC1 absolute 56 40
 
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 90 120 0 T_TO220H
-schematic demo set value T1 SD236
-schematic demo set purpose T1 Heating
-#schematic demo add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 90 132 0 T_TO220H
-board demo move device T1 absolute 8 30
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 80 130 0 S_1206
-schematic demo set value C1 100n
-schematic demo set partcode C1 C_PAC_S_1206_VAL_10n
+schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 90 120 0 T_TO220H
+schematic demo_test set value T1 SD236
+schematic demo_test set purpose T1 Heating
+#schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 90 132 0 T_TO220H
+board demo_test move device T1 absolute 8 30
+schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 80 130 0 S_1206
+schematic demo_test set value C1 100n
+schematic demo_test set partcode C1 C_PAC_S_1206_VAL_10n
 
 # Fehler hängt:
-# board demo move device C1 absolute 10 10
-board demo move device C1 absolute 44 30
-board demo rotate device C1 relative 20
-# board demo rotate device C1 relative 19
-# board demo flip device C1 bottom
+# board demo_test move device C1 absolute 10 10
+board demo_test move device C1 absolute 44 30
+# board demo_test rotate device C1 relative 20
+# board demo_test rotate device C1 relative 19
+# board demo_test flip device C1 bottom
 
-schematic demo draw net GND 1 80 126  80 100
-schematic demo place net_label 1 80 123
-schematic demo draw net GND 2 80 126  80 110
+schematic demo_test draw net GND 1 80 126  80 100
+schematic demo_test place net_label 1 80 123
+schematic demo_test draw net GND 2 80 126  80 110
 
-schematic demo draw net GND 1 90 126  100 126
-schematic demo place net_connector 1 100 126 input
-
-
-# board demo flip device C1 bottom
-# schematic demo draw net GND 1 80 126 80 100
-# schematic demo draw net GND 1 80 100 100 100
-# schematic demo place net_connector 1 100 100 input
-
-# schematic demo draw net GND 2 80 126 80 100
-# schematic demo draw net GND 2 80 100 100 100
-
-# schematic demo drag segment GND 1 80 100 2 absolute 70 90
-
-# schematic demo place net_connector 1 80 100 input
-# schematic demo place net_connector 1 80 126 input
-
-# schematic demo place net_label 1 80 110
-# schematic demo draw net IN 1 78 150 90 150
-# schematic demo place net_connector 1 78 150 input
-# schematic demo place net_connector 1 90 150 input
-# schematic demo draw net IN 1 80 134 80 150
-# schematic demo place net_label 1 80 145
-
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
-# schematic demo set purpose X1 "PWR IN POS"
-# schematic demo draw net GND 1 62.5 150  75 150
-# schematic demo place net_label 1 65 150
-board demo move device X1 absolute 45 20
-# board demo flip device X1 bottom
-# board demo rotate device X1 relative 180
+schematic demo_test draw net GND 1 90 126  100 126
+schematic demo_test place net_connector 1 100 126 input
 
 
-# schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 66 120 0 T_0207 #  S_1206
-# schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 66 120 0 S_0805
-# schematic demo set value R1 330R
-# schematic demo set partcode R1 R_PAC_T_0207_VAL_330R
-# schematic demo set purpose R1 "brightness"
-# schematic demo draw net GND 1 66 124  66 130
-# schematic demo draw net IN 1 66 116  66 110
-# board demo move device R1 absolute 10 5
-# board demo rotate device R1 relative 10
-# board demo flip device R1 bottom
+# board demo_test flip device C1 bottom
+# schematic demo_test draw net GND 1 80 126 80 100
+# schematic demo_test draw net GND 1 80 100 100 100
+# schematic demo_test place net_connector 1 100 100 input
+
+# schematic demo_test draw net GND 2 80 126 80 100
+# schematic demo_test draw net GND 2 80 100 100 100
+
+# schematic demo_test drag segment GND 1 80 100 2 absolute 70 90
+
+# schematic demo_test place net_connector 1 80 100 input
+# schematic demo_test place net_connector 1 80 126 input
+
+# schematic demo_test place net_label 1 80 110
+# schematic demo_test draw net IN 1 78 150 90 150
+# schematic demo_test place net_connector 1 78 150 input
+# schematic demo_test place net_connector 1 90 150 input
+# schematic demo_test draw net IN 1 80 134 80 150
+# schematic demo_test place net_label 1 80 145
+
+schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev 1 60 150 0 T_male_blade
+# schematic demo_test set purpose X1 "PWR IN POS"
+# schematic demo_test draw net GND 1 62.5 150  75 150
+# schematic demo_test place net_label 1 65 150
+board demo_test move device X1 absolute 45 20
+# board demo_test flip device X1 bottom
+# board demo_test rotate device X1 relative 180
 
 
-#schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 100 130 90 S_1206
-# schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 100 130 0 S_1206
-# schematic demo draw net GND 1 100 125  120 125
-# board demo move device C2 absolute 40 11
-# board demo rotate device C2 relative 10
+# schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 66 120 0 T_0207 #  S_1206
+# schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/passive/resistors/R.dev 1 66 120 0 S_0805
+# schematic demo_test set value R1 330R
+# schematic demo_test set partcode R1 R_PAC_T_0207_VAL_330R
+# schematic demo_test set purpose R1 "brightness"
+# schematic demo_test draw net GND 1 66 124  66 130
+# schematic demo_test draw net IN 1 66 116  66 110
+# board demo_test move device R1 absolute 10 5
+# board demo_test rotate device R1 relative 10
+# board demo_test flip device R1 bottom
 
 
-# board demo route net GND 1 line 2  20 20  50 20
-# board demo route net GND 2 line 2  21 16  50 16
-# board demo route net GND 3 line 2  20 12  50 12
-# board demo route net GND 4 line 2  23  8  50  8
+#schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 100 130 90 S_1206
+# schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 100 130 0 S_1206
+# schematic demo_test draw net GND 1 100 125  120 125
+# board demo_test move device C2 absolute 40 11
+# board demo_test rotate device C2 relative 10
+
+
+# board demo_test route net GND 1 line 2  20 20  50 20
+# board demo_test route net GND 2 line 2  21 16  50 16
+# board demo_test route net GND 3 line 2  20 12  50 12
+# board demo_test route net GND 4 line 2  23  8  50  8
 
 # EURO card format:
-#board demo draw outline line 0 0 line 160 0 line 160 80 line 0 80
+#board demo_test draw outline line 0 0 line 160 0 line 160 80 line 0 80
 
 # 0.5 EURO format
-# board demo draw outline line 0 0 line 50 0 line 50 50 line 0 50
-board demo draw outline line 0 0 arc 50 25  50 0 ccw line 50 50 line 0 50
-# board demo draw outline line 0 0 line 10 0 line 10 40 line 20 40 line 20 0 line 50 0 line 50 50 line 0 50
-# board demo draw outline line 0 0 arc 20 0 10 0 cw line 30 0 line 50 0 line 50 50 line 0 50
+# board demo_test draw outline line 0 0 line 50 0 line 50 50 line 0 50
+board demo_test draw outline line 0 0 arc 50 25  50 0 ccw line 50 50 line 0 50
+# board demo_test draw outline line 0 0 line 10 0 line 10 40 line 20 40 line 20 0 line 50 0 line 50 50 line 0 50
+# board demo_test draw outline line 0 0 arc 20 0 10 0 cw line 30 0 line 50 0 line 50 50 line 0 50
 
 # mounting holes (with 3mm diameter)
-# board demo draw hole circle  3 47 1.5
-board demo draw hole circle 48 47 1.5
-board demo draw hole circle  3 12 1.5
-board demo draw hole circle 48 12 1.5
+# board demo_test draw hole circle  3 47 1.5
+board demo_test draw hole circle 48 47 1.5
+board demo_test draw hole circle  3 12 1.5
+board demo_test draw hole circle 48 12 1.5
 
-board demo draw hole circle 39 4 4
-board demo draw hole circle 26 40 3
-board demo draw hole circle 39 40 3
-board demo draw hole line 2 9 line 2 1 line 8 9
-board demo draw hole circle 9 7 1.2
-board demo draw hole circle 34 1.5 0.2
-board demo draw hole circle 32 5 0.6
-board demo draw hole line 45.5 0.5 line 48 0.5 line 48 8 line 47 8
+board demo_test draw hole circle 39 4 4
+board demo_test draw hole circle 26 40 3
+board demo_test draw hole circle 39 40 3
+board demo_test draw hole line 2 9 line 2 1 line 8 9
+board demo_test draw hole circle 9 7 1.2
+board demo_test draw hole circle 34 1.5 0.2
+board demo_test draw hole circle 32 5 0.6
+board demo_test draw hole line 45.5 0.5 line 48 0.5 line 48 8 line 47 8
 
-# board demo draw hole line 9 14  line 20 14  line 20 18 line 9 18
-board demo draw hole line 9 14  arc 20 16  20 14 ccw  line 20 18  line 9 18
-# board demo draw hole line 9 14 arc 12 14  11 14 cw line 13 14 line 20 14 line 20 18 line 9 18
+# board demo_test draw hole line 9 14  line 20 14  line 20 18 line 9 18
+board demo_test draw hole line 9 14  arc 20 16  20 14 ccw  line 20 18  line 9 18
+# board demo_test draw hole line 9 14 arc 12 14  11 14 cw line 13 14 line 20 14 line 20 18 line 9 18
 
 # fiducials
-board demo add device $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac FD 40 50
-# board demo add device $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac FD 5 40
-# board demo add device $HOME/git/BEL/ET_component_library/packages/S_1206.pac XD 6 21
-# board demo flip device XD1 bottom
-# board demo rotate device XD1 relative 10
-# board demo add device $HOME/git/BEL/ET_component_library/packages/fiducials/top_mark.pac TM 5 40
-# board demo add device $HOME/git/BEL/ET_component_library/packages/fiducials/bottom_mark.pac TM 7 38
-# board demo rotate device TM1 relative 10
+board demo_test add device $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac FD 40 50
+# board demo_test add device $HOME/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac FD 5 40
+# board demo_test add device $HOME/git/BEL/ET_component_library/packages/S_1206.pac XD 6 21
+# board demo_test flip device XD1 bottom
+# board demo_test rotate device XD1 relative 10
+# board demo_test add device $HOME/git/BEL/ET_component_library/packages/fiducials/top_mark.pac TM 5 40
+# board demo_test add device $HOME/git/BEL/ET_component_library/packages/fiducials/bottom_mark.pac TM 7 38
+# board demo_test rotate device TM1 relative 10
 
 # non-electrical mounting holes:
-board demo add device $HOME/git/BEL/ET_component_library/packages/holes/mounting_hole_round_4mm.pac MH 40 40
-# board demo add device $HOME/git/BEL/ET_component_library/packages/holes/mounting_hole_rectangular_3x5mm.pac MH 15 45
-# board demo flip device MH2 bottom
-# board demo rotate device MH2 relative 11
-# board demo add device $HOME/git/BEL/ET_component_library/packages/holes/mounting_hole_round_4mm_metal.pac MH 44 32
+board demo_test add device $HOME/git/BEL/ET_component_library/packages/holes/mounting_hole_round_4mm.pac MH 40 40
+# board demo_test add device $HOME/git/BEL/ET_component_library/packages/holes/mounting_hole_rectangular_3x5mm.pac MH 15 45
+# board demo_test flip device MH2 bottom
+# board demo_test rotate device MH2 relative 11
+# board demo_test add device $HOME/git/BEL/ET_component_library/packages/holes/mounting_hole_round_4mm_metal.pac MH 44 32
 
 # electrical mounting holes:
-# schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/holes/mounting_hole.dev 1 58 80 0 round_4mm
-# board demo move device MH4 absolute 32 46
+# schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/passive/holes/mounting_hole.dev 1 58 80 0 round_4mm
+# board demo_test move device MH4 absolute 32 46
 
-board demo route net GND 1 line 0.5  6 3   8 3
-# board demo route net GND 2 line 0.5  8 3  10 1
-# board demo route net GND 1 line 0.5  3 3.4  6 3
-# board demo route net GND 1 line 0.5  32 4   32 2
-board demo place via GND 8 3
+board demo_test route net GND 1 line 0.5  6 3   8 3
+# board demo_test route net GND 2 line 0.5  8 3  10 1
+# board demo_test route net GND 1 line 0.5  3 3.4  6 3
+# board demo_test route net GND 1 line 0.5  32 4   32 2
+board demo_test place via GND 8 3
 
-# board demo route net IN 1 line 0.5  6 1   8 1
-# board demo place via IN 8 1
+# board demo_test route net IN 1 line 0.5  6 1   8 1
+# board demo_test place via IN 8 1
 
-# board demo display vias off
-# board demo place via GND 9 3 buried 2 3
-# board demo place via GND 8 2 blind top 2
+# board demo_test display vias off
+# board demo_test place via GND 9 3 buried 2 3
+# board demo_test place via GND 8 2 blind top 2
 
 
 # keepout test
-board demo draw keepout top zone line 0 70 line 10 70 line 10 80 line 0 80
-board demo display keepout top on
+board demo_test draw keepout top zone line 0 70 line 10 70 line 10 80 line 0 80
+board demo_test display keepout top on
 
 
 # stencil test
-board demo draw stencil top    line   1  10 60  20 60
-board demo draw stencil bottom line   1  10 62  20 62
-board demo draw stencil top arc    1  30 60  20 60  40 60  cw
-board demo draw stencil top circle 1  30 70  5
-board demo draw stencil top zone line 25 55 line 30 55 line 30 65 line 25 65
-# board demo add device $HOME/git/BEL/ET_component_library/packages/test/stencil.pac ST 40 40
-# board demo rotate device ST1 relative 10
+board demo_test draw stencil top    line   1  10 60  20 60
+board demo_test draw stencil bottom line   1  10 62  20 62
+board demo_test draw stencil top arc    1  30 60  20 60  40 60  cw
+board demo_test draw stencil top circle 1  30 70  5
+board demo_test draw stencil top zone line 25 55 line 30 55 line 30 65 line 25 65
+# board demo_test add device $HOME/git/BEL/ET_component_library/packages/test/stencil.pac ST 40 40
+# board demo_test rotate device ST1 relative 10
 
 # stopmask test
-board demo draw stopmask top line   1  52 4  55 4
-board demo draw stopmask top arc    1  58 4  56 4   60 4  cw
-board demo draw stopmask top circle 1  58 0  2
-board demo draw stopmask top zone line 52 0 line 60 0 line 60 4 line 52 4
+board demo_test draw stopmask top line   1  52 4  55 4
+board demo_test draw stopmask top arc    1  58 4  56 4   60 4  cw
+board demo_test draw stopmask top circle 1  58 0  2
+board demo_test draw stopmask top zone line 52 0 line 60 0 line 60 4 line 52 4
 
-# board demo add device $HOME/git/BEL/ET_component_library/packages/test/stop.pac SM 40 40
-# board demo rotate device SM1 relative 10
+# board demo_test add device $HOME/git/BEL/ET_component_library/packages/test/stop.pac SM 40 40
+# board demo_test rotate device SM1 relative 10
 
-# board demo route net GND 1 line 0.2 2.5 23  4 23
-# board demo route net GND 1 arc  0.2  6 23  4 23   8 23  CW
+# board demo_test route net GND 1 line 0.2 2.5 23  4 23
+# board demo_test route net GND 1 arc  0.2  6 23  4 23   8 23  CW
 
-# board demo place via GND 25 11 blind bottom 3
-# board demo place via GND 25 11 blind top 3
-# board demo place via GND 25 11 buried 2 3
+# board demo_test place via GND 25 11 blind bottom 3
+# board demo_test place via GND 25 11 blind top 3
+# board demo_test place via GND 25 11 buried 2 3
 
-# board demo route net GND 1 line 0.5  30 6.5   20 45
+# board demo_test route net GND 1 line 0.5  30 6.5   20 45
 
-# board demo display restrict route 1
-# board demo draw route_restrict [1] line 50 30 70 30
-# board demo draw route_restrict [1] arc 60 40  50 40  70 40 ccw
-# board demo draw route_restrict [1] circle 60 40  5
-# board demo draw route_restrict [1] zone line 50 50 line 70 50 line 70 70 line 50 70
+# board demo_test display restrict route 1
+# board demo_test draw route_restrict [1] line 50 30 70 30
+# board demo_test draw route_restrict [1] arc 60 40  50 40  70 40 ccw
+# board demo_test draw route_restrict [1] circle 60 40  5
+# board demo_test draw route_restrict [1] zone line 50 50 line 70 50 line 70 70 line 50 70
 
-# board demo display restrict via 1
-# board demo draw via_restrict   [1] zone line 40 40 line 50 40 line 45 50
+# board demo_test display restrict via 1
+# board demo_test draw via_restrict   [1] zone line 40 40 line 50 40 line 45 50
 
-# board demo delete route_restrict 50 30 10
+# board demo_test delete route_restrict 50 30 10
 # um -10 in x und versetzt
-# board demo draw outline line -10 -10 line 70 -10 line 70 70 line -10 70
+# board demo_test draw outline line -10 -10 line 70 -10 line 70 70 line -10 70
 
 # diagonal halbiertes 0.5 Euro format
 # von links nach rechts steigend:
-# board demo draw outline line 0 0 line 80 0 line 80 80
+# board demo_test draw outline line 0 0 line 80 0 line 80 80
 # von links nach rechts fallend:
-# board demo draw outline line 0 0 line 80 0 line 0 80
+# board demo_test draw outline line 0 0 line 80 0 line 0 80
 
 # halbkreis concav in unterkante
-# board demo draw outline line 0 0 arc 20 0 10 0 cw line 30 0 line 80 0 line 80 80 line 0 80
+# board demo_test draw outline line 0 0 arc 20 0 10 0 cw line 30 0 line 80 0 line 80 80 line 0 80
 
 # halbkreis covex in unterkante
-# board demo draw outline line 0 0 arc 20 0 10 0 ccw line 30 0 line 80 0 line 80 80 line 0 80
+# board demo_test draw outline line 0 0 arc 20 0 10 0 ccw line 30 0 line 80 0 line 80 80 line 0 80
 
 # viertelkreis covex in rechts unten
-# board demo draw outline line 0 0 arc 80 0 60 0 cw line 80 20 line 80 80 line 0 80
+# board demo_test draw outline line 0 0 arc 80 0 60 0 cw line 80 20 line 80 80 line 0 80
 
 # halbkreis concav in rechter kante
-# board demo draw outline line 0 0 line 80 0 arc 80 40 80 20 cw line 80 60 line 80 80 line 0 80
+# board demo_test draw outline line 0 0 line 80 0 arc 80 40 80 20 cw line 80 60 line 80 80 line 0 80
 
-# board demo draw outline line 0 0 line 80 0 line 80 80 line 0 80 arc 0 40 0 50 cw line 0 30
+# board demo_test draw outline line 0 0 line 80 0 line 80 80 line 0 80 arc 0 40 0 50 cw line 0 30
 
 # kreis auf 0/0:
-# board demo draw outline circle 0 0 20
-# board demo draw outline circle 50 50 20
-# board demo draw outline circle 10 0 10
-# board demo draw hole line 50 50 arc 60 50 70 50 ccw
+# board demo_test draw outline circle 0 0 20
+# board demo_test draw outline circle 50 50 20
+# board demo_test draw outline circle 10 0 10
+# board demo_test draw hole line 50 50 arc 60 50 70 50 ccw
 
-#board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 220 120 line 0 120
-#board demo draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
+#board demo_test draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 220 120 line 0 120
+#board demo_test draw outline line 0 0 arc 40 0 30 0 cw line 50 0 line 232 0 line 210 3.3 line 220 13.2 line 200 120 line 0 120
 
 # 3/4 kreis links unten, trapez rechts:
-# board demo move board relative 20 20
-# board demo draw outline arc 0 0 0 20 ccw line 20 0 line 100 0 line 130 20 line 130 80 line 100 100 line 1 101
-# board demo draw hole line 100 10 line 120 30 line 120 70 line 100 90
-# board demo draw hole circle 0 0 5.5
-# board demo draw hole circle 47 35 5.5
-# board demo draw hole line 65 40 line 75 40 arc 70 50 75 50 ccw line 65 50
+# board demo_test move board relative 20 20
+# board demo_test draw outline arc 0 0 0 20 ccw line 20 0 line 100 0 line 130 20 line 130 80 line 100 100 line 1 101
+# board demo_test draw hole line 100 10 line 120 30 line 120 70 line 100 90
+# board demo_test draw hole circle 0 0 5.5
+# board demo_test draw hole circle 47 35 5.5
+# board demo_test draw hole line 65 40 line 75 40 arc 70 50 75 50 ccw line 65 50
 
-board demo set zone fill solid
-# board demo set zone fill hatched
-# board demo set zone spacing 1.1
-board demo set zone linewidth 0.3
-board demo set zone relief gap_max 0.4
-board demo set zone relief width_min 0.31
-# board demo set zone isolation 0.2
+board demo_test set zone fill solid
+# board demo_test set zone fill hatched
+# board demo_test set zone spacing 1.1
+board demo_test set zone linewidth 0.3
+board demo_test set zone relief gap_max 0.4
+board demo_test set zone relief width_min 0.31
+# board demo_test set zone isolation 0.2
 
 
 # rechteckig 100x50 überstand nach links unten
-board demo route net gnd 1 zone line -1 -1 line 100 -1 line 100 50 line -1 50
-# board demo route freetrack 1 zone line -1 -1 line 100 -1 line 100 50 line -1 50
-# board demo route net gnd 1 zone line -1 -1 line 99 1 line 100 50 line -1 50
+board demo_test route net gnd 1 zone line -1 -1 line 100 -1 line 100 50 line -1 50
+# board demo_test route freetrack 1 zone line -1 -1 line 100 -1 line 100 50 line -1 50
+# board demo_test route net gnd 1 zone line -1 -1 line 99 1 line 100 50 line -1 50
 
 # rechteckig innen ohne überstand
-# board demo route net gnd 1 zone line 10 10 line 70 10 line 70 50 line 10 50
+# board demo_test route net gnd 1 zone line 10 10 line 70 10 line 70 50 line 10 50
 # halbkreis concav in unterkante:
-# board demo route net gnd 1 zone line 10 10 arc 30 10 20 10 cw line 40 10 line 70 10 line 70 50 line 10 50
+# board demo_test route net gnd 1 zone line 10 10 arc 30 10 20 10 cw line 40 10 line 70 10 line 70 50 line 10 50
 
 # halbkreis covex in unterkante:
-# board demo route net gnd 1 zone line 10 10 arc 30 10 20 10 ccw line 40 10 line 70 10 line 70 50 line 10 50
+# board demo_test route net gnd 1 zone line 10 10 arc 30 10 20 10 ccw line 40 10 line 70 10 line 70 50 line 10 50
 
 # rechteckig 30x30 zentriert auf 0/0
-# board demo route net gnd 1 zone line -15 -15 line 15 -15 line 15 15 line -15 15
-# board demo route net gnd 1 zone circle 50 50 1
+# board demo_test route net gnd 1 zone line -15 -15 line 15 -15 line 15 15 line -15 15
+# board demo_test route net gnd 1 zone circle 50 50 1
 # halbkreis links:
-# board demo route net gnd 1 zone line 50 60 arc 50 50 50 40 cw
+# board demo_test route net gnd 1 zone line 50 60 arc 50 50 50 40 cw
 # halbkreis links, rechteck rechts:
-# board demo route net gnd 1 zone arc 50 50 50 60 ccw line 50 40 line 60 40 line 60 60
-#board demo route net gnd 1 zone arc 0 0 10 10 ccw line 10 -10
-# board demo route net gnd 1 zone arc 0 0 13 8 ccw line 13 -8
-# board demo route net gnd 1 zone arc 0 0 -5 10 ccw line 5 10
-# board demo route net gnd 3 zone line 10 25 line 50 25 line 49 45 line 11 45
-#board demo route net gnd 3 zone line -22 -22 line 135 -22 line 135 105 line -22 105
+# board demo_test route net gnd 1 zone arc 50 50 50 60 ccw line 50 40 line 60 40 line 60 60
+#board demo_test route net gnd 1 zone arc 0 0 10 10 ccw line 10 -10
+# board demo_test route net gnd 1 zone arc 0 0 13 8 ccw line 13 -8
+# board demo_test route net gnd 1 zone arc 0 0 -5 10 ccw line 5 10
+# board demo_test route net gnd 3 zone line 10 25 line 50 25 line 49 45 line 11 45
+#board demo_test route net gnd 3 zone line -22 -22 line 135 -22 line 135 105 line -22 105
 
-# board demo route net gnd 3 zone line 0 0 line 135 0 line 135 70 line 0 70
-# board demo place text conductor 3 0.5 10 11 5 45 "ab/Si"
-board demo place text conductor 3 0.15 1 20 5 0 "LY3"
+# board demo_test route net gnd 3 zone line 0 0 line 135 0 line 135 70 line 0 70
+# board demo_test place text conductor 3 0.5 10 11 5 45 "ab/Si"
+board demo_test place text conductor 3 0.15 1 20 5 0 "LY3"
 
-#board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 51 line -1 51
-#board demo route net gnd 1 zone line -1 -1 line 51 -1 line 51 30 line -1 30
+#board demo_test route net gnd 1 zone line -1 -1 line 51 -1 line 51 51 line -1 51
+#board demo_test route net gnd 1 zone line -1 -1 line 51 -1 line 51 30 line -1 30
  
-board demo route freetrack 1 line 0.2  5  5 10  5
-board demo route freetrack 1 line 0.2  5  6 10  6
+board demo_test route freetrack 1 line 0.2  5  5 10  5
+board demo_test route freetrack 1 line 0.2  5  6 10  6
  
-# board demo route net GND 1 zone line -1 15 line 18 15 line 18 25 line 1 25
-board demo place text conductor 1 0.15 1 4 15.5 0 "GND"
+# board demo_test route net GND 1 zone line -1 15 line 18 15 line 18 25 line 1 25
+board demo_test place text conductor 1 0.15 1 4 15.5 0 "GND"
 
-# board demo route net P5V 1 zone line -1 -1 line 51 -1 line 51 7 line -1 7
-board demo route freetrack 1 zone line 5 2 line 20 2 line 20 10 line 5 10
-# board demo set zone isolation 0.2
-#board demo route freetrack 1 zone line 0 9 line 50 9 line 50 14 line 0 14
-# board demo route net GND 1 zone line 0 9 line 50 9 line 50 14 line 0 14
-# board demo route freetrack 4 zone line 0 9 line 50 9 line 50 14 line 0 14
+# board demo_test route net P5V 1 zone line -1 -1 line 51 -1 line 51 7 line -1 7
+board demo_test route freetrack 1 zone line 5 2 line 20 2 line 20 10 line 5 10
+# board demo_test set zone isolation 0.2
+#board demo_test route freetrack 1 zone line 0 9 line 50 9 line 50 14 line 0 14
+# board demo_test route net GND 1 zone line 0 9 line 50 9 line 50 14 line 0 14
+# board demo_test route freetrack 4 zone line 0 9 line 50 9 line 50 14 line 0 14
 
-# board demo set zone fill hatched
-# board demo set zone spacing 1.1
-# board demo route net P5V 1 zone line 6 27 line 51 27 line 51 55 line 6 55
+# board demo_test set zone fill hatched
+# board demo_test set zone spacing 1.1
+# board demo_test route net P5V 1 zone line 6 27 line 51 27 line 51 55 line 6 55
 
-# board demo route freetrack 1 zone line 25 15 line 40 15 line 40 20 line 20 20
+# board demo_test route freetrack 1 zone line 25 15 line 40 15 line 40 20 line 20 20
 
-# board demo place text conductor 1 0.2 2 1 11 0 "ABCDEFGHIJKLM"
-# board demo place text conductor 1 0.2 2 1 11 0 "NOPQRSTUVWXYZ"
+# board demo_test place text conductor 1 0.2 2 1 11 0 "ABCDEFGHIJKLM"
+# board demo_test place text conductor 1 0.2 2 1 11 0 "NOPQRSTUVWXYZ"
 
-# board demo place text conductor 4 0.15 5 123 25 90 "KEEP CLEAR"
-# board demo place text conductor 4 0.5 5 90 25 0 "KEEP CLEAR"
-# board demo place text conductor 4 0.15 5 10 1.1 90 "KEEP CLEAR"
-# board demo place text conductor 4 0.6 5 45 60 45.33 "KEEP CLEAR"
-# board demo place text conductor 4 0.15 5 70 70 -5 "KEEP CLEAR"
-# board demo place text conductor 4 0.15 3 10 85 45 "BOT"
+# board demo_test place text conductor 4 0.15 5 123 25 90 "KEEP CLEAR"
+# board demo_test place text conductor 4 0.5 5 90 25 0 "KEEP CLEAR"
+# board demo_test place text conductor 4 0.15 5 10 1.1 90 "KEEP CLEAR"
+# board demo_test place text conductor 4 0.6 5 45 60 45.33 "KEEP CLEAR"
+# board demo_test place text conductor 4 0.15 5 70 70 -5 "KEEP CLEAR"
+# board demo_test place text conductor 4 0.15 3 10 85 45 "BOT"
 
-# board demo route net gnd 1 zone line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
-# board demo place text conductor 1 0.15 1 7 22 0 "4 5 6 7 8 9"
-#board demo place text conductor 1 0.15 1 2 22 0 "i j k l m n o"
-#board demo place text conductor 1 0.15 1 2 22 0 "f p q r s t u"
-# board demo place text conductor 1 0.15 1 2 22 0 "v w x y z"
-#board demo place text conductor 1 0.15 1 2 22 0 "E : + - _ /"
-# board demo place text conductor 1 0.15 1 4.0 0.9 0 "T S"
+# board demo_test route net gnd 1 zone line -2 11 line 1 11 line 1 4 line 6 4 line 6 5.6 line 15 5.6 line 15 6.8 line 6 6.8 line 6 10 line 20 10 line 20 20 line -2 20
+# board demo_test place text conductor 1 0.15 1 7 22 0 "4 5 6 7 8 9"
+#board demo_test place text conductor 1 0.15 1 2 22 0 "i j k l m n o"
+#board demo_test place text conductor 1 0.15 1 2 22 0 "f p q r s t u"
+# board demo_test place text conductor 1 0.15 1 2 22 0 "v w x y z"
+#board demo_test place text conductor 1 0.15 1 2 22 0 "E : + - _ /"
+# board demo_test place text conductor 1 0.15 1 4.0 0.9 0 "T S"
 
-board demo set grid 0.1 0.1
+board demo_test set grid 0.1 0.1
 
-board demo place text assy top 0.15 3 33 23 0 "ASSY DOC 1"
-board demo place text assy top 0.3 2 33 22 0 "ASSY DOC 2"
-board demo place text assy bottom 0.15 3 32 23 0 "ASSY DOC 3"
-board demo place text assy bottom 0.3 2 32 22 45 "ASSY DOC 4"
+board demo_test place text assy top 0.15 3 33 23 0 "ASSY DOC 1"
+board demo_test place text assy top 0.3 2 33 22 0 "ASSY DOC 2"
+board demo_test place text assy bottom 0.15 3 32 23 0 "ASSY DOC 3"
+board demo_test place text assy bottom 0.3 2 32 22 45 "ASSY DOC 4"
 
-board demo place text silkscreen top 0.5 3 33 33 0 "SILK 1"
-board demo place text silkscreen top 0.15 2 33 32 0 "SILK 2"
-board demo place text silkscreen bottom 0.15 3 32 33 0 "SILK 3"
-board demo place text silkscreen bottom 0.15 2 32 32 0 "SILK 4"
+board demo_test place text silkscreen top 0.5 3 33 33 0 "SILK 1"
+board demo_test place text silkscreen top 0.15 2 33 32 0 "SILK 2"
+board demo_test place text silkscreen bottom 0.15 3 32 33 0 "SILK 3"
+board demo_test place text silkscreen bottom 0.15 2 32 32 0 "SILK 4"
 
-board demo place text stopmask top 0.1 3 33 43 0 "STOP 1"
-board demo place text stopmask top 0.2 2 33 42 0 "STOP 2"
-board demo place text stopmask bottom 0.3 3 32 43 0 "STOP 3"
-board demo place text stopmask bottom 0.15 2 32 42 0 "STOP 4"
+board demo_test place text stopmask top 0.1 3 33 43 0 "STOP 1"
+board demo_test place text stopmask top 0.2 2 33 42 0 "STOP 2"
+board demo_test place text stopmask bottom 0.3 3 32 43 0 "STOP 3"
+board demo_test place text stopmask bottom 0.15 2 32 42 0 "STOP 4"
 
-board demo place text conductor 1 0.15 2 33 28 0 "L1"
-board demo place text conductor 2 0.15 2 33 27 0 "L2"
+board demo_test place text conductor 1 0.15 2 33 28 0 "L1"
+board demo_test place text conductor 2 0.15 2 33 27 0 "L2"
 
 # assembly documentation test
-board demo draw assy top line   1  21 11  40 11
-board demo draw assy top line   1  21 10  40 10
-board demo draw assy top arc    1  18 10  16 10  20 10 cw
-board demo draw assy top circle 1  18  6   2
-board demo draw assy top zone line 21 5 line 25 5 line 25 7 line 21 7
+board demo_test draw assy top line   1  21 11  40 11
+board demo_test draw assy top line   1  21 10  40 10
+board demo_test draw assy top arc    1  18 10  16 10  20 10 cw
+board demo_test draw assy top circle 1  18  6   2
+board demo_test draw assy top zone line 21 5 line 25 5 line 25 7 line 21 7
 
-board demo draw assy bottom line   0.5  21 12  40 12
-board demo draw assy bottom line   0.5  21 11  40 11
-board demo draw assy bottom zone line 21 6 line 25 6 line 25 8 line 21 8
+board demo_test draw assy bottom line   0.5  21 12  40 12
+board demo_test draw assy bottom line   0.5  21 11  40 11
+board demo_test draw assy bottom zone line 21 6 line 25 6 line 25 8 line 21 8
 
 
 # silkscreen test
-board demo draw silkscreen top line   1  27 31   30 31
-board demo draw silkscreen top line   1  27 30   30 31
-board demo draw silkscreen top arc    1  26 33   24 33   28 33 cw
-board demo draw silkscreen top circle 1  26 28   2
-board demo draw silkscreen top zone line 26 25 line 28 25 line 28 33 line 26 33
+board demo_test draw silkscreen top line   1  27 31   30 31
+board demo_test draw silkscreen top line   1  27 30   30 31
+board demo_test draw silkscreen top arc    1  26 33   24 33   28 33 cw
+board demo_test draw silkscreen top circle 1  26 28   2
+board demo_test draw silkscreen top zone line 26 25 line 28 25 line 28 33 line 26 33
 
 
-# board demo route net GND 1 line 0.5  33 10  36 10
-# board demo route net GND 1 line 0.5  36 10  36  9
-board demo route net GND 1 line 0.5  36  9  33  9
-board demo route net GND 1 arc  0.5  31  9  29  9   33  9 ccw
+# board demo_test route net GND 1 line 0.5  33 10  36 10
+# board demo_test route net GND 1 line 0.5  36 10  36  9
+board demo_test route net GND 1 line 0.5  36  9  33  9
+board demo_test route net GND 1 arc  0.5  31  9  29  9   33  9 ccw
 
-# board demo set zone log HIGH
+# board demo_test set zone log HIGH
 
-# board demo fill zone # optional net name
+# board demo_test fill zone # optional net name
 
-# board demo position cursor absolute 0 0
-# board demo zoom center 0 0 50
+# board demo_test position cursor absolute 0 0
+# board demo_test zoom center 0 0 50
 
-# board demo set cursor 15 35 100
+# board demo_test set cursor 15 35 100
 
-# board demo zoom center 20 10 50
-# board demo zoom center 4 23	50
-# board demo zoom center 7 20	50
+# board demo_test zoom center 20 10 50
+# board demo_test zoom center 4 23	50
+# board demo_test zoom center 7 20	50
 
-# board demo display stencil top
+# board demo_test display stencil top
 
-# board demo display conductors 1 on
-# board demo display conductors 2 on
-# board demo display conductors 3 off
-# board demo display conductors 4 on
+# board demo_test display conductors 1 on
+# board demo_test display conductors 2 on
+# board demo_test display conductors 3 off
+# board demo_test display conductors 4 on
 
-# board demo display restrict route 1 off
-# board demo display restrict route 4 off
-# board demo display keepout top on
-# board demo display keepout bottom on
+# board demo_test display restrict route 1 off
+# board demo_test display restrict route 4 off
+# board demo_test display keepout top on
+# board demo_test display keepout bottom on
 
-# board demo display silkscreen top on
-# board demo display silkscreen bottom on
-
-
-#schematic demo drag segment P5V 1 78 90 relative 2 2
-# schematic demo drag segment P5V 1 78 90 absolute 78 92
-
-# schematic demo exit # CS does not work (gtk error)
-
-# board demo fill zone
-# board demo clear zone
-
-board demo place placeholder conductor    4    0.15 2 21 44 0 module
-board demo place placeholder stopmask       bottom 0.15 2 21 44 0 module
-
-board demo place placeholder assy       top   0.15 2 21 40 0 customer
-board demo place placeholder silkscreen top   0.15 2 21 38 0 customer
+# board demo_test display silkscreen top on
+# board demo_test display silkscreen bottom on
 
 
-# schematic demo delete segment 1 80 120 2
-# schematic demo drag segment 1 80 100 2 absolute 70 90
-# schematic demo drag segment 1 80 100 2 relative -10 -10
+#schematic demo_test drag segment P5V 1 78 90 relative 2 2
+# schematic demo_test drag segment P5V 1 78 90 absolute 78 92
 
-# schematic demo draw net GND 1 70 100  90 100
-# schematic demo draw net GND 1 90 100  90 110
-# schematic demo draw net GND 1 80 110  90 110
+# schematic demo_test exit # CS does not work (gtk error)
 
-# schematic demo draw net VCC 1 80 110  90 110
+# board demo_test fill zone
+# board demo_test clear zone
+
+board demo_test place placeholder conductor    4    0.15 2 21 44 0 module
+board demo_test place placeholder stopmask       bottom 0.15 2 21 44 0 module
+
+board demo_test place placeholder assy       top   0.15 2 21 40 0 customer
+board demo_test place placeholder silkscreen top   0.15 2 21 38 0 customer
 
 
-# schematic demo draw net VCC 1 70 101  90 101
+# schematic demo_test delete segment 1 80 120 2
+# schematic demo_test drag segment 1 80 100 2 absolute 70 90
+# schematic demo_test drag segment 1 80 100 2 relative -10 -10
+
+# schematic demo_test draw net GND 1 70 100  90 100
+# schematic demo_test draw net GND 1 90 100  90 110
+# schematic demo_test draw net GND 1 80 110  90 110
+
+# schematic demo_test draw net VCC 1 80 110  90 110
+
+
+# schematic demo_test draw net VCC 1 70 101  90 101
 
 # waagerechtes Segment links:
 # waagerechtes Segment rechts:
 # waagerechtes Segment dazwischen als Verbindung:
-# schematic demo draw net GND 1 80 100  90 100
-# schematic demo place net_connector 1 80 100 input
-# schematic demo place net_label 1 81 100
-# schematic demo draw net GND 1 100 100  110 100
-# schematic demo place net_connector 1 100 100 input
-# schematic demo place net_label 1 101 100
-# schematic demo draw net GND 1 90 100  100 100
+# schematic demo_test draw net GND 1 80 100  90 100
+# schematic demo_test place net_connector 1 80 100 input
+# schematic demo_test place net_label 1 81 100
+# schematic demo_test draw net GND 1 100 100  110 100
+# schematic demo_test place net_connector 1 100 100 input
+# schematic demo_test place net_label 1 101 100
+# schematic demo_test draw net GND 1 90 100  100 100
 
-# schematic demo draw net
-# schematic demo draw net GND 2 90 100  100 100
+# schematic demo_test draw net
+# schematic demo_test draw net GND 2 90 100  100 100
 
-# schematic demo execute script demo_grid.scr
+# schematic demo_test execute script demo_grid.scr
 
 
-# schematic demo set cursor 90 100
-# schematic demo zoom center 90 100 10
+# schematic demo_test set cursor 90 100
+# schematic demo_test zoom center 90 100 10
 
 # senkrechtes Segment links und rechts
 # Querverbindung oben
-# schematic demo draw net GND 1 80 126  80 100
-# schematic demo draw net GND 2 80 126  80 110
-# schematic demo draw net GND 1 90 126  100 126
-# schematic demo draw net GND 1 80 126  90 126
-# schematic demo draw net GND 1 80 126  70 126
-# schematic demo draw net GND 1 70 100  90 100
-# schematic demo draw net GND 1 80 100  80 80
+# schematic demo_test draw net GND 1 80 126  80 100
+# schematic demo_test draw net GND 2 80 126  80 110
+# schematic demo_test draw net GND 1 90 126  100 126
+# schematic demo_test draw net GND 1 80 126  90 126
+# schematic demo_test draw net GND 1 80 126  70 126
+# schematic demo_test draw net GND 1 70 100  90 100
+# schematic demo_test draw net GND 1 80 100  80 80
 
 # 
-schematic demo draw net P5V 1 90 114  100 114
-schematic demo place net_label 1 95 114
-schematic demo place net_connector 1 100 114 input
-schematic demo draw net P5V 1 80 134   80 140
-schematic demo draw net P5V 2 60 130  100 130
+schematic demo_test draw net P5V 1 90 114  100 114
+schematic demo_test place net_label 1 95 114
+schematic demo_test place net_connector 1 100 114 input
+schematic demo_test draw net P5V 1 80 134   80 140
+schematic demo_test draw net P5V 2 60 130  100 130
 
 # rename strand
-# schematic demo rename net GND GNDA 1 95 126 2
+# schematic demo_test rename net GND GNDA 1 95 126 2
 
 # rename on a single sheet:
-# schematic demo rename net GND GNDA 1
+# schematic demo_test rename net GND GNDA 1
 
 # rename whole net:
-# schematic demo rename net GND GNDA
+# schematic demo_test rename net GND GNDA
 
 
 # waagerechtes Segment links
 # senkrechtes Segment rechs
 # waagerechtes Segment rechts
 # waagerechtes Segment dazwischen als Verbindung
-# schematic demo draw net GND 1 80 100  90 100
-# schematic demo place net_label 1 81 100
-# schematic demo draw net GND 1 100 100  100 110
-# schematic demo draw net GND 1 100 100  110 100
-schematic demo draw net GND 1 90 100  100 100
-schematic demo place net_label 1 93 100
+# schematic demo_test draw net GND 1 80 100  90 100
+# schematic demo_test place net_label 1 81 100
+# schematic demo_test draw net GND 1 100 100  100 110
+# schematic demo_test draw net GND 1 100 100  110 100
+schematic demo_test draw net GND 1 90 100  100 100
+schematic demo_test place net_label 1 93 100
 
-schematic demo draw net GNDA 1 80 120  84 120
+schematic demo_test draw net GNDA 1 80 120  84 120
 
-schematic demo fetch unit IC1 C 1 70 100 0
-schematic demo fetch unit IC1 D 2 70 100 0
+schematic demo_test fetch unit IC1 C 1 70 100 0
+schematic demo_test fetch unit IC1 D 2 70 100 0
 
-# schematic demo move unit IC1 C absolute 1 60 100
-# schematic demo move unit IC1 C absolute 1 70 100
-schematic demo move unit IC1 C relative 1 -10 0
-schematic demo move unit IC1 C relative -1 10 0
+# schematic demo_test move unit IC1 C absolute 1 60 100
+# schematic demo_test move unit IC1 C absolute 1 70 100
+schematic demo_test move unit IC1 C relative 1 -10 0
+schematic demo_test move unit IC1 C relative -1 10 0
 
-# schematic demo rotate unit IC1 C absolute -90
-# schematic demo rotate unit IC1 C relative 90
-schematic demo rename device IC1 IC20
-schematic demo rotate unit IC20 A relative 90
+# schematic demo_test rotate unit IC1 C absolute -90
+# schematic demo_test rotate unit IC1 C relative 90
+schematic demo_test rename device IC1 IC20
+schematic demo_test rotate unit IC20 A relative 90
 
-schematic demo move name T1 1 relative 10 0
-schematic demo rotate name T1 1 vertical
-schematic demo rotate name T1 1 horizontal
+schematic demo_test move name T1 1 relative 10 0
+schematic demo_test rotate name T1 1 vertical
+schematic demo_test rotate name T1 1 horizontal
 
-schematic demo move unit T1 1 absolute 1 100 140
+schematic demo_test move unit T1 1 absolute 1 100 140
 
-# schematic demo show net GND
+# schematic demo_test show net GND
 
-# schematic demo drag segment 1 80 100 2 relative 10 0
+# schematic demo_test drag segment 1 80 100 2 relative 10 0
 
-# schematic demo draw net GND 1 70 100 100 100
-# schematic demo draw net GND 1 70 110  80 110
-# schematic demo draw net GND 1 70 110  70 120
-# schematic demo draw net GND 1 80 100  80  90
-# schematic demo place net_connector 1 100 100 input
+# schematic demo_test draw net GND 1 70 100 100 100
+# schematic demo_test draw net GND 1 70 110  80 110
+# schematic demo_test draw net GND 1 70 110  70 120
+# schematic demo_test draw net GND 1 80 100  80  90
+# schematic demo_test place net_connector 1 100 100 input
 
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 60 130 0 S_1206
-schematic demo rename device C2 C10
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 60 120 0 S_1206
+schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 60 130 0 S_1206
+schematic demo_test rename device C2 C10
+schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 60 120 0 S_1206
 
-board demo add device $HOME/git/BEL/ET_component_library/packages/S_1206.pac C 7 14
+board demo_test add device $HOME/git/BEL/ET_component_library/packages/S_1206.pac C 7 14
 
-schematic demo add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 60 110 0 S_1206
+schematic demo_test add device $HOME/git/BEL/ET_component_library/devices/passive/capacitors/C.dev 1 60 110 0 S_1206
 
-board demo add device $HOME/git/BEL/ET_component_library/packages/S_1206.pac C 10 14
+board demo_test add device $HOME/git/BEL/ET_component_library/packages/S_1206.pac C 10 14
 
 
-board demo move name IC20 silkscreen top 1 relative 5 0
+board demo_test rotate device C1 relative 20
 
+# board demo_test move name C1 silkscreen top 1 relative 5 0
+# board demo_test move name C1 silkscreen top 1 absolute 50 30
+# board demo_test move name IC20 silkscreen top 1 absolute 51 34
+
+
+# board demo_test move name IC20 silkscreen top 1 relative 5 0
+# board demo_test rotate name IC20 silkscreen top 1 relative -45
+
+board demo_test move device C1 relative 10 0
+board demo_test flip device C1
+
+# board demo_test save module
 
 # script end
