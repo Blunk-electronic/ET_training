@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-11-28T15:14:13
+-- date 2025-11-28T17:03:21
 -- ====================================================================================================
 
 [META BEGIN]
@@ -142,6 +142,32 @@
 					[SEGMENT END]
 				[SEGMENTS END]
 			[STRAND END]
+			[STRAND BEGIN]
+				position sheet  3 x  80.00 y  92.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  80.00 y  100.00
+						end   x  80.00 y  92.50
+						[PORTS BEGIN]
+							A  device IC1 unit P port GND
+							B  device PWR4 unit 1 port GND
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+			[STRAND BEGIN]
+				position sheet  3 x  107.50 y  92.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  107.50 y  105.00
+						end   x  107.50 y  92.50
+						[PORTS BEGIN]
+							A  device C2 unit 1 port 2
+							B  device PWR5 unit 1 port GND
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
 			[LINE BEGIN]
@@ -161,16 +187,60 @@
 	[NET END]
 
 	[NET BEGIN]
-		name P12
+		name P5
 		class default
 		scope  local
 		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  3 x  80.00 y  120.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  107.50 y  135.00
+						end   x  107.50 y  115.00
+						[PORTS BEGIN]
+							B  device C2 unit 1 port 1
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  65.00 y  135.00
+						end   x  80.00 y  135.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  67.50 y  135.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  80.00 y  135.00
+						end   x  107.50 y  135.00
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  80.00 y  135.00
+						end   x  80.00 y  120.00
+						[JUNCTIONS BEGIN]
+							A 
+						[JUNCTIONS END]
+						[PORTS BEGIN]
+							B  device IC1 unit P port VCC
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
 			[STRAND BEGIN]
 				position sheet  1 x  77.50 y  127.50
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
 						start x  90.00 y  135.00
 						end   x  142.50 y  135.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  135.00 y  135.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
 						start x  90.00 y  135.00
@@ -233,6 +303,204 @@
 		[ROUTE END]
 	[NET END]
 
+	[NET BEGIN]
+		name Q
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  2 x  95.00 y  107.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  75.00 y  135.00
+						end   x  70.00 y  135.00
+						[PORTS BEGIN]
+							A  device IC1 unit A port I2
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  70.00 y  135.00
+						end   x  70.00 y  127.50
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  70.00 y  127.50
+						end   x  97.50 y  117.50
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  97.50 y  117.50
+						end   x  97.50 y  107.50
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  97.50 y  107.50
+						end   x  95.00 y  107.50
+						[PORTS BEGIN]
+							B  device IC1 unit D port O
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  97.50 y  107.50
+						end   x  105.00 y  107.50
+						[CONNECTORS BEGIN]
+							B direction passive
+						[CONNECTORS END]
+						[JUNCTIONS BEGIN]
+							A 
+						[JUNCTIONS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
+		name Q_N
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  2 x  70.00 y  112.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  75.00 y  112.50
+						end   x  70.00 y  112.50
+						[PORTS BEGIN]
+							A  device IC1 unit D port I1
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  70.00 y  112.50
+						end   x  70.00 y  120.00
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  70.00 y  120.00
+						end   x  97.50 y  127.50
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  97.50 y  127.50
+						end   x  97.50 y  140.00
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  97.50 y  140.00
+						end   x  95.00 y  140.00
+						[PORTS BEGIN]
+							B  device IC1 unit A port O
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  97.50 y  140.00
+						end   x  105.00 y  140.00
+						[CONNECTORS BEGIN]
+							B direction passive
+						[CONNECTORS END]
+						[JUNCTIONS BEGIN]
+							A 
+						[JUNCTIONS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
+		name RESET_N
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  2 x  62.50 y  102.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  75.00 y  102.50
+						end   x  62.50 y  102.50
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  65.00 y  103.00
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							A  device IC1 unit D port I2
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+			[STRAND BEGIN]
+				position sheet  2 x  27.50 y  155.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  27.50 y  155.00
+						end   x  45.00 y  155.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  35.00 y  155.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							A  device X4 unit 1 port 1
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
+		name SET_N
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  2 x  62.50 y  145.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  75.00 y  145.00
+						end   x  62.50 y  145.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  65.00 y  145.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							A  device IC1 unit A port I1
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+			[STRAND BEGIN]
+				position sheet  2 x  27.50 y  172.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  27.50 y  172.50
+						end   x  45.00 y  172.50
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  35.00 y  173.00
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							A  device X3 unit 1 port 1
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
+	[NET END]
+
 [NETS END]
 ----------------------------------------------------------------------------------------------------
 [DRAWING_FRAMES BEGIN]
@@ -242,17 +510,17 @@
 			[SHEET BEGIN]
 				number  1
 				category PRODUCT
-				text "input filter"
+				text "Power Supply"
 			[SHEET END]
 			[SHEET BEGIN]
 				number  2
 				category DEVELOPMENT
-				text "test points"
+				text "Logic Block"
 			[SHEET END]
 			[SHEET BEGIN]
 				number  3
 				category ROUTING
-				text "core to motor-driver"
+				text "Logic Block Power Decoupling"
 			[SHEET END]
 		[SHEET_DESCRIPTIONS END]
 	[SCHEMATIC END]
@@ -324,6 +592,184 @@
 						size  1.30
 						rotation  0.0
 						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
+		name C2
+		appearance PCB
+		model /home/luno/git/BEL/ET_component_library/devices/passive/capacitors/C.dev
+		value 100n
+		variant S_0805
+		[PACKAGE BEGIN]
+			position x  45.0000 y  20.0000 rotation  0.0000000 face  top
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x  2.2000 y  0.0000 rotation  90.0000000 face  top
+					size  1.2000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer assy_doc
+					meaning value
+					anchor relative
+					position x  3.8000 y  0.0000 rotation  90.0000000 face  top
+					size  1.2000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[PACKAGE END]
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  3 x  107.50 y  110.00 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x  1.60 y  1.00
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x  1.60 y -2.50
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y  0.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
+		name IC1
+		appearance PCB
+		model /home/luno/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev
+		value 7400
+		variant D
+		[PACKAGE BEGIN]
+			position x  45.0000 y  27.5000 rotation  0.0000000 face  top
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x -2.0000 y -6.0000 rotation  0.0000000 face  top
+					size  1.0000
+					linewidth  0.1500
+					alignment horizontal right vertical bottom
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning value
+					anchor relative
+					position x -2.0000 y -8.0000 rotation  0.0000000 face  top
+					size  1.0000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[PACKAGE END]
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name A
+				position sheet  2 x  85.00 y  140.00 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x -3.00 y -9.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x -3.00 y -11.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y  0.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+			[UNIT BEGIN]
+				name D
+				position sheet  2 x  85.00 y  107.50 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x -3.00 y -9.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x -3.00 y -11.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y  0.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+			[UNIT BEGIN]
+				name P
+				position sheet  3 x  80.00 y  110.00 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x  5.20 y  2.50
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x  5.20 y -2.50
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y  0.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal center vertical center
 					[PLACEHOLDER END]
 				[PLACEHOLDERS END]
 			[UNIT END]
@@ -426,6 +872,32 @@
 			[UNIT BEGIN]
 				name 1
 				position sheet  1 x  105.00 y  87.50 rotation  0.0
+				mirrored no
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
+		name PWR4
+		appearance VIRTUAL
+		model /home/luno/git/BEL/ET_component_library/devices/supply/gnd.dev
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  3 x  80.00 y  87.50 rotation  0.0
+				mirrored no
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
+		name PWR5
+		appearance VIRTUAL
+		model /home/luno/git/BEL/ET_component_library/devices/supply/gnd.dev
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  3 x  107.50 y  87.50 rotation  0.0
 				mirrored no
 			[UNIT END]
 		[UNITS END]
@@ -681,6 +1153,128 @@
 		[UNITS END]
 	[DEVICE END]
 
+	[DEVICE BEGIN]
+		name X3
+		appearance PCB
+		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
+		variant T_male_blade
+		purpose "SET"
+		[PACKAGE BEGIN]
+			position x  47.5000 y  5.0000 rotation  90.0000000 face  top
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x  3.5000 y  0.0000 rotation  0.0000000 face  top
+					size  1.5000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning purpose
+					anchor relative
+					position x  3.5000 y -2.0000 rotation  0.0000000 face  top
+					size  1.5000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[PACKAGE END]
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  2 x  25.00 y  172.50 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x  0.00 y -1.50
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical center
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x  0.00 y  0.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y -3.00
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical center
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
+		name X4
+		appearance PCB
+		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
+		variant T_male_blade
+		purpose "RESET"
+		[PACKAGE BEGIN]
+			position x  57.5000 y  5.0000 rotation  90.0000000 face  top
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x  3.5000 y  0.0000 rotation  0.0000000 face  top
+					size  1.5000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning purpose
+					anchor relative
+					position x  3.5000 y -2.0000 rotation  0.0000000 face  top
+					size  1.5000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[PACKAGE END]
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  2 x  25.00 y  155.00 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x  0.00 y -1.50
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical center
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x  0.00 y  0.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y -3.00
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical center
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
 [DEVICES END]
 ----------------------------------------------------------------------------------------------------
 [ASSEMBLY_VARIANTS BEGIN]
@@ -813,6 +1407,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-11-28T15:14:13
+-- date 2025-11-28T17:03:22
 -- module file end
 
