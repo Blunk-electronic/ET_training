@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-11-28T17:03:21
+-- date 2025-12-02T16:00:53
 -- ====================================================================================================
 
 [META BEGIN]
@@ -43,12 +43,22 @@
 ----------------------------------------------------------------------------------------------------
 [NET_CLASSES BEGIN]
 	[NET_CLASS BEGIN]
-		name pwr
-		description "power class"
-		clearance  1.0000
-		track_width_min  0.3000
+		name HC
+		description "high current"
+		clearance  0.5000
+		track_width_min  0.5000
 		via_drill_min  0.4000
-		via_restring_min  0.1000
+		via_restring_min  0.4000
+		micro_via_drill_min  0.1000
+		micro_via_restring_min  0.1000
+	[NET_CLASS END]
+	[NET_CLASS BEGIN]
+		name HV
+		description "high voltage"
+		clearance  1.0000
+		track_width_min  0.5000
+		via_drill_min  0.4000
+		via_restring_min  0.4000
 		micro_via_drill_min  0.1000
 		micro_via_restring_min  0.1000
 	[NET_CLASS END]
@@ -62,7 +72,7 @@
 	[SCHEMATIC END]
 	[BOARD BEGIN]
 		on_off on
-		spacing x  2.5000 y  2.5000
+		spacing x  1.0000 y  1.0000
 		style dots
 	[BOARD END]
 [DRAWING_GRID END]
@@ -176,6 +186,12 @@
 				layer 1
 				width  1.0000
 			[LINE END]
+			[LINE BEGIN]
+				start x  5.0000 y  21.0780
+				end x  5.0000 y  14.0000
+				layer 1
+				width  0.1500
+			[LINE END]
 			[VIA BEGIN]
 				category THROUGH
 				position x  5.0000 y  12.5000
@@ -183,6 +199,102 @@
 				restring_outer  0.3500
 				restring_inner  0.3000
 			[VIA END]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
+		name HV_IN
+		class HV
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  4 x  65.00 y  135.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  65.00 y  135.00
+						end   x  77.50 y  135.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  70.00 y  135.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							A  device X5 unit 1 port 1
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  77.50 y  135.00
+						end   x  77.50 y  130.00
+						[PORTS BEGIN]
+							B  device R3 unit 1 port 1
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  95.0000 y  22.5000
+				end x  91.5000 y  22.5000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  91.5000 y  22.5000
+				end x  89.0000 y  20.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
+		name HV_OUT
+		class HV
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  4 x  65.00 y  107.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  77.50 y  120.00
+						end   x  77.50 y  107.50
+						[PORTS BEGIN]
+							A  device R3 unit 1 port 2
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  77.50 y  107.50
+						end   x  65.00 y  107.50
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  67.50 y  108.00
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							B  device X6 unit 1 port 1
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  95.0000 y  10.0000
+				end x  91.0000 y  10.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  91.0000 y  10.0000
+				end x  88.0000 y  7.0000
+				layer 1
+				width  0.1500
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -277,6 +389,12 @@
 			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  5.0000 y  23.9220
+				end x  5.0000 y  30.0000
+				layer 1
+				width  0.1500
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -521,6 +639,11 @@
 				number  3
 				category ROUTING
 				text "Logic Block Power Decoupling"
+			[SHEET END]
+			[SHEET BEGIN]
+				number  4
+				category PRODUCT
+				text "High Voltage / ESD protection"
 			[SHEET END]
 		[SHEET_DESCRIPTIONS END]
 	[SCHEMATIC END]
@@ -1034,6 +1157,77 @@
 	[DEVICE END]
 
 	[DEVICE BEGIN]
+		name R3
+		appearance PCB
+		model /home/luno/git/BEL/ET_component_library/devices/passive/resistors/R.dev
+		value 1M
+		variant T_0207
+		purpose "ESD protection"
+		[PACKAGE BEGIN]
+			position x  85.0000 y  12.5000 rotation  270.0000000 face  top
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x  0.0000 y -3.0000 rotation  0.0000000 face  top
+					size  1.0000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning purpose
+					anchor relative
+					position x  0.0000 y -6.0000 rotation  0.0000000 face  top
+					size  1.0000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer assy_doc
+					meaning value
+					anchor relative
+					position x  0.0000 y -4.5000 rotation  0.0000000 face  top
+					size  1.0000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[PACKAGE END]
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  4 x  77.50 y  125.00 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x  2.50 y  0.00
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x  2.50 y -2.50
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  2.50 y -5.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
 		name X1
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
@@ -1275,6 +1469,128 @@
 		[UNITS END]
 	[DEVICE END]
 
+	[DEVICE BEGIN]
+		name X5
+		appearance PCB
+		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
+		variant T_male_blade
+		purpose "HV INPUT"
+		[PACKAGE BEGIN]
+			position x  95.0000 y  22.5000 rotation  180.0000000 face  top
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor absolute
+					position x  92.5000 y  20.0000 rotation  180.0000000 face  top
+					size  1.5000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning purpose
+					anchor relative
+					position x  3.5000 y -2.0000 rotation  0.0000000 face  top
+					size  1.5000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[PACKAGE END]
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  4 x  62.50 y  135.00 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x  0.00 y -1.50
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical center
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x  0.00 y  0.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y -3.00
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical center
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
+		name X6
+		appearance PCB
+		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
+		variant T_male_blade
+		purpose "HV OUTPUT"
+		[PACKAGE BEGIN]
+			position x  95.0000 y  10.0000 rotation  180.0000000 face  top
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor absolute
+					position x  92.5000 y  7.5000 rotation  180.0000000 face  top
+					size  1.5000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning purpose
+					anchor relative
+					position x  3.5000 y -2.0000 rotation  0.0000000 face  top
+					size  1.5000
+					linewidth  0.1500
+					alignment horizontal left vertical center
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[PACKAGE END]
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  4 x  62.50 y  107.50 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x  0.00 y -1.50
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical center
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x  0.00 y  0.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y -3.00
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical center
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
 [DEVICES END]
 ----------------------------------------------------------------------------------------------------
 [ASSEMBLY_VARIANTS BEGIN]
@@ -1305,6 +1621,31 @@
 		[FILL_ZONES_CONDUCTOR END]
 	[USER_SETTINGS END]
 	[DEVICES_NON_ELECTRIC BEGIN]
+		[DEVICE BEGIN]
+			name C3
+			position x  9.0000 y  21.0000 rotation  0.0000000 face  top
+			model /home/luno/git/BEL/ET_component_library/packages/S_1206.pac
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x  2.6000 y  0.0000 rotation  90.0000000 face  top
+					size  1.2000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer assy_doc
+					meaning value
+					anchor relative
+					position x  4.2000 y  0.0000 rotation  90.0000000 face  top
+					size  1.2000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[DEVICE END]
 	[DEVICES_NON_ELECTRIC END]
 	[SILKSCREEN BEGIN]
 		[TOP BEGIN]
@@ -1407,6 +1748,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-11-28T17:03:22
+-- date 2025-12-02T16:00:53
 -- module file end
 
