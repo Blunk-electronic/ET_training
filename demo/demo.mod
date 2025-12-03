@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-12-02T16:00:53
+-- date 2025-12-03T11:52:22
 -- ====================================================================================================
 
 [META BEGIN]
@@ -1646,6 +1646,36 @@
 				[PLACEHOLDER END]
 			[PLACEHOLDERS END]
 		[DEVICE END]
+		[DEVICE BEGIN]
+			name FD1
+			position x  95.0000 y  56.0000 rotation  0.0000000 face  top
+			model /home/luno/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x -1.0000 y -3.0000 rotation  0.0000000 face  top
+					size  1.0000
+					linewidth  0.1500
+					alignment horizontal center vertical center
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[DEVICE END]
+		[DEVICE BEGIN]
+			name MH1
+			position x  95.0000 y  75.0000 rotation  0.0000000 face  top
+			model /home/luno/git/BEL/ET_component_library/packages/holes/mounting_hole_round_4mm.pac
+			[PLACEHOLDERS BEGIN]
+			[PLACEHOLDERS END]
+		[DEVICE END]
+		[DEVICE BEGIN]
+			name MH2
+			position x  34.0000 y  8.0000 rotation  0.0000000 face  top
+			model /home/luno/git/BEL/ET_component_library/packages/holes/mounting_hole_round_4mm.pac
+			[PLACEHOLDERS BEGIN]
+			[PLACEHOLDERS END]
+		[DEVICE END]
 	[DEVICES_NON_ELECTRIC END]
 	[SILKSCREEN BEGIN]
 		[TOP BEGIN]
@@ -1685,13 +1715,61 @@
 		[BOTTOM END]
 	[KEEPOUT END]
 	[ROUTE_RESTRICT BEGIN]
+		[LINE BEGIN]
+			start x  100.0000 y  28.0000
+			end x  80.0000 y  28.0000
+			layers [1]
+		[LINE END]
+		[LINE BEGIN]
+			start x  80.0000 y  28.0000
+			end x  80.0000 y  0.0000
+			layers [1]
+		[LINE END]
+		[LINE BEGIN]
+			start x  100.0000 y  28.0000
+			end x  80.0000 y  28.0000
+			layers [4]
+		[LINE END]
+		[LINE BEGIN]
+			start x  80.0000 y  28.0000
+			end x  80.0000 y  0.0000
+			layers [4]
+		[LINE END]
+		[LINE BEGIN]
+			start x  100.0000 y  28.0000
+			end x  80.0000 y  28.0000
+			layers [2]
+		[LINE END]
+		[LINE BEGIN]
+			start x  80.0000 y  28.0000
+			end x  80.0000 y  0.0000
+			layers [2]
+		[LINE END]
+		[LINE BEGIN]
+			start x  100.0000 y  28.0000
+			end x  80.0000 y  28.0000
+			layers [3]
+		[LINE END]
+		[LINE BEGIN]
+			start x  80.0000 y  28.0000
+			end x  80.0000 y  0.0000
+			layers [3]
+		[LINE END]
 	[ROUTE_RESTRICT END]
 	[VIA_RESTRICT BEGIN]
 	[VIA_RESTRICT END]
 	[CONDUCTOR BEGIN]
+		[TEXT BEGIN]
+			content "GND"
+			position x  69.0000 y  40.0000 rotation  0.0000000
+			size  5.0000
+			linewidth  0.5000
+			alignment horizontal left vertical bottom
+			layer 1
+		[TEXT END]
 		[PLACEHOLDER BEGIN]
 			meaning MODULE
-			position x  75.0000 y  70.0000 rotation  0.0000000
+			position x  75.0000 y  55.0000 rotation  0.0000000
 			size  2.0000
 			linewidth  0.2000
 			alignment horizontal left vertical bottom
@@ -1748,6 +1826,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-12-02T16:00:53
+-- date 2025-12-03T11:52:22
 -- module file end
 
