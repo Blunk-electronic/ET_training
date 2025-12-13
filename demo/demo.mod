@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-12-03T11:52:22
+-- date 2025-12-13T08:30:32
 -- ====================================================================================================
 
 [META BEGIN]
@@ -395,6 +395,18 @@
 				layer 1
 				width  0.1500
 			[LINE END]
+			[LINE BEGIN]
+				start x  4.3166 y  39.3401
+				end x  3.0000 y  38.0235
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  3.0000 y  38.0235
+				end x  3.0000 y  33.0000
+				layer 1
+				width  0.1500
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -418,6 +430,18 @@
 			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  9.3166 y  44.3401
+				end x  9.3166 y  44.3166
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  9.3166 y  44.3166
+				end x  5.7500 y  40.7500
+				layer 1
+				width  0.1500
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -1648,7 +1672,7 @@
 		[DEVICE END]
 		[DEVICE BEGIN]
 			name FD1
-			position x  95.0000 y  56.0000 rotation  0.0000000 face  top
+			position x  85.0000 y  76.0000 rotation  0.0000000 face  top
 			model /home/luno/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
@@ -1761,7 +1785,7 @@
 	[CONDUCTOR BEGIN]
 		[TEXT BEGIN]
 			content "GND"
-			position x  69.0000 y  40.0000 rotation  0.0000000
+			position x  69.0000 y  24.0000 rotation  0.0000000
 			size  5.0000
 			linewidth  0.5000
 			alignment horizontal left vertical bottom
@@ -1826,6 +1850,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-12-03T11:52:22
+-- date 2025-12-13T08:30:32
 -- module file end
 
