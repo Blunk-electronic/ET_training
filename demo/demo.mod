@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-12-13T08:30:32
+-- date 2025-12-18T08:44:54
 -- ====================================================================================================
 
 [META BEGIN]
@@ -247,6 +247,18 @@
 				layer 1
 				width  0.1500
 			[LINE END]
+			[LINE BEGIN]
+				start x  85.0000 y  18.5000
+				end x  87.5000 y  18.5000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  87.5000 y  18.5000
+				end x  89.0000 y  20.0000
+				layer 1
+				width  0.1500
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -291,6 +303,18 @@
 			[LINE END]
 			[LINE BEGIN]
 				start x  91.0000 y  10.0000
+				end x  88.0000 y  7.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  85.0000 y  6.5000
+				end x  87.5000 y  6.5000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  87.5000 y  6.5000
 				end x  88.0000 y  7.0000
 				layer 1
 				width  0.1500
@@ -690,6 +714,7 @@
 		model /home/luno/git/BEL/ET_component_library/devices/passive/capacitors/C_pol.dev
 		value 10u
 		variant S_1206
+		partcode C_PAC_S_1206_VAL_10u
 		[PACKAGE BEGIN]
 			position x  5.0000 y  22.5000 rotation  0.0000000 face  top
 			[PLACEHOLDERS BEGIN]
@@ -751,8 +776,9 @@
 		model /home/luno/git/BEL/ET_component_library/devices/passive/capacitors/C.dev
 		value 100n
 		variant S_0805
+		partcode C_PAC_S_0805_VAL_100n
 		[PACKAGE BEGIN]
-			position x  45.0000 y  20.0000 rotation  0.0000000 face  top
+			position x  30.0000 y  28.0000 rotation  270.0000000 face  top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silkscreen
@@ -812,8 +838,9 @@
 		model /home/luno/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev
 		value 7400
 		variant D
+		partcode IC_PAC_S_SO14_VAL_7400
 		[PACKAGE BEGIN]
-			position x  45.0000 y  27.5000 rotation  0.0000000 face  top
+			position x  30.0000 y  21.0000 rotation  0.0000000 face  top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silkscreen
@@ -929,6 +956,7 @@
 		model /home/luno/git/BEL/ET_component_library/devices/active/opto/led-single.dev
 		value green
 		variant S_0805
+		partcode LED_PAC_S_0805_VAL_green
 		purpose "PWR ON"
 		[PACKAGE BEGIN]
 			position x  10.0000 y  45.0000 rotation  134.0000000 face  top
@@ -1056,6 +1084,7 @@
 		model /home/luno/git/BEL/ET_component_library/devices/passive/resistors/R.dev
 		value 1k
 		variant S_0805
+		partcode R_PAC_S_0805_VAL_1k
 		[PACKAGE BEGIN]
 			position x  5.0000 y  40.0000 rotation  134.0000000 face  top
 			[PLACEHOLDERS BEGIN]
@@ -1115,9 +1144,11 @@
 		name R2
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/resistors/R.dev
+		value 4k7
 		variant T_0207
+		partcode R_PAC_T_0207_pitch_12mm_VAL_4k7
 		[PACKAGE BEGIN]
-			position x  20.0000 y  15.0000 rotation  0.0000000 face  top
+			position x  68.0000 y  33.0000 rotation  90.0000000 face  top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silkscreen
@@ -1186,6 +1217,7 @@
 		model /home/luno/git/BEL/ET_component_library/devices/passive/resistors/R.dev
 		value 1M
 		variant T_0207
+		partcode R_PAC_T_0207_pitch_12mm_VAL_1M
 		purpose "ESD protection"
 		[PACKAGE BEGIN]
 			position x  85.0000 y  12.5000 rotation  270.0000000 face  top
@@ -1256,6 +1288,7 @@
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
 		variant T_male_blade
+		partcode X_PAC_T_male_blade_single
 		[PACKAGE BEGIN]
 			position x  5.0000 y  30.0000 rotation  0.0000000 face  top
 			[PLACEHOLDERS BEGIN]
@@ -1316,6 +1349,7 @@
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
 		variant T_male_blade
+		partcode X_PAC_T_male_blade_single
 		[PACKAGE BEGIN]
 			position x  5.0000 y  7.5000 rotation  0.0000000 face  top
 			[PLACEHOLDERS BEGIN]
@@ -1376,6 +1410,7 @@
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
 		variant T_male_blade
+		partcode X_PAC_T_male_blade_single
 		purpose "SET"
 		[PACKAGE BEGIN]
 			position x  47.5000 y  5.0000 rotation  90.0000000 face  top
@@ -1437,6 +1472,7 @@
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
 		variant T_male_blade
+		partcode X_PAC_T_male_blade_single
 		purpose "RESET"
 		[PACKAGE BEGIN]
 			position x  57.5000 y  5.0000 rotation  90.0000000 face  top
@@ -1498,6 +1534,7 @@
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
 		variant T_male_blade
+		partcode X_PAC_T_male_blade_single
 		purpose "HV INPUT"
 		[PACKAGE BEGIN]
 			position x  95.0000 y  22.5000 rotation  180.0000000 face  top
@@ -1559,6 +1596,7 @@
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
 		variant T_male_blade
+		partcode X_PAC_T_male_blade_single
 		purpose "HV OUTPUT"
 		[PACKAGE BEGIN]
 			position x  95.0000 y  10.0000 rotation  180.0000000 face  top
@@ -1647,7 +1685,7 @@
 	[DEVICES_NON_ELECTRIC BEGIN]
 		[DEVICE BEGIN]
 			name C3
-			position x  9.0000 y  21.0000 rotation  0.0000000 face  top
+			position x  76.0000 y  47.0000 rotation  0.0000000 face  top
 			model /home/luno/git/BEL/ET_component_library/packages/S_1206.pac
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
@@ -1672,7 +1710,23 @@
 		[DEVICE END]
 		[DEVICE BEGIN]
 			name FD1
-			position x  85.0000 y  76.0000 rotation  0.0000000 face  top
+			position x  95.0000 y  69.0000 rotation  0.0000000 face  top
+			model /home/luno/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x -1.0000 y -3.0000 rotation  0.0000000 face  top
+					size  1.0000
+					linewidth  0.1500
+					alignment horizontal center vertical center
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[DEVICE END]
+		[DEVICE BEGIN]
+			name FD2
+			position x  13.0000 y  4.0000 rotation  0.0000000 face  top
 			model /home/luno/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
@@ -1705,7 +1759,7 @@
 		[TOP BEGIN]
 			[PLACEHOLDER BEGIN]
 				meaning MODULE
-				position x  75.0000 y  75.0000 rotation  0.0000000
+				position x  80.0000 y  75.0000 rotation  0.0000000
 				size  2.0000
 				linewidth  0.2000
 				alignment horizontal left vertical bottom
@@ -1785,15 +1839,15 @@
 	[CONDUCTOR BEGIN]
 		[TEXT BEGIN]
 			content "GND"
-			position x  69.0000 y  24.0000 rotation  0.0000000
-			size  5.0000
-			linewidth  0.5000
+			position x  63.0000 y  50.0000 rotation  0.0000000
+			size  3.0000
+			linewidth  0.3000
 			alignment horizontal left vertical bottom
 			layer 1
 		[TEXT END]
 		[PLACEHOLDER BEGIN]
 			meaning MODULE
-			position x  75.0000 y  55.0000 rotation  0.0000000
+			position x  80.0000 y  57.0000 rotation  0.0000000
 			size  2.0000
 			linewidth  0.2000
 			alignment horizontal left vertical bottom
@@ -1850,6 +1904,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-12-13T08:30:32
+-- date 2025-12-18T08:44:54
 -- module file end
 
