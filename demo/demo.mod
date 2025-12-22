@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-12-18T08:44:54
+-- date 2025-12-22T10:40:53
 -- ====================================================================================================
 
 [META BEGIN]
@@ -192,10 +192,47 @@
 				layer 1
 				width  0.1500
 			[LINE END]
+			[LINE BEGIN]
+				start x  5.0000 y  12.5000
+				end x  5.0000 y  14.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  27.0750 y  17.1900
+				end x  28.8100 y  17.1900
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  28.8100 y  17.1900
+				end x  29.0000 y  17.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  5.0000 y  14.0000
+				end x  7.0000 y  14.0000
+				layer 4
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  7.0000 y  14.0000
+				end x  8.2500 y  15.2500
+				layer 4
+				width  0.1500
+			[LINE END]
 			[VIA BEGIN]
 				category THROUGH
-				position x  5.0000 y  12.5000
+				position x  5.0000 y  14.0000
 				diameter  0.6000
+				restring_outer  0.3500
+				restring_inner  0.3000
+			[VIA END]
+			[VIA BEGIN]
+				category THROUGH
+				position x  29.0000 y  17.0000
+				diameter  0.3000
 				restring_outer  0.3500
 				restring_inner  0.3000
 			[VIA END]
@@ -427,6 +464,24 @@
 			[LINE END]
 			[LINE BEGIN]
 				start x  3.0000 y  38.0235
+				end x  3.0000 y  33.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  5.0000 y  30.0000
+				end x  5.0000 y  32.2500
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  5.0000 y  32.2500
+				end x  4.2500 y  33.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  4.2500 y  33.0000
 				end x  3.0000 y  33.0000
 				layer 1
 				width  0.1500
@@ -1904,6 +1959,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-12-18T08:44:54
+-- date 2025-12-22T10:40:53
 -- module file end
 
