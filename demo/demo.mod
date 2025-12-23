@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-12-22T10:40:53
+-- date 2025-12-23T18:39:00
 -- ====================================================================================================
 
 [META BEGIN]
@@ -1814,7 +1814,7 @@
 		[TOP BEGIN]
 			[PLACEHOLDER BEGIN]
 				meaning MODULE
-				position x  80.0000 y  75.0000 rotation  0.0000000
+				position x  44.0000 y  75.0000 rotation  0.0000000
 				size  2.0000
 				linewidth  0.2000
 				alignment horizontal left vertical bottom
@@ -1825,6 +1825,28 @@
 	[SILKSCREEN END]
 	[ASSEMBLY_DOCUMENTATION BEGIN]
 		[TOP BEGIN]
+			[LINE BEGIN]
+				start x  89.0000 y  77.0000
+				end x  92.0000 y  75.0000
+				width  0.3000
+			[LINE END]
+			[LINE BEGIN]
+				start x  92.0000 y  75.0000
+				end x  89.0000 y  73.0000
+				width  0.3000
+			[LINE END]
+			[LINE BEGIN]
+				start x  89.0000 y  73.0000
+				end x  89.0000 y  77.0000
+				width  0.3000
+			[LINE END]
+			[TEXT BEGIN]
+				content "SCREW"
+				position x  73.0000 y  73.0000 rotation  0.0000000
+				size  3.0000
+				linewidth  0.5000
+				alignment horizontal left vertical bottom
+			[TEXT END]
 		[TOP END]
 		[BOTTOM BEGIN]
 		[BOTTOM END]
@@ -1959,6 +1981,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-12-22T10:40:53
+-- date 2025-12-23T18:39:00
 -- module file end
 
