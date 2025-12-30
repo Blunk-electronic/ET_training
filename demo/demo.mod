@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-12-30T10:11:02
+-- date 2025-12-30T16:35:17
 -- ====================================================================================================
 
 [META BEGIN]
@@ -2077,6 +2077,33 @@
 			width  0.1500
 			layer 1
 		[LINE END]
+		[ZONE BEGIN]
+			easing_style none
+			easing_radius  0.0000
+			width  0.3000
+			isolation  0.3000
+			priority  0
+			layer 1
+			fill_style solid
+			[CONTOURS BEGIN]
+				[LINE BEGIN]
+					start x  20.0000 y  67.0000
+					end x  64.0000 y  67.0000
+				[LINE END]
+				[LINE BEGIN]
+					start x  64.0000 y  67.0000
+					end x  64.0000 y  81.0000
+				[LINE END]
+				[LINE BEGIN]
+					start x  64.0000 y  81.0000
+					end x  20.0000 y  81.0000
+				[LINE END]
+				[LINE BEGIN]
+					start x  20.0000 y  81.0000
+					end x  20.0000 y  67.0000
+				[LINE END]
+			[CONTOURS END]
+		[ZONE END]
 		[TEXT BEGIN]
 			content "GND"
 			position x  63.0000 y  50.0000 rotation  0.0000000
@@ -2160,6 +2187,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-12-30T10:11:02
+-- date 2025-12-30T16:35:17
 -- module file end
 
