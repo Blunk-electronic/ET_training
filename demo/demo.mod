@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-12-23T18:39:00
+-- date 2025-12-30T10:11:02
 -- ====================================================================================================
 
 [META BEGIN]
@@ -236,6 +236,37 @@
 				restring_outer  0.3500
 				restring_inner  0.3000
 			[VIA END]
+			[ZONE BEGIN]
+				easing_style none
+				easing_radius  0.0000
+				width  0.3000
+				isolation  0.3000
+				priority  0
+				layer 1
+				fill_style solid
+				connection thermal
+				pad_technology smt_and_tht
+				relief_width_min  0.3100
+				relief_gap_max  0.4000
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x -1.0000 y  36.0000
+						end x  101.0000 y  36.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  101.0000 y  36.0000
+						end x  101.0000 y  60.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  101.0000 y  60.0000
+						end x -1.0000 y  60.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x -1.0000 y  60.0000
+						end x -1.0000 y  36.0000
+					[LINE END]
+				[CONTOURS END]
+			[ZONE END]
 		[ROUTE END]
 	[NET END]
 
@@ -1727,7 +1758,7 @@
 			fill_style solid
 			linewidth  0.3000
 			priority  0
-			isolation  0.0500
+			isolation  0.3000
 			spacing  0.0500
 			connection thermal
 			pad_technology smt_and_tht
@@ -1765,7 +1796,7 @@
 		[DEVICE END]
 		[DEVICE BEGIN]
 			name FD1
-			position x  95.0000 y  69.0000 rotation  0.0000000 face  top
+			position x  96.0000 y  66.0000 rotation  0.0000000 face  top
 			model /home/luno/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
@@ -1812,6 +1843,28 @@
 	[DEVICES_NON_ELECTRIC END]
 	[SILKSCREEN BEGIN]
 		[TOP BEGIN]
+			[LINE BEGIN]
+				start x  80.0000 y  68.0000
+				end x  65.0000 y  68.0000
+				width  1.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  65.0000 y  68.0000
+				end x  68.0000 y  71.0000
+				width  1.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  65.0000 y  68.0000
+				end x  68.0000 y  65.0000
+				width  1.0000
+			[LINE END]
+			[TEXT BEGIN]
+				content "AIRFLOW"
+				position x  71.0000 y  63.0000 rotation  0.0000000
+				size  3.0000
+				linewidth  0.5000
+				alignment horizontal left vertical bottom
+			[TEXT END]
 			[PLACEHOLDER BEGIN]
 				meaning MODULE
 				position x  44.0000 y  75.0000 rotation  0.0000000
@@ -1821,6 +1874,28 @@
 			[PLACEHOLDER END]
 		[TOP END]
 		[BOTTOM BEGIN]
+			[LINE BEGIN]
+				start x  80.0000 y  68.0000
+				end x  65.0000 y  68.0000
+				width  1.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  65.0000 y  68.0000
+				end x  68.0000 y  71.0000
+				width  1.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  65.0000 y  68.0000
+				end x  68.0000 y  65.0000
+				width  1.0000
+			[LINE END]
+			[TEXT BEGIN]
+				content "AIRFLOW"
+				position x  90.0000 y  63.0000 rotation  0.0000000
+				size  3.0000
+				linewidth  0.5000
+				alignment horizontal left vertical bottom
+			[TEXT END]
 		[BOTTOM END]
 	[SILKSCREEN END]
 	[ASSEMBLY_DOCUMENTATION BEGIN]
@@ -1865,6 +1940,46 @@
 	[STOPMASK END]
 	[KEEPOUT BEGIN]
 		[TOP BEGIN]
+			[ZONE BEGIN]
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x  102.0000 y  82.0000
+						end x  14.0000 y  82.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  14.0000 y  82.0000
+						end x  14.0000 y  61.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  14.0000 y  61.0000
+						end x  102.0000 y  61.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  102.0000 y  61.0000
+						end x  102.0000 y  82.0000
+					[LINE END]
+				[CONTOURS END]
+			[ZONE END]
+			[CUTOUT_ZONE BEGIN]
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x  90.0000 y  70.0000
+						end x  100.0000 y  70.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  100.0000 y  70.0000
+						end x  100.0000 y  80.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  100.0000 y  80.0000
+						end x  90.0000 y  80.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  90.0000 y  80.0000
+						end x  90.0000 y  70.0000
+					[LINE END]
+				[CONTOURS END]
+			[CUTOUT_ZONE END]
 		[TOP END]
 		[BOTTOM BEGIN]
 		[BOTTOM END]
@@ -1914,6 +2029,54 @@
 	[VIA_RESTRICT BEGIN]
 	[VIA_RESTRICT END]
 	[CONDUCTOR BEGIN]
+		[LINE BEGIN]
+			start x  66.0000 y  5.0000
+			end x  65.0000 y  2.0000
+			width  0.1500
+			layer 1
+		[LINE END]
+		[LINE BEGIN]
+			start x  65.0000 y  2.0000
+			end x  67.0000 y  2.0000
+			width  0.1500
+			layer 1
+		[LINE END]
+		[LINE BEGIN]
+			start x  67.0000 y  2.0000
+			end x  66.0000 y  5.0000
+			width  0.1500
+			layer 1
+		[LINE END]
+		[LINE BEGIN]
+			start x  65.0000 y  2.0000
+			end x  67.0000 y  2.0000
+			width  0.1500
+			layer 4
+		[LINE END]
+		[LINE BEGIN]
+			start x  67.0000 y  2.0000
+			end x  66.0000 y  5.0000
+			width  0.1500
+			layer 4
+		[LINE END]
+		[LINE BEGIN]
+			start x  66.0000 y  5.0000
+			end x  65.0000 y  2.0000
+			width  0.1500
+			layer 4
+		[LINE END]
+		[LINE BEGIN]
+			start x  64.0000 y  7.0000
+			end x  68.0000 y  7.0000
+			width  0.1500
+			layer 4
+		[LINE END]
+		[LINE BEGIN]
+			start x  64.0000 y  7.0000
+			end x  68.0000 y  7.0000
+			width  0.1500
+			layer 1
+		[LINE END]
 		[TEXT BEGIN]
 			content "GND"
 			position x  63.0000 y  50.0000 rotation  0.0000000
@@ -1921,6 +2084,22 @@
 			linewidth  0.3000
 			alignment horizontal left vertical bottom
 			layer 1
+		[TEXT END]
+		[TEXT BEGIN]
+			content "FIXTURE"
+			position x  61.0000 y  8.0000 rotation  0.0000000
+			size  2.0000
+			linewidth  0.3000
+			alignment horizontal left vertical bottom
+			layer 1
+		[TEXT END]
+		[TEXT BEGIN]
+			content "FIXTURE"
+			position x  74.0000 y  8.0000 rotation  0.0000000
+			size  2.0000
+			linewidth  0.3000
+			alignment horizontal left vertical bottom
+			layer 4
 		[TEXT END]
 		[PLACEHOLDER BEGIN]
 			meaning MODULE
@@ -1956,6 +2135,26 @@
 		[OUTLINE END]
 		[HOLE BEGIN]
 			[LINE BEGIN]
+				start x  0.0000 y  0.0000
+				end x  100.0000 y  0.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  100.0000 y  0.0000
+				end x  100.0000 y  80.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  100.0000 y  80.0000
+				end x  37.5000 y  80.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  37.5000 y  80.0000
+				end x  0.0000 y  42.5000
+			[LINE END]
+			[LINE BEGIN]
+				start x  0.0000 y  42.5000
+				end x  0.0000 y  0.0000
+			[LINE END]
+			[LINE BEGIN]
 				start x  7.5000 y  37.5000
 				end x  42.5000 y  72.5000
 			[LINE END]
@@ -1981,6 +2180,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-12-23T18:39:00
+-- date 2025-12-30T10:11:02
 -- module file end
 
