@@ -2135,26 +2135,6 @@
 		[OUTLINE END]
 		[HOLE BEGIN]
 			[LINE BEGIN]
-				start x  0.0000 y  0.0000
-				end x  100.0000 y  0.0000
-			[LINE END]
-			[LINE BEGIN]
-				start x  100.0000 y  0.0000
-				end x  100.0000 y  80.0000
-			[LINE END]
-			[LINE BEGIN]
-				start x  100.0000 y  80.0000
-				end x  37.5000 y  80.0000
-			[LINE END]
-			[LINE BEGIN]
-				start x  37.5000 y  80.0000
-				end x  0.0000 y  42.5000
-			[LINE END]
-			[LINE BEGIN]
-				start x  0.0000 y  42.5000
-				end x  0.0000 y  0.0000
-			[LINE END]
-			[LINE BEGIN]
 				start x  7.5000 y  37.5000
 				end x  42.5000 y  72.5000
 			[LINE END]
