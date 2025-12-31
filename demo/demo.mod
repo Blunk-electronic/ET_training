@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-12-30T16:35:17
+-- date 2025-12-31T11:22:47
 -- ====================================================================================================
 
 [META BEGIN]
@@ -1928,14 +1928,54 @@
 	[ASSEMBLY_DOCUMENTATION END]
 	[STENCIL BEGIN]
 		[TOP BEGIN]
+			[LINE BEGIN]
+				start x  70.0000 y  6.0000
+				end x  70.0000 y  3.0000
+				width  2.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  62.0000 y  6.0000
+				end x  62.0000 y  3.0000
+				width  2.0000
+			[LINE END]
 		[TOP END]
 		[BOTTOM BEGIN]
+			[LINE BEGIN]
+				start x  62.0000 y  6.0000
+				end x  62.0000 y  3.0000
+				width  2.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  70.0000 y  6.0000
+				end x  70.0000 y  3.0000
+				width  2.0000
+			[LINE END]
 		[BOTTOM END]
 	[STENCIL END]
 	[STOPMASK BEGIN]
 		[TOP BEGIN]
+			[LINE BEGIN]
+				start x  62.0000 y  6.0000
+				end x  62.0000 y  3.0000
+				width  2.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  70.0000 y  6.0000
+				end x  70.0000 y  3.0000
+				width  2.0000
+			[LINE END]
 		[TOP END]
 		[BOTTOM BEGIN]
+			[LINE BEGIN]
+				start x  62.0000 y  6.0000
+				end x  62.0000 y  3.0000
+				width  2.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  70.0000 y  6.0000
+				end x  70.0000 y  3.0000
+				width  2.0000
+			[LINE END]
 		[BOTTOM END]
 	[STOPMASK END]
 	[KEEPOUT BEGIN]
@@ -2077,6 +2117,30 @@
 			width  0.1500
 			layer 1
 		[LINE END]
+		[LINE BEGIN]
+			start x  70.0000 y  6.0000
+			end x  70.0000 y  3.0000
+			width  2.0000
+			layer 1
+		[LINE END]
+		[LINE BEGIN]
+			start x  62.0000 y  6.0000
+			end x  62.0000 y  3.0000
+			width  2.0000
+			layer 1
+		[LINE END]
+		[LINE BEGIN]
+			start x  62.0000 y  6.0000
+			end x  62.0000 y  3.0000
+			width  2.0000
+			layer 4
+		[LINE END]
+		[LINE BEGIN]
+			start x  70.0000 y  6.0000
+			end x  70.0000 y  3.0000
+			width  2.0000
+			layer 4
+		[LINE END]
 		[ZONE BEGIN]
 			easing_style none
 			easing_radius  0.0000
@@ -2187,6 +2251,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-12-30T16:35:17
+-- date 2025-12-31T11:22:47
 -- module file end
 
