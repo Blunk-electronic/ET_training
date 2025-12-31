@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-12-31T16:25:05
+-- date 2025-12-31T16:36:00
 -- ====================================================================================================
 
 [META BEGIN]
@@ -1974,6 +1974,33 @@
 				end x  37.0000 y  69.0000
 				width  1.0000
 			[LINE END]
+			[ZONE BEGIN]
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x  53.0000 y  74.0000
+						end x  60.0000 y  74.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  60.0000 y  74.0000
+						end x  60.0000 y  78.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  60.0000 y  78.0000
+						end x  53.0000 y  78.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  53.0000 y  78.0000
+						end x  53.0000 y  74.0000
+					[LINE END]
+				[CONTOURS END]
+			[ZONE END]
+			[TEXT BEGIN]
+				content "TOP"
+				position x  36.0000 y  71.0000 rotation  40.0000000
+				size  3.0000
+				linewidth  0.4000
+				alignment horizontal left vertical bottom
+			[TEXT END]
 		[TOP END]
 		[BOTTOM BEGIN]
 			[LINE BEGIN]
@@ -2261,6 +2288,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-12-31T16:25:05
+-- date 2025-12-31T16:36:00
 -- module file end
 
