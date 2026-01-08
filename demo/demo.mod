@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2025-12-31T16:36:00
+-- date 2026-01-07T09:51:18
 -- ====================================================================================================
 
 [META BEGIN]
@@ -174,6 +174,19 @@
 						[PORTS BEGIN]
 							A  device C2 unit 1 port 2
 							B  device PWR5 unit 1 port GND
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+			[STRAND BEGIN]
+				position sheet  1 x  125.00 y  92.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  125.00 y  95.00
+						end   x  125.00 y  92.50
+						[PORTS BEGIN]
+							A  device T1 unit 1 port E
+							B  device PWR6 unit 1 port GND
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -1165,6 +1178,19 @@
 	[DEVICE END]
 
 	[DEVICE BEGIN]
+		name PWR6
+		appearance VIRTUAL
+		model /home/luno/git/BEL/ET_component_library/devices/supply/gnd.dev
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  1 x  125.00 y  87.50 rotation  0.0
+				mirrored no
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
 		name R1
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/resistors/R.dev
@@ -1234,7 +1260,7 @@
 		variant T_0207
 		partcode R_PAC_T_0207_pitch_12mm_VAL_4k7
 		[PACKAGE BEGIN]
-			position x  68.0000 y  33.0000 rotation  90.0000000 face  top
+			position x  63.0000 y  33.0000 rotation  90.0000000 face  top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silkscreen
@@ -1360,6 +1386,67 @@
 					[PLACEHOLDER BEGIN]
 						meaning purpose
 						position x  2.50 y -5.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
+		name T1
+		appearance PCB
+		model /home/luno/git/BEL/ET_component_library/devices/active/transistor/npn.dev
+		value BD136
+		variant T_TO220H
+		[PACKAGE BEGIN]
+			position x  80.0000 y  33.0000 rotation  0.0000000 face  top
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x  0.0000 y -5.5000 rotation  0.0000000 face  top
+					size  1.5000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer assy_doc
+					meaning value
+					anchor relative
+					position x  0.0000 y -7.5000 rotation  0.0000000 face  top
+					size  1.5000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[PACKAGE END]
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  1 x  125.00 y  100.00 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x  2.00 y  1.00
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x  2.00 y -1.00
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y  0.00
 						size  1.30
 						rotation  0.0
 						alignment horizontal left vertical bottom
@@ -1771,7 +1858,7 @@
 	[DEVICES_NON_ELECTRIC BEGIN]
 		[DEVICE BEGIN]
 			name C3
-			position x  76.0000 y  47.0000 rotation  0.0000000 face  top
+			position x  58.0000 y  31.0000 rotation  0.0000000 face  top
 			model /home/luno/git/BEL/ET_component_library/packages/S_1206.pac
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
@@ -2288,6 +2375,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2025-12-31T16:36:00
+-- date 2026-01-07T09:51:18
 -- module file end
 
