@@ -11,9 +11,11 @@ board demo set zone isolation 0.3
 # rechteckig 1mm überstand
 # board demo route net GND 1 zone line -1 -1 line 101 -1 line 101 51 line -1 51
 # board demo route net GND 1 zone line -1 -1 line 101 -1 line 101 60 line -1 60
-board demo route net GND 1 zone line -1 36 line 101 36 line 101 60 line -1 60
+# board demo route net GND 1 zone line -1 36 line 101 36 line 101 60 line -1 60
 
-# board demo route freetrack 1 zone line -1 -1 line 100 -1 line 100 50 line -1 50
+# board demo route freetrack 1 zone line 20 67 line 64 67 line 64 81 line 20 81
+board demo draw stopmask top zone line 53 74 line 60 74 line 60 78 line 53 78
+
 # board demo route net gnd 1 zone line -1 -1 line 99 1 line 100 50 line -1 50
 
 # board demo place text conductor 3 0.15 1 20 5 0 "LY3"
@@ -26,8 +28,8 @@ board demo display restrict route 1 on
 
 # board demo move device R2 absolute 75 50
 # board demo move device IC1 absolute 92 45
-board demo set cursor 7.75 43 70
+# board demo set cursor 7.75 43 70
 
-board demo fill zone
+# board demo fill zone
 
 # script end

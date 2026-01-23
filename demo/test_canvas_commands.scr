@@ -1,0 +1,39 @@
+# SCHEMATIC:
+
+# set grid:
+schematic demo set grid spacing 10 5
+
+# zoom to LED1:
+schematic demo set cursor 90 110 80
+
+# set zoom:
+# schematic demo set zoom 40
+
+# zoom to fit:
+# schematic demo zoom all
+
+# move cursor
+# schematic demo move cursor 5 0
+
+
+
+
+# BOARD:
+
+# set grid:
+board demo set grid spacing 10 5
+
+# zoom to LED1:
+board demo set cursor 10 45 80
+
+# set zoom:
+# board demo set zoom 40
+
+# zoom to fit:
+board demo zoom all
+
+# move cursor
+# board demo move cursor 5 0
+
+
+# script end

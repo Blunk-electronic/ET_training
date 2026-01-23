@@ -1,0 +1,11 @@
+
+
+
+# BOARD
+
+board demo add device $HOME/git/BEL/ET_component_library/packages/labels/top_mark.pac TM 7 4
+board demo rotate device TM1 relative 90
+board demo rename device TM1 TM2
+board demo move device TM2 relative 3 0 # final pos. is 10/4
+
+board demo flip device IC1
