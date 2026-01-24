@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2026-01-23T10:25:56
+-- date 2026-01-24T09:19:10
 -- ====================================================================================================
 
 [META BEGIN]
@@ -16,6 +16,7 @@
 		approved_by "N/A"
 		approved_date 1901-01-01
 		[PREFERRED_LIBRARIES BEGIN]
+			path $HOME/git/BEL/ET_component_library/devices/
 		[PREFERRED_LIBRARIES END]
 	[SCHEMATIC END]
 	[BOARD BEGIN]
@@ -31,11 +32,13 @@
 		approved_by "N/A"
 		approved_date 1901-01-01
 		[PREFERRED_LIBRARIES BEGIN]
+			path $HOME/git/BEL/ET_component_library/packages/
 		[PREFERRED_LIBRARIES END]
 	[BOARD END]
 [META END]
 ----------------------------------------------------------------------------------------------------
 [RULES BEGIN]
+	layout pcb-design-rules/JLP_ML4_standard.dru
 [RULES END]
 ----------------------------------------------------------------------------------------------------
 [NET_CLASSES BEGIN]
@@ -155,6 +158,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2026-01-23T10:25:56
+-- date 2026-01-24T09:19:10
 -- module file end
 

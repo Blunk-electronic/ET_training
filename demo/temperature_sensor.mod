@@ -16,6 +16,7 @@
 		approved_by "N/A"
 		approved_date 1901-01-01
 		[PREFERRED_LIBRARIES BEGIN]
+			path $HOME/git/BEL/ET_component_library/devices/
 		[PREFERRED_LIBRARIES END]
 	[SCHEMATIC END]
 	[BOARD BEGIN]
@@ -31,6 +32,7 @@
 		approved_by "N/A"
 		approved_date 1901-01-01
 		[PREFERRED_LIBRARIES BEGIN]
+			path $HOME/git/BEL/ET_component_library/packages/
 		[PREFERRED_LIBRARIES END]
 	[BOARD END]
 [META END]

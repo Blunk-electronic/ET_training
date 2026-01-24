@@ -1,0 +1,14 @@
+# SCHEMATIC:
+schematic power_supply show module power_supply
+
+schematic power_supply add library $HOME/git/BEL/ET_component_library/devices/
+schematic power_supply remove library $HOME/git/BEL/ET_component_library/devices/
+
+# BOARD:
+board power_supply add library $HOME/git/BEL/ET_component_library/packages/
+board power_supply remove library $HOME/git/BEL/ET_component_library/packages/
+
+# board power_supply save module
+
+
+# script end
