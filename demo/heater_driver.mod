@@ -2310,7 +2310,7 @@
 		[TEXT END]
 		[TEXT BEGIN]
 			content "FIXTURE"
-			position x  74.0000 y  8.0000 rotation  0.0000000
+			position x  74.0000 y  8.0000 rotation  45.0000000
 			size  2.0000
 			linewidth  0.3000
 			alignment horizontal left vertical bottom
@@ -2318,11 +2318,19 @@
 		[TEXT END]
 		[PLACEHOLDER BEGIN]
 			meaning MODULE
-			position x  80.0000 y  57.0000 rotation  0.0000000
+			position x  70.0000 y  57.0000 rotation  0.0000000
 			size  2.0000
 			linewidth  0.2000
 			alignment horizontal left vertical bottom
 			layer 1
+		[PLACEHOLDER END]
+		[PLACEHOLDER BEGIN]
+			meaning MODULE
+			position x  93.0000 y  57.0000 rotation  0.0000000
+			size  2.0000
+			linewidth  0.2000
+			alignment horizontal left vertical bottom
+			layer 4
 		[PLACEHOLDER END]
 	[CONDUCTOR END]
 	[PCB_CONTOURS_NON_PLATED BEGIN]
