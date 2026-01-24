@@ -1983,6 +1983,13 @@
 				linewidth  0.5000
 				alignment horizontal left vertical bottom
 			[TEXT END]
+			[PLACEHOLDER BEGIN]
+				meaning MODULE
+				position x  68.0000 y  75.0000 rotation  0.0000000
+				size  2.0000
+				linewidth  0.2000
+				alignment horizontal left vertical bottom
+			[PLACEHOLDER END]
 		[BOTTOM END]
 	[SILKSCREEN END]
 	[ASSEMBLY_DOCUMENTATION BEGIN]
