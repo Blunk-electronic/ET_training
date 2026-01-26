@@ -2018,6 +2018,13 @@
 			[TEXT END]
 		[TOP END]
 		[BOTTOM BEGIN]
+			[TEXT BEGIN]
+				content "STANDOFF"
+				position x  92.0000 y  73.0000 rotation  0.0000000
+				size  3.0000
+				linewidth  0.5000
+				alignment horizontal left vertical bottom
+			[TEXT END]
 		[BOTTOM END]
 	[ASSEMBLY_DOCUMENTATION END]
 	[STENCIL BEGIN]
