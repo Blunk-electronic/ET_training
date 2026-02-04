@@ -1,0 +1,10 @@
+schematic temperature_sensor show module temperature_sensor
+board temperature_sensor set cursor 130 140 2
+board temperature_sensor zoom all
+
+# EURO card format:
+#board temperature_sensor draw outline line 0 0 line 160 0 line 160 80 line 0 80
+
+
+board temperature_sensor draw outline line 130 110 line 160 110 line 160 170 line 130 170 arc 130 140  130 170 ccw
+# script end

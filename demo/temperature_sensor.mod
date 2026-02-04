@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2026-01-23T10:23:32
+-- date 2026-02-04T12:18:47
 -- ====================================================================================================
 
 [META BEGIN]
@@ -151,12 +151,34 @@
 	[CONDUCTOR END]
 	[PCB_CONTOURS_NON_PLATED BEGIN]
 		[OUTLINE BEGIN]
+			[LINE BEGIN]
+				start x  130.0000 y  110.0000
+				end x  160.0000 y  110.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  160.0000 y  110.0000
+				end x  160.0000 y  170.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  160.0000 y  170.0000
+				end x  130.0000 y  170.0000
+			[LINE END]
+			[LINE BEGIN]
+				start x  130.0000 y  170.0000
+				end x  130.0000 y  170.0000
+			[LINE END]
+			[ARC BEGIN]
+				center x  130.0000 y  140.0000
+				start x  130.0000 y  170.0000
+				end x  130.0000 y  110.0000
+				direction ccw
+			[ARC END]
 		[OUTLINE END]
 	[PCB_CONTOURS_NON_PLATED END]
 [BOARD END]
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2026-01-23T10:23:32
+-- date 2026-02-04T12:18:47
 -- module file end
 
