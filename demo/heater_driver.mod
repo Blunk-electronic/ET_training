@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2026-01-23T09:55:42
+-- date 2026-03-04T19:19:43
 -- ====================================================================================================
 
 [META BEGIN]
@@ -88,6 +88,29 @@
 [BOARD_LAYER_STACK END]
 ----------------------------------------------------------------------------------------------------
 [NETS BEGIN]
+	[NET BEGIN]
+		name COLLECTOR
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  1 x  125.00 y  105.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  125.00 y  105.00
+						end   x  125.00 y  120.00
+						[PORTS BEGIN]
+							A  device T1 unit 1 port C
+							B netchanger 1 port master
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
+	[NET END]
+
 	[NET BEGIN]
 		name GND
 		class default
@@ -450,17 +473,6 @@
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
 						start x  90.00 y  135.00
-						end   x  142.50 y  135.00
-						[LABELS BEGIN]
-							[LABEL BEGIN]
-								position x  135.00 y  135.50
-								rotation  0.0
-								size  1.30
-							[LABEL END]
-						[LABELS END]
-					[SEGMENT END]
-					[SEGMENT BEGIN]
-						start x  90.00 y  135.00
 						end   x  90.00 y  127.50
 						[JUNCTIONS BEGIN]
 							A 
@@ -488,6 +500,28 @@
 						[JUNCTIONS END]
 						[PORTS BEGIN]
 							B  device C1 unit 1 port 1
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  90.00 y  135.00
+						end   x  105.00 y  135.00
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  105.00 y  135.00
+						end   x  142.50 y  135.00
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  105.00 y  135.00
+						end   x  105.00 y  120.00
+						[JUNCTIONS BEGIN]
+							A 
+						[JUNCTIONS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  105.00 y  120.00
+						end   x  110.00 y  120.00
+						[PORTS BEGIN]
+							B netchanger 1 port slave
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -1832,6 +1866,14 @@
 [ASSEMBLY_VARIANTS END]
 ----------------------------------------------------------------------------------------------------
 [NETCHANGERS BEGIN]
+	[NETCHANGER BEGIN]
+		name 1
+		direction FORWARD
+		position_in_schematic x  117.50 y  120.00 rotation  0.0
+		rotation_in_schematic  0.0
+		position_in_board x  0.0000 y  0.0000
+		layer 1
+	[NETCHANGER END]
 [NETCHANGERS END]
 ----------------------------------------------------------------------------------------------------
 [BOARD BEGIN]
@@ -2397,6 +2439,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2026-01-23T09:55:42
+-- date 2026-03-04T19:19:43
 -- module file end
 
