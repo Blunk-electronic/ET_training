@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2026-03-04T19:19:43
+-- date 2026-03-21T10:35:50
 -- ====================================================================================================
 
 [META BEGIN]
@@ -100,7 +100,7 @@
 						start x  125.00 y  105.00
 						end   x  125.00 y  120.00
 						[PORTS BEGIN]
-							A  device T1 unit 1 port C
+							A device T1 unit 1 port C
 							B netchanger 1 port master
 						[PORTS END]
 					[SEGMENT END]
@@ -123,14 +123,14 @@
 						start x  80.00 y  97.50
 						end   x  80.00 y  92.50
 						[PORTS BEGIN]
-							B  device PWR1 unit 1 port GND
+							B device PWR1 unit 1 port GND
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
 						start x  72.50 y  97.50
 						end   x  77.50 y  97.50
 						[PORTS BEGIN]
-							A  device X2 unit 1 port 1
+							A device X2 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
@@ -144,7 +144,7 @@
 							A 
 						[JUNCTIONS END]
 						[PORTS BEGIN]
-							B  device C1 unit 1 port 2
+							B device C1 unit 1 port 2
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -156,8 +156,8 @@
 						start x  90.00 y  105.00
 						end   x  90.00 y  92.50
 						[PORTS BEGIN]
-							A  device LED1 unit 1 port C
-							B  device PWR2 unit 1 port GND
+							A device LED1 unit 1 port C
+							B device PWR2 unit 1 port GND
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -169,8 +169,8 @@
 						start x  105.00 y  95.00
 						end   x  105.00 y  92.50
 						[PORTS BEGIN]
-							A  device R2 unit 1 port 2
-							B  device PWR3 unit 1 port GND
+							A device R2 unit 1 port 2
+							B device PWR3 unit 1 port GND
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -182,8 +182,8 @@
 						start x  80.00 y  100.00
 						end   x  80.00 y  92.50
 						[PORTS BEGIN]
-							A  device IC1 unit P port GND
-							B  device PWR4 unit 1 port GND
+							A device IC1 unit P port GND
+							B device PWR4 unit 1 port GND
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -195,8 +195,8 @@
 						start x  107.50 y  105.00
 						end   x  107.50 y  92.50
 						[PORTS BEGIN]
-							A  device C2 unit 1 port 2
-							B  device PWR5 unit 1 port GND
+							A device C2 unit 1 port 2
+							B device PWR5 unit 1 port GND
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -208,8 +208,8 @@
 						start x  125.00 y  95.00
 						end   x  125.00 y  92.50
 						[PORTS BEGIN]
-							A  device T1 unit 1 port E
-							B  device PWR6 unit 1 port GND
+							A device T1 unit 1 port E
+							B device PWR6 unit 1 port GND
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -325,14 +325,14 @@
 							[LABEL END]
 						[LABELS END]
 						[PORTS BEGIN]
-							A  device X5 unit 1 port 1
+							A device X5 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
 						start x  77.50 y  135.00
 						end   x  77.50 y  130.00
 						[PORTS BEGIN]
-							B  device R3 unit 1 port 1
+							B device R3 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -378,7 +378,7 @@
 						start x  77.50 y  120.00
 						end   x  77.50 y  107.50
 						[PORTS BEGIN]
-							A  device R3 unit 1 port 2
+							A device R3 unit 1 port 2
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
@@ -392,7 +392,7 @@
 							[LABEL END]
 						[LABELS END]
 						[PORTS BEGIN]
-							B  device X6 unit 1 port 1
+							B device X6 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -438,7 +438,7 @@
 						start x  107.50 y  135.00
 						end   x  107.50 y  115.00
 						[PORTS BEGIN]
-							B  device C2 unit 1 port 1
+							B device C2 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
@@ -463,7 +463,7 @@
 							A 
 						[JUNCTIONS END]
 						[PORTS BEGIN]
-							B  device IC1 unit P port VCC
+							B device IC1 unit P port VCC
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -478,14 +478,14 @@
 							A 
 						[JUNCTIONS END]
 						[PORTS BEGIN]
-							B  device R1 unit 1 port 1
+							B device R1 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
 						start x  72.50 y  135.00
 						end   x  77.50 y  135.00
 						[PORTS BEGIN]
-							A  device X1 unit 1 port 1
+							A device X1 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
@@ -499,7 +499,7 @@
 							A 
 						[JUNCTIONS END]
 						[PORTS BEGIN]
-							B  device C1 unit 1 port 1
+							B device C1 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
@@ -579,8 +579,8 @@
 						start x  90.00 y  117.50
 						end   x  90.00 y  115.00
 						[PORTS BEGIN]
-							A  device R1 unit 1 port 2
-							B  device LED1 unit 1 port A
+							A device R1 unit 1 port 2
+							B device LED1 unit 1 port A
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -614,7 +614,7 @@
 						start x  75.00 y  135.00
 						end   x  70.00 y  135.00
 						[PORTS BEGIN]
-							A  device IC1 unit A port I2
+							A device IC1 unit A port I2
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
@@ -633,7 +633,7 @@
 						start x  97.50 y  107.50
 						end   x  95.00 y  107.50
 						[PORTS BEGIN]
-							B  device IC1 unit D port O
+							B device IC1 unit D port O
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
@@ -665,7 +665,7 @@
 						start x  75.00 y  112.50
 						end   x  70.00 y  112.50
 						[PORTS BEGIN]
-							A  device IC1 unit D port I1
+							A device IC1 unit D port I1
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
@@ -684,7 +684,7 @@
 						start x  97.50 y  140.00
 						end   x  95.00 y  140.00
 						[PORTS BEGIN]
-							B  device IC1 unit A port O
+							B device IC1 unit A port O
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
@@ -723,7 +723,7 @@
 							[LABEL END]
 						[LABELS END]
 						[PORTS BEGIN]
-							A  device IC1 unit D port I2
+							A device IC1 unit D port I2
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -742,7 +742,7 @@
 							[LABEL END]
 						[LABELS END]
 						[PORTS BEGIN]
-							A  device X4 unit 1 port 1
+							A device X4 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -771,7 +771,7 @@
 							[LABEL END]
 						[LABELS END]
 						[PORTS BEGIN]
-							A  device IC1 unit A port I1
+							A device IC1 unit A port I1
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -790,7 +790,7 @@
 							[LABEL END]
 						[LABELS END]
 						[PORTS BEGIN]
-							A  device X3 unit 1 port 1
+							A device X3 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -2439,6 +2439,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2026-03-04T19:19:43
+-- date 2026-03-21T10:35:50
 -- module file end
 
