@@ -8,6 +8,7 @@ schematic heater_driver set cursor 120 120 10
 # schematic heater_driver add netchanger 1 175 120 270
 
 schematic heater_driver display ports
+# schematic heater_driver add netchanger 1 150 135 0
 schematic heater_driver copy netchanger 1 1 150 135
 # schematic heater_driver move netchanger 1 relative 1 -62.5 -17.5
 # schematic heater_driver move netchanger 1 absolute 2 55.0 102.5
@@ -15,12 +16,14 @@ schematic heater_driver copy netchanger 1 1 150 135
 # schematic heater_driver set netchanger 2 backward
 # schematic heater_driver rotate netchanger 2 90
 
-board heater_driver move netchanger 1 absolute 45 30
-board heater_driver move netchanger 2 absolute 47 30
-board heater_driver set netchanger 2 layer 3
-board heater_driver set cursor 45 30 20
+# board heater_driver move netchanger 1 absolute 45 40
+# board heater_driver move netchanger 2 absolute 47 30
+# board heater_driver set netchanger 2 layer 3
+# board heater_driver set cursor 45 30 20
 # schematic heater_driver copy netchanger 2 2 150 100
 
-# schematic heater_driver rename netchanger 1 2
+schematic heater_driver rename netchanger 2 2200
+
+board heater_driver move netchanger 2200 absolute 45 35
 # BOARD
 
