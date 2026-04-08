@@ -1869,8 +1869,7 @@
 	[NETCHANGER BEGIN]
 		name 1
 		direction FORWARD
-		position_in_schematic x  117.50 y  120.00 rotation  0.0
-		rotation_in_schematic  0.0
+		position_in_schematic sheet 1 x  117.50 y  120.00 rotation  0.0
 		position_in_board x  0.0000 y  0.0000
 		layer 1
 	[NETCHANGER END]
