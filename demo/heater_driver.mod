@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2026-03-21T10:35:50
+-- date 2026-04-11T10:09:08
 -- ====================================================================================================
 
 [META BEGIN]
@@ -1869,8 +1869,8 @@
 	[NETCHANGER BEGIN]
 		name 1
 		direction FORWARD
-		position_in_schematic sheet 1 x  117.50 y  120.00 rotation  0.0
-		position_in_board x  0.0000 y  0.0000
+		position_in_schematic sheet  1 x  117.50 y  120.00 rotation  0.0
+		position_in_board x  40.0000 y  29.0000
 		layer 1
 	[NETCHANGER END]
 [NETCHANGERS END]
@@ -2438,6 +2438,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2026-03-21T10:35:50
+-- date 2026-04-11T10:09:08
 -- module file end
 
