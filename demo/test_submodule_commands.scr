@@ -1,0 +1,26 @@
+# SCHEMATIC
+
+schematic heater_driver add submodule oscillator.mod OSC1 5 170 90 30 30 # pos 300/90 size 30/30
+# schematic heater_driver copy submodule OSC1 OSC2 1 170 140
+
+# schematic heater_driver rename submodule OSC1 OSC2
+
+# schematic heater_driver move submodule OSC2 relative 1 0 0
+
+# schematic heater_driver delete submodule OSC2
+
+# schematic heater_driver drag submodule OSC2 relative -10 0
+
+schematic heater_driver add port OSC1 P5 0 20 master
+schematic heater_driver add port OSC1 OSC_OUT 0 15 master
+schematic heater_driver add port OSC1 GND 0 10 master
+
+
+schematic heater_driver draw net P5 5 170 110 160 110
+schematic heater_driver place net_label 5 160 110
+
+schematic heater_driver draw net CLK 5 170 105 160 105
+schematic heater_driver place net_label 5 160 105
+
+schematic heater_driver draw net GND 5 170 100 160 100
+schematic heater_driver place net_label 5 160 100

@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2026-04-11T10:09:08
+-- date 2026-04-15T18:57:49
 -- ====================================================================================================
 
 [META BEGIN]
@@ -88,6 +88,39 @@
 [BOARD_LAYER_STACK END]
 ----------------------------------------------------------------------------------------------------
 [NETS BEGIN]
+	[NET BEGIN]
+		name CLK
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  5 x  77.50 y  90.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  77.50 y  90.00
+						end   x  77.50 y  95.00
+						[PORTS BEGIN]
+							A device R4 unit 1 port 1
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  77.50 y  95.00
+						end   x  97.50 y  95.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  90.00 y  95.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
+	[NET END]
+
 	[NET BEGIN]
 		name COLLECTOR
 		class default
@@ -210,6 +243,19 @@
 						[PORTS BEGIN]
 							A device T1 unit 1 port E
 							B device PWR6 unit 1 port GND
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+			[STRAND BEGIN]
+				position sheet  5 x  77.50 y  75.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  77.50 y  80.00
+						end   x  77.50 y  75.00
+						[PORTS BEGIN]
+							A device R4 unit 1 port 2
+							B device PWR7 unit 1 port GND
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -1225,6 +1271,19 @@
 	[DEVICE END]
 
 	[DEVICE BEGIN]
+		name PWR7
+		appearance VIRTUAL
+		model /home/luno/git/BEL/ET_component_library/devices/supply/gnd.dev
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  5 x  77.50 y  70.00 rotation  0.0
+				mirrored no
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
 		name R1
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/resistors/R.dev
@@ -1420,6 +1479,66 @@
 					[PLACEHOLDER BEGIN]
 						meaning purpose
 						position x  2.50 y -5.00
+						size  1.30
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
+		name R4
+		appearance PCB
+		model /home/luno/git/BEL/ET_component_library/devices/passive/resistors/R.dev
+		variant S_0805
+		[PACKAGE BEGIN]
+			position x  0.0000 y  0.0000 rotation  0.0000000 face  top
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x  2.2000 y  1.0000 rotation  90.0000000 face  top
+					size  1.2000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer assy_doc
+					meaning value
+					anchor relative
+					position x  3.8000 y  0.0000 rotation  90.0000000 face  top
+					size  1.2000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[PACKAGE END]
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  5 x  77.50 y  85.00 rotation  0.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x  1.60 y  1.00
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x  1.60 y -1.00
+						size  1.20
+						rotation  0.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y  0.00
 						size  1.30
 						rotation  0.0
 						alignment horizontal left vertical bottom
@@ -2438,6 +2557,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2026-04-11T10:09:08
+-- date 2026-04-15T18:57:49
 -- module file end
 
