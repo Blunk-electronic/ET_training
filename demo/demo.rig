@@ -12,6 +12,12 @@
 		generic_name pwr-supply
 		instance_name PWR1
 	[MODULE END]
+
+	[MODULE BEGIN]
+		generic_name oscillator
+		instance_name OSC1
+	[MODULE END]
+
 	
 [MODULE_INSTANCES END]
 
