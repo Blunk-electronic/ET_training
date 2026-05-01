@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2026-04-15T18:57:49
+-- date 2026-05-01T19:30:31
 -- ====================================================================================================
 
 [META BEGIN]
@@ -89,6 +89,115 @@
 ----------------------------------------------------------------------------------------------------
 [NETS BEGIN]
 	[NET BEGIN]
+		name ADC_IN_LOW
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  1 x  120.00 y  75.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  120.00 y  75.00
+						end   x  142.50 y  75.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  127.50 y  75.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							A device R5 unit 1 port 2
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
+		name AGND
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  1 x  100.00 y  75.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  100.00 y  75.00
+						end   x  110.00 y  75.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  105.00 y  75.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							B device R5 unit 1 port 1
+							A netchanger 2 port master
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  18.0000 y  7.0000
+				end x  18.0000 y  5.0000
+				layer 1
+				width  0.3000
+			[LINE END]
+			[LINE BEGIN]
+				start x  18.0000 y  5.0000
+				end x  14.0000 y  5.0000
+				layer 1
+				width  0.3000
+			[LINE END]
+			[VIA BEGIN]
+				category THROUGH
+				position x  18.0000 y  7.0000
+				diameter  0.6000
+				restring_outer  0.3500
+				restring_inner  0.3000
+			[VIA END]
+			[ZONE BEGIN]
+				easing_style none
+				easing_radius  0.0000
+				width  0.3000
+				isolation  0.3000
+				priority  0
+				layer 1
+				fill_style solid
+				connection thermal
+				pad_technology smt_and_tht
+				relief_width_min  0.3100
+				relief_gap_max  0.4000
+				[CONTOURS BEGIN]
+					[LINE BEGIN]
+						start x  15.0000 y  0.0000
+						end x  40.0000 y  0.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  40.0000 y  0.0000
+						end x  40.0000 y  15.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  40.0000 y  15.0000
+						end x  15.0000 y  15.0000
+					[LINE END]
+					[LINE BEGIN]
+						start x  15.0000 y  15.0000
+						end x  15.0000 y  0.0000
+					[LINE END]
+				[CONTOURS END]
+			[ZONE END]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
 		name CLK
 		class default
 		scope  local
@@ -122,53 +231,30 @@
 	[NET END]
 
 	[NET BEGIN]
-		name COLLECTOR
-		class default
-		scope  local
-		[STRANDS BEGIN]
-			[STRAND BEGIN]
-				position sheet  1 x  125.00 y  105.00
-				[SEGMENTS BEGIN]
-					[SEGMENT BEGIN]
-						start x  125.00 y  105.00
-						end   x  125.00 y  120.00
-						[PORTS BEGIN]
-							A device T1 unit 1 port C
-							B netchanger 1 port master
-						[PORTS END]
-					[SEGMENT END]
-				[SEGMENTS END]
-			[STRAND END]
-		[STRANDS END]
-		[ROUTE BEGIN]
-		[ROUTE END]
-	[NET END]
-
-	[NET BEGIN]
 		name GND
 		class default
 		scope  local
 		[STRANDS BEGIN]
 			[STRAND BEGIN]
-				position sheet  1 x  72.50 y  97.50
+				position sheet  1 x  77.50 y  72.50
 				[SEGMENTS BEGIN]
-					[SEGMENT BEGIN]
-						start x  80.00 y  97.50
-						end   x  80.00 y  92.50
-						[PORTS BEGIN]
-							B device PWR1 unit 1 port GND
-						[PORTS END]
-					[SEGMENT END]
 					[SEGMENT BEGIN]
 						start x  72.50 y  97.50
 						end   x  77.50 y  97.50
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  72.50 y  98.00
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
 						[PORTS BEGIN]
 							A device X2 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 					[SEGMENT BEGIN]
 						start x  77.50 y  97.50
-						end   x  80.00 y  97.50
+						end   x  77.50 y  92.50
 					[SEGMENT END]
 					[SEGMENT BEGIN]
 						start x  77.50 y  97.50
@@ -178,6 +264,27 @@
 						[JUNCTIONS END]
 						[PORTS BEGIN]
 							B device C1 unit 1 port 2
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  77.50 y  92.50
+						end   x  77.50 y  75.00
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  77.50 y  75.00
+						end   x  77.50 y  72.50
+						[PORTS BEGIN]
+							B device PWR1 unit 1 port GND
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  77.50 y  75.00
+						end   x  85.00 y  75.00
+						[JUNCTIONS BEGIN]
+							A 
+						[JUNCTIONS END]
+						[PORTS BEGIN]
+							B netchanger 2 port slave
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -191,19 +298,6 @@
 						[PORTS BEGIN]
 							A device LED1 unit 1 port C
 							B device PWR2 unit 1 port GND
-						[PORTS END]
-					[SEGMENT END]
-				[SEGMENTS END]
-			[STRAND END]
-			[STRAND BEGIN]
-				position sheet  1 x  105.00 y  92.50
-				[SEGMENTS BEGIN]
-					[SEGMENT BEGIN]
-						start x  105.00 y  95.00
-						end   x  105.00 y  92.50
-						[PORTS BEGIN]
-							A device R2 unit 1 port 2
-							B device PWR3 unit 1 port GND
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -235,11 +329,11 @@
 				[SEGMENTS END]
 			[STRAND END]
 			[STRAND BEGIN]
-				position sheet  1 x  125.00 y  92.50
+				position sheet  1 x  150.00 y  92.50
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
-						start x  125.00 y  95.00
-						end   x  125.00 y  92.50
+						start x  150.00 y  95.00
+						end   x  150.00 y  92.50
 						[PORTS BEGIN]
 							A device T1 unit 1 port E
 							B device PWR6 unit 1 port GND
@@ -304,6 +398,48 @@
 				layer 4
 				width  0.1500
 			[LINE END]
+			[LINE BEGIN]
+				start x  5.0000 y  7.5000
+				end x  9.0000 y  7.5000
+				layer 1
+				width  0.3000
+			[LINE END]
+			[LINE BEGIN]
+				start x  9.0000 y  7.5000
+				end x  9.5000 y  7.0000
+				layer 1
+				width  0.3000
+			[LINE END]
+			[LINE BEGIN]
+				start x  9.5000 y  7.0000
+				end x  9.5000 y  5.5000
+				layer 1
+				width  0.3000
+			[LINE END]
+			[LINE BEGIN]
+				start x  9.5000 y  5.5000
+				end x  10.0000 y  5.0000
+				layer 1
+				width  0.3000
+			[LINE END]
+			[LINE BEGIN]
+				start x  10.0000 y  5.0000
+				end x  12.0000 y  5.0000
+				layer 1
+				width  0.3000
+			[LINE END]
+			[LINE BEGIN]
+				start x  27.0750 y  17.1900
+				end x  12.0000 y  17.1900
+				layer 1
+				width  0.3000
+			[LINE END]
+			[LINE BEGIN]
+				start x  12.0000 y  17.1900
+				end x  12.0000 y  17.0000
+				layer 1
+				width  0.3000
+			[LINE END]
 			[VIA BEGIN]
 				category THROUGH
 				position x  5.0000 y  14.0000
@@ -349,6 +485,102 @@
 					[LINE END]
 				[CONTOURS END]
 			[ZONE END]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
+		name HEATER_C
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  1 x  135.00 y  112.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  135.00 y  112.50
+						end   x  150.00 y  112.50
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  140.00 y  113.00
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							A netchanger 1 port master
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  150.00 y  112.50
+						end   x  150.00 y  105.00
+						[PORTS BEGIN]
+							B device T1 unit 1 port C
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  80.0000 y  33.0000
+				end x  80.0000 y  37.0000
+				layer 1
+				width  0.5000
+			[LINE END]
+			[LINE BEGIN]
+				start x  80.0000 y  37.0000
+				end x  78.0000 y  39.0000
+				layer 1
+				width  0.5000
+			[LINE END]
+			[LINE BEGIN]
+				start x  78.0000 y  39.0000
+				end x  72.0000 y  39.0000
+				layer 1
+				width  0.5000
+			[LINE END]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
+		name HEATER_L
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  1 x  105.00 y  112.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  105.00 y  117.50
+						end   x  105.00 y  112.50
+						[PORTS BEGIN]
+							A device R2 unit 1 port 2
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  105.00 y  112.50
+						end   x  120.00 y  112.50
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  107.50 y  113.00
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							B netchanger 1 port slave
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  63.0000 y  39.0000
+				end x  67.0000 y  39.0000
+				layer 1
+				width  0.5000
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -530,6 +762,13 @@
 					[SEGMENT BEGIN]
 						start x  72.50 y  135.00
 						end   x  77.50 y  135.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  72.50 y  135.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
 						[PORTS BEGIN]
 							A device X1 unit 1 port 1
 						[PORTS END]
@@ -558,16 +797,12 @@
 					[SEGMENT END]
 					[SEGMENT BEGIN]
 						start x  105.00 y  135.00
-						end   x  105.00 y  120.00
+						end   x  105.00 y  127.50
 						[JUNCTIONS BEGIN]
 							A 
 						[JUNCTIONS END]
-					[SEGMENT END]
-					[SEGMENT BEGIN]
-						start x  105.00 y  120.00
-						end   x  110.00 y  120.00
 						[PORTS BEGIN]
-							B netchanger 1 port slave
+							B device R2 unit 1 port 1
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
@@ -1199,7 +1434,7 @@
 		[UNITS BEGIN]
 			[UNIT BEGIN]
 				name 1
-				position sheet  1 x  80.00 y  87.50 rotation  0.0
+				position sheet  1 x  77.50 y  67.50 rotation  0.0
 				mirrored no
 			[UNIT END]
 		[UNITS END]
@@ -1213,19 +1448,6 @@
 			[UNIT BEGIN]
 				name 1
 				position sheet  1 x  90.00 y  87.50 rotation  0.0
-				mirrored no
-			[UNIT END]
-		[UNITS END]
-	[DEVICE END]
-
-	[DEVICE BEGIN]
-		name PWR3
-		appearance VIRTUAL
-		model /home/luno/git/BEL/ET_component_library/devices/supply/gnd.dev
-		[UNITS BEGIN]
-			[UNIT BEGIN]
-				name 1
-				position sheet  1 x  105.00 y  87.50 rotation  0.0
 				mirrored no
 			[UNIT END]
 		[UNITS END]
@@ -1264,7 +1486,7 @@
 		[UNITS BEGIN]
 			[UNIT BEGIN]
 				name 1
-				position sheet  1 x  125.00 y  87.50 rotation  0.0
+				position sheet  1 x  150.00 y  87.50 rotation  0.0
 				mirrored no
 			[UNIT END]
 		[UNITS END]
@@ -1349,7 +1571,7 @@
 		name R2
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/passive/resistors/R.dev
-		value 4k7
+		value 100R
 		variant T_0207
 		partcode R_PAC_T_0207_pitch_12mm_VAL_4k7
 		[PACKAGE BEGIN]
@@ -1358,8 +1580,8 @@
 				[PLACEHOLDER BEGIN]
 					layer silkscreen
 					meaning name
-					anchor relative
-					position x  0.0000 y -3.0000 rotation  0.0000000 face  top
+					anchor absolute
+					position x  66.0000 y  29.0000 rotation  0.0000000 face  top
 					size  1.0000
 					linewidth  0.1500
 					alignment horizontal left vertical center
@@ -1376,8 +1598,8 @@
 				[PLACEHOLDER BEGIN]
 					layer assy_doc
 					meaning value
-					anchor relative
-					position x  0.0000 y -4.5000 rotation  0.0000000 face  top
+					anchor absolute
+					position x  64.0000 y  30.0000 rotation  0.0000000 face  top
 					size  1.0000
 					linewidth  0.1500
 					alignment horizontal left vertical center
@@ -1387,7 +1609,7 @@
 		[UNITS BEGIN]
 			[UNIT BEGIN]
 				name 1
-				position sheet  1 x  105.00 y  100.00 rotation  0.0
+				position sheet  1 x  105.00 y  122.50 rotation  0.0
 				mirrored no
 				[PLACEHOLDERS BEGIN]
 					[PLACEHOLDER BEGIN]
@@ -1549,6 +1771,68 @@
 	[DEVICE END]
 
 	[DEVICE BEGIN]
+		name R5
+		appearance PCB
+		model /home/luno/git/BEL/ET_component_library/devices/passive/resistors/R.dev
+		value 22R
+		variant S_0805
+		partcode R_PAC_S_0805_VAL_1k
+		[PACKAGE BEGIN]
+			position x  18.0000 y  4.0000 rotation  0.0000000 face  top
+			[PLACEHOLDERS BEGIN]
+				[PLACEHOLDER BEGIN]
+					layer silkscreen
+					meaning name
+					anchor relative
+					position x  2.2000 y  0.0000 rotation  90.0000000 face  top
+					size  1.2000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+				[PLACEHOLDER BEGIN]
+					layer assy_doc
+					meaning value
+					anchor relative
+					position x  3.8000 y  0.0000 rotation  90.0000000 face  top
+					size  1.2000
+					linewidth  0.1500
+					alignment horizontal center vertical bottom
+				[PLACEHOLDER END]
+			[PLACEHOLDERS END]
+		[PACKAGE END]
+		[UNITS BEGIN]
+			[UNIT BEGIN]
+				name 1
+				position sheet  1 x  115.00 y  75.00 rotation  90.0
+				mirrored no
+				[PLACEHOLDERS BEGIN]
+					[PLACEHOLDER BEGIN]
+						meaning name
+						position x -1.00 y  1.60
+						size  1.20
+						rotation  90.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning value
+						position x  1.00 y  1.60
+						size  1.20
+						rotation  90.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+					[PLACEHOLDER BEGIN]
+						meaning purpose
+						position x  0.00 y  0.00
+						size  1.30
+						rotation  90.0
+						alignment horizontal left vertical bottom
+					[PLACEHOLDER END]
+				[PLACEHOLDERS END]
+			[UNIT END]
+		[UNITS END]
+	[DEVICE END]
+
+	[DEVICE BEGIN]
 		name T1
 		appearance PCB
 		model /home/luno/git/BEL/ET_component_library/devices/active/transistor/npn.dev
@@ -1580,7 +1864,7 @@
 		[UNITS BEGIN]
 			[UNIT BEGIN]
 				name 1
-				position sheet  1 x  125.00 y  100.00 rotation  0.0
+				position sheet  1 x  150.00 y  100.00 rotation  0.0
 				mirrored no
 				[PLACEHOLDERS BEGIN]
 					[PLACEHOLDER BEGIN]
@@ -1988,8 +2272,15 @@
 	[NETCHANGER BEGIN]
 		name 1
 		direction FORWARD
-		position_in_schematic sheet  1 x  117.50 y  120.00 rotation  0.0
-		position_in_board x  40.0000 y  29.0000
+		position_in_schematic sheet  1 x  127.50 y  112.50 rotation  0.0
+		position_in_board x  69.0000 y  39.0000
+		layer 1
+	[NETCHANGER END]
+	[NETCHANGER BEGIN]
+		name 2
+		direction FORWARD
+		position_in_schematic sheet  1 x  92.50 y  75.00 rotation  0.0
+		position_in_board x  13.0000 y  5.0000
 		layer 1
 	[NETCHANGER END]
 [NETCHANGERS END]
@@ -2018,7 +2309,7 @@
 	[DEVICES_NON_ELECTRIC BEGIN]
 		[DEVICE BEGIN]
 			name C3
-			position x  58.0000 y  31.0000 rotation  0.0000000 face  top
+			position x  39.0000 y  29.0000 rotation  0.0000000 face  top
 			model /home/luno/git/BEL/ET_component_library/packages/S_1206.pac
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
@@ -2059,7 +2350,7 @@
 		[DEVICE END]
 		[DEVICE BEGIN]
 			name FD2
-			position x  13.0000 y  4.0000 rotation  0.0000000 face  top
+			position x  6.0000 y  3.0000 rotation  0.0000000 face  top
 			model /home/luno/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
@@ -2490,6 +2781,14 @@
 			alignment horizontal left vertical bottom
 			layer 4
 		[TEXT END]
+		[TEXT BEGIN]
+			content "AGND"
+			position x  23.0000 y  1.0000 rotation  0.0000000
+			size  2.5000
+			linewidth  0.3000
+			alignment horizontal left vertical bottom
+			layer 1
+		[TEXT END]
 		[PLACEHOLDER BEGIN]
 			meaning MODULE
 			position x  70.0000 y  57.0000 rotation  0.0000000
@@ -2557,6 +2856,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2026-04-15T18:57:49
+-- date 2026-05-01T19:30:31
 -- module file end
 
