@@ -1,0 +1,10 @@
+# SCHEMATIC
+
+schematic heater_driver show sheet 2
+schematic heater_driver set cursor 85 107 10
+
+schematic heater_driver mirror unit IC1 D
+
+
+# BOARD
+

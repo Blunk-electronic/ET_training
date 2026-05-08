@@ -1,0 +1,4 @@
+board heater_driver set color background white
+schematic heater_driver set color background white
+
+# script end
