@@ -24,3 +24,5 @@ schematic heater_driver place net_label 5 160 105
 
 schematic heater_driver draw net GND 5 170 100 160 100
 schematic heater_driver place net_label 5 160 100
+
+schematic heater_driver make netlist default 1

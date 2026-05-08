@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2026-05-01T19:30:31
+-- date 2026-05-02T11:16:25
 -- ====================================================================================================
 
 [META BEGIN]
@@ -156,6 +156,12 @@
 				layer 1
 				width  0.3000
 			[LINE END]
+			[LINE BEGIN]
+				start x  14.0000 y  5.0000
+				end x  12.0000 y  5.0000
+				layer 1
+				width  0.3000
+			[LINE END]
 			[VIA BEGIN]
 				category THROUGH
 				position x  18.0000 y  7.0000
@@ -280,6 +286,13 @@
 					[SEGMENT BEGIN]
 						start x  77.50 y  75.00
 						end   x  85.00 y  75.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  80.00 y  75.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
 						[JUNCTIONS BEGIN]
 							A 
 						[JUNCTIONS END]
@@ -424,7 +437,7 @@
 			[LINE END]
 			[LINE BEGIN]
 				start x  10.0000 y  5.0000
-				end x  12.0000 y  5.0000
+				end x  11.0000 y  5.0000
 				layer 1
 				width  0.3000
 			[LINE END]
@@ -437,6 +450,12 @@
 			[LINE BEGIN]
 				start x  12.0000 y  17.1900
 				end x  12.0000 y  17.0000
+				layer 1
+				width  0.3000
+			[LINE END]
+			[LINE BEGIN]
+				start x  11.0000 y  5.0000
+				end x  12.0000 y  5.0000
 				layer 1
 				width  0.3000
 			[LINE END]
@@ -594,7 +613,7 @@
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
 						start x  65.00 y  135.00
-						end   x  77.50 y  135.00
+						end   x  80.00 y  135.00
 						[LABELS BEGIN]
 							[LABEL BEGIN]
 								position x  70.00 y  135.50
@@ -604,43 +623,13 @@
 						[LABELS END]
 						[PORTS BEGIN]
 							A device X5 unit 1 port 1
-						[PORTS END]
-					[SEGMENT END]
-					[SEGMENT BEGIN]
-						start x  77.50 y  135.00
-						end   x  77.50 y  130.00
-						[PORTS BEGIN]
-							B device R3 unit 1 port 1
+							B netchanger 3 port master
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
 			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
-			[LINE BEGIN]
-				start x  95.0000 y  22.5000
-				end x  91.5000 y  22.5000
-				layer 1
-				width  0.1500
-			[LINE END]
-			[LINE BEGIN]
-				start x  91.5000 y  22.5000
-				end x  89.0000 y  20.0000
-				layer 1
-				width  0.1500
-			[LINE END]
-			[LINE BEGIN]
-				start x  85.0000 y  18.5000
-				end x  87.5000 y  18.5000
-				layer 1
-				width  0.1500
-			[LINE END]
-			[LINE BEGIN]
-				start x  87.5000 y  18.5000
-				end x  89.0000 y  20.0000
-				layer 1
-				width  0.1500
-			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -653,14 +642,7 @@
 				position sheet  4 x  65.00 y  107.50
 				[SEGMENTS BEGIN]
 					[SEGMENT BEGIN]
-						start x  77.50 y  120.00
-						end   x  77.50 y  107.50
-						[PORTS BEGIN]
-							A device R3 unit 1 port 2
-						[PORTS END]
-					[SEGMENT END]
-					[SEGMENT BEGIN]
-						start x  77.50 y  107.50
+						start x  80.00 y  107.50
 						end   x  65.00 y  107.50
 						[LABELS BEGIN]
 							[LABEL BEGIN]
@@ -671,36 +653,13 @@
 						[LABELS END]
 						[PORTS BEGIN]
 							B device X6 unit 1 port 1
+							A netchanger 4 port master
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
 			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
-			[LINE BEGIN]
-				start x  95.0000 y  10.0000
-				end x  91.0000 y  10.0000
-				layer 1
-				width  0.1500
-			[LINE END]
-			[LINE BEGIN]
-				start x  91.0000 y  10.0000
-				end x  88.0000 y  7.0000
-				layer 1
-				width  0.1500
-			[LINE END]
-			[LINE BEGIN]
-				start x  85.0000 y  6.5000
-				end x  87.5000 y  6.5000
-				layer 1
-				width  0.1500
-			[LINE END]
-			[LINE BEGIN]
-				start x  87.5000 y  6.5000
-				end x  88.0000 y  7.0000
-				layer 1
-				width  0.1500
-			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -845,6 +804,78 @@
 				layer 1
 				width  0.1500
 			[LINE END]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
+		name PROT_1
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  4 x  95.00 y  135.00
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  95.00 y  135.00
+						end   x  110.00 y  135.00
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  97.50 y  135.50
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							A netchanger 3 port slave
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  110.00 y  135.00
+						end   x  110.00 y  127.50
+						[PORTS BEGIN]
+							B device R3 unit 1 port 1
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
+		[ROUTE END]
+	[NET END]
+
+	[NET BEGIN]
+		name PROT_2
+		class default
+		scope  local
+		[STRANDS BEGIN]
+			[STRAND BEGIN]
+				position sheet  4 x  95.00 y  107.50
+				[SEGMENTS BEGIN]
+					[SEGMENT BEGIN]
+						start x  95.00 y  107.50
+						end   x  110.00 y  107.50
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  97.50 y  108.00
+								rotation  0.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
+						[PORTS BEGIN]
+							A netchanger 4 port slave
+						[PORTS END]
+					[SEGMENT END]
+					[SEGMENT BEGIN]
+						start x  110.00 y  107.50
+						end   x  110.00 y  117.50
+						[PORTS BEGIN]
+							B device R3 unit 1 port 2
+						[PORTS END]
+					[SEGMENT END]
+				[SEGMENTS END]
+			[STRAND END]
+		[STRANDS END]
+		[ROUTE BEGIN]
 		[ROUTE END]
 	[NET END]
 
@@ -1681,7 +1712,7 @@
 		[UNITS BEGIN]
 			[UNIT BEGIN]
 				name 1
-				position sheet  4 x  77.50 y  125.00 rotation  0.0
+				position sheet  4 x  110.00 y  122.50 rotation  0.0
 				mirrored no
 				[PLACEHOLDERS BEGIN]
 					[PLACEHOLDER BEGIN]
@@ -2145,7 +2176,7 @@
 		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
 		variant T_male_blade
 		partcode X_PAC_T_male_blade_single
-		purpose "HV INPUT"
+		purpose "HV_P"
 		[PACKAGE BEGIN]
 			position x  95.0000 y  22.5000 rotation  180.0000000 face  top
 			[PLACEHOLDERS BEGIN]
@@ -2207,7 +2238,7 @@
 		model /home/luno/git/BEL/ET_component_library/devices/passive/connectors/X_male_single.dev
 		variant T_male_blade
 		partcode X_PAC_T_male_blade_single
-		purpose "HV OUTPUT"
+		purpose "HV_N"
 		[PACKAGE BEGIN]
 			position x  95.0000 y  10.0000 rotation  180.0000000 face  top
 			[PLACEHOLDERS BEGIN]
@@ -2280,7 +2311,21 @@
 		name 2
 		direction FORWARD
 		position_in_schematic sheet  1 x  92.50 y  75.00 rotation  0.0
-		position_in_board x  13.0000 y  5.0000
+		position_in_board x  12.0000 y  5.0000
+		layer 1
+	[NETCHANGER END]
+	[NETCHANGER BEGIN]
+		name 3
+		direction BACKWARD
+		position_in_schematic sheet  4 x  87.50 y  135.00 rotation  0.0
+		position_in_board x  91.0000 y  18.0000
+		layer 1
+	[NETCHANGER END]
+	[NETCHANGER BEGIN]
+		name 4
+		direction BACKWARD
+		position_in_schematic sheet  4 x  87.50 y  107.50 rotation  0.0
+		position_in_board x  91.0000 y  6.0000
 		layer 1
 	[NETCHANGER END]
 [NETCHANGERS END]
@@ -2856,6 +2901,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2026-05-01T19:30:31
+-- date 2026-05-02T11:16:25
 -- module file end
 
