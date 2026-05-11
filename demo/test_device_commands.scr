@@ -1,11 +1,25 @@
+# schematic heater_driver show device L1 R1
 
+# schematic heater_driver show sheet 2
+# schematic heater_driver show device L1 IC1 .
 
+# schematic heater_driver show device L1 IC1 C
+# schematic heater_driver show device L1 IC1 D
+
+board heater_driver show device L1 C3
+board heater_driver show device L1 C2
+# board heater_driver show device L1 R100
+
+# schematic heater_driver set value R111 330R
+# schematic heater_driver set value R1 470R
+# schematic heater_driver rename device R1 R2
+# schematic heater_driver rename device R1 R111
 
 # BOARD
 
-board demo add device $HOME/git/BEL/ET_component_library/packages/labels/top_mark.pac TM 7 4
-board demo rotate device TM1 relative 90
-board demo rename device TM1 TM2
-board demo move device TM2 relative 3 0 # final pos. is 10/4
-
-board demo flip device IC1
+# board demo add device $HOME/git/BEL/ET_component_library/packages/labels/top_mark.pac TM 7 4
+# board demo rotate device TM1 relative 90
+# board demo rename device TM1 TM2
+# board demo move device TM2 relative 3 0 # final pos. is 10/4
+# 
+# board demo flip device IC1
