@@ -6,9 +6,12 @@
 # schematic heater_driver show device L1 IC1 C
 # schematic heater_driver show device L1 IC1 D
 
-board heater_driver show device L1 C3
-board heater_driver show device L1 C2
+# board heater_driver show device L1 C3
+# board heater_driver show device L1 C2
 # board heater_driver show device L1 R100
+
+# schematic heater_driver show device L1 IC1 D
+schematic heater_driver delete unit IC2 E
 
 # schematic heater_driver set value R111 330R
 # schematic heater_driver set value R1 470R
