@@ -12,7 +12,7 @@ schematic heater_driver add submodule oscillator.mod OSC1 5 170 90 30 30 # pos 3
 # schematic heater_driver drag submodule OSC2 relative -10 0
 
 schematic heater_driver add port OSC1 P5 0 20 master
-schematic heater_driver add port OSC1 OSC_OUT 0 15 master
+schematic heater_driver add port OSC1 OSC_OUT 0 15 slave
 schematic heater_driver add port OSC1 GND 0 10 master
 
 

@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2026-04-15T17:42:34
+-- date 2026-06-05T15:05:16
 -- ====================================================================================================
 
 [META BEGIN]
@@ -115,6 +115,24 @@
 			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  16.0000 y  20.0000
+				end x  19.0000 y  20.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  19.0000 y  20.0000
+				end x  20.0000 y  21.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  20.0000 y  21.0000
+				end x  25.0000 y  21.0000
+				layer 1
+				width  0.1500
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -204,6 +222,12 @@
 			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  16.0000 y  26.0000
+				end x  27.0000 y  26.0000
+				layer 3
+				width  0.3000
+			[LINE END]
 			[ZONE BEGIN]
 				easing_style none
 				easing_radius  0.0000
@@ -249,6 +273,24 @@
 			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  16.0000 y  23.0000
+				end x  19.0000 y  23.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  19.0000 y  23.0000
+				end x  20.0000 y  22.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  20.0000 y  22.0000
+				end x  25.0000 y  22.0000
+				layer 1
+				width  0.1500
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -300,13 +342,37 @@
 							A 
 						[JUNCTIONS END]
 						[PORTS BEGIN]
-							B netchanger 5 port slave
+							B netchanger 5 port master
 						[PORTS END]
 					[SEGMENT END]
 				[SEGMENTS END]
 			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  16.0000 y  17.0000
+				end x  17.0000 y  17.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  17.0000 y  17.0000
+				end x  19.0000 y  15.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  19.0000 y  15.0000
+				end x  23.0000 y  15.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  23.0000 y  15.0000
+				end x  24.0000 y  16.0000
+				layer 1
+				width  0.1500
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -365,6 +431,18 @@
 			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  16.0000 y  14.0000
+				end x  23.0000 y  14.0000
+				layer 1
+				width  0.1500
+			[LINE END]
+			[LINE BEGIN]
+				start x  23.0000 y  14.0000
+				end x  24.0000 y  15.0000
+				layer 1
+				width  0.1500
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -463,6 +541,12 @@
 			[STRAND END]
 		[STRANDS END]
 		[ROUTE BEGIN]
+			[LINE BEGIN]
+				start x  16.0000 y  29.0000
+				end x  27.0000 y  29.0000
+				layer 2
+				width  0.3000
+			[LINE END]
 		[ROUTE END]
 	[NET END]
 
@@ -533,7 +617,7 @@
 		variant S_1206
 		partcode C_PAC_S_1206_VAL_10u
 		[PACKAGE BEGIN]
-			position x  21.0000 y  18.0000 rotation  0.0000000 face  top
+			position x  23.0000 y  31.0000 rotation  90.0000000 face  top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silkscreen
@@ -776,7 +860,7 @@
 		partcode LED_PAC_S_0805_VAL_green
 		purpose "PWR ON"
 		[PACKAGE BEGIN]
-			position x  22.0000 y  23.0000 rotation  134.0000000 face  top
+			position x  35.0000 y  30.0000 rotation  179.0000000 face  top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silkscreen
@@ -890,7 +974,7 @@
 		variant S_0805
 		partcode R_PAC_S_0805_VAL_1k
 		[PACKAGE BEGIN]
-			position x  22.0000 y  28.0000 rotation  134.0000000 face  top
+			position x  30.0000 y  31.0000 rotation  179.0000000 face  top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silkscreen
@@ -955,14 +1039,14 @@
 		direction BACKWARD
 		position_in_schematic sheet  1 x  65.00 y  135.00 rotation  0.0
 		position_in_board x  16.0000 y  29.0000
-		layer 1
+		layer 2
 	[NETCHANGER END]
 	[NETCHANGER BEGIN]
 		name 2
 		direction BACKWARD
 		position_in_schematic sheet  1 x  65.00 y  97.50 rotation  0.0
 		position_in_board x  16.0000 y  26.0000
-		layer 1
+		layer 3
 	[NETCHANGER END]
 	[NETCHANGER BEGIN]
 		name 3
@@ -980,7 +1064,7 @@
 	[NETCHANGER END]
 	[NETCHANGER BEGIN]
 		name 5
-		direction FORWARD
+		direction BACKWARD
 		position_in_schematic sheet  2 x  120.00 y  140.00 rotation  0.0
 		position_in_board x  16.0000 y  17.0000
 		layer 1
@@ -1034,7 +1118,7 @@
 		[DEVICE END]
 		[DEVICE BEGIN]
 			name FD2
-			position x  13.0000 y  4.0000 rotation  0.0000000 face  top
+			position x  21.0000 y  9.0000 rotation  0.0000000 face  top
 			model /home/luno/git/BEL/ET_component_library/packages/fiducials/crosshair_4.pac
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
@@ -1322,7 +1406,7 @@
 	[PCB_CONTOURS_NON_PLATED BEGIN]
 		[OUTLINE BEGIN]
 			[LINE BEGIN]
-				start x  0.0000 y  0.0000
+				start x  16.0000 y  0.0000
 				end x  45.0000 y  0.0000
 			[LINE END]
 			[LINE BEGIN]
@@ -1331,11 +1415,11 @@
 			[LINE END]
 			[LINE BEGIN]
 				start x  45.0000 y  42.0000
-				end x  0.0000 y  42.0000
+				end x  16.0000 y  42.0000
 			[LINE END]
 			[LINE BEGIN]
-				start x  0.0000 y  42.0000
-				end x  0.0000 y  0.0000
+				start x  16.0000 y  42.0000
+				end x  16.0000 y  0.0000
 			[LINE END]
 		[OUTLINE END]
 		[HOLE BEGIN]
@@ -1345,6 +1429,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2026-04-15T17:42:34
+-- date 2026-06-05T15:05:16
 -- module file end
 

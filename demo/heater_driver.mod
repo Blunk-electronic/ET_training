@@ -1,5 +1,5 @@
 -- SYSTEM ET module
--- date 2026-05-02T11:16:25
+-- date 2026-05-16T11:27:16
 -- ====================================================================================================
 
 [META BEGIN]
@@ -321,6 +321,13 @@
 					[SEGMENT BEGIN]
 						start x  80.00 y  100.00
 						end   x  80.00 y  92.50
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  79.50 y  95.00
+								rotation  90.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
 						[PORTS BEGIN]
 							A device IC1 unit P port GND
 							B device PWR4 unit 1 port GND
@@ -334,6 +341,13 @@
 					[SEGMENT BEGIN]
 						start x  107.50 y  105.00
 						end   x  107.50 y  92.50
+						[LABELS BEGIN]
+							[LABEL BEGIN]
+								position x  107.00 y  95.00
+								rotation  90.0
+								size  1.30
+							[LABEL END]
+						[LABELS END]
 						[PORTS BEGIN]
 							A device C2 unit 1 port 2
 							B device PWR5 unit 1 port GND
@@ -1747,7 +1761,7 @@
 		model /home/luno/git/BEL/ET_component_library/devices/passive/resistors/R.dev
 		variant S_0805
 		[PACKAGE BEGIN]
-			position x  0.0000 y  0.0000 rotation  0.0000000 face  top
+			position x  16.0000 y  21.0000 rotation  0.0000000 face  top
 			[PLACEHOLDERS BEGIN]
 				[PLACEHOLDER BEGIN]
 					layer silkscreen
@@ -2901,6 +2915,6 @@
 ----------------------------------------------------------------------------------------------------
 
 -- ====================================================================================================
--- date 2026-05-02T11:16:25
+-- date 2026-05-16T11:27:16
 -- module file end
 

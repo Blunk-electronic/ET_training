@@ -1,0 +1,2 @@
+board heater_driver draw silkscreen top zone line 0 70 line 10 70 line 10 80 line 0 80
+# board heater_driver display keepout top 

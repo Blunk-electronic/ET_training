@@ -1,7 +1,17 @@
-# schematic heater_driver show device L1 R1
+# schematic heater_driver show net GND
+board heater_driver show net GND
 
-# schematic heater_driver show sheet 2
-# schematic heater_driver show device L1 IC1 .
+# schematic heater_driver set scope GND global
+# schematic heater_driver set scope AGND local
+
+# schematic heater_driver set class GND pwr
+
+# schematic heater_driver delete net GND 3
+# schematic heater_driver delete net GND
+
+# schematic heater_driver rename net GND DGND 3 107.5 100 2
+# schematic heater_driver rename net GND2 DGND 3
+# schematic heater_driver rename net GND DGND
 
 # schematic heater_driver show device L1 IC1 C
 # schematic heater_driver show device L1 IC1 D
@@ -29,11 +39,6 @@
 # schematic heater_driver rotate value IC1 D vertical
 # schematic heater_driver move value IC1 D relative 0 -5
 # schematic heater_driver move value IC1 D absolute 85 95
-
-schematic heater_driver add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 120 60 0 T_TO220H
-schematic heater_driver rename device T2 T20
-schematic heater_driver copy device T20 1 140 60 0
-schematic heater_driver renumber devices 100
 
 # board heater_driver copy device C3 45 29
 # board heater_driver move device C3 absolute 45 29
