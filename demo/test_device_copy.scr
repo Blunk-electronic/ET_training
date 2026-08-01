@@ -1,0 +1,20 @@
+schematic heater_driver show sheet 2
+# schematic heater_driver add device $HOME/git/BEL/ET_component_library/devices/active/logic/7400_ext.dev 2 85 170 0 D
+schematic heater_driver copy device IC1 2 85 170 0
+schematic heater_driver set cursor 85 170 10
+# board demo_test move device IC1 absolute 56 40
+
+# schematic heater_driver add device $HOME/git/BEL/ET_component_library/devices/active/transistor/npn.dev 1 120 60 0 T_TO220H
+# schematic heater_driver rename device T2 T20
+# schematic heater_driver copy device T20 1 140 60 0
+# schematic heater_driver renumber devices 100
+
+
+# BOARD
+
+# board demo add device $HOME/git/BEL/ET_component_library/packages/labels/top_mark.pac TM 7 4
+# board demo rotate device TM1 relative 90
+# board demo rename device TM1 TM2
+# board demo move device TM2 relative 3 0 # final pos. is 10/4
+# 
+# board demo flip device IC1
