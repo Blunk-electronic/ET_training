@@ -4,12 +4,17 @@
 
 [MODULE_INSTANCES BEGIN]
 	[MODULE BEGIN]
-		generic_name demo
-		instance_name MOD1
+		generic_name heater_driver
+		instance_name HEATER1
+	[MODULE END]
+
+	[MODULE BEGIN]
+		generic_name temperature_sensor
+		instance_name TSEN1
 	[MODULE END]
 	
 	[MODULE BEGIN]
-		generic_name pwr-supply
+		generic_name power_supply
 		instance_name PWR1
 	[MODULE END]
 
