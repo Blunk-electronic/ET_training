@@ -14,8 +14,19 @@ schematic heater_driver define group 2 80 100 10 50
 # schematic heater_driver mirror unit IC1 D
 schematic heater_driver move name IC1 D relative 1 0
 
-schematic heater_driver copy group 0 40 0
-schematic heater_driver draw net Q 2 135 140 150 140
-schematic heater_driver draw net Q_N 2 115 102.5 115 100
 
-schematic heater_driver set cursor 110 120 10
+
+# simple copy:
+# schematic heater_driver copy group 0 40 0
+# schematic heater_driver draw net Q 2 135 140 150 140
+# schematic heater_driver draw net Q_N 2 115 102.5 115 100
+# schematic heater_driver set cursor 110 120 10
+
+
+
+# multiple copy:
+# auto center
+# schematic heater_driver copy group
+# schematic heater_driver copy group 100 120
+
+# schematic heater_driver paste group 2 10 10
