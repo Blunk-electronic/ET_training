@@ -1,7 +1,10 @@
 # SCHEMATIC
 
 # schematic heater_driver show sheet 2
-schematic heater_driver delete sheet 3
+# schematic heater_driver delete sheet 3
+
+# schematic heater_driver add sheet
+schematic heater_driver add sheet routing
 
 
 
