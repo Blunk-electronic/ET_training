@@ -26,8 +26,10 @@ schematic heater_driver move name IC1 D relative 1 0
 
 # multiple copy:
 # auto center
-# schematic heater_driver copy group
-schematic heater_driver copy group 100 120
+schematic heater_driver copy group
+schematic heater_driver paste group 2 120 123.75
 
-schematic heater_driver paste group 2 160 120
+# explicit center
+# schematic heater_driver copy group 100 120
+# schematic heater_driver paste group 2 160 120
 # schematic heater_driver paste group 2 210 120
