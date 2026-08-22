@@ -1,7 +1,7 @@
 # schematic heater_driver define group 1 80 100 50 30
 # schematic heater_driver define group 1 130 130 20 10
 schematic heater_driver show sheet 2
-schematic heater_driver define group 2 80 100 10 50
+# schematic heater_driver define group 2 80 100 10 50
 # schematic heater_driver show sheet 2
 # schematic heater_driver delete group
 
@@ -12,7 +12,7 @@ schematic heater_driver define group 2 80 100 10 50
 
 # schematic heater_driver rotate unit IC1 D relative 90
 # schematic heater_driver mirror unit IC1 D
-schematic heater_driver move name IC1 D relative 1 0
+# schematic heater_driver move name IC1 D relative 1 0
 
 
 
@@ -26,8 +26,8 @@ schematic heater_driver move name IC1 D relative 1 0
 
 # multiple copy:
 # auto center
-schematic heater_driver copy group
-schematic heater_driver paste group 2 120 123.75
+# schematic heater_driver copy group
+# schematic heater_driver paste group 2 120 123.75
 
 # explicit center
 # schematic heater_driver copy group 100 120
