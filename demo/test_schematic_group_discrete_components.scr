@@ -1,0 +1,30 @@
+# Group some discrete components on sheet 1:
+schematic heater_driver define group 1 80 100 50 30
+# !! schematic heater_driver define group 1 130 130 20 10
+
+
+
+# schematic heater_driver delete group
+
+# schematic heater_driver define group 1 87.5 132.5 5 5
+# schematic heater_driver drag group 5 10
+
+# schematic heater_driver copy group relative 0 50 -50
+
+
+
+# Copy the group:
+# multiple copy:
+# auto center
+# schematic heater_driver copy group
+
+# explicit center
+schematic heater_driver copy group 80 100
+
+# Paste group on sheet 1:
+schematic heater_driver paste group 1 190 100
+
+
+
+# schematic heater_driver paste group 2 190 100
+# schematic heater_driver paste group 2 210 120
