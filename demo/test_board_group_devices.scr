@@ -1,0 +1,24 @@
+# Group some devices on top side:
+board heater_driver define group 0 0 20 10
+
+# board heater_driver clear group
+
+# board heater_driver delete group
+
+board heater_driver move group -10 -10
+
+# Copy the group:
+# multiple copy:
+# auto center
+#board heater_driver copy group
+
+# explicit center
+# board heater_driver copy group 105 112.5
+
+# Paste group:
+# board heater_driver paste group 190 100
+
+
+
+# board heater_driver paste group 190 100
+# board heater_driver paste group 210 120

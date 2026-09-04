@@ -1,20 +1,13 @@
-# Copy the flip-flop on sheet 2:
-schematic heater_driver show sheet 2
+# Copy the netchangers on sheet 4:
+schematic heater_driver show sheet 4
 
-# Group the gates only:
-# schematic heater_driver define group 2 80 100 10 50
 
-# Group the gates and some net segments:
-schematic heater_driver define group 2 80 100 30 50
+# Group the netchangers and some net segments:
+schematic heater_driver define group 4 75 100 25 45
 
 
 
 # schematic heater_driver delete group
-
-# schematic heater_driver rotate unit IC1 D relative 90
-# schematic heater_driver mirror unit IC1 D
-# schematic heater_driver move name IC1 D relative 1 0
-
 
 
 # simple copy:
@@ -25,13 +18,13 @@ schematic heater_driver define group 2 80 100 30 50
 
 
 
-# Copy the flip-flop and some segments:
+# Copy the netchangers and some segments:
 # multiple copy:
 # auto center
 schematic heater_driver copy group
 
-# Paste the group on sheet 2:
-# schematic heater_driver paste group 2 140 123.75
+# Paste the group on sheet 4:
+# schematic heater_driver paste group 4 150 100
 
 # Paste the group on sheet 3:
 # schematic heater_driver paste group 3 140 123.75
