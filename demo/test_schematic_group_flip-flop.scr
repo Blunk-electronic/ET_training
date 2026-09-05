@@ -17,8 +17,9 @@ schematic heater_driver define group 2 80 100 30 50
 
 
 
-# simple copy:
-# schematic heater_driver copy group 0 40 0
+# single copy:
+# schematic heater_driver copy group single 0 40 0
+
 # schematic heater_driver draw net Q 2 135 140 150 140
 # schematic heater_driver draw net Q_N 2 115 102.5 115 100
 # schematic heater_driver set cursor 110 120 10
@@ -28,7 +29,7 @@ schematic heater_driver define group 2 80 100 30 50
 # Copy the flip-flop and some segments:
 # multiple copy:
 # auto center
-schematic heater_driver copy group
+schematic heater_driver copy group clipboard
 
 # Paste the group on sheet 2:
 # schematic heater_driver paste group 2 140 123.75
@@ -38,6 +39,6 @@ schematic heater_driver copy group
 # schematic heater_driver show sheet 3
 
 # explicit center
-# schematic heater_driver copy group 100 120
+# schematic heater_driver copy group clipboard 100 120
 # schematic heater_driver paste group 2 160 120
 # schematic heater_driver paste group 2 210 120
