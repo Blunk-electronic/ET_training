@@ -1,0 +1,27 @@
+board heater_driver define group -5 -5 20 20
+
+# board heater_driver clear group
+
+# board heater_driver delete group
+
+# board heater_driver move group -10 -10
+
+
+# Copy the group:
+
+# single copy:
+# board heater_driver copy group single -10 -10
+
+
+# multiple copy:
+# auto center
+# board heater_driver copy group clipboard
+
+# explicit center
+board heater_driver copy group clipboard 0 0
+
+# Paste group:
+# board heater_driver paste group 0 -10
+# board heater_driver paste group 0 -20
+# board heater_driver paste group 10 -10
+
