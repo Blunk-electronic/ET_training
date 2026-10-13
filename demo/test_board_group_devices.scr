@@ -1,5 +1,6 @@
 # Group some devices on top side:
-board heater_driver define group 0 0 75 10
+# board heater_driver define group 0 0 75 10
+board heater_driver define group 16 4 5 5
 
 # board heater_driver clear group
 
