@@ -1,3 +1,8 @@
-board heater_driver move via 18 7 2 relative 2 0
+board heater_driver place via GND 2 2
+board heater_driver place via GND 4 2 blind top 2
+board heater_driver place via GND 6 2 blind bottom 3
+board heater_driver place via GND 8 2 buried 2 3
 
-board heater_driver move via 18 7 2 absolute 20 7
+# board heater_driver move via 18 7 2 relative 2 0
+
+# board heater_driver move via 18 7 2 absolute 20 7
